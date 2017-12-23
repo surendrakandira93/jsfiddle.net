@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Add, Remove functionality</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" type="text/javascript"></script>
+</head>
+<body>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <input type="button" class="pull-right btn-sm btn btn-info" id="btnLoadData" value="Load Data" />
+                <div id="ko-experience">
+                    <div data-bind="foreach:testtems">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group clearfix">
+                                    <label>Title</label>
+                                    <input type="text" data-bind="value:title ,attr:{name:'test['+$index()+'].Title'}" class="form-control" placeholder="Title">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group clearfix">
+                                    <label>Company</label>
+                                    <select data-bind="value:companyid,options: companieslist,optionsText: 'Text',optionsValue: 'Value',attr:{name:'test['+$index()+'].CompanyID',dataindex:$index()}" class="form-control companyddl">
+                                        <option></option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group clearfix">
+                                    <label>Location</label>
+                                    <input type="text" data-bind="value:location ,attr:{name:'test['+$index()+'].Location',class:'form-control location_'+$index()}" placeholder="Location">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="adminParent">
+                                    <div class="form-group clearfix">
+                                        <input type="checkbox" data-bind="attr:{id:'chk_iscurrent_'+$index()}, checked:ismycurrentcompany,click:$parent.checkValue.bind($data, $index())" class="isPresentCompany" />
+                                        <input type="hidden" data-bind="value:ismycurrentcompany,attr:{name:'test['+$index()+'].IsMyCurrentCompany'}" value="false" class="hidIsPresentCompany" />
+                                        <label data-bind="attr:{for:'chk_iscurrent_'+$index()}"> I currently work here</label>
+                                    </div>
+                                    <!-- ko if: ismycurrentcompany -->
+                                    <div class="form-group clearfix companyAdminDiv">
+                                        <input type="checkbox" data-bind="attr:{id:'chk_iscompanyadmin_'+$index()}, checked:iscompanyadmin,click:$parent.checkCompanyAdminValue.bind($data, $index())" class="isCompanyAdmin" />
+                                        <input type="hidden" data-bind="value:iscompanyadmin,attr:{id:'chk_lbiscompanyadmin_'+$index(), name:'test['+$index()+'].IsCompanyAdmin'}" value="false" class="hidIsCompanyAdmin" />
+                                        <label data-bind="attr:{for:'chk_iscompanyadmin_'+$index()}"> Is company admin </label>
+                                    </div>
+                                    <!-- /ko -->
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group clearfix">
+                                    <label>From</label>
+                                    <select data-bind="value:frommonth,options: monthlist,optionsText: 'Text',optionsValue: 'Value',attr:{name:'test['+$index()+'].FromMonth'}" class="form-control">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group clearfix">
+                                    <label class="nbsp">&nbsp;</label>
+                                    <input type="text" data-bind="value:fromyear ,attr:{name:'test['+$index()+'].FromYear'}" class="form-control datepicker" placeholder="From Year">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ko if: ismycurrentcompany -->
+                        <!-- /ko -->
+                        <!-- ko ifnot: ismycurrentcompany -->
+                        <div class="row todate">
+                            <div class="col-md-6">
+                                <div class="form-group clearfix">
+                                    <label>To</label>
+                                    <select data-bind="value:tomonth,options: monthlist,optionsText: 'Text',optionsValue: 'Value',attr:{id:'chk_ToMonth_'+$index(),name:'test['+$index()+'].ToMonth'}" class="form-control">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group clearfix">
+                                    <label class="nbsp">&nbsp;</label>
+                                    <input type="text" data-bind="value:toyear ,attr:{id:'chk_ToYear_'+$index(),name:'test['+$index()+'].ToYear'}" class="form-control datepicker" placeholder="To Year">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /ko -->
+
+                        <div class="form-group clearfix">
+                            <label>Description</label>
+                            <textarea data-bind="value:description ,attr:{name:'test['+$index()+'].Description'}" class="form-control" placeholder="Description"></textarea>
+                        </div>
+
+
+                        <div class="btn-box5 btn-pad dis-block clearfix" data-bind="visible: $parent.testtems().length > 1">
+                            <input type="button" data-bind="click: $parent.removeItem" class="btn-sm btn btn-danger pull-right removeexperience" value="Remove Experience" />
+                        </div>
+                        <div data-bind="visible: $parent.testtems().length > 1" style="background-color:#000000;height:2px;">
+                            <hr />
+                        </div>
+                    </div>
+
+
+                    <div class="btn-box5 btn-pad dis-block clearfix">
+                        <input type="button" data-bind="click: addItem" class="pull-right btn-sm btn btn-info" value="Add More Experience" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+    var testmonthlist = '[{"Text":"--Select--","Value":""},{"Text":"January","Value":"1"},{"Text":"February","Value":"2"},{"Text":"March","Value":"3"},{"Text":"April","Value":"4"},{"Text":"May","Value":"5"},{"Text":"June","Value":"6"},{"Text":"July","Value":"7"},{"Text":"August","Value":"8"},{"Text":"September","Value":"9"},{"Text":"October","Value":"10"},{"Text":"November","Value":"11"},{"Text":"December","Value":"12"}]';
+
+    var testcompanieslist = '[{"ID":null,"Name":"-- Select Company --"},{"ID":1,"Name":"company 1"},{"ID":2,"Name":"company 2"},{"ID":3,"Name":"company 3"},{"ID":4,"Name":"company 4"}]';
+
+    var testData = '[{"title":"Test 1","companyid":1,"frommonth":"1","fromyear":2010,"tomonth":null,"toyear":null,"ismycurrentcompany":true,"iscompanyadmin":false,"description":"test","location":"location 1"},{"title":"Second Experience","companyid":2,"frommonth":"3","fromyear":2010,"tomonth":"12","toyear":2011,"ismycurrentcompany":false,"iscompanyadmin":false,"description":"Test only ","location":"location 2"},{"title":"Third Experience","companyid":3,"frommonth":"11","fromyear":2018,"tomonth":"11","toyear":2019,"ismycurrentcompany":true,"iscompanyadmin":false,"description":"sdsd","location":"location 3"}]';
+
+    function TestItem(title, companyid, frommonth, fromyear, tomonth, toyear, ismycurrentcompany, description, location, iscompanyadmin) {
+        this.title = ko.observable(title);
+        this.companyid = ko.observable(companyid);
+        this.frommonth = ko.observable(frommonth);
+        this.fromyear = ko.observable(fromyear);
+        this.tomonth = ko.observable(tomonth);
+        this.toyear = ko.observable(toyear);
+        this.ismycurrentcompany = ko.observable(ismycurrentcompany);
+        this.iscompanyadmin = ko.observable(iscompanyadmin);
+        this.description = ko.observable(description);
+        this.location = ko.observable(location);
+
+        this.companieslist = ko.utils.arrayMap(ko.utils.parseJson(testcompanieslist), function (item) {
+            return new ddlBind(item.Name, item.ID);
+        });
+
+        this.monthlist = ko.utils.arrayMap(ko.utils.parseJson(testmonthlist), function (item) {
+            return new ddlBind(item.Text, item.Value);
+        });
+
+    }
+
+    function ddlBind(text, value) {
+        this.Text = ko.observable(text);
+        this.Value = ko.observable(value);
+    }
+
+    var viewModel = {
+        testtems: ko.observableArray([]),
+
+        addItem: function () {
+            viewModel.testtems.push(new TestItem("", "", "", "", "", "", false, "", "", false));
+        },
+
+        removeItem: function (item) {
+            viewModel.testtems.remove(item);
+        },
+        checkValue: function (index) {
+            for (var i = 0; i < viewModel.testtems.length; i++) {
+                if (index != i) {
+                    this.testtems[i].ismycurrentcompany(false);
+                    this.testtems[i].iscompanyadmin(false);
+                }
+            }
+
+            return true;
+        },
+        checkCompanyAdminValue: function () {
+            return true;
+        },
+
+
+    };
+    ko.applyBindings(viewModel);
+    viewModel.testtems(new TestItem("", "", "", "", "", "", false, "", "", false));
+    ApplyDatePicker();
+
+    $("#btnLoadData").click(function () {
+        var dataFromServer = ko.utils.parseJson(testData);
+        var mappedData = ko.utils.arrayMap(dataFromServer, function (item) {
+            return new TestItem(item.title, item.companyid, item.frommonth, item.fromyear, item.tomonth, item.toyear, item.ismycurrentcompany, item.description, item.location, item.iscompanyadmin);
+        });
+
+        viewModel.testtems(mappedData);
+        ApplyDatePicker();
+    });
+
+    function ApplyDatePicker() {
+        $('.datepicker').datepicker({
+            format: " yyyy", // Notice the Extra space at the beginning
+            viewMode: "years",
+            minViewMode: "years"
+        })
+    }
+
+</script>
