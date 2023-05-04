@@ -1,0 +1,611 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Falcon | Dashboard &amp; Web App Template</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="http://rtwelfare.club/assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://rtwelfare.club/assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://rtwelfare.club/assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="http://rtwelfare.club/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-TileImage" content="/assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="http://rtwelfare.club/assets/js/config.js"></script>
+    <script src="http://rtwelfare.club/vendors/simplebar/simplebar.min.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link href="http://rtwelfare.club/vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link href="http://rtwelfare.club/assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+    <link href="http://rtwelfare.club/assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="http://rtwelfare.club/assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="http://rtwelfare.club/assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link href="http://rtwelfare.club/plugins/waitMe/waitMe.min.css" rel="stylesheet" />
+    <link href="http://rtwelfare.club/plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="http://rtwelfare.club/vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
+    <link href="http://rtwelfare.club/vendors/choices/choices.min.css" rel="stylesheet" />
+    <link href="http://rtwelfare.club/css/Custome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://rtwelfare.club/Plugins/cal-heatmap/cal-heatmap.css" />
+    <script>
+        var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+        if (isRTL) {
+            var linkDefault = document.getElementById('style-default');
+            var userLinkDefault = document.getElementById('user-style-default');
+            linkDefault.setAttribute('disabled', true);
+            userLinkDefault.setAttribute('disabled', true);
+            document.querySelector('html').setAttribute('dir', 'rtl');
+        } else {
+            var linkRTL = document.getElementById('style-rtl');
+            var userLinkRTL = document.getElementById('user-style-rtl');
+            linkRTL.setAttribute('disabled', true);
+            userLinkRTL.setAttribute('disabled', true);
+        }
+    </script>
+
+    <style>
+        .validation-summary-errors {
+            color: red;
+        }
+
+        .field-validation-error {
+            color: red;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .q10 {
+            fill: rgb(50,205,47);
+        }
+
+        .q9 {
+            fill: rgb(109, 214,106);
+        }
+
+        .q8 {
+            fill: rgb(122, 222,125);
+        }
+
+        .q7 {
+            fill: rgb(154, 233,153);
+        }
+
+        .q6 {
+            fill: rgb(208, 245,208);
+        }
+
+        .q5 {
+            fill: #ededed;
+        }
+
+        .q4 {
+            fill: rgb(251, 133,131);
+        }
+
+        .q3 {
+            fill: rgb(254, 89,92);
+        }
+
+        .q2 {
+            fill: rgb(255, 46, 67);
+        }
+
+        .q1 {
+            fill: rgb(250, 2, 2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="dvWaitMe"></div>
+    <main class="main" id="top">
+        <div class="container" data-layout="container">
+            <script>
+                var isFluid = JSON.parse(localStorage.getItem('isFluid'));
+                if (isFluid) {
+                    var container = document.querySelector('[data-layout]');
+                    container.classList.remove('container');
+                    container.classList.add('container-fluid');
+                }
+            </script>
+
+
+            <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg">
+
+                <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+                <a class="navbar-brand me-1 me-sm-3" href="index.html">
+                    <div class="d-flex align-items-center">
+                        <img class="me-2" src="http://rtwelfare.club/assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif">falcon</span>
+                    </div>
+                </a>
+                <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
+                    <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-600 fw-medium" href="index.html" role="button">Home</a>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-600 fw-medium" href="index.html?user=user1" role="button">User1</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-600 fw-medium" href="index.html?user=user2" role="button">User2</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </nav>
+            <div class="content">
+
+
+
+                <div class="row g-3 mb-3">
+
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <div class="card overflow-hidden" style="min-width: 12rem">
+                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-1.png);"></div>
+                            <!--/.bg-holder-->
+                            <div class="card-body position-relative">
+                                <h6>Realised PNL</h6>
+                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="RealisedPNL_div">
+                                    <img src="http://rtwelfare.club/img/loading-sm.gif" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <div class="card overflow-hidden" style="min-width: 12rem">
+                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-2.png);"></div>
+                            <!--/.bg-holder-->
+                            <div class="card-body position-relative">
+                                <h6>Charges Taxes</h6>
+                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="chargesTaxes_div"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <div class="card overflow-hidden" style="min-width: 12rem">
+                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-3.png);"></div>
+                            <!--/.bg-holder-->
+                            <div class="card-body position-relative">
+                                <h6>Net Realised PNL</h6>
+                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="netRealisedPNL_div"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <div class="card overflow-hidden" style="min-width: 12rem">
+                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-4.png);"></div>
+                            <!--/.bg-holder-->
+                            <div class="card-body position-relative">
+                                <h6>Unrealised PNL</h6>
+                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="UnrealisedPNL_div"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 ps-lg-2 mb-3">
+                        <div class="card h-lg-100">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Heatmap</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive heatyear div_loader">
+                                    <img src="http://rtwelfare.club/img/loading.gif" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 ps-lg-2 mb-3">
+                        <div class="card h-lg-100">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-auto d-flex justify-content-start order-md-1">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Equity Chart</h6>
+                                    </div>
+                                    <div class="col-auto d-flex justify-content-end order-md-1">
+                                        <div class="col col-md-auto d-flex justify-content-end order-md-3">
+                                            <button class="btn btn-falcon-default btn-sm equity_chart" data-type="day" type="button">
+                                                <span class="fas fa-calendar-day"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Day</span>
+                                            </button>
+                                            <button class="btn btn-falcon-default btn-sm mx-2 equity_chart" data-type="week" type="button">
+                                                <span class="fas fa-calendar-week"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Week</span>
+                                            </button>
+                                            <button class="btn btn-falcon-default btn-sm active equity_chart" data-type="month" type="button">
+                                                <span class="fa fa-calendar-alt"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Month</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body h-100 pe-0">
+
+                                <div id="google_line_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 ps-lg-2 mb-3">
+                        <div class="card h-lg-100">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-auto d-flex justify-content-start order-md-1">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Pnl's Chart</h6>
+                                    </div>
+                                    <div class="col-auto d-flex justify-content-end order-md-1">
+                                        <div class="col col-md-auto d-flex justify-content-end order-md-3">
+                                            <button class="btn btn-falcon-default btn-sm equity_both_chart" data-type="day" type="button">
+                                                <span class="fas fa-calendar-day"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Day</span>
+                                            </button>
+                                            <button class="btn btn-falcon-default btn-sm mx-2 equity_both_chart" data-type="week" type="button">
+                                                <span class="fas fa-calendar-week"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Week</span>
+                                            </button>
+                                            <button class="btn btn-falcon-default btn-sm active equity_both_chart" data-type="month" type="button">
+                                                <span class="fa fa-calendar-alt"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Month</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body h-100 pe-0">
+                                <div id="google_line_both_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 ps-lg-2 mb-3">
+                        <div class="card h-lg-100">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-auto d-flex justify-content-start order-md-1">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Bar Chart</h6>
+                                    </div>
+                                    <div class="col-auto d-flex justify-content-end order-md-1">
+                                        <div class="col col-md-auto d-flex justify-content-end order-md-3">
+                                            <button class="btn btn-falcon-default btn-sm bar_chart" data-type="day" type="button">
+                                                <span class="fas fa-calendar-day"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Day</span>
+                                            </button>
+                                            <button class="btn btn-falcon-default btn-sm mx-2 bar_chart" data-type="week" type="button">
+                                                <span class="fas fa-calendar-week"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Week</span>
+                                            </button>
+                                            <button class="btn btn-falcon-default btn-sm active bar_chart" data-type="month" type="button">
+                                                <span class="fa fa-calendar-alt"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Month</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body h-100 pe-0">
+
+                                <div id="google_bar_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 ps-lg-2 mb-3">
+                        <div class="card h-lg-100">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Weekly PNL</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body h-100 pe-0">
+                                <div id="google_pie_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 ps-lg-2 mb-3">
+                        <div class="card h-lg-100">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">PNL Summary</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body h-100 pe-0">
+
+                                <div id="google_pie_pnl_summary" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 ps-lg-2 mb-3">
+                        <div class="card h-lg-100" style="padding-right: 15px;">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Monthly Breakups</h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body h-100 pe-0 div_loader" id="tbl_monthly">
+                                <img src="http://rtwelfare.club/img/loading-sm.gif" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <footer class="footer">
+                    <div class="row g-0 justify-content-between fs--1 mt-4 mb-3">
+                        <div class="col-12 col-sm-auto text-center">
+                            <p class="mb-0 text-600">Thank you for creating with Falcon <span class="d-none d-sm-inline-block">| </span><br class="d-sm-none" /> 2022 &copy; <a href="https://themewagon.com">Themewagon</a></p>
+                        </div>
+                        <div class="col-12 col-sm-auto text-center">
+                            <p class="mb-0 text-600">v3.13.0</p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+
+        </div>
+    </main><!-- ===============================================-->
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+
+    <script type="text/javascript" src="http://rtwelfare.club/js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://rtwelfare.club/js/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
+    <script src="http://rtwelfare.club/vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
+    <script src="http://rtwelfare.club/vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
+    <script src="http://rtwelfare.club/vendors/anchorjs/anchor.min.js?v=mCNojyCUIjFsIEIal-zHHIUbYBFvD-29Mojv1zI0sPA"></script>
+    <script src="http://rtwelfare.club/vendors/is/is.min.js?v=rNrwuW7iEV0xqy-WkpgQWgItoFd0eEprJpLURRo0hl4"></script>
+    <script src="http://rtwelfare.club/vendors/countup/countUp.umd.js"></script>
+    <script src="http://rtwelfare.club/vendors/echarts/echarts.min.js?v=nID5mM_xbvqrJobTn4k1HIm3QcX9RYVaG6A1FMgyYlw"></script>
+    <script src="http://rtwelfare.club/vendors/fontawesome/all.min.js?v=u7TqVgshDScwW6wDgirx7NLkCiWrm-W9Lc0_6s0DVjs"></script>
+    <script src="http://rtwelfare.club/vendors/lodash/lodash.min.js?v=CVrbEAUGzT7xAu-z5cI5N1GTn0cclSM1QuPeXEJZGF8"></script>
+    <script src="http://rtwelfare.club/vendors/tinymce/tinymce.min.js"></script>
+    <script src="http://rtwelfare.club/vendors/choices/choices.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="http://rtwelfare.club/vendors/list.js/list.min.js?v=jyfQ7nar5XRtzjvEvB_GU5sKBN4QY-ANRj1D5zeKgzU"></script>
+    <script src="http://rtwelfare.club/assets/js/flatpickr.js"></script>
+    <script src="http://rtwelfare.club/assets/js/theme.js?v=iQOEWcaelNwtRkmzUb0lESKcVxZqMfUIBjQczvpVwvY"></script>
+    <script src="http://rtwelfare.club/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="http://rtwelfare.club/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="http://rtwelfare.club/plugins/toastr/toastr.min.js?v=ldqN9_OcVFZtetwyZMvgDHiiWga1hRgUiY2ML1BBLF0"></script>
+    <script src="http://rtwelfare.club/plugins/waitMe/waitMe.min.js"></script>
+    <script src="http://rtwelfare.club/js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
+    <script src="http://rtwelfare.club/js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
+    <script type="text/javascript" src="http://rtwelfare.club/plugins/cal-heatmap/d3.v3.js"></script>
+    <script type="text/javascript" src="http://rtwelfare.club/plugins/cal-heatmap/cal-heatmap.js"></script>
+    <script src="http://rtwelfare.club/js/GoogleChart.js?v=Jh4g3C7Rw_WZwmfOLbSW37GR8LzeGs8SXJSBT0K2b14"></script>
+    <script>
+        (function ($) {
+            function PNLDashboard() {
+                var $this = this, form;
+                var timeSpam = new Date().getTime();
+                var domainName = 'https://raw.githubusercontent.com/surendrakandira93/jsfiddle.net/master/';
+
+                function initilizeModel() {
+
+                    $('.equity_chart').click(function () {
+                        $(".equity_chart").removeClass('active');
+                        $(this).addClass('active');
+                        var type = $(this).data('type');
+                        var aliash = getUrlVars();
+                        bindEquityChart(type, aliash);
+                    });
+
+                    $('.equity_both_chart').click(function () {
+                        $(".equity_both_chart").removeClass('active');
+                        $(this).addClass('active');
+                        var type = $(this).data('type');
+                        var aliash = getUrlVars();
+                        bindEquityBothChart(type, aliash);
+                    });
+
+                    $('.bar_chart').click(function () {
+                        $(".bar_chart").removeClass('active');
+                        $(this).addClass('active');
+                        var type = $(this).data('type'); 
+                        var aliash = getUrlVars();
+                        bindBarChart(type, aliash);
+                    });
+                }
+
+                function bindEquityChart(type,aliash) {
+                    // Dynamic Import
+
+                    $.ajax({
+                        type: "Get",
+                        url: `${domainName}pnl/${aliash}/${type}_getEquityChart.json?v=${timeSpam}`,
+                        dataType: "json",
+                        success: function (result) {
+                            var para = { xs: result, element: 'google_line_pnl' };
+                            GoogleChart.drawChartEquityChart(para)
+                        },
+                        error: function () {
+                            alert("json not found");
+                        }
+                    });
+                }
+
+                function bindEquityBothChart(type,aliash) {
+                    $.getJSON(`${domainName}pnl/${aliash}/${type}_getEquityBothChart.json?v=${timeSpam}`, function (result) {
+                        var para = { xs: result, element: 'google_line_both_pnl' };
+                        GoogleChart.drawChartEquityBothChart(para)
+                    });
+                }
+
+                function bindBarChart(type,aliash) {
+                    $.getJSON(`${domainName}pnl/${aliash}/${type}_getBarChart.json?v=${timeSpam}`, function (result) {
+                        var para = { xs: result, element: 'google_bar_pnl' };
+                        GoogleChart.DrawChartLossProfitChart(para)
+                    });
+                }
+
+
+                function bindPiChar(aliash) {
+                    $.getJSON(`${domainName}pnl/${aliash}/getPiChar.json?v=${timeSpam}`, function (result) {
+                        var para = { xs: result, element: 'google_pie_pnl' };
+                        GoogleChart.drawDonutChart(para)
+                    });
+                }
+
+                function bindHeatMap(aliash) {
+                    $.getJSON(`${domainName}pnl/${aliash}/getHeatMap.json?v=${timeSpam}`, function (result) {
+                        var $html = '';
+                        for (var i = result.startYear; i <= result.endYear; i++) {
+                            $html += `<div class="card-header"><div class="row flex-between-center"><div class="col-6 col-sm-auto d-flex align-items-center pe-0"><h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">${i}</h6></div></div></div><div id="heat_map_cal_${i}"></div>`;
+                        }
+                        $(".heatyear").html($html);
+                        var para = { data: result.items, min: result.min, max: result.max };
+                        GoogleChart.drawCalHeatMap(para)
+                    });
+                }
+
+                function bindSummary(aliash) {
+                    $.getJSON(`${domainName}pnl/${aliash}/calculateSummary.json?v=${timeSpam}`, function (result) {
+                        // debugger;
+                        var summary = result;
+                        var googleChaerVal = new Array();
+                        var echaerVal = new Array();
+                        $("#pnl_summart_label").empty();
+                        $("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedPNL));
+                        $("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargesTaxes));
+                        $("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netRealisedPNL));
+                        $("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedPNL));
+
+                        $("#total_pnl").html(`${summary.realisedPNL.endValue.toFixed(0)} ${summary.realisedPNL.suffix}`);
+
+                        $("#chargesTaxes_div").css('color', '#000');
+                        $("#netRealisedPNL_div").css('color', summary.netRealisedPNL.actualValue > 0 ? '#10b983' : summary.netRealisedPNL.actualValue < 0 ? '#f35631' : '#000');
+
+                        googleChaerVal.push({ pnL: summary.chargesTaxes.actualValue, weekDay: summary.chargesTaxes.name, color: summary.chargesTaxes.color });
+                        echaerVal.push({ value: summary.chargesTaxes.actualValue, name: summary.chargesTaxes.name, color: summary.chargesTaxes.color });
+                        $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
+                                            <div class="d-flex align-items-center">
+                                                <span class="dot" style="background-color:${summary.chargesTaxes.color}"></span><span class="fw-semi-bold">${summary.chargesTaxes.name}</span>
+                                            </div>
+                                            <div class="d-xxl-none">${summary.chargesTaxes.endValue.toFixed(2)} ${summary.chargesTaxes.suffix}</div>
+                                        </div>`);
+
+                        googleChaerVal.push({ pnL: summary.netRealisedPNL.actualValue, weekDay: summary.netRealisedPNL.name, color: summary.netRealisedPNL.color });
+                        echaerVal.push({ value: summary.netRealisedPNL.actualValue, name: summary.netRealisedPNL.name, color: summary.netRealisedPNL.color });
+                        $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
+                                            <div class="d-flex align-items-center">
+                                                <span class="dot" style="background-color:${summary.chargesTaxes.color}"></span><span class="fw-semi-bold">${summary.netRealisedPNL.name}</span>
+                                            </div>
+                                            <div class="d-xxl-none">${summary.netRealisedPNL.endValue.toFixed(2)} ${summary.netRealisedPNL.suffix}</div>
+                                        </div>`);
+                        setTimeout(countupInit, 1);
+
+                        var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary' };
+                        GoogleChart.drawDonutChart(para);
+
+                       // $(".echart-market-share").attr('data-datajson', JSON.stringify(echaerVal));
+                        //setTimeout(pnlSummaryInit, 1);
+                    });
+                }
+
+                function bindPNLSummary(aliash) {                   
+                    $.getJSON(`${domainName}pnl/${aliash}/getMonthlyBreaup.json?v=${timeSpam}`, function (result) {
+                        $("#tbl_monthly").empty();
+                        var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered"><thead><tr><th style="font-size: 12px;" scope="col">Year</th><th style="font-size: 12px;" scope="col">Jan</th><th style="font-size: 12px;" scope="col">Feb</th><th style="font-size: 12px;" scope="col">Mar</th><th style="font-size: 12px;" scope="col">Apr</th><th style="font-size: 12px;" scope="col">May</th><th style="font-size: 12px;" scope="col">Jun</th><th style="font-size: 12px;" scope="col">Jul</th><th style="font-size: 12px;" scope="col">Aug</th><th style="font-size: 12px;" scope="col">Sep</th><th style="font-size: 12px;" scope="col">Oct</th><th style="font-size: 12px;" scope="col">Nov</th><th style="font-size: 12px;" scope="col">Dec</th><th style="font-size: 12px;" scope="col">Total</th></tr></thead><tbody>`;
+                        if (result.length > 0) {
+                            for (var i = 0; i < result.length; i++) {
+                                $html += `<tr><td>${result[i].year}</td>`;
+                                for (var j = 0; j < result[i].monthly.length; j++) {
+                                    $html += `<td style="font-size:12px;color:${(result[i].monthly[j].pnL < 0 ? "#fe595c" : "#6dd66a")};">${result[i].monthly[j].pnLStr}</td>`;
+                                }
+                                $html += `<td style="font-size:12px;color:${(result[i].total < 0 ? "#fe595c" : "#6dd66a")};">${result[i].totalStr}</td></tr>`;
+                            }
+                        } else {
+                            $html += `<tr><td colspan="13">Data not foud</td></tr>`;
+                        }
+                        $("#tbl_monthly").html($html);                       
+                    });
+                }
+
+                function getUrlVars() {
+                    var vars = [], hash;
+                    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        vars.push(hash[1]);
+                    }
+                    return vars.length > 0 && vars[0] != undefined ? vars[0] : 'user1';
+                }
+
+                function LoadeChatFirstTime() {
+                    var aliash = getUrlVars();
+
+                    bindEquityChart('month',aliash);
+                    bindEquityBothChart('month',aliash);
+                    bindBarChart('month',aliash);
+                    bindPiChar(aliash);
+                    bindHeatMap(aliash);
+                    bindSummary(aliash);
+                    bindPNLSummary(aliash);
+                }
+
+                $this.init = function () {
+                    initilizeModel();
+
+                    setTimeout(LoadeChatFirstTime, 500);
+                }
+            }
+
+            $(function () {
+                var self = new PNLDashboard();
+                self.init();
+            })
+        })(jQuery)
+    </script>
+
+</body>
+
+</html>
