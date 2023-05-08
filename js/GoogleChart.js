@@ -1,4 +1,4 @@
-/*google.charts.load('current', { packages: ['corechart', 'line'] });*/
+﻿/*google.charts.load('current', { packages: ['corechart', 'line'] });*/
 google.charts.load('current', { 'packages': ['corechart', 'bar', 'line', 'geochart'], 'mapsApiKey': 'AIzaSyDzZ6uwr469KAgQeW2GFqSYxykj3Zmag8U' });
 var geoChart;
 var GoogleChart = {};

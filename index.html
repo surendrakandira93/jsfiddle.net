@@ -141,12 +141,17 @@
                             <a class="nav-link link-600 fw-medium" href="index.html" role="button">Home</a>
                         </li>
 
-
                         <li class="nav-item dropdown">
                             <a class="nav-link link-600 fw-medium" href="index.html?user=user1" role="button">User1</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link-600 fw-medium" href="index.html?user=user2" role="button">User2</a>
+                        </li>
+						<li class="nav-item dropdown">
+                            <a class="nav-link link-600 fw-medium" href="index.html?user=user3" role="button">User3</a>
+                        </li>
+						<li class="nav-item dropdown">
+                            <a class="nav-link link-600 fw-medium" href="index.html?user=user4" role="button">User4</a>
                         </li>
 
 
@@ -421,7 +426,7 @@
     <script src="http://rtwelfare.club/js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
     <script type="text/javascript" src="http://rtwelfare.club/plugins/cal-heatmap/d3.v3.js"></script>
     <script type="text/javascript" src="http://rtwelfare.club/plugins/cal-heatmap/cal-heatmap.js"></script>
-    <script src="http://rtwelfare.club/js/GoogleChart.js?v=Jh4g3C7Rw_WZwmfOLbSW37GR8LzeGs8SXJSBT0K2b14"></script>
+    <script src="js/GoogleChart.js"></script>
     <script>
         (function ($) {
             function PNLDashboard() {
@@ -498,7 +503,7 @@
                 function bindHeatMap(aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/getHeatMap.json?v=${timeSpam}`, function (result) {
                         var $html = '';
-                        for (var i = result.startYear; i <= result.endYear; i++) {
+                        for (var i = result.startyear; i <= result.endyear; i++) {
                             $html += `<div class="card-header"><div class="row flex-between-center"><div class="col-6 col-sm-auto d-flex align-items-center pe-0"><h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">${i}</h6></div></div></div><div id="heat_map_cal_${i}"></div>`;
                         }
                         $(".heatyear").html($html);
@@ -514,32 +519,32 @@
                         var googleChaerVal = new Array();
                         var echaerVal = new Array();
                         $("#pnl_summart_label").empty();
-                        $("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedPNL));
-                        $("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargesTaxes));
-                        $("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netRealisedPNL));
-                        $("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedPNL));
+                        $("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedpnl));
+                        $("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargestaxes));
+                        $("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netRealisedpnl));
+                        $("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedpnl));
 
-                        $("#total_pnl").html(`${summary.realisedPNL.endValue.toFixed(0)} ${summary.realisedPNL.suffix}`);
+                        $("#total_pnl").html(`${summary.realisedpnl.endvalue.toFixed(0)} ${summary.realisedpnl.suffix}`);
 
                         $("#chargesTaxes_div").css('color', '#000');
-                        $("#netRealisedPNL_div").css('color', summary.netRealisedPNL.actualValue > 0 ? '#10b983' : summary.netRealisedPNL.actualValue < 0 ? '#f35631' : '#000');
+                        $("#netRealisedPNL_div").css('color', summary.netrealisedpnl.actualvalue > 0 ? '#10b983' : summary.netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000');
 
-                        googleChaerVal.push({ pnL: summary.chargesTaxes.actualValue, weekDay: summary.chargesTaxes.name, color: summary.chargesTaxes.color });
-                        echaerVal.push({ value: summary.chargesTaxes.actualValue, name: summary.chargesTaxes.name, color: summary.chargesTaxes.color });
+                        googleChaerVal.push({ pnL: summary.chargestaxes.actualvalue, weekDay: summary.chargestaxes.name, color: summary.chargestaxes.color });
+                        echaerVal.push({ value: summary.chargestaxes.actualValue, name: summary.chargestaxes.name, color: summary.chargestaxes.color });
                         $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
                                             <div class="d-flex align-items-center">
                                                 <span class="dot" style="background-color:${summary.chargesTaxes.color}"></span><span class="fw-semi-bold">${summary.chargesTaxes.name}</span>
                                             </div>
-                                            <div class="d-xxl-none">${summary.chargesTaxes.endValue.toFixed(2)} ${summary.chargesTaxes.suffix}</div>
+                                            <div class="d-xxl-none">${summary.chargesTaxes.endvalue.toFixed(2)} ${summary.chargestaxes.suffix}</div>
                                         </div>`);
 
-                        googleChaerVal.push({ pnL: summary.netRealisedPNL.actualValue, weekDay: summary.netRealisedPNL.name, color: summary.netRealisedPNL.color });
-                        echaerVal.push({ value: summary.netRealisedPNL.actualValue, name: summary.netRealisedPNL.name, color: summary.netRealisedPNL.color });
+                        googleChaerVal.push({ pnL: summary.netrealisedpnl.actualvalue, weekDay: summary.netrealisedpnl.name, color: summary.netrealisedpnl.color });
+                        echaerVal.push({ value: summary.netrealisedpnl.actualvalue, name: summary.netrealisedpnl.name, color: summary.netrealisedpnl.color });
                         $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
                                             <div class="d-flex align-items-center">
                                                 <span class="dot" style="background-color:${summary.chargesTaxes.color}"></span><span class="fw-semi-bold">${summary.netRealisedPNL.name}</span>
                                             </div>
-                                            <div class="d-xxl-none">${summary.netRealisedPNL.endValue.toFixed(2)} ${summary.netRealisedPNL.suffix}</div>
+                                            <div class="d-xxl-none">${summary.netrealisedpnl.endvalue.toFixed(2)} ${summary.netrealisedpnl.suffix}</div>
                                         </div>`);
                         setTimeout(countupInit, 1);
 
@@ -559,9 +564,9 @@
                             for (var i = 0; i < result.length; i++) {
                                 $html += `<tr><td>${result[i].year}</td>`;
                                 for (var j = 0; j < result[i].monthly.length; j++) {
-                                    $html += `<td style="font-size:12px;color:${(result[i].monthly[j].pnL < 0 ? "#fe595c" : "#6dd66a")};">${result[i].monthly[j].pnLStr}</td>`;
+                                    $html += `<td style="font-size:12px;color:${(result[i].monthly[j].pnl < 0 ? "#fe595c" : "#6dd66a")};">${result[i].monthly[j].pnlstr}</td>`;
                                 }
-                                $html += `<td style="font-size:12px;color:${(result[i].total < 0 ? "#fe595c" : "#6dd66a")};">${result[i].totalStr}</td></tr>`;
+                                $html += `<td style="font-size:12px;color:${(result[i].total < 0 ? "#fe595c" : "#6dd66a")};">${result[i].totalstr}</td></tr>`;
                             }
                         } else {
                             $html += `<tr><td colspan="13">Data not foud</td></tr>`;
