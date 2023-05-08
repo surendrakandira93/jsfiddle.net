@@ -58,7 +58,7 @@ GoogleChart.drawChartEquityBothChart = function (params) {
     data.addColumn('number', 'Realized PnL');
 
     for (var i = 0; i < arrInput.length; i++) {
-        data.addRow([new Date(arrInput[i].date), arrInput[i].netpnL, arrInput[i].pnl]);
+        data.addRow([new Date(arrInput[i].date), arrInput[i].netpnl, arrInput[i].pnl]);
     }
     var options = {
         legend: { position: 'none' },
@@ -161,8 +161,8 @@ GoogleChart.DrawChartLossProfitChart = function (params) {
     for (var i = 0; i < arrInput.length; i++) {
         var subArr2 = new Array();
         subArr2.push(new Date(arrInput[i].date));
-        subArr2.push(arrInput[i].pnL);
-        if (arrInput[i].pnL < 0) {
+        subArr2.push(arrInput[i].pnl);
+        if (arrInput[i].pnl < 0) {
             subArr2.push('color: #dc3912');
         } else {
             subArr2.push('color: #109618');
@@ -456,8 +456,8 @@ GoogleChart.drawCalHeatMap = function (params) {
         var obj = arr[i];
         var cal1 = new CalHeatMap();
         cal1.init({
-            itemSelector: `#heat_map_cal_${(new Date(obj.calStartdate)).getFullYear() }`,
-            start: new Date(obj.calStartdate),
+            itemSelector: `#heat_map_cal_${(new Date(obj.calstartdate)).getFullYear() }`,
+            start: new Date(obj.calstartdate),
             domain: "month",
             cellSize: 12,
             range: obj.range,
