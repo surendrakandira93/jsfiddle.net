@@ -41,7 +41,7 @@
     <link href="http://rtwelfare.club/vendors/choices/choices.min.css" rel="stylesheet" />
     <link href="http://rtwelfare.club/css/Custome.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://rtwelfare.club/Plugins/cal-heatmap/cal-heatmap.css" />
-    
+
 </head>
 
 <body>
@@ -57,19 +57,29 @@
                         <img class="me-2" src="http://rtwelfare.club/assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif">falcon</span>
                     </div>
                 </a>
-                
+
 
             </nav>
             <div class="content">
                 <div class="row g-3 mb-3">
                     <div class="col-lg-12 ps-lg-2 mb-3">
-                        <div class="card h-lg-100" style="padding-right: 15px;">
-                            <div class="card-header">
-                                <div class="row flex-between-center">
-                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
-                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">User Summary</h6>
-                                    </div>
+                        <div class="card h-lg-100">
 
+                            <div class="card-header border-bottom border-200 px-0">
+                                <div class="d-lg-flex justify-content-between">
+                                    <div class="row flex-between-center gy-2 px-x1" style="margin-left: 13px;">
+                                        <div class="col-auto pe-0">
+                                            <h6 class="mb-0">User Summary</h6>
+                                        </div>
+
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between justify-content-lg-end px-x1">
+                                        <div class="col-auto" style="margin-right: 10px;">
+                                            <div class="input-group input-search-width">
+                                                <input class="form-control form-control-sm shadow-none search" onkeyup="myFunction()" id="myInput" type="search" placeholder="Search  by name" aria-label="search">                                                
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-body h-100 pe-0 div_loader" id="tbl_monthly">
@@ -132,14 +142,15 @@
 
                 }
 
+              
 
                 function bindPNLSummary() {
                     $.getJSON(`${domainName}pnl/getAccountSummary.json?v=${timeSpam}`, function (result) {
                         $("#tbl_monthly").empty();
-                        var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered"><thead><tr><th style="font-size: 12px;" scope="col">Name</th><th style="font-size: 12px;" scope="col">Realised PNL</th><th style="font-size: 12px;" scope="col">Charges Taxes</th><th style="font-size: 12px;" scope="col">Net Realised PNL</th><th style="font-size: 12px;" scope="col">Unrealised PNL</th></tr></thead><tbody>`;
+                        var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered" id="myTable"><thead><tr><th style="font-size: 12px;" scope="col">Name</th><th style="font-size: 12px;" scope="col">Realised PNL</th><th style="font-size: 12px;" scope="col">Charges Taxes</th><th style="font-size: 12px;" scope="col">Net Realised PNL</th><th style="font-size: 12px;" scope="col">Unrealised PNL</th></tr></thead><tbody>`;
                         if (result.length > 0) {
                             for (var i = 0; i < result.length; i++) {
-                                $html += `<tr><td><a href="Details.html?user=${result[i].name.replace('account', 'user')}">${result[i].name.replace('account', 'user') }</a></td>`;
+                                $html += `<tr><td><a href="Details.html?user=${result[i].name.replace('account', 'user')}">${result[i].name.replace('account', 'user')}</a></td>`;
                                 $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(result[i].realisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
                                 $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:#000;" data-countup='${JSON.stringify(result[i].chargestaxes).replace('endvalue', 'endValue')}'> </div></td>`;
                                 $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:${result[i].netrealisedpnl.actualvalue > 0 ? '#10b983' : result[i].netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000'};" data-countup='${JSON.stringify(result[i].netrealisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
@@ -161,7 +172,7 @@
 
                 $this.init = function () {
                     LoadeChatFirstTime();
-                    
+
                 }
             }
 
@@ -170,6 +181,25 @@
                 self.init();
             })
         })(jQuery)
+
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
     </script>
 
 </body>
