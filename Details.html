@@ -58,6 +58,9 @@
     </script>
 
     <style>
+        .min-vh-12 {
+            min-height: 12vh !important;
+        }
         .validation-summary-errors {
             color: red;
         }
@@ -145,8 +148,42 @@
 
             </nav>
             <div class="content">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <div class="row flex-between-end">
+                            <nav style="--falcon-breadcrumb-divider: '»';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
 
-
+                                    <li class="breadcrumb-item active user_name" aria-current="page"></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="card mb-3 hide_user_Info">
+                    <div class="card-header position-relative min-vh-12 mb-7">
+                        <div class="avatar avatar-5xl avatar-profile">
+                            <img class="rounded-circle img-thumbnail shadow-sm" src="" id="user_profile_img" width="200" alt="">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <h4 class="mb-1 user_name"></h4>
+                                <div class="border-bottom border-dashed my-4 d-lg-none"></div>
+                            </div>
+                            <div class="col ps-2 ps-lg-3">
+                                <a class="d-flex align-items-center mb-2" target="_blank" href="#" id="twiter_url">
+                                    <img class="align-self-center me-2" src="http://rtwelfare.club/assets/img/logos/twitter.png" alt="" width="30">
+                                    <div class="flex-1">
+                                        <h6 class="mb-0 user_name"></h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row g-3 mb-3">
 
@@ -436,13 +473,13 @@
                     $('.bar_chart').click(function () {
                         $(".bar_chart").removeClass('active');
                         $(this).addClass('active');
-                        var type = $(this).data('type'); 
+                        var type = $(this).data('type');
                         var aliash = getUrlVars();
                         bindBarChart(type, aliash);
                     });
                 }
 
-                function bindEquityChart(type,aliash) {
+                function bindEquityChart(type, aliash) {
                     // Dynamic Import
 
                     $.ajax({
@@ -459,14 +496,14 @@
                     });
                 }
 
-                function bindEquityBothChart(type,aliash) {
+                function bindEquityBothChart(type, aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/${type}_getEquityBothChart.json?v=${timeSpam}`, function (result) {
                         var para = { xs: result, element: 'google_line_both_pnl' };
                         GoogleChart.drawChartEquityBothChart(para)
                     });
                 }
 
-                function bindBarChart(type,aliash) {
+                function bindBarChart(type, aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/${type}_getBarChart.json?v=${timeSpam}`, function (result) {
                         var para = { xs: result, element: 'google_bar_pnl' };
                         GoogleChart.DrawChartLossProfitChart(para)
@@ -499,11 +536,11 @@
                         var googleChaerVal = new Array();
                         var echaerVal = new Array();
                         $("#pnl_summart_label").empty();
-                        $("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedpnl).replace('endvalue','endValue'));
+                        $("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedpnl).replace('endvalue', 'endValue'));
                         $("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargestaxes).replace('endvalue', 'endValue'));
                         $("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netrealisedpnl).replace('endvalue', 'endValue'));
                         $("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedpnl).replace('endvalue', 'endValue'));
-                       
+
                         $("#total_pnl").html(`${summary.realisedpnl.endvalue.toFixed(0)} ${summary.realisedpnl.suffix}`);
 
                         $("#chargesTaxes_div").css('color', '#000');
@@ -512,30 +549,30 @@
                         googleChaerVal.push({ pnl: summary.chargestaxes.actualvalue, weekday: summary.chargestaxes.name, color: summary.chargestaxes.color });
                         echaerVal.push({ value: summary.chargestaxes.actualValue, name: summary.chargestaxes.name, color: summary.chargestaxes.color });
                         $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
-                                            <div class="d-flex align-items-center">
-                                                <span class="dot" style="background-color:${summary.chargestaxes.color}"></span><span class="fw-semi-bold">${summary.chargestaxes.name}</span>
-                                            </div>
-                                            <div class="d-xxl-none">${summary.chargestaxes.endvalue.toFixed(2)} ${summary.chargestaxes.suffix}</div>
-                                        </div>`);
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="dot" style="background-color:${summary.chargestaxes.color}"></span><span class="fw-semi-bold">${summary.chargestaxes.name}</span>
+                                                            </div>
+                                                            <div class="d-xxl-none">${summary.chargestaxes.endvalue.toFixed(2)} ${summary.chargestaxes.suffix}</div>
+                                                        </div>`);
 
                         googleChaerVal.push({ pnl: summary.netrealisedpnl.actualvalue, weekday: summary.netrealisedpnl.name, color: summary.netrealisedpnl.color });
                         echaerVal.push({ value: summary.netrealisedpnl.actualvalue, name: summary.netrealisedpnl.name, color: summary.netrealisedpnl.color });
                         $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
-                                            <div class="d-flex align-items-center">
-                                                <span class="dot" style="background-color:${summary.chargestaxes.color}"></span><span class="fw-semi-bold">${summary.netrealisedpnl.name}</span>
-                                            </div>
-                                            <div class="d-xxl-none">${summary.netrealisedpnl.endvalue.toFixed(2)} ${summary.netrealisedpnl.suffix}</div>
-                                        </div>`);
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="dot" style="background-color:${summary.chargestaxes.color}"></span><span class="fw-semi-bold">${summary.netrealisedpnl.name}</span>
+                                                            </div>
+                                                            <div class="d-xxl-none">${summary.netrealisedpnl.endvalue.toFixed(2)} ${summary.netrealisedpnl.suffix}</div>
+                                                        </div>`);
                         setTimeout(countupInit, 1);
                         var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary' };
                         GoogleChart.drawDonutChart(para);
 
-                       // $(".echart-market-share").attr('data-datajson', JSON.stringify(echaerVal));
+                        // $(".echart-market-share").attr('data-datajson', JSON.stringify(echaerVal));
                         //setTimeout(pnlSummaryInit, 1);
                     });
                 }
 
-                function bindPNLSummary(aliash) {                   
+                function bindPNLSummary(aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/getMonthlyBreaup.json?v=${timeSpam}`, function (result) {
                         $("#tbl_monthly").empty();
                         var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered"><thead><tr><th style="font-size: 12px;" scope="col">Year</th><th style="font-size: 12px;" scope="col">Jan</th><th style="font-size: 12px;" scope="col">Feb</th><th style="font-size: 12px;" scope="col">Mar</th><th style="font-size: 12px;" scope="col">Apr</th><th style="font-size: 12px;" scope="col">May</th><th style="font-size: 12px;" scope="col">Jun</th><th style="font-size: 12px;" scope="col">Jul</th><th style="font-size: 12px;" scope="col">Aug</th><th style="font-size: 12px;" scope="col">Sep</th><th style="font-size: 12px;" scope="col">Oct</th><th style="font-size: 12px;" scope="col">Nov</th><th style="font-size: 12px;" scope="col">Dec</th><th style="font-size: 12px;" scope="col">Total</th></tr></thead><tbody>`;
@@ -550,7 +587,7 @@
                         } else {
                             $html += `<tr><td colspan="13">Data not foud</td></tr>`;
                         }
-                        $("#tbl_monthly").html($html);                       
+                        $("#tbl_monthly").html($html);
                     });
                 }
 
@@ -566,22 +603,31 @@
 
                 function LoadeChatFirstTime() {
                     var aliash = getUrlVars();
-                    bindPNLManu();
-                    bindEquityChart('month',aliash);
-                    bindEquityBothChart('month',aliash);
-                    bindBarChart('month',aliash);
+                    bindPNLManu(aliash);
+                    bindEquityChart('month', aliash);
+                    bindEquityBothChart('month', aliash);
+                    bindBarChart('month', aliash);
                     bindPiChar(aliash);
                     bindHeatMap(aliash);
                     bindSummary(aliash);
                     bindPNLSummary(aliash);
                 }
 
-                function bindPNLManu() {
-                    $.getJSON(`${domainName}pnl/getAccountSummary.json?v=${timeSpam}`, function (result) {
+                function bindPNLManu(aliash) {
+                    $.getJSON(`${domainName}pnl/userInfo.json?v=${timeSpam}`, function (result) {
                         if (result.length > 0) {
-                            for (var i = 0; i < result.length; i++) {
-                                $("#manu_ui").append(`<li class="nav-item dropdown"><a class="nav-link link-600 fw-medium" href="Details.html?user=${result[i].name.replace('account', 'user')}" role="button">${result[i].name.replace('account', 'User')}</a></li>`);
+
+                            let userInfo = result.filter(function (el) {
+                                return el.userid === aliash;
+                            });
+                            if (userInfo.length > 0) {
+                                $("#user_profile_img").attr("src", userInfo[0].profilepic);
+                                $("#twiter_url").attr("href", userInfo[0].twitterurl);
+                                $(".user_name").html(userInfo[0].userid);
+                            } else {
+                                $(".hide_user_Info").hide();
                             }
+
                         }
                     });
                 }

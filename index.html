@@ -74,9 +74,9 @@
 
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between justify-content-lg-end px-x1">
-                                        <div class="col-auto" style="margin-right: 10px;">
+                                        <div class="col-auto" style="margin-right: 10px; margin-left: 10px;">
                                             <div class="input-group input-search-width">
-                                                <input class="form-control form-control-sm shadow-none search" onkeyup="myFunction()" id="myInput" type="search" placeholder="Search  by name" aria-label="search">                                                
+                                                <input class="form-control form-control-sm shadow-none search" onkeyup="myFunction()" id="myInput" type="search" placeholder="Search  by name" aria-label="search">
                                             </div>
                                         </div>
                                     </div>
@@ -142,26 +142,60 @@
 
                 }
 
-              
+
 
                 function bindPNLSummary() {
-                    $.getJSON(`${domainName}pnl/getAccountSummary.json?v=${timeSpam}`, function (result) {
-                        $("#tbl_monthly").empty();
-                        var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered" id="myTable"><thead><tr><th style="font-size: 12px;" scope="col">Name</th><th style="font-size: 12px;" scope="col">Realised PNL</th><th style="font-size: 12px;" scope="col">Charges Taxes</th><th style="font-size: 12px;" scope="col">Net Realised PNL</th><th style="font-size: 12px;" scope="col">Unrealised PNL</th></tr></thead><tbody>`;
-                        if (result.length > 0) {
-                            for (var i = 0; i < result.length; i++) {
-                                $html += `<tr><td><a href="Details.html?user=${result[i].name.replace('account', 'user')}">${result[i].name.replace('account', 'user')}</a></td>`;
-                                $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(result[i].realisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
-                                $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:#000;" data-countup='${JSON.stringify(result[i].chargestaxes).replace('endvalue', 'endValue')}'> </div></td>`;
-                                $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:${result[i].netrealisedpnl.actualvalue > 0 ? '#10b983' : result[i].netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000'};" data-countup='${JSON.stringify(result[i].netrealisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
-                                $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(result[i].unrealisedpnl).replace('endvalue', 'endValue')}'> </div></td></tr>`;
+                    $.getJSON(`${domainName}pnl/userInfo.json?v=${timeSpam}`, function (userInfoArr) {
+
+                        $.getJSON(`${domainName}pnl/getAccountSummary.json?v=${timeSpam}`, function (result) {
+                            $("#tbl_monthly").empty();
+                            var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered" id="myTable"><thead><tr><th style="font-size: 12px;width: 20%;" scope="col">Name</th><th style="font-size: 12px;width: 20%;" scope="col">Realised PNL</th><th style="font-size: 12px;width: 20%;" scope="col">Charges Taxes</th><th style="font-size: 12px;width: 20%;" scope="col">Net Realised PNL</th><th style="font-size: 12px;width: 20%;" scope="col">Info</th></tr></thead><tbody>`;
+                            if (result.length > 0) {
+
+                                for (var i = 0; i < result.length; i++) {
+                                    let userInfo = userInfoArr.filter(function (el) {
+                                        return el.userid === result[i].name.replace('account', 'user');
+                                    });
+
+                                    if (userInfo.length > 0) {
+                                        $html += `<tr><td class="align-middle white-space-nowrap">
+                                        <a class="text-800" href="Details.html?user=${result[i].name.replace('account', 'user')}">
+                              <div class="d-flex align-items-center">
+                                <div class="avatar avatar-xl">
+                                  <img class="rounded-circle" src="${userInfo[0].profilepic}" alt="">
+                                </div>
+                                <h6 class="mb-0 ps-2 name">${result[i].name.replace('account', 'user')}</h6>
+                              </div>
+                            </a></td>`;
+                                    } else {
+                                        $html += `<a href="Details.html?user=${result[i].name.replace('account', 'user')}">${result[i].name.replace('account', 'user')}</a>`;
+                                    }
+
+                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(result[i].realisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
+                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:#000;" data-countup='${JSON.stringify(result[i].chargestaxes).replace('endvalue', 'endValue')}'> </div></td>`;
+                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:${result[i].netrealisedpnl.actualvalue > 0 ? '#10b983' : result[i].netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000'};" data-countup='${JSON.stringify(result[i].netrealisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
+                                    if (userInfoArr.length > 0) {
+
+
+                                        $html += `<td><a target="_blank" href="${userInfo[0].twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="Details.html?user=${result[i].name.replace('account', 'user')}"> <span class="far fa-eye"></span></a></td></tr>`;
+
+                                    } else {
+                                        $html += `<td></td></tr>`;
+                                    }
+
+                                }
+
+                            } else {
+                                $html += `<tr><td colspan="5">Data not foud</td></tr>`;
                             }
-                        } else {
-                            $html += `<tr><td colspan="5">Data not foud</td></tr>`;
-                        }
-                        $("#tbl_monthly").html($html);
-                        setTimeout(countupInit, 1);
+
+                            $("#tbl_monthly").html($html);
+                            setTimeout(countupInit, 1);
+                        });
+
                     });
+
+
                 }
 
 
