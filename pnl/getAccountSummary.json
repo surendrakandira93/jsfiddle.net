@@ -1,8 +1,8 @@
 [
   {
     "realisedpnl": {
-      "endvalue": 3.7274711,
-      "actualvalue": 372747.11,
+      "endvalue": 4.0755425,
+      "actualvalue": 407554.25,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -10,8 +10,8 @@
       "prefix": "+"
     },
     "totalpnl": {
-      "endvalue": 4.5717364,
-      "actualvalue": 457173.64,
+      "endvalue": 5.6360209,
+      "actualvalue": 563602.09,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -19,8 +19,56 @@
       "prefix": ""
     },
     "chargestaxes": {
-      "endvalue": 84.42653,
-      "actualvalue": 84426.53,
+      "endvalue": 1.5604784,
+      "actualvalue": 156047.84,
+      "decimalplaces": 2,
+      "suffix": "L",
+      "color": "#27bcfd",
+      "name": "Charges Taxes",
+      "prefix": ""
+    },
+    "netrealisedpnl": {
+      "endvalue": 2.5150641,
+      "actualvalue": 251506.41,
+      "decimalplaces": 2,
+      "suffix": "L",
+      "color": "#00d27a",
+      "name": "NetRealised PNL",
+      "prefix": "+"
+    },
+    "unrealisedpnl": {
+      "endvalue": 0.0,
+      "actualvalue": 0.0,
+      "decimalplaces": 2,
+      "suffix": "",
+      "color": "#2c7be5",
+      "name": "Unrealised PNL",
+      "prefix": ""
+    },
+    "name": "bnstraddler"
+  },
+  {
+    "realisedpnl": {
+      "endvalue": 1.877085,
+      "actualvalue": 187708.5,
+      "decimalplaces": 2,
+      "suffix": "L",
+      "color": "#f5803e",
+      "name": "Realised PNL",
+      "prefix": "+"
+    },
+    "totalpnl": {
+      "endvalue": 2.4095877000000003,
+      "actualvalue": 240958.77000000002,
+      "decimalplaces": 2,
+      "suffix": "L",
+      "color": "#f5803e",
+      "name": "Total PNL",
+      "prefix": ""
+    },
+    "chargestaxes": {
+      "endvalue": 53.25027000000001,
+      "actualvalue": 53250.270000000004,
       "decimalplaces": 2,
       "suffix": "K",
       "color": "#27bcfd",
@@ -28,8 +76,8 @@
       "prefix": ""
     },
     "netrealisedpnl": {
-      "endvalue": 2.8832057999999994,
-      "actualvalue": 288320.57999999996,
+      "endvalue": 1.3445823,
+      "actualvalue": 134458.22999999998,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#00d27a",
@@ -45,12 +93,12 @@
       "name": "Unrealised PNL",
       "prefix": ""
     },
-    "name": "account1"
+    "name": "dharanitrades"
   },
   {
     "realisedpnl": {
-      "endvalue": 8.7037044,
-      "actualvalue": 870370.44,
+      "endvalue": 72.8418365,
+      "actualvalue": 7284183.649999999,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -58,17 +106,17 @@
       "prefix": "+"
     },
     "totalpnl": {
-      "endvalue": 11.1128771,
-      "actualvalue": 1111287.71,
+      "endvalue": 1.296534568,
+      "actualvalue": 12965345.68,
       "decimalplaces": 2,
-      "suffix": "L",
+      "suffix": "Cr",
       "color": "#f5803e",
       "name": "Total PNL",
       "prefix": ""
     },
     "chargestaxes": {
-      "endvalue": 2.4091727,
-      "actualvalue": 240917.27,
+      "endvalue": 56.8116203,
+      "actualvalue": 5681162.03,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#27bcfd",
@@ -76,8 +124,8 @@
       "prefix": ""
     },
     "netrealisedpnl": {
-      "endvalue": 6.294531699999999,
-      "actualvalue": 629453.1699999999,
+      "endvalue": 16.03021619999999,
+      "actualvalue": 1603021.6199999992,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#00d27a",
@@ -93,12 +141,12 @@
       "name": "Unrealised PNL",
       "prefix": ""
     },
-    "name": "account2"
+    "name": "itjegan"
   },
   {
     "realisedpnl": {
-      "endvalue": 4.7837849,
-      "actualvalue": 478378.49,
+      "endvalue": 2.5236825,
+      "actualvalue": 252368.25,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -106,8 +154,8 @@
       "prefix": "+"
     },
     "totalpnl": {
-      "endvalue": 6.2155645999999996,
-      "actualvalue": 621556.46,
+      "endvalue": 4.7358948,
+      "actualvalue": 473589.48,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -115,8 +163,8 @@
       "prefix": ""
     },
     "chargestaxes": {
-      "endvalue": 1.4317797,
-      "actualvalue": 143177.97,
+      "endvalue": 2.2122123,
+      "actualvalue": 221221.23,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#27bcfd",
@@ -124,10 +172,10 @@
       "prefix": ""
     },
     "netrealisedpnl": {
-      "endvalue": 3.3520052000000002,
-      "actualvalue": 335200.52,
+      "endvalue": 31.14701999999999,
+      "actualvalue": 31147.01999999999,
       "decimalplaces": 2,
-      "suffix": "L",
+      "suffix": "K",
       "color": "#00d27a",
       "name": "NetRealised PNL",
       "prefix": "+"
@@ -141,12 +189,12 @@
       "name": "Unrealised PNL",
       "prefix": ""
     },
-    "name": "account3"
+    "name": "projectwealth7"
   },
   {
     "realisedpnl": {
-      "endvalue": 12.4311755,
-      "actualvalue": 1243117.55,
+      "endvalue": 9.19,
+      "actualvalue": 919000.0,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -154,8 +202,8 @@
       "prefix": "+"
     },
     "totalpnl": {
-      "endvalue": 15.684613500000001,
-      "actualvalue": 1568461.35,
+      "endvalue": 17.367311800000003,
+      "actualvalue": 1736731.1800000002,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -163,8 +211,8 @@
       "prefix": ""
     },
     "chargestaxes": {
-      "endvalue": 3.253438,
-      "actualvalue": 325343.8,
+      "endvalue": 8.1773118,
+      "actualvalue": 817731.18,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#27bcfd",
@@ -172,8 +220,8 @@
       "prefix": ""
     },
     "netrealisedpnl": {
-      "endvalue": 9.1777375,
-      "actualvalue": 917773.75,
+      "endvalue": 1.0126881999999995,
+      "actualvalue": 101268.81999999995,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#00d27a",
@@ -189,6 +237,6 @@
       "name": "Unrealised PNL",
       "prefix": ""
     },
-    "name": "account4"
+    "name": "vijayinvites"
   }
 ]

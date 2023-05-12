@@ -154,21 +154,21 @@
 
                                 for (var i = 0; i < result.length; i++) {
                                     let userInfo = userInfoArr.filter(function (el) {
-                                        return el.userid === result[i].name.replace('account', 'user');
+                                        return el.userid === result[i].name;
                                     });
 
                                     if (userInfo.length > 0) {
                                         $html += `<tr><td class="align-middle white-space-nowrap">
-                                        <a class="text-800" href="Details.html?user=${result[i].name.replace('account', 'user')}">
+                                        <a class="text-800" href="Details.html?user=${result[i].name}">
                               <div class="d-flex align-items-center">
                                 <div class="avatar avatar-xl">
                                   <img class="rounded-circle" src="${userInfo[0].profilepic}" alt="">
                                 </div>
-                                <h6 class="mb-0 ps-2 name">${result[i].name.replace('account', 'user')}</h6>
+                                <h6 class="mb-0 ps-2 name">${userInfo[0].username}</h6>
                               </div>
                             </a></td>`;
                                     } else {
-                                        $html += `<a href="Details.html?user=${result[i].name.replace('account', 'user')}">${result[i].name.replace('account', 'user')}</a>`;
+                                        $html += `<a href="Details.html?user=${result[i].name}">${userInfo[0].username}</a>`;
                                     }
 
                                     $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(result[i].realisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
@@ -177,7 +177,7 @@
                                     if (userInfoArr.length > 0) {
 
 
-                                        $html += `<td><a target="_blank" href="${userInfo[0].twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="Details.html?user=${result[i].name.replace('account', 'user')}"> <span class="far fa-eye"></span></a></td></tr>`;
+                                        $html += `<td><a target="_blank" href="${userInfo[0].twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="Details.html?user=${result[i].name}"> <span class="far fa-eye"></span></a></td></tr>`;
 
                                     } else {
                                         $html += `<td></td></tr>`;
