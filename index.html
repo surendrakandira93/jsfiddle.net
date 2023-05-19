@@ -171,9 +171,9 @@
                                         $html += `<tr><td class="align-middle white-space-nowrap"><a href="Details.html?user=${result[i].name}">${result[i].name}</a></td>`;
                                     }
 
-                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(result[i].realisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
-                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:#000;" data-countup='${JSON.stringify(result[i].chargestaxes).replace('endvalue', 'endValue')}'> </div></td>`;
-                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:${result[i].netrealisedpnl.actualvalue > 0 ? '#10b983' : result[i].netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000'};" data-countup='${JSON.stringify(result[i].netrealisedpnl).replace('endvalue', 'endValue')}'> </div></td>`;
+                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(result[i].realisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces') }'> </div></td>`;
+                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:#000;" data-countup='${JSON.stringify(result[i].chargestaxes).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces') }'> </div></td>`;
+                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:${result[i].netrealisedpnl.actualvalue > 0 ? '#10b983' : result[i].netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000'};" data-countup='${JSON.stringify(result[i].netrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces') }'> </div></td>`;
                                     if (userInfo.length > 0) {
 
 

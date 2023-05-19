@@ -513,7 +513,7 @@
 
                 function bindPiChar(aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/getPiChar.json?v=${timeSpam}`, function (result) {
-                        var para = { xs: result, element: 'google_pie_pnl' };
+                        var para = { xs: result, element: 'google_pie_pnl', colors: ['#42a53f', '#fe595c', '#3366cc', '#ff9900', '#990099'] };
                         GoogleChart.drawDonutChart(para)
                     });
                 }
@@ -536,15 +536,25 @@
                         var googleChaerVal = new Array();
                         var echaerVal = new Array();
                         $("#pnl_summart_label").empty();
-                        $("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedpnl).replace('endvalue', 'endValue'));
-                        $("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargestaxes).replace('endvalue', 'endValue'));
-                        $("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netrealisedpnl).replace('endvalue', 'endValue'));
-                        $("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedpnl).replace('endvalue', 'endValue'));
+                        $("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
+                        $("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargestaxes).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
+                        $("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
+                        $("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
 
                         $("#total_pnl").html(`${summary.realisedpnl.endvalue.toFixed(0)} ${summary.realisedpnl.suffix}`);
 
                         $("#chargesTaxes_div").css('color', '#000');
                         $("#netRealisedPNL_div").css('color', summary.netrealisedpnl.actualvalue > 0 ? '#10b983' : summary.netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000');
+
+                        
+                        googleChaerVal.push({ pnl: summary.netrealisedpnl.actualvalue, weekday: summary.netrealisedpnl.name, color: summary.netrealisedpnl.color });
+                        echaerVal.push({ value: summary.netrealisedpnl.actualvalue, name: summary.netrealisedpnl.name, color: summary.netrealisedpnl.color });
+                        $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="dot" style="background-color:${summary.chargestaxes.color}"></span><span class="fw-semi-bold">${summary.netrealisedpnl.name}</span>
+                                                            </div>
+                                                            <div class="d-xxl-none">${summary.netrealisedpnl.endvalue.toFixed(2)} ${summary.netrealisedpnl.suffix}</div>
+                                                        </div>`);
 
                         googleChaerVal.push({ pnl: summary.chargestaxes.actualvalue, weekday: summary.chargestaxes.name, color: summary.chargestaxes.color });
                         echaerVal.push({ value: summary.chargestaxes.actualValue, name: summary.chargestaxes.name, color: summary.chargestaxes.color });
@@ -555,16 +565,8 @@
                                                             <div class="d-xxl-none">${summary.chargestaxes.endvalue.toFixed(2)} ${summary.chargestaxes.suffix}</div>
                                                         </div>`);
 
-                        googleChaerVal.push({ pnl: summary.netrealisedpnl.actualvalue, weekday: summary.netrealisedpnl.name, color: summary.netrealisedpnl.color });
-                        echaerVal.push({ value: summary.netrealisedpnl.actualvalue, name: summary.netrealisedpnl.name, color: summary.netrealisedpnl.color });
-                        $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="dot" style="background-color:${summary.chargestaxes.color}"></span><span class="fw-semi-bold">${summary.netrealisedpnl.name}</span>
-                                                            </div>
-                                                            <div class="d-xxl-none">${summary.netrealisedpnl.endvalue.toFixed(2)} ${summary.netrealisedpnl.suffix}</div>
-                                                        </div>`);
                         setTimeout(countupInit, 1);
-                        var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary' };
+                        var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary', colors: ['#42a53f', '#fe595c'] };
                         GoogleChart.drawDonutChart(para);
 
                         // $(".echart-market-share").attr('data-datajson', JSON.stringify(echaerVal));
@@ -580,9 +582,9 @@
                             for (var i = 0; i < result.length; i++) {
                                 $html += `<tr><td>${result[i].year}</td>`;
                                 for (var j = 0; j < result[i].monthly.length; j++) {
-                                    $html += `<td style="font-size:12px;color:${(result[i].monthly[j].pnl < 0 ? "#fe595c" : "#6dd66a")};">${result[i].monthly[j].pnlstr}</td>`;
+                                    $html += `<td style="font-size:14px;color:${(result[i].monthly[j].pnl < 0 ? "#fe595c" : "#42a53f")};">${result[i].monthly[j].pnlstr}</td>`;
                                 }
-                                $html += `<td style="font-size:12px;color:${(result[i].total < 0 ? "#fe595c" : "#6dd66a")};">${result[i].totalstr}</td></tr>`;
+                                $html += `<td style="font-size:14px;color:${(result[i].total < 0 ? "#fe595c" : "#42a53f")};">${result[i].totalstr}</td></tr>`;
                             }
                         } else {
                             $html += `<tr><td colspan="13">Data not foud</td></tr>`;

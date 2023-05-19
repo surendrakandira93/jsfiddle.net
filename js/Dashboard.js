@@ -53,7 +53,7 @@
 
         function bindPiChar() {
             $.getJSON('pnl/user1/getPiChar.json', function (result) {
-                var para = { xs: result, element: 'google_pie_pnl' };
+                var para = { xs: result, element: 'google_pie_pnl', colors: ['#42a53f', '#fe595c', '#3366cc', '#ff9900', '#990099'] };
                 GoogleChart.drawDonutChart(para)
             });
         }
@@ -76,6 +76,16 @@
                 $("#chargesTaxes_div").css('color', '#000');
                 $("#netRealisedPNL_div").css('color', summary.netRealisedPNL.actualValue > 0 ? '#10b983' : summary.netRealisedPNL.actualValue < 0 ? '#f35631' : '#000');
 
+                
+                googleChaerVal.push({ pnL: summary.netRealisedPNL.actualValue, weekDay: summary.netRealisedPNL.name, color: summary.netRealisedPNL.color });
+                echaerVal.push({ value: summary.netRealisedPNL.actualValue, name: summary.netRealisedPNL.name, color: summary.netRealisedPNL.color });
+                $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
+                                <div class="d-flex align-items-center">
+                                    <span class="dot" style="background-color:${summary.chargesTaxes.color}"></span><span class="fw-semi-bold">${summary.netRealisedPNL.name}</span>
+                                </div>
+                                <div class="d-xxl-none">${summary.netRealisedPNL.endValue.toFixed(2)} ${summary.netRealisedPNL.suffix}</div>
+                            </div>`);
+
                 googleChaerVal.push({ pnL: summary.chargesTaxes.actualValue, weekDay: summary.chargesTaxes.name, color: summary.chargesTaxes.color });
                 echaerVal.push({ value: summary.chargesTaxes.actualValue, name: summary.chargesTaxes.name, color: summary.chargesTaxes.color });
                 $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
@@ -85,17 +95,10 @@
                                 <div class="d-xxl-none">${summary.chargesTaxes.endValue.toFixed(2)} ${summary.chargesTaxes.suffix}</div>
                             </div>`);
 
-                googleChaerVal.push({ pnL: summary.netRealisedPNL.actualValue, weekDay: summary.netRealisedPNL.name, color: summary.netRealisedPNL.color });
-                echaerVal.push({ value: summary.netRealisedPNL.actualValue, name: summary.netRealisedPNL.name, color: summary.netRealisedPNL.color });
-                $("#pnl_summart_label").append(` <div class="d-flex flex-between-center mb-1">
-                                <div class="d-flex align-items-center">
-                                    <span class="dot" style="background-color:${summary.chargesTaxes.color}"></span><span class="fw-semi-bold">${summary.netRealisedPNL.name}</span>
-                                </div>
-                                <div class="d-xxl-none">${summary.netRealisedPNL.endValue.toFixed(2)} ${summary.netRealisedPNL.suffix}</div>
-                            </div>`);
+
                 setTimeout(countupInit, 1);
 
-                var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary' };
+                var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary', colors: ['#42a53f', '#fe595c'] };
                 GoogleChart.drawDonutChart(para);
 
                 $(".echart-market-share").attr('data-datajson', JSON.stringify(echaerVal));
