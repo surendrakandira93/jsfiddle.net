@@ -97,6 +97,54 @@
   },
   {
     "realisedpnl": {
+      "endvalue": 4.0755425,
+      "actualvalue": 407554.25,
+      "decimalplaces": 2,
+      "suffix": "L",
+      "color": "#f5803e",
+      "name": "Realised PNL",
+      "prefix": "+"
+    },
+    "totalpnl": {
+      "endvalue": 5.6360209,
+      "actualvalue": 563602.09,
+      "decimalplaces": 2,
+      "suffix": "L",
+      "color": "#f5803e",
+      "name": "Total PNL",
+      "prefix": ""
+    },
+    "chargestaxes": {
+      "endvalue": 1.5604784,
+      "actualvalue": 156047.84,
+      "decimalplaces": 2,
+      "suffix": "L",
+      "color": "#27bcfd",
+      "name": "Charges Taxes",
+      "prefix": ""
+    },
+    "netrealisedpnl": {
+      "endvalue": 2.5150641,
+      "actualvalue": 251506.41,
+      "decimalplaces": 2,
+      "suffix": "L",
+      "color": "#00d27a",
+      "name": "NetRealised PNL",
+      "prefix": "+"
+    },
+    "unrealisedpnl": {
+      "endvalue": 0.0,
+      "actualvalue": 0.0,
+      "decimalplaces": 2,
+      "suffix": "",
+      "color": "#2c7be5",
+      "name": "Unrealised PNL",
+      "prefix": ""
+    },
+    "name": "kandira"
+  },
+  {
+    "realisedpnl": {
       "endvalue": 72.8418365,
       "actualvalue": 7284183.649999999,
       "decimalplaces": 2,
