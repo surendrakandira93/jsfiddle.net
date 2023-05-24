@@ -8,6 +8,7 @@ GoogleChart.drawChartEquityChart = function (params) {
 
     var arrInput = params.xs;
     var element = params.element;
+    var colors = params.colors;
 
     var data = new google.visualization.DataTable();
     data.addColumn('date', 'X');
@@ -17,7 +18,7 @@ GoogleChart.drawChartEquityChart = function (params) {
         data.addRow([new Date(arrInput[i].date), arrInput[i].pnl]);
     }
     var options = {
-        height:300,
+        height: 300,
         legend: { position: 'none' },
         chartArea: {
             left: "7%",
@@ -36,7 +37,8 @@ GoogleChart.drawChartEquityChart = function (params) {
             textStyle: { color: 'gray' },
             'stroke-color': 'transparent'
         },
-        backgroundColor: { fill: 'transparent' }
+        backgroundColor: { fill: 'transparent' },
+        colors: colors
 
     };
 
@@ -51,6 +53,7 @@ GoogleChart.drawChartEquityBothChart = function (params) {
 
     var arrInput = params.xs;
     var element = params.element;
+    var colors = params.colors;
 
     var data = new google.visualization.DataTable();
     data.addColumn('date', 'X');
@@ -80,7 +83,8 @@ GoogleChart.drawChartEquityBothChart = function (params) {
             textStyle: { color: 'gray' },
             'stroke-color': 'transparent'
         },
-        backgroundColor: { fill: 'transparent' }
+        backgroundColor: { fill: 'transparent' },
+        colors: colors
 
     };
 
@@ -240,19 +244,28 @@ GoogleChart.drawDonutChart = function (params) {
 
     var arrInput = params.xs;
     var element = params.element;
+    var colors = params.colors;
     var arrData2 = new Array();
     arrData2.push(["Task", "Hours per Day"]);
 
     for (var i = 0; i < arrInput.length; i++) {
         var subArr2 = new Array();
-        subArr2.push(arrInput[i].weekday);
 
-        if (arrInput[i].pnl < 0) {
-            subArr2.push(arrInput[i].pnl * -1);
-        } else {
+        //subArr2.push(arrInput[i].weekday);
+        //if (arrInput[i].pnl < 0) {
+        //    subArr2.push(arrInput[i].pnl * -1);
+        //} else {
+        //    subArr2.push(parseInt(arrInput[i].pnl));
+        //}
+        //arrData2.push(subArr2);
+
+
+        if (arrInput[i].pnl > 0) {
+            subArr2.push(arrInput[i].weekday);
             subArr2.push(parseInt(arrInput[i].pnl));
+            arrData2.push(subArr2);
         }
-        arrData2.push(subArr2);
+
     }
 
     var data = new google.visualization.arrayToDataTable(arrData2);
@@ -268,7 +281,9 @@ GoogleChart.drawDonutChart = function (params) {
         pieHole: 0.75,
         pieSliceText: 'none',
         backgroundColor: { fill: 'transparent' },
-        legend: { textStyle: { color: 'gray' } }
+        legend: { textStyle: { color: 'gray' } },
+        is3D: true,
+        colors: colors
     };
 
     var chart = new google.visualization.PieChart(document.getElementById(element));
@@ -444,24 +459,24 @@ GoogleChart.drawCalHeatMap = function (params) {
     var maxValue = parseInt(params.max);
     var eualPart = parseInt(minValue * -1 / 4);
     var eualPart2 = parseInt(maxValue / 4);
-   
+
     var legend = new Array();
     legend.push(minValue + eualPart, (eualPart + eualPart) * -1, eualPart * -1, -1, 1, eualPart2, (eualPart2 + eualPart2), maxValue - eualPart2)
     console.log(legend);
     var arr = params.data;
 
     for (var i = 0; i < arr.length; i++) {
-        var testData = document.getElementById(`heat_map_cal_${(new Date(arr[i].calstartdate)).getFullYear() }`);
+        var testData = document.getElementById(`heat_map_cal_${(new Date(arr[i].calstartdate)).getFullYear()}`);
         console.log(testData);
         var obj = arr[i];
         var cal1 = new CalHeatMap();
         cal1.init({
-            itemSelector: `#heat_map_cal_${(new Date(obj.calstartdate)).getFullYear() }`,
+            itemSelector: `#heat_map_cal_${(new Date(obj.calstartdate)).getFullYear()}`,
             start: new Date(obj.calstartdate),
             domain: "month",
             cellSize: 12,
             range: obj.range,
-            weekStartOnMonday: true,
+            weekStartOnMonday: false,
             domainGutter: 10,
             data: obj.data,
             afterLoadData: parser,

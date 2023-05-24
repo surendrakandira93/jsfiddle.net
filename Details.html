@@ -260,7 +260,7 @@
                                     </div>
                                     <div class="col-auto d-flex justify-content-end order-md-1">
                                         <div class="col col-md-auto d-flex justify-content-end order-md-3">
-                                            <button class="btn btn-falcon-default btn-sm equity_chart" data-type="day" type="button">
+                                            <button class="btn btn-falcon-default btn-sm active equity_chart" data-type="day" type="button">
                                                 <span class="fas fa-calendar-day"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Day</span>
                                             </button>
@@ -268,7 +268,7 @@
                                                 <span class="fas fa-calendar-week"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Week</span>
                                             </button>
-                                            <button class="btn btn-falcon-default btn-sm active equity_chart" data-type="month" type="button">
+                                            <button class="btn btn-falcon-default btn-sm equity_chart" data-type="month" type="button">
                                                 <span class="fa fa-calendar-alt"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Month</span>
                                             </button>
@@ -293,7 +293,7 @@
                                     </div>
                                     <div class="col-auto d-flex justify-content-end order-md-1">
                                         <div class="col col-md-auto d-flex justify-content-end order-md-3">
-                                            <button class="btn btn-falcon-default btn-sm drawdown_chart" data-type="day" type="button">
+                                            <button class="btn btn-falcon-default btn-sm active drawdown_chart" data-type="day" type="button">
                                                 <span class="fas fa-calendar-day"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Day</span>
                                             </button>
@@ -301,7 +301,7 @@
                                                 <span class="fas fa-calendar-week"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Week</span>
                                             </button>
-                                            <button class="btn btn-falcon-default btn-sm active drawdown_chart" data-type="month" type="button">
+                                            <button class="btn btn-falcon-default btn-sm drawdown_chart" data-type="month" type="button">
                                                 <span class="fa fa-calendar-alt"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Month</span>
                                             </button>
@@ -326,7 +326,7 @@
                                     </div>
                                     <div class="col-auto d-flex justify-content-end order-md-1">
                                         <div class="col col-md-auto d-flex justify-content-end order-md-3">
-                                            <button class="btn btn-falcon-default btn-sm equity_both_chart" data-type="day" type="button">
+                                            <button class="btn btn-falcon-default btn-sm active equity_both_chart" data-type="day" type="button">
                                                 <span class="fas fa-calendar-day"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Day</span>
                                             </button>
@@ -334,7 +334,7 @@
                                                 <span class="fas fa-calendar-week"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Week</span>
                                             </button>
-                                            <button class="btn btn-falcon-default btn-sm active equity_both_chart" data-type="month" type="button">
+                                            <button class="btn btn-falcon-default btn-sm  equity_both_chart" data-type="month" type="button">
                                                 <span class="fa fa-calendar-alt"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Month</span>
                                             </button>
@@ -357,7 +357,7 @@
                                     </div>
                                     <div class="col-auto d-flex justify-content-end order-md-1">
                                         <div class="col col-md-auto d-flex justify-content-end order-md-3">
-                                            <button class="btn btn-falcon-default btn-sm bar_chart" data-type="day" type="button">
+                                            <button class="btn btn-falcon-default btn-sm active bar_chart" data-type="day" type="button">
                                                 <span class="fas fa-calendar-day"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Day</span>
                                             </button>
@@ -365,7 +365,7 @@
                                                 <span class="fas fa-calendar-week"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Week</span>
                                             </button>
-                                            <button class="btn btn-falcon-default btn-sm active bar_chart" data-type="month" type="button">
+                                            <button class="btn btn-falcon-default btn-sm  bar_chart" data-type="month" type="button">
                                                 <span class="fa fa-calendar-alt"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Month</span>
                                             </button>
@@ -543,7 +543,7 @@
                         url: `${domainName}pnl/${aliash}/${type}_getEquityChart.json?v=${timeSpam}`,
                         dataType: "json",
                         success: function (result) {
-                            var para = { xs: result, element: 'google_line_pnl' };
+                            var para = { xs: result, element: 'google_line_pnl', colors: ['#42a53f'] };
                             GoogleChart.drawChartEquityChart(para)
                         },
                         error: function () {
@@ -559,7 +559,7 @@
                         url: `${domainName}pnl/${aliash}/${type}_getDrawDownChart.json?v=${timeSpam}`,
                         dataType: "json",
                         success: function (result) {
-                            var para = { xs: result, element: 'google_drawdown_pnl' };
+                            var para = { xs: result, element: 'google_drawdown_pnl', colors: ['#fe595c'] };
                             GoogleChart.drawChartEquityChart(para)
                         },
                         error: function () {
@@ -570,7 +570,7 @@
 
                 function bindEquityBothChart(type, aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/${type}_getEquityBothChart.json?v=${timeSpam}`, function (result) {
-                        var para = { xs: result, element: 'google_line_both_pnl' };
+                        var para = { xs: result, element: 'google_line_both_pnl', colors: ['#42a53f', '#fe595c'] };
                         GoogleChart.drawChartEquityBothChart(para)
                     });
                 }
@@ -608,10 +608,15 @@
                         var googleChaerVal = new Array();
                         var echaerVal = new Array();
                         $("#pnl_summart_label").empty();
-                        $("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
-                        $("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargestaxes).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
-                        $("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
-                        $("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
+                        //$("#RealisedPNL_div").attr('data-countup', JSON.stringify(summary.realisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
+                        //$("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargestaxes).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
+                        //$("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
+                        //$("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
+                        $("#RealisedPNL_div").html(summary.realisedpnl.prefix + summary.realisedpnl.endvalue.toFixed(summary.realisedpnl.decimalplaces) + summary.realisedpnl.suffix);
+                        $("#chargesTaxes_div").html(summary.chargestaxes.prefix + summary.chargestaxes.endvalue.toFixed(summary.chargestaxes.decimalplaces) + summary.chargestaxes.suffix);
+                        $("#netRealisedPNL_div").html(summary.netrealisedpnl.prefix + summary.netrealisedpnl.endvalue.toFixed(summary.netrealisedpnl.decimalplaces) + summary.netrealisedpnl.suffix);
+                        $("#UnrealisedPNL_div").html(summary.unrealisedpnl.prefix + summary.unrealisedpnl.endvalue.toFixed(summary.unrealisedpnl.decimalplaces) + summary.unrealisedpnl.suffix);
+
 
                         $("#total_pnl").html(`${summary.realisedpnl.endvalue.toFixed(0)} ${summary.realisedpnl.suffix}`);
 
@@ -637,7 +642,7 @@
                                                             <div class="d-xxl-none">${summary.chargestaxes.endvalue.toFixed(2)} ${summary.chargestaxes.suffix}</div>
                                                         </div>`);
 
-                        setTimeout(countupInit, 1);
+                       // setTimeout(countupInit, 1);
                         var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary', colors: ['#42a53f', '#fe595c'] };
                         GoogleChart.drawDonutChart(para);
 
@@ -698,10 +703,10 @@
                 function LoadeChatFirstTime() {
                     var aliash = getUrlVars();
                     bindPNLManu(aliash);
-                    bindEquityChart('month', aliash);
-                    bindDrawDownChart('month', aliash);
-                    bindEquityBothChart('month', aliash);
-                    bindBarChart('month', aliash);
+                    bindEquityChart('day', aliash);
+                    bindDrawDownChart('day', aliash);
+                    bindEquityBothChart('day', aliash);
+                    bindBarChart('day', aliash);
                     bindPiChar(aliash);
                     bindHeatMap(aliash);
                     bindSummary(aliash);
