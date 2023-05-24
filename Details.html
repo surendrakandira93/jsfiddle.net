@@ -322,6 +322,37 @@
                             <div class="card-header">
                                 <div class="row flex-between-center">
                                     <div class="col-auto d-flex justify-content-start order-md-1">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">PnL vs DD</h6>
+                                    </div>
+                                    <div class="col-auto d-flex justify-content-end order-md-1">
+                                        <div class="col col-md-auto d-flex justify-content-end order-md-3">
+                                            <button class="btn btn-falcon-default btn-sm active pnl_dd_both_chart" data-type="1" type="button">
+                                                <span class="fas fa-calendar-day"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Day</span>
+                                            </button>
+                                            <button class="btn btn-falcon-default btn-sm mx-2 pnl_dd_both_chart" data-type="2" type="button">
+                                                <span class="fas fa-calendar-week"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Week</span>
+                                            </button>
+                                            <button class="btn btn-falcon-default btn-sm pnl_dd_both_chart" data-type="3" type="button">
+                                                <span class="fa fa-calendar-alt"></span>
+                                                <span class="d-none d-sm-inline-block ms-1">Month</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body h-100 pe-0">
+                                <div id="google_line_both_pnl_dd" class="h-100 div_loader"><img src="/img/loading-sm.gif" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 ps-lg-2 mb-3">
+                        <div class="card h-lg-100">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-auto d-flex justify-content-start order-md-1">
                                         <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Pnl's Chart</h6>
                                     </div>
                                     <div class="col-auto d-flex justify-content-end order-md-1">
@@ -527,6 +558,14 @@
                         bindEquityBothChart(type, aliash);
                     });
 
+                    $('.pnl_dd_both_chart').click(function () {
+                        $(".pnl_dd_both_chart").removeClass('active');
+                        $(this).addClass('active');
+                        var type = $(this).data('type');
+                        var aliash = getUrlVars();
+                        bindPnLAndDrawnDownChart(type, aliash);
+                    });
+
                     $('.bar_chart').click(function () {
                         $(".bar_chart").removeClass('active');
                         $(this).addClass('active');
@@ -543,7 +582,7 @@
                         url: `${domainName}pnl/${aliash}/${type}_getEquityChart.json?v=${timeSpam}`,
                         dataType: "json",
                         success: function (result) {
-                            var para = { xs: result, element: 'google_line_pnl', colors: ['#42a53f'] };
+                            var para = { xs: result, element: 'google_line_pnl', colors: ['#2c7be5'] };
                             GoogleChart.drawChartEquityChart(para)
                         },
                         error: function () {
@@ -570,10 +609,19 @@
 
                 function bindEquityBothChart(type, aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/${type}_getEquityBothChart.json?v=${timeSpam}`, function (result) {
-                        var para = { xs: result, element: 'google_line_both_pnl', colors: ['#42a53f', '#fe595c'] };
+                        var para = { xs: result, element: 'google_line_both_pnl', colors: ['#42a53f', '#2c7be5'], columns: ['Net PNL', 'Realized PnL'] };
                         GoogleChart.drawChartEquityBothChart(para)
                     });
                 }
+
+
+                function bindPnLAndDrawnDownChart(type, aliash) {
+                    $.getJSON(`${domainName}pnl/${aliash}/${type}_getEquityAndDDChart.json?v=${timeSpam}`, function (result) {
+                        var para = { xs: result, element: 'google_line_both_pnl_dd', colors: ['#42a53f', '#fe595c'], columns: ['PNL', 'DD'] };
+                        GoogleChart.drawChartEquityBothChart(para)
+                    });
+                }
+            
 
                 function bindBarChart(type, aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/${type}_getBarChart.json?v=${timeSpam}`, function (result) {
@@ -585,7 +633,7 @@
 
                 function bindPiChar(aliash) {
                     $.getJSON(`${domainName}pnl/${aliash}/getPiChar.json?v=${timeSpam}`, function (result) {
-                        var para = { xs: result, element: 'google_pie_pnl', colors: ['#42a53f', '#fe595c', '#3366cc', '#ff9900', '#990099'] };
+                        var para = { xs: result, element: 'google_pie_pnl', colors: ['#42a53f', '#02a8b5', '#3366cc', '#ff9900', '#990099'] };
                         GoogleChart.drawDonutChart(para)
                     });
                 }
@@ -643,7 +691,7 @@
                                                         </div>`);
 
                        // setTimeout(countupInit, 1);
-                        var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary', colors: ['#42a53f', '#fe595c'] };
+                        var para = { xs: googleChaerVal, element: 'google_pie_pnl_summary', colors: ['#42a53f', '#02a8b5'] };
                         GoogleChart.drawDonutChart(para);
 
                         // $(".echart-market-share").attr('data-datajson', JSON.stringify(echaerVal));
@@ -706,6 +754,7 @@
                     bindEquityChart('day', aliash);
                     bindDrawDownChart('day', aliash);
                     bindEquityBothChart('day', aliash);
+                    bindPnLAndDrawnDownChart('day', aliash);
                     bindBarChart('day', aliash);
                     bindPiChar(aliash);
                     bindHeatMap(aliash);
