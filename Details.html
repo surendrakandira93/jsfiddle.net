@@ -326,15 +326,15 @@
                                     </div>
                                     <div class="col-auto d-flex justify-content-end order-md-1">
                                         <div class="col col-md-auto d-flex justify-content-end order-md-3">
-                                            <button class="btn btn-falcon-default btn-sm active pnl_dd_both_chart" data-type="1" type="button">
+                                            <button class="btn btn-falcon-default btn-sm active pnl_dd_both_chart" data-type="day" type="button">
                                                 <span class="fas fa-calendar-day"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Day</span>
                                             </button>
-                                            <button class="btn btn-falcon-default btn-sm mx-2 pnl_dd_both_chart" data-type="2" type="button">
+                                            <button class="btn btn-falcon-default btn-sm mx-2 pnl_dd_both_chart" data-type="week" type="button">
                                                 <span class="fas fa-calendar-week"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Week</span>
                                             </button>
-                                            <button class="btn btn-falcon-default btn-sm pnl_dd_both_chart" data-type="3" type="button">
+                                            <button class="btn btn-falcon-default btn-sm pnl_dd_both_chart" data-type="month" type="button">
                                                 <span class="fa fa-calendar-alt"></span>
                                                 <span class="d-none d-sm-inline-block ms-1">Month</span>
                                             </button>
@@ -479,6 +479,23 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-lg-12 ps-lg-2 mb-3">
+                        <div class="card h-lg-100" style="padding-right: 15px;">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Statistics</h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body h-100 pe-0 div_loader" id="tbl_statistics">
+                                <img src="http://rtwelfare.club/img/loading-sm.gif" />
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <footer class="footer">
@@ -738,6 +755,37 @@
                     
                 }
 
+                function bindStatistics(aliash) {
+                    $("#tbl_statistics").html();
+
+                    $.getJSON(`${domainName}pnl/${aliash}/statistics.json?v=${timeSpam}`, function (result) {
+                        var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered"><thead><tr><th style="font-size: 12px;" scope="col">No</th><th style="font-size: 12px;" scope="col">Name</th><th style="font-size: 12px;" scope="col">Value</th></tr></thead><tbody>`;
+                        if (result) {
+
+                            $html += `<tr><td>1</td><td>Capital Required</td><td>Rs. 100000.00</td></tr>`;
+                            $html += `<tr><td>2</td><td>Total Trading Days</td><td>${result.totaltradingdays}</td></tr>`;
+                            $html += `<tr><td>3</td><td>Win Days</td><td>${result.windays}</td></tr>`;
+                            $html += `<tr><td>4</td><td>Loss Days</td><td>${result.lossdays}</td></tr>`;
+                            $html += `<tr><td>5</td><td>Max Winning Streak Days</td><td>${result.maxwinningstreakdays}</td></tr>`;
+                            $html += `<tr><td>6</td><td>Max Losing Streak Days</td><td>${result.maxlosingstreakdays}</td></tr>`;
+                            $html += `<tr><td>7</td><td>Win Rate</td><td>${result.winrate.toFixed(2)} %</td></tr>`;
+                            $html += `<tr><td>8</td><td>Avg Monthly Profit</td><td>Rs. ${result.avgmonthlyprofit}</td></tr>`;
+                            $html += `<tr><td>9</td><td>Total Profit</td><td>Rs. ${result.totalprofit.toFixed(2)}</td></tr>`;
+                            $html += `<tr><td>10</td><td>Max Profit in a Day</td><td>Rs. ${result.maxprofitaday}</td></tr>`;
+                            $html += `<tr><td>11</td><td>Max Loss in a Day</td><td>Rs. ${result.maxlossaday}</td></tr>`;
+                            $html += `<tr><td>12</td><td>Avg Profit/Loss Daily</td><td>Rs. ${result.avgprofit_lossdaily.toFixed(2)}</td></tr>`;
+                            $html += `<tr><td>13</td><td>Avg Profit on Profit Days</td><td>Rs. ${result.avgprofitonprofitdays.toFixed(2)}</td></tr>`;
+                            $html += `<tr><td>14</td><td>Avg Loss on Loss Days</td><td>Rs. ${result.avglossonlossdays.toFixed(2)}</td></tr>`;
+                            $html += `<tr><td>15</td><td>Max Drawdown</td><td>Rs. ${result.maxdrawdown.toFixed(2)}</td></tr>`;
+
+
+                        } else {
+                            $html += `<tr><td colspan="13">Data not foud</td></tr>`;
+                        }
+                        $("#tbl_statistics").html($html);
+                    });                 
+                }
+
                 function getUrlVars() {
                     var vars = [], hash;
                     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -761,6 +809,7 @@
                     bindSummary(aliash);
                     bindPNLSummary(aliash);
                     bindWeeklyBreaup(aliash);
+                    bindStatistics(aliash);
                 }
 
                 function bindPNLManu(aliash) {
