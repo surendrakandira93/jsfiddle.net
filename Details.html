@@ -112,6 +112,30 @@
         .q1 {
             fill: rgb(250, 2, 2);
         }
+        .statistics-sucess .card-body {
+            color: #42a53f;
+        }
+
+        .statistics-sucess h6 {
+            color: #42a53f;
+        }
+
+        .statistics-sucess td {
+            color: #42a53f;
+        }
+
+        .statistics-danger .card-body {
+            color: #fe595c;
+        }
+
+        .statistics-danger h6 {
+            color: #fe595c;
+        }
+
+        .statistics-danger td {
+            color: #fe595c;
+        }
+       
     </style>
 
 </head>
@@ -193,7 +217,7 @@
                             <!--/.bg-holder-->
                             <div class="card-body position-relative">
                                 <h6>Realised PNL</h6>
-                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="RealisedPNL_div">
+                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif RealisedPNL_div" id="RealisedPNL_div">
                                     <img src="http://rtwelfare.club/img/loading-sm.gif" />
                                 </div>
                             </div>
@@ -229,6 +253,291 @@
                             <div class="card-body position-relative">
                                 <h6>Unrealised PNL</h6>
                                 <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="UnrealisedPNL_div"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 ps-lg-2 mb-3">
+                        <div class="card h-lg-100" style="padding-right: 15px;">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Statistics</h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body h-100 pe-0">
+
+                                <div class="row g-3">
+                                    <div class="col-sm-4 col-md-4 mb-3">
+                                        <table class="table table-bordered customTable">
+                                            <tr>
+                                                <td>Capital</td>
+                                                <td class="Capital">100,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Trading days</td>
+                                                <td class="statistics-sucess TotalTradingDays"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wid days</td>
+                                                <td class="statistics-sucess WinDays"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Loss Days</td>
+                                                <td class="statistics-danger LossDays"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Win %</td>
+                                                <td class="statistics-sucess WinRate"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Loss %</td>
+                                                <td class="statistics-danger LoosRate"></td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-4 mb-3">
+                                        <table class="table table-bordered customTable">
+                                            <tr>
+                                                <td>Realized Pnl</td>
+                                                <td class="statistics-sucess RealisedPNL_div"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Max Profit in a day </td>
+                                                <td class="MaxProfitinaDay"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Max Loss in a day</td>
+                                                <td class="statistics-danger MaxLossinaDay"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg Pofit/Loss per day</td>
+                                                <td class="AvgProfitLossDaily"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg Profit on profit days</td>
+                                                <td class="statistics-sucess AvgProfitonProfitDays"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Avg Loss on Loss days</td>
+                                                <td class="statistics-danger AvgLossonLossDays"></td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-4 mb-3">
+                                        <table class="table table-bordered customTable">
+                                            <tr>
+                                                <td>Max DD</td>
+                                                <td class="statistics-danger MaxDrawdown"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Reward To Risk</td>
+                                                <td class="RewardToRisk"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Expectancy Ratio</td>
+                                                <td class="ExpectancyRatio"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Max Win Streak</td>
+                                                <td class="statistics-sucess MaxWinningStreakDays"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Max loss streak</td>
+                                                <td class="statistics-danger MaxLosingStreakDays"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Max DD days</td>
+                                                <td class="statistics-danger MaxDDDays"></td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 ps-lg-2 mb-3">
+                        <div class="card h-lg-100" style="padding-right: 15px;">
+                            <div class="card-header">
+                                <div class="row flex-between-center">
+                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
+                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Statistics</h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body h-100 pe-0">
+
+                                <div class="row g-3">
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-1.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Total Trading Days</h6>
+                                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif div_loader TotalTradingDays">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-2.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Win Days</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader WinDays"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-3.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Loss Days</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader LossDays"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-4.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Max Winning Streak Days</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader MaxWinningStreakDays">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-5.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Max Losing Streak Days</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader MaxLosingStreakDays"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-6.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Win Rate</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader WinRate"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-7.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Avg Monthly Profit</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader AvgMonthlyProfit"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-1.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Total Profit</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader TotalProfit"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-2.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Max Profit in a Day</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader MaxProfitinaDay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-3.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Max Loss in a Day</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader MaxLossinaDay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-4.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Avg Profit/Loss Daily</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader AvgProfitLossDaily"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-5.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Avg Profit on Profit Days</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader AvgProfitonProfitDays"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-6.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Avg Loss on Loss Days</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader AvgLossonLossDays"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
+                                        <div class="card overflow-hidden" style="min-width: 12rem">
+                                            <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-7.png);"></div>
+                                            <!--/.bg-holder-->
+                                            <div class="card-body position-relative">
+                                                <h6>Max Drawdown</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader MaxDrawdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -480,22 +789,6 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-12 ps-lg-2 mb-3">
-                        <div class="card h-lg-100" style="padding-right: 15px;">
-                            <div class="card-header">
-                                <div class="row flex-between-center">
-                                    <div class="col-6 col-sm-auto d-flex align-items-center pe-0">
-                                        <h6 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">Statistics</h6>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card-body h-100 pe-0 div_loader" id="tbl_statistics">
-                                <img src="http://rtwelfare.club/img/loading-sm.gif" />
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
                 <footer class="footer">
@@ -677,7 +970,7 @@
                         //$("#chargesTaxes_div").attr('data-countup', JSON.stringify(summary.chargestaxes).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
                         //$("#netRealisedPNL_div").attr('data-countup', JSON.stringify(summary.netrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
                         //$("#UnrealisedPNL_div").attr('data-countup', JSON.stringify(summary.unrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces'));
-                        $("#RealisedPNL_div").html(summary.realisedpnl.prefix + summary.realisedpnl.endvalue.toFixed(summary.realisedpnl.decimalplaces) + summary.realisedpnl.suffix);
+                        $(".RealisedPNL_div").html(summary.realisedpnl.prefix + summary.realisedpnl.endvalue.toFixed(summary.realisedpnl.decimalplaces) + summary.realisedpnl.suffix);
                         $("#chargesTaxes_div").html(summary.chargestaxes.prefix + summary.chargestaxes.endvalue.toFixed(summary.chargestaxes.decimalplaces) + summary.chargestaxes.suffix);
                         $("#netRealisedPNL_div").html(summary.netrealisedpnl.prefix + summary.netrealisedpnl.endvalue.toFixed(summary.netrealisedpnl.decimalplaces) + summary.netrealisedpnl.suffix);
                         $("#UnrealisedPNL_div").html(summary.unrealisedpnl.prefix + summary.unrealisedpnl.endvalue.toFixed(summary.unrealisedpnl.decimalplaces) + summary.unrealisedpnl.suffix);
@@ -756,33 +1049,30 @@
                 }
 
                 function bindStatistics(aliash) {
-                    $("#tbl_statistics").html();
 
                     $.getJSON(`${domainName}pnl/${aliash}/statistics.json?v=${timeSpam}`, function (result) {
-                        var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered"><thead><tr><th style="font-size: 12px;" scope="col">No</th><th style="font-size: 12px;" scope="col">Name</th><th style="font-size: 12px;" scope="col">Value</th></tr></thead><tbody>`;
                         if (result) {
+                            $(".TotalTradingDays").html(result.totaltradingdays);
+                            $(".WinDays").html(result.windays);
+                            $(".LossDays").html(result.lossdays);
+                            $(".MaxWinningStreakDays").html(result.maxwinningstreakdays);
+                            $(".MaxLosingStreakDays").html(result.maxlosingstreakdays);
+                            $(".WinRate").html(`${result.winrate.toFixed(2)} %`);
+                            $(".AvgMonthlyProfit").html(`Rs. ${result.avgmonthlyprofitstr}`);
+                            $(".TotalProfit").html(`Rs. ${result.totalprofitstr}`);
+                            $(".MaxProfitinaDay").html(`Rs. ${result.maxprofitadaystr}`);
+                            $(".MaxLossinaDay").html(`Rs. ${result.maxlossadaystr}`);
+                            $(".AvgProfitLossDaily").html(`Rs. ${result.avgprofit_lossdailystr}`);
+                            $(".AvgProfitonProfitDays").html(`Rs. ${result.avgprofitonprofitdaysstr}`);
+                            $(".AvgLossonLossDays").html(`Rs. ${result.avglossonlossdaysstr}`);
+                            $(".MaxDrawdown").html(`Rs. ${result.maxdrawdownstr}`);
+                           
+                            $(".LoosRate").html(`${result.lossrate.toFixed(2)} %`);
+                            $(".MaxDDDays").html(`${result.maxdddays} [${result.maxdddaysstr}]`);
+                            $(".RewardToRisk").html(`${result.rewardtorisk}`);
+                            $(".ExpectancyRatio").html(`${result.expectancyratio}`);
 
-                            $html += `<tr><td>1</td><td>Capital Required</td><td>Rs. 100000.00</td></tr>`;
-                            $html += `<tr><td>2</td><td>Total Trading Days</td><td>${result.totaltradingdays}</td></tr>`;
-                            $html += `<tr><td>3</td><td>Win Days</td><td>${result.windays}</td></tr>`;
-                            $html += `<tr><td>4</td><td>Loss Days</td><td>${result.lossdays}</td></tr>`;
-                            $html += `<tr><td>5</td><td>Max Winning Streak Days</td><td>${result.maxwinningstreakdays}</td></tr>`;
-                            $html += `<tr><td>6</td><td>Max Losing Streak Days</td><td>${result.maxlosingstreakdays}</td></tr>`;
-                            $html += `<tr><td>7</td><td>Win Rate</td><td>${result.winrate.toFixed(2)} %</td></tr>`;
-                            $html += `<tr><td>8</td><td>Avg Monthly Profit</td><td>Rs. ${result.avgmonthlyprofit}</td></tr>`;
-                            $html += `<tr><td>9</td><td>Total Profit</td><td>Rs. ${result.totalprofit.toFixed(2)}</td></tr>`;
-                            $html += `<tr><td>10</td><td>Max Profit in a Day</td><td>Rs. ${result.maxprofitaday}</td></tr>`;
-                            $html += `<tr><td>11</td><td>Max Loss in a Day</td><td>Rs. ${result.maxlossaday}</td></tr>`;
-                            $html += `<tr><td>12</td><td>Avg Profit/Loss Daily</td><td>Rs. ${result.avgprofit_lossdaily.toFixed(2)}</td></tr>`;
-                            $html += `<tr><td>13</td><td>Avg Profit on Profit Days</td><td>Rs. ${result.avgprofitonprofitdays.toFixed(2)}</td></tr>`;
-                            $html += `<tr><td>14</td><td>Avg Loss on Loss Days</td><td>Rs. ${result.avglossonlossdays.toFixed(2)}</td></tr>`;
-                            $html += `<tr><td>15</td><td>Max Drawdown</td><td>Rs. ${result.maxdrawdown.toFixed(2)}</td></tr>`;
-
-
-                        } else {
-                            $html += `<tr><td colspan="13">Data not foud</td></tr>`;
                         }
-                        $("#tbl_statistics").html($html);
                     });                 
                 }
 
