@@ -150,38 +150,34 @@
                         $.getJSON(`${domainName}pnl/getAccountSummary.json?v=${timeSpam}`, function (result) {
                             $("#tbl_monthly").empty();
                             var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered" id="myTable"><thead><tr><th style="font-size: 12px;width: 20%;" scope="col">Name</th><th style="font-size: 12px;width: 20%;" scope="col">Realised PNL</th><th style="font-size: 12px;width: 20%;" scope="col">Charges Taxes</th><th style="font-size: 12px;width: 20%;" scope="col">Net Realised PNL</th><th style="font-size: 12px;width: 20%;" scope="col">Info</th></tr></thead><tbody>`;
-                            if (result.length > 0) {
+                            if (userInfoArr.length > 0) {
 
-                                for (var i = 0; i < result.length; i++) {
-                                    let userInfo = userInfoArr.filter(function (el) {
-                                        return el.userid === result[i].name;
+                                for (var i = 0; i < userInfoArr.length; i++) {
+                                    let userSummary = result.filter(function (el) {
+                                        return el.name === userInfoArr[i].userid;
                                     });
 
-                                    if (userInfo.length > 0) {
+                                   
                                         $html += `<tr><td class="align-middle white-space-nowrap">
-                                        <a class="text-800" href="Details.html?user=${result[i].name}">
+                                        <a class="text-800" href="Details.html?user=${userInfoArr[i].userid}">
                               <div class="d-flex align-items-center">
                                 <div class="avatar avatar-xl">
-                                  <img class="rounded-circle" src="${userInfo[0].profilepic}" alt="">
+                                  <img class="rounded-circle" src="${userInfoArr[i].profilepic}" alt="">
                                 </div>
-                                <h6 class="mb-0 ps-2 name">${userInfo[0].username}</h6>
+                                <h6 class="mb-0 ps-2 name">${userInfoArr[i].username}</h6>
                               </div>
                             </a></td>`;
+
+                                    if (userSummary.length > 0) {
+                                        $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(userSummary[0].realisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${userSummary[0].realisedpnl.prefix + userSummary[0].realisedpnl.endvalue.toFixed(userSummary[0].realisedpnl.decimalplaces) + userSummary[0].realisedpnl.suffix} </div></td>`;
+                                        $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:#000;" data-countup='${JSON.stringify(userSummary[0].chargestaxes).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${userSummary[0].chargestaxes.prefix + userSummary[0].chargestaxes.endvalue.toFixed(userSummary[0].chargestaxes.decimalplaces) + userSummary[0].chargestaxes.suffix} </div></td>`;
+                                        $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:${userSummary[0].netrealisedpnl.actualvalue > 0 ? '#10b983' : userSummary[0].netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000'};" data-countup='${JSON.stringify(userSummary[0].netrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${userSummary[0].netrealisedpnl.prefix + userSummary[0].netrealisedpnl.endvalue.toFixed(userSummary[0].netrealisedpnl.decimalplaces) + userSummary[0].realisedpnl.suffix} </div></td>`;
                                     } else {
-                                        $html += `<tr><td class="align-middle white-space-nowrap"><a href="Details.html?user=${result[i].name}">${result[i].name}</a></td>`;
+                                        $html += `<td>`;
+                                        $html += `<td>`;
+                                        $html += `<td>`;
                                     }
-
-                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(result[i].realisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${result[i].realisedpnl.prefix + result[i].realisedpnl.endvalue.toFixed(result[i].realisedpnl.decimalplaces) + result[i].realisedpnl.suffix} </div></td>`;
-                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:#000;" data-countup='${JSON.stringify(result[i].chargestaxes).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${result[i].chargestaxes.prefix + result[i].chargestaxes.endvalue.toFixed(result[i].chargestaxes.decimalplaces) + result[i].chargestaxes.suffix} </div></td>`;
-                                    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:${result[i].netrealisedpnl.actualvalue > 0 ? '#10b983' : result[i].netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000'};" data-countup='${JSON.stringify(result[i].netrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${result[i].netrealisedpnl.prefix + result[i].netrealisedpnl.endvalue.toFixed(result[i].netrealisedpnl.decimalplaces) + result[i].realisedpnl.suffix} </div></td>`;
-                                    if (userInfo.length > 0) {
-
-
-                                        $html += `<td><a target="_blank" href="${userInfo[0].twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="Details.html?user=${result[i].name}"> <span class="far fa-eye"></span></a></td></tr>`;
-
-                                    } else {
-                                        $html += `<td></td></tr>`;
-                                    }
+                                    $html += `<td><a target="_blank" href="${userInfoArr[i].twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="Details.html?user=${userInfoArr[i].userid}"> <span class="far fa-eye"></span></a></td></tr>`;
 
                                 }
 
