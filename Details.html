@@ -235,6 +235,12 @@
                                     </div>
                                 </a>
                             </div>
+
+                            <div class="col ps-2 ps-lg-3">
+                                <a class="d-flex align-items-center mb-2" target="_blank" id="pnlsource_url" href="">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1398,6 +1404,7 @@
                             if (userInfo.length > 0) {
                                 $("#user_profile_img").attr("src", userInfo[0].profilepic);
                                 $("#twiter_url").attr("href", userInfo[0].twitterurl);
+                                $("#pnlsource_url").attr("href", userInfo[0].pnlsource);
                                 $(".user_name").html(userInfo[0].username);
                             } else {
                                 $(".hide_user_Info").hide();
