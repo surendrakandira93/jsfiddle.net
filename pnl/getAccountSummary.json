@@ -1,8 +1,8 @@
 [
   {
     "realisedpnl": {
-      "endvalue": 6.09424,
-      "actualvalue": 609424.0,
+      "endvalue": 6.123135,
+      "actualvalue": 612313.5,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -10,8 +10,8 @@
       "prefix": "+"
     },
     "totalpnl": {
-      "endvalue": 6.43882805563,
-      "actualvalue": 643882.805563,
+      "endvalue": 6.48632375318,
+      "actualvalue": 648632.375318,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -19,8 +19,8 @@
       "prefix": ""
     },
     "chargestaxes": {
-      "endvalue": 34.458805563,
-      "actualvalue": 34458.805563,
+      "endvalue": 36.318875317999996,
+      "actualvalue": 36318.875318,
       "decimalplaces": 2,
       "suffix": "K",
       "color": "#27bcfd",
@@ -28,8 +28,8 @@
       "prefix": ""
     },
     "netrealisedpnl": {
-      "endvalue": 5.74965194437,
-      "actualvalue": 574965.194437,
+      "endvalue": 5.75994624682,
+      "actualvalue": 575994.624682,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#00d27a",
@@ -46,11 +46,11 @@
       "prefix": ""
     },
     "name": "00f867f7",
-    "total": 358,
-    "winrate": 70.87378640776699,
+    "total": 364,
+    "winrate": 70.47619047619048,
+    "maxdrawdown": 82677.25,
     "barchart": [
-      0.0,
-      43030.0,
+      30505.0,
       40656.0,
       59963.5,
       21019.0,
@@ -60,9 +60,10 @@
       20878.5,
       76682.0,
       129321.5,
-      57144.5
+      54974.5,
+      5059.5
     ],
-    "maxdate": "2023-10-26T00:00:00Z",
+    "maxdate": "2023-11-01T00:00:00Z",
     "mindate": "2022-11-03T00:00:00Z"
   },
   {
@@ -114,9 +115,9 @@
     "name": "8d285bd5",
     "total": 336,
     "winrate": 67.0967741935484,
+    "maxdrawdown": 449281.5,
     "barchart": [
-      4978.75,
-      -77343.75,
+      -52387.5,
       -129037.5,
       -32477.5,
       -5367.5,
@@ -179,9 +180,9 @@
     "name": "b7673976",
     "total": 1072,
     "winrate": 78.92561983471074,
+    "maxdrawdown": 201567.5,
     "barchart": [
-      447.5,
-      34368.880000000005,
+      -14250.450000000012,
       65253.75,
       225951.66,
       116452.57,
@@ -198,8 +199,8 @@
   },
   {
     "realisedpnl": {
-      "endvalue": 88.5454133,
-      "actualvalue": 8854541.33,
+      "endvalue": 88.2714058,
+      "actualvalue": 8827140.58,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -207,8 +208,8 @@
       "prefix": "+"
     },
     "totalpnl": {
-      "endvalue": 95.77557221212,
-      "actualvalue": 9577557.221212,
+      "endvalue": 95.87585160402,
+      "actualvalue": 9587585.160402,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#f5803e",
@@ -216,8 +217,8 @@
       "prefix": ""
     },
     "chargestaxes": {
-      "endvalue": 7.23015891212,
-      "actualvalue": 723015.891212,
+      "endvalue": 7.60444580402,
+      "actualvalue": 760444.580402,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#27bcfd",
@@ -225,8 +226,8 @@
       "prefix": ""
     },
     "netrealisedpnl": {
-      "endvalue": 81.31525438788,
-      "actualvalue": 8131525.4387880005,
+      "endvalue": 80.66695999598001,
+      "actualvalue": 8066695.999598,
       "decimalplaces": 2,
       "suffix": "L",
       "color": "#00d27a",
@@ -243,11 +244,11 @@
       "prefix": ""
     },
     "name": "d66b32c9",
-    "total": 1785,
-    "winrate": 82.99595141700405,
+    "total": 1790,
+    "winrate": 82.8,
+    "maxdrawdown": 567728.5,
     "barchart": [
-      9937.5,
-      329087.13,
+      234865.3,
       731375.0,
       614272.91,
       671897.52,
@@ -257,9 +258,10 @@
       1278417.06,
       1785337.26,
       727855.52,
-      452805.5
+      361198.0,
+      64206.75
     ],
-    "maxdate": "2023-10-27T00:00:00Z",
+    "maxdate": "2023-11-01T00:00:00Z",
     "mindate": "2022-10-31T00:00:00Z"
   },
   {
@@ -311,9 +313,9 @@
     "name": "d66b32c91",
     "total": 358,
     "winrate": 70.87378640776699,
+    "maxdrawdown": 82677.25,
     "barchart": [
-      0.0,
-      43030.0,
+      30505.0,
       40656.0,
       59963.5,
       21019.0,
@@ -377,6 +379,7 @@
     "name": "e09d349f",
     "total": 22,
     "winrate": 50.0,
+    "maxdrawdown": -0.0,
     "barchart": [
       492.85,
       132000.0
@@ -433,9 +436,9 @@
     "name": "testnetpnl",
     "total": 284,
     "winrate": 83.75,
+    "maxdrawdown": 575210.0,
     "barchart": [
-      9490.0,
-      337748.25,
+      279620.75,
       706777.25,
       448284.75,
       576463.95,

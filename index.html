@@ -66,38 +66,26 @@
                     <div class="col-lg-12 ps-lg-2 mb-3">
                         <div class="card h-lg-100">
 
-                            <div class="card-header border-bottom border-200 px-0">
-                                <div class="d-lg-flex justify-content-between">
-                                    <div class="row flex-between-center gy-2 px-x1" style="margin-left: 13px;">
-                                        <div class="col-auto pe-0">
-                                            <h6 class="mb-0">User Summary</h6>
-                                        </div>
+                            
+                            <div class="card-body h-100 pe-0 div_loader">
+                                <div class="table-responsive scrollbar">
+                                    <table class="table table-bordered table-striped fs--1 mb-0" id="tableUsers">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Win Rate</th>
+                                                <th>Realised PNL</th>
+                                                <th>Charges Taxes</th>
+                                                <th>Net Realised PNL</th>
+                                                <th>Max Drawdown</th>
+                                                <th>Number of days</th>
+                                                <th> Monthly PNL</th>
+                                                <th style="font-size: 12px;width: 12%;" scope="col">Info</th>
+                                            </tr>
+                                        </thead>
 
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between justify-content-lg-end px-x1">
-                                        <div class="col-auto" style="margin-right: 10px; margin-left: 10px;">
-                                            <div class="input-group input-search-width">
-                                                <input class="form-control form-control-sm shadow-none search" onkeyup="myFunction()" id="myInput" type="search" placeholder="Search  by name" aria-label="search">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </table>
                                 </div>
-                            </div>
-                            <div class="card-body h-100 pe-0 div_loader" id="tbl_monthly11">
-                                <table class="table table-bordered table-striped fs--1 mb-0" id="tbl_monthly">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Win Rate</th>
-                                            <th>Realised PNL</th>
-                                            <th>Charges Taxes</th>
-                                            <th>Net Realised PNL</th>
-                                            <th> Monthly PNL</th>
-                                            <th style="font-size: 12px;width: 12%;" scope="col">Info</th>
-                                        </tr>
-                                    </thead>
-
-                                </table>
                             </div>
                         </div>
                     </div>
@@ -185,34 +173,12 @@
                                         allUserObj.userid = userInfoArr[i].userid;
                                         allUserObj.pnlsource = userInfoArr[i].pnlsource;
                                     }
-
-                                    modelJson.push(allUserObj);
-
-                                //    $html += `<tr><td class="align-middle white-space-nowrap">
-                                //            <a class="text-800" href="Details.html?user=${userInfoArr[i].userid}">
-                                //  <div class="d-flex align-items-center">
-                                //    <div class="avatar avatar-xl">
-                                //      <img class="rounded-circle" src="${userInfoArr[i].profilepic}" alt="">
-                                //    </div>
-                                //    <h6 class="mb-0 ps-2 name">${userInfoArr[i].username}</h6>
-                                //  </div>
-                                //</a></td>`;
-
-                                    //if (userSummary.length > 0) {
-                                    //    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif"  data-countup='${JSON.stringify(userSummary[0].realisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${userSummary[0].realisedpnl.prefix + userSummary[0].realisedpnl.endvalue.toFixed(userSummary[0].realisedpnl.decimalplaces) + userSummary[0].realisedpnl.suffix} </div></td>`;
-                                    //    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:#000;" data-countup='${JSON.stringify(userSummary[0].chargestaxes).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${userSummary[0].chargestaxes.prefix + userSummary[0].chargestaxes.endvalue.toFixed(userSummary[0].chargestaxes.decimalplaces) + userSummary[0].chargestaxes.suffix} </div></td>`;
-                                    //    $html += `<td><div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" style="color:${userSummary[0].netrealisedpnl.actualvalue > 0 ? '#10b983' : userSummary[0].netrealisedpnl.actualvalue < 0 ? '#f35631' : '#000'};" data-countup='${JSON.stringify(userSummary[0].netrealisedpnl).replace('endvalue', 'endValue').replace('decimalplaces', 'decimalPlaces')}'>${userSummary[0].netrealisedpnl.prefix + userSummary[0].netrealisedpnl.endvalue.toFixed(userSummary[0].netrealisedpnl.decimalplaces) + userSummary[0].realisedpnl.suffix} </div></td>`;
-                                    //} else {
-                                    //    $html += `<td>`;
-                                    //    $html += `<td>`;
-                                    //    $html += `<td>`;
-                                    //}
-                                   // $html += `<td><a target="_blank" href="${userInfoArr[i].twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="Details.html?user=${userInfoArr[i].userid}"> <span class="far fa-eye"></span></a></td></tr>`;
-
+                                    modelJson.push(allUserObj);                                
                                 }
 
-                                var table = $('#tbl_monthly').DataTable({
+                                var table = $('#tableUsers').DataTable({
                                     paging: false,
+                                    order: [[1, 'desc']],
                                     ajax: function (dataSent, callback, settings) {
                                         callback({ data: modelJson });
                                     },
@@ -282,6 +248,29 @@
                                                 var colour = row.netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983';
                                                 return type === 'display' ? `<span style="color:${colour}">${row.netrealisedpnl.prefix}${row.netrealisedpnl.endvalue.toFixed(row.netrealisedpnl.decimalplaces)}${row.netrealisedpnl.suffix}</span>` : row.netrealisedpnl.actualvalue;
 
+                                            }
+                                        },
+
+                                        {
+                                            data: null,
+                                            bSortable: true,
+                                            render: function (data, type, row, meta) {
+                                                if (type === "display") {
+                                                    // format data here
+                                                    return row.maxdrawdown.toFixed(2); // This is formatted data
+                                                }
+                                                return row.maxdrawdown;
+                                            }
+                                        },
+                                        {
+                                            data: null,
+                                            bSortable: true,
+                                            render: function (data, type, row, meta) {
+                                                if (type === "display") {
+                                                    // format data here
+                                                    return row.total; // This is formatted data
+                                                }
+                                                return row.total;
                                             }
                                         },
                                         {
