@@ -277,7 +277,7 @@
                                         return el.name === userInfoArr[i].userid;
                                     });
 
-                                    if (userSummary.length > 0) {
+                                    if (userSummary.length > 0 && userSummary[0].realisedpnl != undefined) {
                                         allUserObj = userSummary[0];
                                         allUserObj.username = userInfoArr[i].username;
                                         allUserObj.userid = userInfoArr[i].userid;
@@ -315,7 +315,7 @@
                                                 return `<a href="Details.html?user=${row.userid}">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="avatar avatar-xl">
-                                                                            <img class="rounded-circle" src="${(row.profilepic != null ? row.profilepic : "http://rtwelfare.club/img/default-Profile.png")}" alt="">
+                                                                            <img class="rounded-circle" src="${(row.profilepic != null && row.profilepic != ""? row.profilepic : "http://rtwelfare.club/img/default-Profile.png")}" alt="">
                                                                         </div>
                                                                         <h6 class="mb-0 ps-2">${row.username}</h6>
                                                                     </div>
