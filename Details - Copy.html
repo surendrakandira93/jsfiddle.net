@@ -199,7 +199,6 @@
                         </li>
                     </ul>
                 </div>
- <button type="button" class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>
 
             </nav>
             <div class="content">
@@ -288,7 +287,7 @@
                             <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-4.png);"></div>
                             <!--/.bg-holder-->
                             <div class="card-body position-relative">
-                                <h6>PnL to DD Ratio</h6>
+                                <h6>Unrealised PNL</h6>
                                 <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="UnrealisedPNL_div"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
                             </div>
                         </div>
@@ -375,15 +374,15 @@
                                     </div>
 
                                     <!--<div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
-                    <div class="card overflow-hidden" style="min-width: 12rem">
-                        <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-7.png);"></div>-->
+                                    <div class="card overflow-hidden" style="min-width: 12rem">
+                                        <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-7.png);"></div>-->
                                     <!--/.bg-holder-->
                                     <!--<div class="card-body position-relative">
-                                <h6>Avg Monthly Profit</h6>
-                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader AvgMonthlyProfit"></div>
-                            </div>
-                        </div>
-                    </div>-->
+                                                <h6>Avg Monthly Profit</h6>
+                                                <div class="display-4 mb-2 fw-normal font-sans-serif div_loader AvgMonthlyProfit"></div>
+                                            </div>
+                                        </div>
+                                    </div>-->
 
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
@@ -816,13 +815,13 @@
     <script type="text/javascript" src="http://rtwelfare.club/plugins/cal-heatmap/d3.v3.js"></script>
     <script type="text/javascript" src="http://rtwelfare.club/plugins/cal-heatmap/cal-heatmap.js"></script>
     <script src="http://rtwelfare.club/js/St_web_GoogleChart.js"></script>
-<script src="http://rtwelfare.club/js/globalpnl.js" asp-append-version="true"></script>
+    <script src="http://rtwelfare.club/js/globalpnl.js" asp-append-version="true"></script>
     <script>
         (function ($) {
             function PNLDashboard() {
                 var $this = this, form;
                 var $timeSpam = new Date().getTime();
-                var $domainName = 'https://raw.githubusercontent.com/surendrakandira93/jsfiddle.net/master/';
+                var $domainName = '/';
                 var $aliash = getUrlVars();
 
                 function initilizeModel() {
@@ -883,8 +882,8 @@
                         url: `${$domainName}pnl/${$aliash}/${typeKey}.json?v=${$timeSpam}`,
                         dataType: "json",
                         success: function (response) {
-                            //var result = JSON.parse(response);
-                            onSuccess(response);
+                            var result = JSON.parse(response);
+                            onSuccess(result);
                         },
                         error: function () {
                         }
@@ -1053,6 +1052,7 @@
                 $this.init = function () {
                     initilizeModel();
                     setTimeout(LoadeChatFirstTime, 500);
+                    setTimeout(GlobalPNL.tooltipInit, 600);
                 }
             }
 
@@ -1062,17 +1062,6 @@
             })
         })(jQuery)
     </script>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ4QCZ8VQV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RJ4QCZ8VQV');
-</script>
 
 </body>
 
