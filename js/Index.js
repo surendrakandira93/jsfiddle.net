@@ -21,24 +21,40 @@
         $.getJSON(`${$domainName}pnl/userInfo.json?v=${$timeSpam}`, function (result) {
             userInfoArr = result;
         });
-        $(".nav-link").on('click', function () {
+        $(".nav-click").on('click', function () {
             var key = $(this).data('key');
-            $(".nav-link").removeClass('active');
+            $(".nav-click").removeClass('active');
             $(this).addClass('active');
             bindPNLSummary(key);
         })
 
-        $(".btn_data").on('click', function () {
-            var key = $(this).data('key');
-            $(".btn_data").removeClass('underline');
-            $(this).addClass('underline');
-            bindPNLSummary(key);
-        })
+      
 
         function bindPNLSummary(key) {
             var modelJson = new Array();
             ShowLoading();
-
+            switch (key) {
+                case "All":
+                case "Last90Days":
+                case "Last180Days":
+                case "Last360Days":
+                case "PreviousFY":
+                case "CurrentFY":
+                    $("#barChartLeval").html('Monthly PNL');
+                    break;
+                case "CurrentMonth":
+                case "Last60Days":
+                case "Last30Days":
+                    $("#barChartLeval").html('Weekly PNL');
+                    break;
+                case "PreviousDay":
+                case "CurrentWeek":
+                case "Last7Days":
+                    $("#barChartLeval").html('Weekly PNL');
+                    break;
+                default:
+                    $("#barChartLeval").html('Monthly PNL');
+            }
             if (table != null) {
                 table.destroy();
             }
@@ -75,15 +91,17 @@
                             callback({ data: modelJson });
                         },
                         paging: false,
-                        drawCallback: function () {
+                        drawCallback: function () {  
                             $('.sparkline')
                                 .map(function () {
-                                    return $('canvas', this).length ? null : this;
+                                    var $this = $('canvas', this).length ? null : this;
+                                    return $this;
                                 })
                                 .sparkline('html', {
                                     type: 'bar',
-                                    width: '250px',
-                                    'negBarColor': '#f35631', 'barColor': '#10b983'
+                                    width: '850px',
+                                    'negBarColor': '#f35631',
+                                    'barColor': '#10b983'
                                 });
                         },
                         columns: [
@@ -203,9 +221,11 @@
                             })
                             .sparkline('html', {
                                 type: 'bar',
-                                width: '450px',
-                                'negBarColor': '#f35631', 'barColor': '#10b983'
+                                width: '850px',
+                                'negBarColor': '#f35631',
+                                'barColor': '#10b983'
                             });
+
                     }, 1)
                     
 

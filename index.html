@@ -42,7 +42,9 @@
     <link href="http://rtwelfare.club/css/Custome.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://rtwelfare.club/Plugins/cal-heatmap/cal-heatmap.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="waitMe/waitMe.min.css" rel="stylesheet" />
     <style>
+        
         .hover-actions {
             display: block !important;
         }
@@ -71,6 +73,31 @@
         .smallfont {
             font-size: smaller;
         }
+
+        .tableHeader th {
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .underline {
+            text-decoration-line: underline;
+        }
+        .leading-\[14px\] {
+            line-height: 14px;
+        }
+        .font-semibold {
+            font-weight: 600;
+        }
+        .text-xs, .text-xs\/4 {
+            font-size: .75rem;
+        }
+
+        .px-2 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
     </style>
 </head>
 
@@ -80,29 +107,98 @@
     <main class="main" id="top">
 
         <div class="container" data-layout="container">
-
             <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg">
-
                 <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-                <a class="navbar-brand me-1 me-sm-3" href="index.html">
+                <a class="navbar-brand me-1 me-sm-3 desktop_nav" href="/">
                     <div class="d-flex align-items-center">
-                        <img class="me-2" src="Approved.svg" alt="" width="40" /><span class="font-sans-serif">truePnL</span>
+                        <img class="me-2" src="Approved.svg" alt="" width="40" />
+                        <span class="font-sans-serif" id="logo_txt">truePnL</span>
                     </div>
                 </a>
-               
 
+                <div class="collapse navbar-collapse scrollbar desktop_nav_icon" id="navbarStandard">
+                    <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium" data-key="All" role="button">Max</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium" data-key="CurrentWeek">
+                                Curr. Week
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium" data-key="CurrentMonth">
+                                Curr. Month
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium" data-key="CurrentFY">
+                                Curr. FY
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium" data-key="PreviousFY">
+                                Prev. FY
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium" data-key="Last90Days">
+                                90D
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium" data-key="Last60Days">
+                                60D
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                            <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
+                                <div class="bg-white dark__bg-1000 rounded-3 py-2">
+                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="PreviousDay">
+                                        Prev. Day
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="Last7Days">
+                                        7D
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="Last30Days">
+                                        30D
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="Last180Days">
+                                        180D
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="Last360Days">
+                                        360D
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="PreviousMonth">
+                                        Prev. Month
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
             </nav>
             <div class="content">
-                
+
                 <div class="row g-3 mb-3">
-                    <div class="col-lg-12 ps-lg-2 mb-3 desktop_div">
+                    <div class="col-lg-12 ps-lg-2 mb-3 desktop_div" style="display:none;">
                         <div class="card h-lg-100">
                             <div class="card-body h-100 pe-0 div_loader">
                                 <button type="button" class="btn btn-primary ms-3" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>
+
+                                
                                 <div class="table-responsive scrollbar">
                                     <table class="table table-bordered table-striped fs--1 mb-0" id="tableUsers">
                                         <thead>
-                                            <tr>
+                                            <tr class="tableHeader">
                                                 <th>Name</th>
                                                 <th>PnL to DD Ratio</th>
                                                 <th>Win Rate</th>
@@ -111,22 +207,37 @@
                                                 <th>Net Realised PNL</th>
                                                 <th>Max Drawdown</th>
                                                 <th>Number of days</th>
-                                                <th> Monthly PNL</th>
+                                                <th id="barChartLeval"> Monthly PNL</th>
                                                 <th style="font-size: 12px;width: 5%;" scope="col">Info</th>
                                             </tr>
                                         </thead>
 
                                     </table>
                                 </div>
-                                </div>
-                                <h6 class="ms-3">The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
                             </div>
-                        
+                            <h6 class="ms-3">The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
+                        </div>
+
                     </div>
 
-                    <div class="card mb-3 mobile_div">
+                    <div class="card mb-3 mobile_div" style="display:none;">
                         <button type="button" class="btn btn-primary ms-3 mt-3" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>
-
+                        <!--<div class="flex items-center justify-between pb-3 pt-3" style="overflow:auto;">
+                            <div class="" style="display: flex;">
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526] underline" data-key="All">Max</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="PreviousDay">P.D</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last7Days">7D</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last30Days">30D</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last60Days">60D</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last90Days">90D</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last180Days">180D</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="PreviousMonth">P.M</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="PreviousFY">P.FY</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="CurrentWeek">C.W</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="CurrentMonth">C.M</div>
+                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="CurrentFY">C.FY</div>
+                            </div>
+                        </div>-->
                         <div class="card-body bg-light">
                             <div class="row h-100 g-3">
                                 <div class="col-md-12">
@@ -153,7 +264,7 @@
     <script id="pnl_row_template" type="text/x-jquery-tmpl">
         <div class="row g-0 align-items-center py-2 position-relative">
             <div class="col-2">
-                <div class="avatar avatar-xl me-3">
+                <div class="avatar avatar-xl">
                     <img class="avatar-name rounded-circle bg-soft-success text-dark" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
                 </div>
             </div>
@@ -176,7 +287,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row g-0 align-items-center py-2 position-relative">
             <div class="col-3 smallfont">
                 Win Rate:
@@ -231,6 +342,7 @@
     </script>
 
     <script type="text/javascript" src="http://rtwelfare.club/js/jquery.min.js"></script>
+    <script type="text/javascript" src="waitMe/waitMe.js"></script>
     <script type="text/javascript" src="http://rtwelfare.club/js/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
     <script src="http://rtwelfare.club/vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
     <script src="http://rtwelfare.club/vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
@@ -252,264 +364,10 @@
     <script src="http://rtwelfare.club/plugins/waitMe/waitMe.min.js"></script>
     <script src="http://rtwelfare.club/js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
     <script src="http://rtwelfare.club/js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
-    <script src="https://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.js"></script>
+    <script src="js/jquery.sparkline.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="http://rtwelfare.club/js/jquery.tmpl.js"></script>
-    <script>
-        (function ($) {
-            window.onresize = function (event) {
-                flexTable();
-            };
-
-            function PNLDashboard() {
-                var $this = this, form;
-                var timeSpam = new Date().getTime();
-                var domainName = 'https://raw.githubusercontent.com/surendrakandira93/jsfiddle.net/master/';
-
-                function initilizeModel() {
-
-
-                }
-
-
-
-                function bindPNLSummary() {
-                    var modelJson = new Array();
-
-                    $.getJSON(`${domainName}pnl/userInfo.json?v=${timeSpam}`, function (userInfoArr) {
-                        $.getJSON(`${domainName}pnl/getAccountSummary.json?v=${timeSpam}`, function (result) {
-                            //  $("#tbl_monthly").empty();
-                            // var $html = `<div class="h-100"><div class="table-responsive scrollbar"><table class="table table-bordered" id="myTable"><thead><tr><th style="font-size: 12px;width: 20%;" scope="col">Name</th><th style="font-size: 12px;width: 20%;" scope="col">Realised PNL</th><th style="font-size: 12px;width: 20%;" scope="col">Charges Taxes</th><th style="font-size: 12px;width: 20%;" scope="col">Net Realised PNL</th><th style="font-size: 12px;width: 20%;" scope="col">Info</th></tr></thead><tbody>`;
-                            if (userInfoArr.length > 0) {
-
-                                var allUserObj = {};
-
-                                for (var i = 0; i < userInfoArr.length; i++) {
-                                    let userSummary = result.filter(function (el) {
-                                        return el.name === userInfoArr[i].userid;
-                                    });
-                                    console.log(userInfoArr[i].userid);
-
-                                    if (userSummary.length > 0 && userSummary[0].realisedpnl != undefined) {
-                                        console.log(userSummary[0].name);
-                                        allUserObj = userSummary[0];
-                                        allUserObj.username = userInfoArr[i].username;
-                                        allUserObj.userid = userInfoArr[i].userid;
-                                        allUserObj.profilepic = userInfoArr[i].profilepic;
-                                        allUserObj.twitterurl = userInfoArr[i].twitterurl;
-                                        allUserObj.userid = userInfoArr[i].userid;
-                                        allUserObj.pnlsource = userInfoArr[i].pnlsource;
-                                        console.log(allUserObj);
-                                        modelJson.push(allUserObj);
-                                    }
-
-                                }
-
-                                var table = $('#tableUsers').DataTable({
-                                    paging: false,
-                                    order: [[1, 'desc']],
-                                    ajax: function (dataSent, callback, settings) {
-                                        callback({ data: modelJson });
-                                    },
-                                    paging: false,
-                                    drawCallback: function () {
-                                        $('.sparkline')
-                                            .map(function () {
-                                                return $('canvas', this).length ? null : this;
-                                            })
-                                            .sparkline('html', {
-                                                type: 'bar',
-                                                width: '250px',
-                                                'negBarColor': '#f35631', 'barColor': '#10b983'
-                                            });
-                                    },
-                                    columns: [
-                                        {
-                                            data: null,
-                                            bSortable: true,
-                                            render: function (data, type, row, meta) {
-                                                return `<a href="Details.html?user=${row.userid}">
-                                                                        <div class="d-flex align-items-center">
-                                                                            <div class="avatar avatar-xl">
-                                                                                <img class="rounded-circle" src="${(row.profilepic != null && row.profilepic != "" ? row.profilepic : "http://rtwelfare.club/img/default-Profile.png")}" alt="">
-                                                                            </div>
-                                                                            <h6 class="mb-0 ps-2">${row.username}</h6>
-                                                                        </div>
-                                                                    </a>`;
-                                            }
-                                        },
-                                        {
-                                            data: null,
-                                            bSortable: true,
-                                            render: function (data, type, row, meta) {
-                                                if (type === "display") {
-                                                    return row.pnlddratio != NaN?`${row.pnlddratio.toFixed(2)}`:'0.00';
-                                                }
-                                                return row.pnlddratio;
-                                            }
-                                        },
-                                        {
-                                            data: null,
-                                            bSortable: true,
-                                            render: function (data, type, row, meta) {
-                                                if (type === "display") {
-                                                    return `${row.winrate.toFixed(2)} %`;
-                                                }
-                                                return row.winrate;
-                                            }
-                                        },
-                                        {
-                                            data: null,
-                                            bSortable: true,
-                                            render: function (data, type, row, meta) {
-                                                if (type === "display") {
-                                                    // format data here
-                                                    return `${row.realisedpnl.prefix}${row.realisedpnl.endvalue.toFixed(row.realisedpnl.decimalplaces)}${row.realisedpnl.suffix}`; // This is formatted data
-                                                }
-                                                return row.realisedpnl.actualvalue;
-                                            }
-                                        },
-                                        {
-                                            data: null,
-                                            bSortable: true,
-                                            render: function (data, type, row, meta) {
-                                                if (type === "display") {
-                                                    // format data here
-                                                    return `${row.chargestaxes.prefix}${row.chargestaxes.endvalue.toFixed(row.chargestaxes.decimalplaces)}${row.chargestaxes.suffix}`; // This is formatted data
-                                                }
-                                                return row.chargestaxes.actualvalue;
-                                            }
-                                        },
-                                        {
-                                            data: null,
-                                            bSortable: true,
-                                            render: function (data, type, row, meta) {
-                                                var colour = row.netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983';
-                                                return type === 'display' ? `<span style="color:${colour}">${row.netrealisedpnl.prefix}${row.netrealisedpnl.endvalue.toFixed(row.netrealisedpnl.decimalplaces)}${row.netrealisedpnl.suffix}</span>` : row.netrealisedpnl.actualvalue;
-
-                                            }
-                                        },
-
-                                        {
-                                            data: null,
-                                            bSortable: true,
-                                            render: function (data, type, row, meta) {
-                                                if (type === "display") {
-                                                    // format data here
-                                                    return row.maxdrawdown; // This is formatted data
-                                                }
-                                                return row.maxdrawdown;
-                                            }
-                                        },
-                                        {
-                                            data: null,
-                                            bSortable: true,
-                                            render: function (data, type, row, meta) {
-                                                if (type === "display") {
-                                                    // format data here
-                                                    return row.totaltradingdays; // This is formatted data
-                                                }
-                                                return row.totaltradingdays;
-                                            }
-                                        },
-                                        {
-                                            data: 'barchart',
-                                            bSortable: false,
-                                            render: function (data, type, row, meta) {
-                                                return type === 'display'
-                                                    ? '<span class="sparkline">' + data.toString() + '</span>'
-                                                    : data;
-                                            }
-                                        },
-                                        {
-                                            data: 'barchart',
-                                            bSortable: false,
-                                            render: function (data, type, row, meta) {
-                                                return `<a target="_blank" href="${row.twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="${row.pnlsource}"> <span class="far fa-eye"></span></a>`;
-                                            }
-                                        }
-                                    ]
-                                });
-                                modelJson.sort(ArrDescSort);
-                                $("#pnl_row_template").tmpl(modelJson).appendTo("#true_nl_rows");
-                                $('.sparkline_span')
-                                    .map(function () {
-                                        var $this = $('canvas', this).length ? null : this;
-                                        return $this;
-                                    })
-                                    .sparkline('html', {
-                                        type: 'bar',
-                                        width: '450px',
-                                        'negBarColor': '#f35631', 'barColor': '#10b983'
-                                    });
-
-                                flexTable();
-
-                            } else {
-                                // $html += `<tr><td colspan="5">Data not foud</td></tr>`;
-                            }
-
-                            // $("#tbl_monthly").html($html);
-                            //setTimeout(countupInit, 1);
-                        });
-
-                    });
-
-
-                }
-
-
-                function ArrDescSort(a, b) {
-                    var x = a.pnlddratio;
-                    var y = b.pnlddratio;
-                    return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-                }
-
-                function LoadeChatFirstTime() {
-                    bindPNLSummary();
-                }
-
-                $this.init = function () {
-                    LoadeChatFirstTime();
-
-                }
-            }
-
-            $(function () {
-                var self = new PNLDashboard();
-                self.init();
-            })
-        })(jQuery)
-
-        function myFunction() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-
-        function flexTable() {
-            if ($(window).width() < 768) {
-                $(".mobile_div").show();
-                $(".desktop_div").hide();
-            } else {
-                $(".mobile_div").hide();
-                $(".desktop_div").show();
-            }
-        }
-    </script>
+    <script src="js/index.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ4QCZ8VQV"></script>
