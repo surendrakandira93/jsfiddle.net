@@ -86,6 +86,7 @@
            
 
             var userList = userInfoArr;
+            $(".title_date").html('');
             //switch (key) {
             //    case "All":
             //        userList = userInfoArr;
@@ -128,13 +129,18 @@
             //    default:
             //        userList = userInfoArr;
             //}
-            GetValByKey(key, function (result) {
+            GetValByKey(key, function (response) {
                 //if (userList.length > 0 && result.length > 0) {
 
-                    var allUserObj = {};
+                var allUserObj = {};
+                if (response.fromdate != null) {
+                    $(".title_date").html(`${response.title} from  ${moment(response.fromdate).format('DD/MM/YYYY')} to  ${moment(response.todate).format('DD/MM/YYYY')
+}`);
+                }
+                
 
                     for (var i = 0; i < userList.length; i++) {
-                        let userSummary = result.filter(function (el) {
+                        let userSummary = response.result.filter(function (el) {
                             return el.name === userList[i].userid;
                         });
 
