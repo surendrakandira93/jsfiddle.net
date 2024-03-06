@@ -951,13 +951,13 @@
                     if (vals === undefined || vals === null) {
                         vals = $this.data('html');
                     }
-                    values = vals.replace(/(^\s*<!--)|(-->\s*$)|\s+/g, '').split(',');
+                    values = vals.toString().replace(/(^\s*<!--)|(-->\s*$)|\s+/g, '').split(',');
                 } else if (userValues === 'html' || userValues === undefined) {
                     vals = this.getAttribute(options.get('tagValuesAttribute'));
                     if (vals === undefined || vals === null) {
                         vals = $this.html();
                     }
-                    values = vals.replace(/(^\s*<!--)|(-->\s*$)|\s+/g, '').split(',');
+                    values = vals.toString().replace(/(^\s*<!--)|(-->\s*$)|\s+/g, '').split(',');
                 } else {
                     values = userValues;
                 }

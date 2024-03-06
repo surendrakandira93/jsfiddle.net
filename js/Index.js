@@ -175,6 +175,9 @@
                                 }).sparkline('data-html', {
                                     type: 'bar',
                                     width: '850px',
+                                    height: '2em',
+                                    barSpacing: 2,
+                                    barWidth: 2,
                                     'negBarColor': '#f35631',
                                     'barColor': '#10b983'
                                 });
@@ -304,7 +307,9 @@
                             .sparkline('data-html', {
                                 type: 'bar',
                                 width: '135',
-                                height: '38',
+                                height: '2em',
+                                barSpacing: 2,
+                                barWidth: 2,
                                 'negBarColor': '#f35631',
                                 'barColor': '#10b983'
                             });
