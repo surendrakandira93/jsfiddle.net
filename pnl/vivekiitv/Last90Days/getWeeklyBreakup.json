@@ -3,7 +3,7 @@
     "year": 2023,
     "monthly": [
       {
-        "pnl": -434.51927900000004,
+        "pnl": -434.52,
         "pnlstr": "-434.52",
         "date": "0001-01-01T00:00:00",
         "weekday": "Monday",
@@ -11,23 +11,23 @@
         "color": null
       },
       {
-        "pnl": 40533.548622,
-        "pnlstr": "40.53K",
+        "pnl": 0.0,
+        "pnlstr": "",
         "date": "0001-01-01T00:00:00",
         "weekday": "Tuesday",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": -283.450153,
-        "pnlstr": "-283.45",
+        "pnl": 0.0,
+        "pnlstr": "",
         "date": "0001-01-01T00:00:00",
         "weekday": "Wednesday",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 260016.912828,
+        "pnl": 260016.91,
         "pnlstr": "2.6L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Thursday",
@@ -35,7 +35,7 @@
         "color": null
       },
       {
-        "pnl": 134227.03190499998,
+        "pnl": 134227.03,
         "pnlstr": "1.34L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Friday",
@@ -59,8 +59,8 @@
         "color": null
       }
     ],
-    "total": 434059.523923,
-    "totalstr": "4.34L"
+    "total": 393809.42000000004,
+    "totalstr": "3.94L"
   },
   {
     "year": 2024,
@@ -82,7 +82,7 @@
         "color": null
       },
       {
-        "pnl": 7232.471886000001,
+        "pnl": 7232.47,
         "pnlstr": "7.23K",
         "date": "0001-01-01T00:00:00",
         "weekday": "Wednesday",
@@ -90,7 +90,7 @@
         "color": null
       },
       {
-        "pnl": 214827.884261,
+        "pnl": 214827.88,
         "pnlstr": "2.15L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Thursday",
@@ -98,7 +98,7 @@
         "color": null
       },
       {
-        "pnl": -157.262856,
+        "pnl": -157.26,
         "pnlstr": "-157.26",
         "date": "0001-01-01T00:00:00",
         "weekday": "Friday",
@@ -122,7 +122,7 @@
         "color": null
       }
     ],
-    "total": 221903.09329100003,
+    "total": 221903.09,
     "totalstr": "2.22L"
   }
 ]

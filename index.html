@@ -57,18 +57,15 @@
         }
 
         .sparkline_span {
-            width: 90px;
-            height: 30px;
+            width: 150px;
+            height: 40px;
         }
 
         .stretched-link::after {
             position: relative;
         }
 
-        canvas {
-            width: 60px;
-            height: 30px;
-        }
+       
 
         .smallfont {
             font-size: smaller;
@@ -97,6 +94,9 @@
         .cursor-pointer {
             cursor: pointer;
         }
+        .navbar-nav .nav-link.active {
+            color: #2c7be5;
+        }
 
     </style>
 </head>
@@ -118,37 +118,37 @@
 
                 <div class="collapse navbar-collapse scrollbar desktop_nav_icon" id="navbarStandard">
                     <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
-                        <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium" data-key="All" role="button">Max</a>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-click fw-medium cursor-pointer active"  data-key="All" href="index.html?key=All">Max</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium" data-key="CurrentWeek">
+                            <a class="nav-link nav-click fw-medium cursor-pointer"  data-key="CurrentWeek" href="index.html?key=CurrentWeek">
                                 Curr. Week
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium" data-key="CurrentMonth">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="CurrentMonth" href="index.html?key=CurrentMonth">
                                 Curr. Month
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium" data-key="CurrentFY">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="CurrentFY" href="index.html?key=CurrentFY">
                                 Curr. FY
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium" data-key="PreviousFY">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="PreviousFY" href="index.html?key=PreviousFY">
                                 Prev. FY
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium" data-key="Last90Days">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="Last90Days" href="index.html?key=Last90Days">
                                 90D
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium" data-key="Last60Days">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="Last60Days" href="index.html?key=Last60Days">
                                 60D
                             </a>
                         </li>
@@ -156,33 +156,36 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                             <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
                                 <div class="bg-white dark__bg-1000 rounded-3 py-2">
-                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="PreviousDay">
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousDay" href="index.html?key=PreviousDay">
                                         Prev. Day
                                     </a>
 
-                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="Last7Days">
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last7Days" href="index.html?key=Last7Days">
                                         7D
                                     </a>
 
-                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="Last30Days">
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last30Days" href="index.html?key=Last30Days">
                                         30D
                                     </a>
 
-                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="Last180Days">
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last180Days" href="index.html?key=Last180Days">
                                         180D
                                     </a>
 
-                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="Last360Days">
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last360Days" href="index.html?key=Last360Days">
                                         360D
                                     </a>
 
-                                    <a class="nav-click dropdown-item link-600 fw-medium" data-key="PreviousMonth">
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousMonth" href="index.html?key=PreviousMonth">
                                         Prev. Month
                                     </a>
                                 </div>
                             </div>
                         </li>
 
+                        <li  class="nav-item">
+                            <a  class="nav-link fw-medium cursor-pointer" style="background-color: #2c7be5; color: white;" href="https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform" target="_blank">Add your PnL</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -192,27 +195,29 @@
                     <div class="col-lg-12 ps-lg-2 mb-3 desktop_div" style="display:none;">
                         <div class="card h-lg-100">
                             <div class="card-body h-100 pe-0 div_loader">
-                                <button type="button" class="btn btn-primary ms-3" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>
+                                <!--<button type="button" class="btn btn-primary ms-3" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>-->
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive scrollbar ms-3">
+                                            <table class="table table-bordered table-striped mb-0" id="tableUsers">
+                                                <thead>
+                                                    <tr class="tableHeader">
+                                                        <th>Name</th>
+                                                        <th id="barChartLeval"> Monthly PNL</th>
+                                                        <th>PnL to DD Ratio</th>
+                                                        <th>Win Rate</th>
+                                                        <th>Realised PNL</th>
+                                                        <th>Charges Taxes</th>
+                                                        <th>Net Realised PNL</th>
+                                                        <th>Max Drawdown</th>
+                                                        <th>Number of days</th>
+                                                        <th style="font-size: 12px;width: 5%;" scope="col">Info</th>
+                                                    </tr>
+                                                </thead>
 
-                                
-                                <div class="table-responsive scrollbar">
-                                    <table class="table table-bordered table-striped fs--1 mb-0" id="tableUsers">
-                                        <thead>
-                                            <tr class="tableHeader">
-                                                <th>Name</th>
-                                                <th>PnL to DD Ratio</th>
-                                                <th>Win Rate</th>
-                                                <th>Realised PNL</th>
-                                                <th>Charges Taxes</th>
-                                                <th>Net Realised PNL</th>
-                                                <th>Max Drawdown</th>
-                                                <th>Number of days</th>
-                                                <th id="barChartLeval"> Monthly PNL</th>
-                                                <th style="font-size: 12px;width: 5%;" scope="col">Info</th>
-                                            </tr>
-                                        </thead>
-
-                                    </table>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <h6 class="ms-3">The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
@@ -270,13 +275,13 @@
             </div>
 
             <div class="col-5">
-                <a class="text-800 stretched-link" href="Details.html?user=${userid}">${username}</a>
+                <a class="fw-bold text-800 stretched-link" href="Details.html?user=${userid}">${username}</a>
             </div>
-            <div class="col-3">
-                <div class="sparkline_span">${barchart.toString()}</div>
+            <div class="col-5">
+                <div class="sparkline_span" data-html="${barchart.toString()}"></div>
             </div>
 
-            <div class="col-2">
+            <!--<div class="col-2">
                 <div class="hover-actions top-50 translate-middle-y">
                     <a class="btn btn-light border-300 btn-sm text-600" data-bs-toggle="tooltip" data-bs-placement="top" href="${twitterurl}" target="_blank" aria-label="Download" data-bs-original-title="Twitter">
                         <span class="fab fa-twitter"></span>
@@ -285,7 +290,7 @@
                         <span class="far fa-eye"></span>
                     </a>
                 </div>
-            </div>
+            </div>-->
         </div>
 
         <div class="row g-0 align-items-center py-2 position-relative">

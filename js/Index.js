@@ -6,9 +6,35 @@
         if ($(window).width() < 768) {
             $(".mobile_div").show();
             $(".desktop_div").hide();
+            //setTimeout(function () {
+            //    $('.sparkline_span')
+            //        .map(function () {
+            //            var $this = $('canvas', this).length ? null : this;
+            //            return $this;
+            //        })
+            //        .sparkline('html', {
+            //            type: 'bar',
+            //            width: '850px',
+            //            'negBarColor': '#f35631',
+            //            'barColor': '#10b983'
+            //        });
+
+            //}, 1)
         } else {
             $(".mobile_div").hide();
             $(".desktop_div").show();
+
+            //setTimeout(function () {
+            //    $('.sparkline').map(function () {
+            //        var $this = $('canvas', this).length ? null : this;
+            //        return $this;
+            //    }).sparkline('html', {
+            //        type: 'bar',
+            //        width: '850px',
+            //        'negBarColor': '#f35631',
+            //        'barColor': '#10b983'
+            //    });
+            //}, 1);
         }
     }
     function PNLDashboard() {
@@ -17,92 +43,137 @@
         var $domainName = 'https://raw.githubusercontent.com/surendrakandira93/jsfiddle.net/master/';
         var table = null;
         var userInfoArr = Array()
+        var $aliash = getUrlVars();
+       
+        //$(".nav-click").on('click', function () {
+        //    var key = $(this).data('key');
+        //    $(".nav-click").removeClass('active');
+        //    $(this).addClass('active');
+        //    if (!$(".navbar-toggler-humburger-icon").hasClass('collapsed')) {
+        //        $(".navbar-toggler-humburger-icon").click();
+        //    }
+        //    bindPNLSummary(key);
+        //})
 
-        $.getJSON(`${$domainName}pnl/userInfo.json?v=${$timeSpam}`, function (result) {
-            userInfoArr = result;
-        });
-        $(".nav-click").on('click', function () {
-            var key = $(this).data('key');
-            $(".nav-click").removeClass('active');
-            $(this).addClass('active');
-            bindPNLSummary(key);
-        })
 
-      
 
         function bindPNLSummary(key) {
             var modelJson = new Array();
             ShowLoading();
             switch (key) {
-                case "All":
-                case "Last90Days":
-                case "Last180Days":
+                case "All":                
                 case "Last360Days":
                 case "PreviousFY":
                 case "CurrentFY":
                     $("#barChartLeval").html('Monthly PNL');
-                    break;
-                case "CurrentMonth":
-                case "Last60Days":
-                case "Last30Days":
+                    break;                
+                case "Last60Days":              
+                case "Last90Days":
+                case "Last180Days":
                     $("#barChartLeval").html('Weekly PNL');
                     break;
                 case "PreviousDay":
                 case "CurrentWeek":
                 case "Last7Days":
-                    $("#barChartLeval").html('Weekly PNL');
+                case "PreviousMonth":
+                case "CurrentMonth":
+                case "Last30Days":
+                    $("#barChartLeval").html('Daily PNL');
                     break;
                 default:
                     $("#barChartLeval").html('Monthly PNL');
             }
-            if (table != null) {
-                table.destroy();
-            }
+           
+
+            var userList = userInfoArr;
+            //switch (key) {
+            //    case "All":
+            //        userList = userInfoArr;
+            //        break;
+            //    case "Last90Days":
+            //        userList = userInfoArr.filter((f) => f.islast90days);
+            //        break;
+            //    case "Last180Days":
+            //        userList = userInfoArr.filter((f) => f.islast180days);
+            //        break;
+            //    case "Last360Days":
+            //        userList = userInfoArr.filter((f) => f.islast360days);
+            //        break;
+            //    case "PreviousFY":
+            //        userList = userInfoArr.filter((f) => f.ispreviousfy);
+            //        break;
+            //    case "CurrentFY":
+            //        userList = userInfoArr.filter((f) => f.iscurrentfy);
+            //        break;
+            //    case "CurrentMonth":
+            //        userList = userInfoArr.filter((f) => f.iscurrentmonth);
+            //        break;
+            //    case "Last60Days":
+            //        userList = userInfoArr.filter((f) => f.islast60days);
+            //        break;
+            //    case "Last30Days":
+            //        userList = userInfoArr.filter((f) => f.islast30days);
+            //        break;
+            //    case "PreviousDay":
+            //        userList = userInfoArr.filter((f) => f.ispreviousday);
+            //        break;
+            //    case "CurrentWeek":
+            //        userList = userInfoArr.filter((f) => f.iscurrentweek);
+            //        break;
+            //    case "Last7Days":
+            //        userList = userInfoArr.filter((f) => f.islast7days);
+            //    case "PreviousMonth":
+            //        userList = userInfoArr.filter((f) => f.ispreviousmonth);
+            //        break;
+            //    default:
+            //        userList = userInfoArr;
+            //}
             GetValByKey(key, function (result) {
-                if (userInfoArr.length > 0) {
+                //if (userList.length > 0 && result.length > 0) {
 
                     var allUserObj = {};
 
-                    for (var i = 0; i < userInfoArr.length; i++) {
+                    for (var i = 0; i < userList.length; i++) {
                         let userSummary = result.filter(function (el) {
-                            return el.name === userInfoArr[i].userid;
+                            return el.name === userList[i].userid;
                         });
-                        console.log(userInfoArr[i].userid);
 
                         if (userSummary.length > 0 && userSummary[0].realisedpnl != undefined) {
-                            console.log(userSummary[0].name);
                             allUserObj = userSummary[0];
-                            allUserObj.username = userInfoArr[i].username;
-                            allUserObj.userid = userInfoArr[i].userid;
-                            allUserObj.profilepic = userInfoArr[i].profilepic;
-                            allUserObj.twitterurl = userInfoArr[i].twitterurl;
-                            allUserObj.userid = userInfoArr[i].userid;
-                            allUserObj.pnlsource = userInfoArr[i].pnlsource;
-                            console.log(allUserObj);
+                            allUserObj.username = userList[i].username;
+                            allUserObj.userid = userList[i].userid;
+                            allUserObj.profilepic = userList[i].profilepic;
+                            allUserObj.twitterurl = userList[i].twitterurl;
+                            allUserObj.userid = userList[i].userid;
+                            allUserObj.pnlsource = userList[i].pnlsource;
                             modelJson.push(allUserObj);
                         }
 
                     }
-
+                    if (table != null) {
+                        table.destroy();
+                        table = null;
+                    }
                     table = $('#tableUsers').DataTable({
                         paging: false,
-                        order: [[1, 'desc']],
+                        order: [[2, 'desc']],
                         ajax: function (dataSent, callback, settings) {
                             callback({ data: modelJson });
                         },
                         paging: false,
-                        drawCallback: function () {  
-                            $('.sparkline')
-                                .map(function () {
+                        drawCallback: function () {
+                            setTimeout(function () {
+                                $('.sparkline').map(function () {
                                     var $this = $('canvas', this).length ? null : this;
                                     return $this;
-                                })
-                                .sparkline('html', {
+                                }).sparkline('data-html', {
                                     type: 'bar',
                                     width: '850px',
                                     'negBarColor': '#f35631',
                                     'barColor': '#10b983'
                                 });
+                            }, 1);
+
                         },
                         columns: [
                             {
@@ -117,6 +188,16 @@
                                                                             <h6 class="mb-0 ps-2">${row.username}</h6>
                                                                         </div>
                                                                     </a>`;
+                                }
+                            }
+                            ,
+                            {
+                                data: 'barchart',
+                                bSortable: false,
+                                render: function (data, type, row, meta) {
+                                    return type === 'display'
+                                        ? '<span class="sparkline" data-html="' + data.toString() + '"></span>'
+                                        : data;
                                 }
                             },
                             {
@@ -197,41 +278,51 @@
                                 data: 'barchart',
                                 bSortable: false,
                                 render: function (data, type, row, meta) {
-                                    return type === 'display'
-                                        ? '<span class="sparkline">' + data.toString() + '</span>'
-                                        : data;
-                                }
-                            },
-                            {
-                                data: 'barchart',
-                                bSortable: false,
-                                render: function (data, type, row, meta) {
                                     return `<a target="_blank" href="${row.twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="${row.pnlsource}"> <span class="far fa-eye"></span></a>`;
                                 }
                             }
                         ]
                     });
-                    modelJson.sort(ArrDescSort);
+                modelJson.sort(ArrDescSort);
+                if (modelJson.length > 0) {
                     $("#pnl_row_template").tmpl(modelJson).appendTo("#true_nl_rows");
+                } else {
+                    $("#true_nl_rows").html('<span>Record not found </span>');
+                }
                     setTimeout(function () {
                         $('.sparkline_span')
                             .map(function () {
                                 var $this = $('canvas', this).length ? null : this;
                                 return $this;
                             })
-                            .sparkline('html', {
+                            .sparkline('data-html', {
                                 type: 'bar',
-                                width: '850px',
+                                width: '135',
+                                height: '38',
                                 'negBarColor': '#f35631',
                                 'barColor': '#10b983'
                             });
 
                     }, 1)
-                    
+
 
                     flexTable();
 
-                }
+              //  }
+                //else {
+                //    if (table != null) {
+                //        table.destroy();
+                //        table = $('#tableUsers').DataTable({
+                //            paging: false,
+                //            order: [[2, 'desc']],
+                //            ajax: function (dataSent, callback, settings) {
+                //                callback({ data: [] });
+                //            },
+                //            paging: false
+                //        });
+                //        $("#true_nl_rows").empty();
+                //    }
+                //}
 
                 HideLoading()
             });
@@ -307,9 +398,24 @@
         };
 
         function LoadeChatFirstTime() {
-            bindPNLSummary('All');
+            $(".nav-click").removeClass('active');
+            $(`[data-key="${$aliash}"]`).addClass('active');
+            $.getJSON(`${$domainName}pnl/userInfo.json?v=${$timeSpam}`, function (result) {
+                userInfoArr = result;
+                bindPNLSummary($aliash);
+            });
+            
         }
 
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[1]);
+            }
+            return vars.length > 0 && vars[0] != undefined ? vars[0] : 'All';
+        }
         $this.init = function () {
 
             var hostName = window.location.hostname;

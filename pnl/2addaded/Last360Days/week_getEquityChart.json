@@ -1,6 +1,6 @@
 [
   {
-    "pnl": -183258.721732,
+    "pnl": 0.0,
     "pnlstr": null,
     "date": "2023-03-06T00:00:00",
     "weekday": "Mar 2023",
@@ -24,7 +24,7 @@
     "color": null
   },
   {
-    "pnl": -207983.62490999995,
+    "pnl": -207983.62491,
     "pnlstr": null,
     "date": "2023-03-27T00:00:00",
     "weekday": "Mar 2023",
@@ -408,10 +408,18 @@
     "color": null
   },
   {
-    "pnl": -3286661.212483,
+    "pnl": -3230996.868348,
     "pnlstr": null,
     "date": "2024-02-26T00:00:00",
     "weekday": "Feb 2024",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": -3182193.998403,
+    "pnlstr": null,
+    "date": "2024-03-04T00:00:00",
+    "weekday": "Mar 2024",
     "charges": 0.0,
     "color": null
   }

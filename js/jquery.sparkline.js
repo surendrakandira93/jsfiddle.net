@@ -946,7 +946,13 @@
                  render, i;
             render = function () {
                 var values, width, height, tmp, mhandler, sp, vals;
-                if (userValues === 'html' || userValues === undefined) {
+                if (userValues === 'data-html' || userValues === undefined) {
+                    vals = this.getAttribute(options.get('tagValuesAttribute'));
+                    if (vals === undefined || vals === null) {
+                        vals = $this.data('html');
+                    }
+                    values = vals.replace(/(^\s*<!--)|(-->\s*$)|\s+/g, '').split(',');
+                } else if (userValues === 'html' || userValues === undefined) {
                     vals = this.getAttribute(options.get('tagValuesAttribute'));
                     if (vals === undefined || vals === null) {
                         vals = $this.html();
