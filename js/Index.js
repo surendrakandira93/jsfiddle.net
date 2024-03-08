@@ -151,6 +151,7 @@
                             allUserObj.profilepic = userList[i].profilepic;
                             allUserObj.twitterurl = userList[i].twitterurl;
                             allUserObj.userid = userList[i].userid;
+                            allUserObj.key = key;
                             allUserObj.pnlsource = userList[i].pnlsource;
                             modelJson.push(allUserObj);
                         }
@@ -189,7 +190,7 @@
                                 data: null,
                                 bSortable: true,
                                 render: function (data, type, row, meta) {
-                                    return `<a href="Details.html?user=${row.userid}">
+                                    return `<a href="Details.html?user=${row.userid}&key=${row.key}">
                                                                         <div class="d-flex align-items-center">
                                                                             <div class="avatar avatar-xl">
                                                                                 <img class="rounded-circle" src="${(row.profilepic != null && row.profilepic != "" ? row.profilepic : "http://rtwelfare.club/img/default-Profile.png")}" alt="">
@@ -287,15 +288,18 @@
                                 data: 'barchart',
                                 bSortable: false,
                                 render: function (data, type, row, meta) {
-                                    return `<a target="_blank" href="${row.twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="${row.pnlsource}"> <span class="far fa-eye"></span></a>`;
+                                    return `<a target="_blank" href="${row.twitterurl}"> <img src="twitter-x.svg" style="width: 15px;" /> </a> <a target="_blank" href="${row.pnlsource}"> <img src="zerodha.png" style="width: 15px;" /></a>`;
                                 }
                             }
                         ]
                     });
                 modelJson.sort(ArrDescSort);
                 if (modelJson.length > 0) {
+                    //$("#pnl_tr_template").tmpl(modelJson).appendTo("#tableUsers tbody");
                     $("#pnl_row_template").tmpl(modelJson).appendTo("#true_nl_rows");
+                    
                 } else {
+                    $("#tableUsers tbody").html('<tr><td colspan="10">Record Not Found</td></tr>');
                     $("#true_nl_rows").html('<span>Record not found </span>');
                 }
                     setTimeout(function () {

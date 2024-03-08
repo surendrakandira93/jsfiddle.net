@@ -64,15 +64,16 @@
         .stretched-link::after {
             position: relative;
         }
-
-       
-
-        .smallfont {
-            font-size: smaller;
+        canvas {
+            width: 60px;
+            height: 30px;
+        }
+        table {
+            font-size: 12px;
         }
 
         .tableHeader th {
-            border-top: 1px solid rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(0, 0, 0, 0.3);*/
         }
         .underline {
             text-decoration-line: underline;
@@ -80,12 +81,7 @@
         .leading-\[14px\] {
             line-height: 14px;
         }
-        .font-semibold {
-            font-weight: 600;
-        }
-        .text-xs, .text-xs\/4 {
-            font-size: .75rem;
-        }
+        
 
         .px-2 {
             padding-left: 0.5rem;
@@ -96,6 +92,9 @@
         }
         .navbar-nav .nav-link.active {
             color: #2c7be5;
+        }
+        .text-hr {
+            color: rgba(237, 242, 249, var(--falcon-text-opacity)) !important;
         }
 
     </style>
@@ -109,7 +108,7 @@
         <div class="container" data-layout="container">
             <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg">
                 <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-                <a class="navbar-brand me-1 me-sm-3 desktop_nav" href="/">
+                <a class="navbar-brand me-1 me-sm-3 desktop_nav" data-key="All" href="index.html?key=All">
                     <div class="d-flex align-items-center">
                         <img class="me-2" src="Approved.svg" alt="" width="40" />
                         <span class="font-sans-serif" id="logo_txt">truePnL</span>
@@ -122,15 +121,24 @@
                             <a class="nav-link nav-click fw-medium cursor-pointer active" data-key="All" href="index.html?key=All">Max</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="CurrentWeek" href="index.html?key=CurrentWeek">
-                                Curr. Week
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="PreviousMonth" href="index.html?key=PreviousMonth">
+                                Prev. Month
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="CurrentMonth" href="index.html?key=CurrentMonth">
-                                Curr. Month
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="Last60Days" href="index.html?key=Last60Days">
+                                60D
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="Last90Days" href="index.html?key=Last90Days">
+                                90D
+                            </a>
+                        </li>
+
+
                         <li class="nav-item">
                             <a class="nav-link nav-click fw-medium cursor-pointer" data-key="CurrentFY" href="index.html?key=CurrentFY">
                                 Curr. FY
@@ -142,23 +150,16 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="Last90Days" href="index.html?key=Last90Days">
-                                90D
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="Last60Days" href="index.html?key=Last60Days">
-                                60D
-                            </a>
-                        </li>
+
+
+
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                             <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
                                 <div class="bg-white dark__bg-1000 rounded-3 py-2">
-                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousDay" href="index.html?key=PreviousDay">
+                                    <!--<a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousDay" href="index.html?key=PreviousDay">
                                         Prev. Day
-                                    </a>
+                                    </a>-->
 
                                     <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last7Days" href="index.html?key=Last7Days">
                                         7D
@@ -175,11 +176,17 @@
                                     <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last360Days" href="index.html?key=Last360Days">
                                         360D
                                     </a>
+                        
+                            <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentWeek" href="index.html?key=CurrentWeek">
+                                Curr. Week
+                            </a>
+                       
+                            <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentMonth" href="index.html?key=CurrentMonth">
+                                Curr. Month
+                            </a>
+                      
 
-                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousMonth" href="index.html?key=PreviousMonth">
-                                        Prev. Month
-                                    </a>
-                                </div>
+</div>
                             </div>
                         </li>
 
@@ -200,7 +207,7 @@
                                     <div class="col-md-12">
                                         <span class="ms-3 fw-bold title_date"></span>
                                         <div class="table-responsive scrollbar ms-3">
-                                            <table class="table table-bordered table-striped mb-0" id="tableUsers">
+                                            <table class="table table-bordered table-striped mb-0" id="tableUsers" style="width:100%">
                                                 <thead>
                                                     <tr class="tableHeader">
                                                         <th>Name</th>
@@ -215,6 +222,9 @@
                                                         <th style="font-size: 12px;width: 5%;" scope="col">Info</th>
                                                     </tr>
                                                 </thead>
+                                                <tbody>
+                                                    
+                                                </tbody>
 
                                             </table>
                                         </div>
@@ -268,31 +278,45 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
+    <script id="pnl_tr_template" type="text/x-jquery-tmpl">
+
+        <tr>
+            <td><a href="Details.html?user=${userid}">
+    <div class="d-flex align-items-center">
+        <div class="avatar avatar-xl">
+            <img class="rounded-circle" src="${(profilepic != null && profilepic != " " ? profilepic : " http: //rtwelfare.club/img/default-Profile.png")}" alt="">
+        </div>
+        <h6 class="mb-0 ps-2">${username}</h6>
+    </div>
+</a></td>
+            <td> <span class="sparkline_span" data-html="${barchart.toString()}"></span></td>
+            <td>${pnlddratio.toFixed(2)}</td>
+            <td>${winrate.toFixed(2)}</td>
+            <td>${realisedpnl.prefix}${realisedpnl.endvalue.toFixed(realisedpnl.decimalplaces)}${realisedpnl.suffix}</td>
+            <td>${chargestaxes.prefix}${chargestaxes.endvalue.toFixed(chargestaxes.decimalplaces)}${chargestaxes.suffix}</td>
+            <td style="color:${netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983'}">${netrealisedpnl.prefix}${netrealisedpnl.endvalue.toFixed(netrealisedpnl.decimalplaces)}${netrealisedpnl.suffix}</td>
+            <td style="color:#f35631">${maxdrawdown}</td>
+            <td>${totaltradingdays}</td>
+            <td><a target="_blank" href="${twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="${pnlsource}"> <span class="far fa-eye"></span></a></td>
+        </tr>
+    </script>
+
     <script id="pnl_row_template" type="text/x-jquery-tmpl">
         <div class="row g-0 align-items-center py-2 position-relative">
             <div class="col-2">
                 <div class="avatar avatar-xl">
-                    <img class="avatar-name rounded-circle bg-soft-success text-dark" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
+                    <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">
+                        <img class="avatar-name rounded-circle bg-soft-success text-dark" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
+                    </a>
                 </div>
             </div>
 
             <div class="col-5">
-                <a class="fw-bold stretched-link" href="Details.html?user=${userid}">${username}</a>
+                <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">${username}</a>
             </div>
             <div class="col-5">
                 <div class="sparkline_span" data-html="${barchart.toString()}"></div>
             </div>
-
-            <!--<div class="col-2">
-                <div class="hover-actions top-50 translate-middle-y">
-                    <a class="btn btn-light border-300 btn-sm text-600" data-bs-toggle="tooltip" data-bs-placement="top" href="${twitterurl}" target="_blank" aria-label="Download" data-bs-original-title="Twitter">
-                        <span class="fab fa-twitter"></span>
-                    </a>
-                    <a class="btn btn-light border-300 btn-sm text-600 shadow-none" href="${pnlsource}" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="PNLSource" data-bs-original-title="PNL Source">
-                        <span class="far fa-eye"></span>
-                    </a>
-                </div>
-            </div>-->
         </div>
 
         <div class="row g-0 align-items-center py-2 position-relative">
@@ -300,52 +324,52 @@
                 Win Rate:
             </div>
 
-            <div class="col-3">
-                ${winrate.toFixed(2)}
+            <div class="col-3 text-center fw-bold">
+                ${winrate.toFixed(2)}%
             </div>
             <div class="col-3 smallfont">
-                Realised PNL:
+                Grs PnL:
             </div>
 
-            <div class="col-3">
+            <div class="col-3 text-center fw-bold" style="color:${realisedpnl.actualvalue < 0 ? '#f35631' : '#10b983' }">
                 ${realisedpnl.prefix}${realisedpnl.endvalue.toFixed(realisedpnl.decimalplaces)}${realisedpnl.suffix}
             </div>
         </div>
 
         <div class="row g-0 align-items-center py-2 position-relative">
             <div class="col-3 smallfont">
-                Max Drawdown:
+                Max DD:
             </div>
 
-            <div class="col-3" style="color:#f35631">
+            <div class="col-3 text-center fw-bold">
                 ${maxdrawdown}
             </div>
             <div class="col-3 smallfont">
-                Charges Taxes:
+                Charges:
             </div>
 
-            <div class="col-3">
+            <div class="col-3 text-center fw-bold">
                 ${chargestaxes.prefix}${chargestaxes.endvalue.toFixed(chargestaxes.decimalplaces)}${chargestaxes.suffix}
             </div>
         </div>
 
         <div class="row g-0 align-items-center py-2 position-relative">
             <div class="col-3 smallfont">
-                PnL to DD Ratio:
+                PnL DD Ratio:
             </div>
 
-            <div class="col-3">
+            <div class="col-3 text-center fw-bold">
                 ${pnlddratio.toFixed(2)}
             </div>
             <div class="col-3 smallfont">
-                Net Realised PNL:
+                Net PnL:
             </div>
 
-            <div class="col-3" style="color:${netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983'}">
+            <div class="col-3 text-center fw-bold" style="color:${netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983'}">
                 ${netrealisedpnl.prefix}${netrealisedpnl.endvalue.toFixed(netrealisedpnl.decimalplaces)}${netrealisedpnl.suffix}
             </div>
         </div>
-        <hr class="text-200">
+        <hr class="text-hr">
     </script>
 
     <script type="text/javascript" src="http://rtwelfare.club/js/jquery.min.js"></script>

@@ -198,31 +198,31 @@
                             <a class="nav-link" href="index.html" role="button">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="PreviousDay.html" role="button">Prev. Day</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=PreviousDay" role="button">Prev. Day</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Last7Days.html" role="button">Last 7 Days</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last7Days" role="button">Last 7 Days</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Last30Days.html" role="button">Last 30 Days</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last30Days" role="button">Last 30 Days</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Last60Days.html" role="button">Last 60 Days</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last60Days" role="button">Last 60 Days</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Last90Days.html" role="button">Last 90 Days</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last90Days" role="button">Last 90 Days</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Last180Days.html" role="button">Last 180 Days</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last180Days" role="button">Last 180 Days</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Last360Days.html" role="button">Last 360 Days</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last360Days" role="button">Last 360 Days</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="PreviousFY.html" role="button">Prev. FY</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=PreviousFY" role="button">Prev. FY</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="CurrentFY.html" role="button">Current FY</a>
+                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=CurrentFY" role="button">Current FY</a>
                         </li>
                     </ul>
                 </div>
@@ -236,19 +236,39 @@
                             <nav style="--falcon-breadcrumb-divider: '»';" aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-
+                                    <li class="breadcrumb-item active bredcrum_title" aria-current="page"></li>
                                     <li class="breadcrumb-item active user_name" aria-current="page"></li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 hide_user_Info">
-                    <div class="card-header position-relative min-vh-12 mb-7">
-                        <div class="avatar avatar-5xl avatar-profile">
-                            <img class="rounded-circle img-thumbnail shadow-sm" src="" id="user_profile_img" width="200" alt="">
+
+                <div class="d-block d-sm-none">
+                    <div class="card">
+                        <img src="..." class="card-img-top user_profile_img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title user_name"></h5>
+                            <a class="d-flex float-start mb-2 twiter_url" target="_blank" href="#" id="twiter_url">
+                                <img class="align-self-center me-2" src="twitter-x.svg" alt="" width="30">
+                            </a>
+
+                            <a class="d-flex float-end mb-2 pnlsource_url" target="_blank" id="pnlsource_url" href="">
+                                <img src="zerodha.png" />
+                            </a>
+
                         </div>
                     </div>
+                </div>
+
+                <div class="d-none d-sm-block card mb-3 hide_user_Info">
+                    <div class="card-header position-relative min-vh-12 mb-7">
+                        <div class="avatar avatar-5xl avatar-profile">
+                            <img class="rounded-circle img-thumbnail shadow-sm user_profile_img" src="" id="user_profile_img" width="200" alt="">
+                        </div>
+                    </div>
+                    
+
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-8">
@@ -256,17 +276,14 @@
                                 <div class="border-bottom border-dashed my-4 d-lg-none"></div>
                             </div>
                             <div class="col ps-2 ps-lg-3">
-                                <a class="d-flex align-items-center mb-2" target="_blank" href="#" id="twiter_url">
-                                    <img class="align-self-center me-2" src="http://rtwelfare.club/assets/img/logos/twitter.png" alt="" width="30">
-                                    <div class="flex-1">
-                                        <h6 class="mb-0 user_name"></h6>
-                                    </div>
+                                <a class="d-flex align-items-center mb-2 twiter_url" target="_blank" href="#" id="twiter_url">
+                                    <img class="align-self-center me-2" src="twitter-x.svg" alt="" width="30">                                   
                                 </a>
                             </div>
 
                             <div class="col ps-2 ps-lg-3">
-                                <a class="d-flex align-items-center mb-2" target="_blank" id="pnlsource_url" href="">
-                                    <span class="far fa-eye"></span>
+                                <a class="d-flex align-items-center mb-2 pnlsource_url" target="_blank" id="pnlsource_url" href="">
+                                    <img src="zerodha.png" />
                                 </a>
                             </div>
                         </div>

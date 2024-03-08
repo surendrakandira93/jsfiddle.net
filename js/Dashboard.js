@@ -4,9 +4,67 @@
         var $timeSpam = new Date().getTime();
         var $domainName = 'https://raw.githubusercontent.com/surendrakandira93/jsfiddle.net/master/';
         var $aliash = getUrlVars();
-
+        var $key = getKeyVars();
+        var $title = "";
         function initilizeModel() {
+            switch ($key) {
+                case "All":                   
+                    break;
+                case "Last90Days":
+                    $title = "Last 90 Days";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "Last180Days":
+                    $title = "Last 180 Days";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "Last360Days":
+                    $title = "Last 360 Days";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "PreviousFY":
+                    $title = "Previous FY";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "CurrentFY":
+                    $title = "Current FY";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "CurrentMonth":
+                    $title = "Current Month";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "Last60Days":
+                    $title = "Last 60 Days";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "Last30Days":
+                    $title = "Last 30 Days";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "PreviousDay":
+                    $title = "Previous Day";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "CurrentWeek":
+                    $title = "Current Week";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "Last7Days":
+                    $title = "Last 7 Days";
+                    pageUrl = `/${$key}/`;
+                case "PreviousMonth":
+                    $title = "Previous Month";
+                    pageUrl = `/${$key}/`;
+                    break;
+                default:
+            }
 
+            if ($title != "") {
+                $(".bredcrum_title").html($title);
+            } else {
+                $(".bredcrum_title").remove();
+            }
             $('.equity_chart').click(function () {
                 $(".equity_chart").removeClass('active');
                 $(this).addClass('active');
@@ -165,6 +223,16 @@
             return vars.length > 0 && vars[0] != undefined ? vars[0] : 'user1';
         }
 
+        function getKeyVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[1]);
+            }
+            return vars.length > 1 && vars[1] != undefined ? vars[1] : 'All';
+        }
+
         function LoadeChatFirstTime() {
             bindPNLManu();
             bindEquityChart('day');
@@ -186,7 +254,7 @@
 
             $(".menu_dynamic").each(function () {
                 var href = $(this).attr('href');
-                var newHref = `${href}?user=${$aliash}`;
+                var newHref = href.replace("$userKey", $aliash);
                 $(this).attr('href', newHref);
             })
 
@@ -197,9 +265,9 @@
                         return el.userid === $aliash;
                     });
                     if (userInfo.length > 0) {
-                        $("#user_profile_img").attr("src", userInfo[0].profilepic);
-                        $("#twiter_url").attr("href", userInfo[0].twitterurl);
-                        $("#pnlsource_url").attr("href", userInfo[0].pnlsource);
+                        $(".user_profile_img").attr("src", userInfo[0].profilepic);
+                        $(".twiter_url").attr("href", userInfo[0].twitterurl);
+                        $(".pnlsource_url").attr("href", userInfo[0].pnlsource);
                         $(".user_name").html(userInfo[0].username);
                     } else {
                         $(".hide_user_Info").hide();

@@ -1,13 +1,26 @@
 {
   "items": [
     {
-      "data": [],
+      "data": [
+        {
+          "date": 1709424000,
+          "value": 0.0
+        },
+        {
+          "date": 1709510400,
+          "value": 0.0
+        },
+        {
+          "date": 1709596800,
+          "value": 673.9
+        }
+      ],
       "calstartdate": "2024-01-01T00:00:00",
       "range": 12
     }
   ],
   "min": 0.0,
-  "max": 0.0,
+  "max": 673.9,
   "startyear": 2024,
   "endyear": 2024
 }
