@@ -44,7 +44,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link href="waitMe/waitMe.min.css" rel="stylesheet" />
     <style>
-        
+
         .hover-actions {
             display: block !important;
         }
@@ -64,39 +64,52 @@
         .stretched-link::after {
             position: relative;
         }
+
         canvas {
             width: 60px;
             height: 30px;
         }
+
         table {
             font-size: 12px;
         }
 
         .tableHeader th {
-            border-top: 1px solid rgba(0, 0, 0, 0.3);*/
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
         }
-        .underline {
+
+        .mobile_div .active {
             text-decoration-line: underline;
         }
+
         .leading-\[14px\] {
             line-height: 14px;
         }
-        
 
-        .px-2 {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
+
+        .px-index-2 {
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
         }
+
         .cursor-pointer {
             cursor: pointer;
         }
+
         .navbar-nav .nav-link.active {
             color: #2c7be5;
         }
+
         .text-hr {
             color: rgba(237, 242, 249, var(--falcon-text-opacity)) !important;
         }
 
+        .round-sql-img {
+            border-radius: 35px;
+            padding: 6px;
+            width: 75px;
+            height: 90px;
+        }
     </style>
 </head>
 
@@ -107,15 +120,15 @@
 
         <div class="container" data-layout="container">
             <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg">
-                <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+                <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" style="display:none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
                 <a class="navbar-brand me-1 me-sm-3 desktop_nav" data-key="All" href="index.html?key=All">
                     <div class="d-flex align-items-center">
                         <img class="me-2" src="Approved.svg" alt="" width="40" />
                         <span class="font-sans-serif" id="logo_txt">truePnL</span>
                     </div>
                 </a>
-
-                <div class="collapse navbar-collapse scrollbar desktop_nav_icon" id="navbarStandard">
+                <button type="button" class="btn btn-primary ms-3 mt-3 mobile_div" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')" style="margin-left:0px !important;margin-top:0px !important; margin-right:0px !important;display:none;"><i class="fa fa-plus"></i> PnL</button>
+                <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
                     <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
                         <li class="nav-item ">
                             <a class="nav-link nav-click fw-medium cursor-pointer active" data-key="All" href="index.html?key=All">Max</a>
@@ -176,17 +189,17 @@
                                     <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last360Days" href="index.html?key=Last360Days">
                                         360D
                                     </a>
-                        
-                            <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentWeek" href="index.html?key=CurrentWeek">
-                                Curr. Week
-                            </a>
-                       
-                            <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentMonth" href="index.html?key=CurrentMonth">
-                                Curr. Month
-                            </a>
-                      
 
-</div>
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentWeek" href="index.html?key=CurrentWeek">
+                                        Curr. Week
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentMonth" href="index.html?key=CurrentMonth">
+                                        Curr. Month
+                                    </a>
+
+
+                                </div>
                             </div>
                         </li>
 
@@ -195,81 +208,40 @@
                         </li>
                     </ul>
                 </div>
+
+                <ul class="nav nav-pills nav-fill mobile_div" style="display:none;">
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="All" href="index.html?key=All">Max</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=PreviousMonth" data-key="PreviousMonth">P. M</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=Last60Days" data-key="Last60Days">60D</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=Last90Days" data-key="Last90Days">90D</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=CurrentFY" data-key="CurrentFY">C. FY</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=PreviousFY" data-key="PreviousFY"> P. FY</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last7Days" href="index.html?key=Last7Days">7D</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last30Days" href="index.html?key=Last30Days">30D</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last180Days" href="index.html?key=Last180Days">180D</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last360Days" href="index.html?key=Last360Days">360D</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="CurrentWeek" href="index.html?key=CurrentWeek">Curr. Week</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="CurrentMonth" href="index.html?key=CurrentMonth">Curr. Month</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
             </nav>
             <div class="content">
-
+                
                 <div class="row g-3 mb-3">
-                    <div class="col-lg-12 ps-lg-2 mb-3 desktop_div" style="display:none;">
-                        <div class="card h-lg-100">
-                            <div class="card-body h-100 pe-0 div_loader">
-                                <!--<button type="button" class="btn btn-primary ms-3" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>-->
-                                <div class="row g-3 mb-3">
-                                    <div class="col-md-12">
-                                        <span class="ms-3 fw-bold title_date"></span>
-                                        <div class="table-responsive scrollbar ms-3">
-                                            <table class="table table-bordered table-striped mb-0" id="tableUsers" style="width:100%">
-                                                <thead>
-                                                    <tr class="tableHeader">
-                                                        <th>Name</th>
-                                                        <th id="barChartLeval"> Monthly PNL</th>
-                                                        <th>PnL to DD Ratio</th>
-                                                        <th>Win Rate</th>
-                                                        <th>Realised PNL</th>
-                                                        <th>Charges Taxes</th>
-                                                        <th>Net Realised PNL</th>
-                                                        <th>Max Drawdown</th>
-                                                        <th>Number of days</th>
-                                                        <th style="font-size: 12px;width: 5%;" scope="col">Info</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    
-                                                </tbody>
-
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h6 class="ms-3">The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
-                        </div>
-
-                    </div>
-
-                    <div class="card mb-3 mobile_div" style="display:none;">
-                        <button type="button" class="btn btn-primary ms-3 mt-3" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>
-                        <!--<div class="flex items-center justify-between pb-3 pt-3" style="overflow:auto;">
-                            <div class="" style="display: flex;">
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526] underline" data-key="All">Max</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="PreviousDay">P.D</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last7Days">7D</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last30Days">30D</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last60Days">60D</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last90Days">90D</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="Last180Days">180D</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="PreviousMonth">P.M</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="PreviousFY">P.FY</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="CurrentWeek">C.W</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="CurrentMonth">C.M</div>
-                                <div class="btn_data mr-1 cursor-pointer px-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-key="CurrentFY">C.FY</div>
-                            </div>
-                        </div>-->
-                        <div class="card-body bg-light">
-                            <div class="row h-100 g-3">
-                                <span class="ms-3 fw-bold title_date"></span>
-                                <div class="col-md-12">
-                                    <div class="col-xxl-12 col-md-12 div-dark" id="true_nl_rows">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h6>The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
-                    </div>
-
+                    <span class="fw-bold title_date"></span>
+                </div>
+                <div class="row g-3 mb-3" id="true_nl_rows">
 
                 </div>
 
-
+                <h6 class="ms-3">The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
 
             </div>
 
@@ -278,98 +250,113 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
-    <script id="pnl_tr_template" type="text/x-jquery-tmpl">
 
-        <tr>
-            <td><a href="Details.html?user=${userid}">
-    <div class="d-flex align-items-center">
-        <div class="avatar avatar-xl">
-            <img class="rounded-circle" src="${(profilepic != null && profilepic != " " ? profilepic : " http: //rtwelfare.club/img/default-Profile.png")}" alt="">
-        </div>
-        <h6 class="mb-0 ps-2">${username}</h6>
-    </div>
-</a></td>
-            <td> <span class="sparkline_span" data-html="${barchart.toString()}"></span></td>
-            <td>${pnlddratio.toFixed(2)}</td>
-            <td>${winrate.toFixed(2)}</td>
-            <td>${realisedpnl.prefix}${realisedpnl.endvalue.toFixed(realisedpnl.decimalplaces)}${realisedpnl.suffix}</td>
-            <td>${chargestaxes.prefix}${chargestaxes.endvalue.toFixed(chargestaxes.decimalplaces)}${chargestaxes.suffix}</td>
-            <td style="color:${netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983'}">${netrealisedpnl.prefix}${netrealisedpnl.endvalue.toFixed(netrealisedpnl.decimalplaces)}${netrealisedpnl.suffix}</td>
-            <td style="color:#f35631">${maxdrawdown}</td>
-            <td>${totaltradingdays}</td>
-            <td><a target="_blank" href="${twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="${pnlsource}"> <span class="far fa-eye"></span></a></td>
-        </tr>
-    </script>
 
     <script id="pnl_row_template" type="text/x-jquery-tmpl">
-        <div class="row g-0 align-items-center py-2 position-relative">
-            <div class="col-2">
-                <div class="avatar avatar-xl">
-                    <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">
-                        <img class="avatar-name rounded-circle bg-soft-success text-dark" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
+        <!--<div class="col-xxl-2 col-xl-3 col-lg-4 col-md-4  col-sm-6 col-xs-12 mb-3">-->
+        <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
+            <div class="card">
+                <!--<div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-4.png);"></div>-->
+                <!--<div class="d-flex align-items-start align-items-sm-center">
+                <a class="" href="Details.html?user=${userid}&key=${key}">
+                    <div class="">
+                        <img class="round-sql-img" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
+                    </div>
+                </a>
+                <div class="ms-1 ms-sm-3">
+
+                    <div class="row align-items-center gx-0 gy-2">
+                        <div class="col-6">
+                            <p class="fw-semi-bold mb-3 mb-sm-2">
+                                <a href="Details.html?user=${userid}&key=${key}">${username}</a>
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <div class="sparkline_span" data-html="${barchart.toString()}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+                <div class="card-body">
+                    <div class="row g-0 align-items-center py-2 position-relative">
+                        <div class="col-2">
+                            <div class="avatar avatar-2xl">
+                                <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">
+                                    <img class="avatar-name rounded-circle bg-soft-success text-dark" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">${username}</a>
+                        </div>
+                        <div class="col-5">
+                            <div class="sparkline_span" data-html="${barchart.toString()}"></div>
+                        </div>
+                    </div>
+
+                    <div class="row g-0 align-items-center py-2 position-relative">
+                        <div class="col-3 smallfont">
+                            Win Rate:
+                        </div>
+
+                        <div class="col-3 text-center fw-bold">
+                            ${winrate.toFixed(2)}%
+                        </div>
+                        <div class="col-3 smallfont">
+                            Grs PnL:
+                        </div>
+
+                        <div class="col-3 text-center fw-bold" style="color:${realisedpnl.actualvalue < 0 ? '#f35631' : '#10b983' }">
+                            ${realisedpnl.prefix}${realisedpnl.endvalue.toFixed(realisedpnl.decimalplaces)}${realisedpnl.suffix}
+                        </div>
+                    </div>
+
+                    <div class="row g-0 align-items-center py-2 position-relative">
+                        <div class="col-3 smallfont">
+                            Max DD:
+                        </div>
+
+                        <div class="col-3 text-center fw-bold">
+                            ${maxdrawdown}
+                        </div>
+                        <div class="col-3 smallfont">
+                            Charges:
+                        </div>
+
+                        <div class="col-3 text-center fw-bold">
+                            ${chargestaxes.prefix}${chargestaxes.endvalue.toFixed(chargestaxes.decimalplaces)}${chargestaxes.suffix}
+                        </div>
+                    </div>
+
+                    <div class="row g-0 align-items-center py-2 position-relative">
+                        <div class="col-3 smallfont">
+                            PnL DD Ratio:
+                        </div>
+
+                        <div class="col-3 text-center fw-bold">
+                            ${pnlddratio.toFixed(2)}
+                        </div>
+                        <div class="col-3 smallfont">
+                            Net PnL:
+                        </div>
+
+                        <div class="col-3 text-center fw-bold" style="color:${netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983'}">
+                            ${netrealisedpnl.prefix}${netrealisedpnl.endvalue.toFixed(netrealisedpnl.decimalplaces)}${netrealisedpnl.suffix}
+                        </div>
+                    </div>
+                    <!--<div class="row g-0 align-items-center py-2 position-relative">
+                    <a class="d-flex float-start mb-2 twiter_url" target="_blank" href="https://twitter.com/tatvamasi2020" id="twiter_url">
+                        <img class="align-self-center me-2" src="twitter-x.svg" alt="" width="30">
                     </a>
+
+                    <a class="d-flex float-end mb-2 pnlsource_url" target="_blank" id="pnlsource_url" href="https://console.zerodha.com/verified/b0ab666f">
+                        <img src="zerodha.png">
+                    </a>
+                </div>-->
                 </div>
             </div>
 
-            <div class="col-5">
-                <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">${username}</a>
-            </div>
-            <div class="col-5">
-                <div class="sparkline_span" data-html="${barchart.toString()}"></div>
-            </div>
         </div>
-
-        <div class="row g-0 align-items-center py-2 position-relative">
-            <div class="col-3 smallfont">
-                Win Rate:
-            </div>
-
-            <div class="col-3 text-center fw-bold">
-                ${winrate.toFixed(2)}%
-            </div>
-            <div class="col-3 smallfont">
-                Grs PnL:
-            </div>
-
-            <div class="col-3 text-center fw-bold" style="color:${realisedpnl.actualvalue < 0 ? '#f35631' : '#10b983' }">
-                ${realisedpnl.prefix}${realisedpnl.endvalue.toFixed(realisedpnl.decimalplaces)}${realisedpnl.suffix}
-            </div>
-        </div>
-
-        <div class="row g-0 align-items-center py-2 position-relative">
-            <div class="col-3 smallfont">
-                Max DD:
-            </div>
-
-            <div class="col-3 text-center fw-bold">
-                ${maxdrawdown}
-            </div>
-            <div class="col-3 smallfont">
-                Charges:
-            </div>
-
-            <div class="col-3 text-center fw-bold">
-                ${chargestaxes.prefix}${chargestaxes.endvalue.toFixed(chargestaxes.decimalplaces)}${chargestaxes.suffix}
-            </div>
-        </div>
-
-        <div class="row g-0 align-items-center py-2 position-relative">
-            <div class="col-3 smallfont">
-                PnL DD Ratio:
-            </div>
-
-            <div class="col-3 text-center fw-bold">
-                ${pnlddratio.toFixed(2)}
-            </div>
-            <div class="col-3 smallfont">
-                Net PnL:
-            </div>
-
-            <div class="col-3 text-center fw-bold" style="color:${netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983'}">
-                ${netrealisedpnl.prefix}${netrealisedpnl.endvalue.toFixed(netrealisedpnl.decimalplaces)}${netrealisedpnl.suffix}
-            </div>
-        </div>
-        <hr class="text-hr">
     </script>
 
     <script type="text/javascript" src="http://rtwelfare.club/js/jquery.min.js"></script>

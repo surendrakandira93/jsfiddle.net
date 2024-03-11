@@ -2047,26 +2047,26 @@
     },
     {
       "realisedpnl": {
-        "endvalue": 1.2635425,
-        "actualvalue": 126354.25,
+        "endvalue": 65.77189999999999,
+        "actualvalue": 65771.9,
         "decimalplaces": 2,
-        "suffix": "L",
+        "suffix": "K",
         "color": "#f5803e",
         "name": "Realised PNL",
         "prefix": "+"
       },
       "totalpnl": {
-        "endvalue": 1.53016937902,
-        "actualvalue": 153016.937902,
+        "endvalue": 93.42947527199999,
+        "actualvalue": 93429.475272,
         "decimalplaces": 2,
-        "suffix": "L",
+        "suffix": "K",
         "color": "#f5803e",
         "name": "Total PNL",
         "prefix": ""
       },
       "chargestaxes": {
-        "endvalue": 26.662687902,
-        "actualvalue": 26662.687901999998,
+        "endvalue": 27.657575272,
+        "actualvalue": 27657.575272,
         "decimalplaces": 2,
         "suffix": "K",
         "color": "#27bcfd",
@@ -2074,8 +2074,8 @@
         "prefix": ""
       },
       "netrealisedpnl": {
-        "endvalue": 99.69156209799999,
-        "actualvalue": 99691.562098,
+        "endvalue": 38.11432472799999,
+        "actualvalue": 38114.32472799999,
         "decimalplaces": 2,
         "suffix": "K",
         "color": "#00d27a",
@@ -2092,15 +2092,15 @@
         "prefix": ""
       },
       "name": "samvedsinho",
-      "total": 31,
+      "total": 45,
       "totaltradingdays": 21,
       "barchart": [
         6484.0,
-        119870.25
+        59287.9
       ],
-      "winrate": 71.42857142857143,
-      "pnlddratio": 1.1831893427446283,
-      "maxdrawdown": "84.26K",
+      "winrate": 61.904761904761905,
+      "pnlddratio": 0.42859079105625003,
+      "maxdrawdown": "88.93K",
       "maxdate": "2023-03-30T00:00:00Z",
       "mindate": "2023-02-28T00:00:00Z"
     },

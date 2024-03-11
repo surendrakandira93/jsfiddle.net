@@ -166,7 +166,67 @@
         }
     </style>
 
+    <style>
 
+        .hover-actions {
+            display: block !important;
+        }
+
+        .btn-sm {
+            --falcon-btn-padding-y: 0.1875rem;
+            --falcon-btn-padding-x: 0.5rem;
+            --falcon-btn-font-size: 0.775rem;
+            --falcon-btn-border-radius: 0.25rem;
+        }
+
+        .sparkline_span {
+            width: 150px;
+            height: 40px;
+        }
+
+        .stretched-link::after {
+            position: relative;
+        }
+
+        canvas {
+            width: 60px;
+            height: 30px;
+        }
+
+        table {
+            font-size: 12px;
+        }
+
+        .tableHeader th {
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile_div .active {
+            text-decoration-line: underline;
+        }
+
+        .leading-\[14px\] {
+            line-height: 14px;
+        }
+
+
+        .px-index-2 {
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #2c7be5;
+        }
+
+        .text-hr {
+            color: rgba(237, 242, 249, var(--falcon-text-opacity)) !important;
+        }
+    </style>
 
 </head>
 
@@ -183,52 +243,120 @@
                 }
             </script>
 
-
             <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg">
-
-                <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-                <a class="navbar-brand me-1 me-sm-3" href="index.html">
+                <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" style="display:none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+                <a class="navbar-brand me-1 me-sm-3 desktop_nav" data-key="All" href="index.html?key=All">
                     <div class="d-flex align-items-center">
-                        <img class="me-2" src="Approved.svg" alt="" width="40" /><span class="font-sans-serif">truePnL</span>
+                        <img class="me-2" src="Approved.svg" alt="" width="40" />
+                        <span class="font-sans-serif" id="logo_txt">truePnL</span>
                     </div>
                 </a>
+                <button type="button" class="btn btn-primary ms-3 mt-3 mobile_div" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')" style="margin-left:0px !important;margin-top:0px !important; margin-right:0px !important;display:none;"><i class="fa fa-plus"></i> PnL</button>
                 <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
-                    <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns" id="manu_ui">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" role="button">Home</a>
+                    <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
+                        <li class="nav-item ">
+                            <a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer active" data-key="All" href="Details.html?user=$userKey&key=All">Max</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=PreviousDay" role="button">Prev. Day</a>
+                            <a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer" data-key="PreviousMonth" href="Details.html?user=$userKey&key=PreviousMonth">
+                                Prev. Month
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer" data-key="Last60Days" href="Details.html?user=$userKey&key=Last60Days">
+                                60D
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer" data-key="Last90Days" href="Details.html?user=$userKey&key=Last90Days">
+                                90D
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer" data-key="CurrentFY" href="Details.html?user=$userKey&key=CurrentFY">
+                                Curr. FY
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last7Days" role="button">Last 7 Days</a>
+                            <a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer" data-key="PreviousFY" href="Details.html?user=$userKey&key=PreviousFY">
+                                Prev. FY
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last30Days" role="button">Last 30 Days</a>
+
+
+
+
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                            <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
+                                <div class="bg-white dark__bg-1000 rounded-3 py-2">
+                                    <!--<a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousDay" href="index.html?key=PreviousDay">
+                                        Prev. Day
+                                    </a>-->
+
+                                    <a class="menu_dynamic nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last7Days" href="Details.html?user=$userKey&key=Last7Days">
+                                        7D
+                                    </a>
+
+                                    <a class="menu_dynamic nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last30Days" href="Details.html?user=$userKey&key=Last30Days">
+                                        30D
+                                    </a>
+
+                                    <a class="menu_dynamic nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last180Days" href="Details.html?user=$userKey&key=Last180Days">
+                                        180D
+                                    </a>
+
+                                    <a class="menu_dynamic nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last360Days" href="Details.html?user=$userKey&key=Last360Days">
+                                        360D
+                                    </a>
+
+                                    <a class="menu_dynamic nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentWeek" href="Details.html?user=$userKey&key=CurrentWeek">
+                                        Curr. Week
+                                    </a>
+
+                                    <a class="menu_dynamic nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentMonth" href="Details.html?user=$userKey&key=CurrentMonth">
+                                        Curr. Month
+                                    </a>
+
+
+                                </div>
+                            </div>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last60Days" role="button">Last 60 Days</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last90Days" role="button">Last 90 Days</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last180Days" role="button">Last 180 Days</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=Last360Days" role="button">Last 360 Days</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=PreviousFY" role="button">Prev. FY</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu_dynamic" href="Details.html?user=$userKey&key=CurrentFY" role="button">Current FY</a>
+                            <a class="nav-link fw-medium cursor-pointer" style="background-color: #2c7be5; color: white;" href="https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform" target="_blank">Add your PnL</a>
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>
 
+                <ul class="nav nav-pills nav-fill mobile_div" style="display:none;">
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="All" href="Details.html?user=$userKey&key=All">Max</a></li>
+                    <li class="nav-item"><a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="Details.html?user=$userKey&key=PreviousMonth" data-key="PreviousMonth">P. M</a></li>
+                    <li class="nav-item"><a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="Details.html?user=$userKey&key=Last60Days" data-key="Last60Days">60D</a></li>
+                    <li class="nav-item"><a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="Details.html?user=$userKey&key=Last90Days" data-key="Last90Days">90D</a></li>
+                    <li class="nav-item"><a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="Details.html?user=$userKey&key=CurrentFY" data-key="CurrentFY">C. FY</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item menu_dynamic pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last7Days" href="Details.html?user=$userKey&key=Last7Days">7D</a></li>
+                            <li><a class="dropdown-item menu_dynamic pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last30Days" href="Details.html?user=$userKey&key=Last30Days">30D</a></li>
+                            <li><a class="dropdown-item menu_dynamic pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last180Days" href="Details.html?user=$userKey&key=Last180Days">180D</a></li>
+                            <li><a class="dropdown-item menu_dynamic pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last360Days" href="Details.html?user=$userKey&key=Last360Days">360D</a></li>
+                            <li><a class="dropdown-item menu_dynamic fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold  text-[#707070]" data-key="PreviousFY" href="Details.html?user=$userKey&key=PreviousFY"> P. FY</a></li>
+                            <li><a class="dropdown-item menu_dynamic pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="CurrentWeek" href="Details.html?user=$userKey&key=CurrentWeek">Curr. Week</a></li>
+                            <li><a class="dropdown-item menu_dynamic pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="CurrentMonth" href="Details.html?user=$userKey&key=CurrentMonth">Curr. Month</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
+
+
             <div class="content">
                 <div class="card mb-3">
                     <div class="card-header">
@@ -245,8 +373,8 @@
                 </div>
 
                 <div class="d-block d-sm-none">
-                    <div class="card">
-                        <img src="..." class="card-img-top user_profile_img" alt="...">
+                    <div class="card" style="margin-bottom:20px;">
+                        <img src="" class="card-img-top user_profile_img" alt="...">
                         <div class="card-body">
                             <h5 class="card-title user_name"></h5>
                             <a class="d-flex float-start mb-2 twiter_url" target="_blank" href="#" id="twiter_url">
@@ -267,7 +395,7 @@
                             <img class="rounded-circle img-thumbnail shadow-sm user_profile_img" src="" id="user_profile_img" width="200" alt="">
                         </div>
                     </div>
-                    
+
 
                     <div class="card-body">
                         <div class="row">
@@ -277,7 +405,7 @@
                             </div>
                             <div class="col ps-2 ps-lg-3">
                                 <a class="d-flex align-items-center mb-2 twiter_url" target="_blank" href="#" id="twiter_url">
-                                    <img class="align-self-center me-2" src="twitter-x.svg" alt="" width="30">                                   
+                                    <img class="align-self-center me-2" src="twitter-x.svg" alt="" width="30">
                                 </a>
                             </div>
 
@@ -429,16 +557,16 @@
                                         </div>
                                     </div>-->
 
-                                    <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
+                                    <!--<div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-1.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-1.png);"></div>-->
                                             <!--/.bg-holder-->
-                                            <div class="card-body position-relative">
+                                            <!--<div class="card-body position-relative">
                                                 <h6>Total Profit</h6>
                                                 <div class="display-4 mb-2 fw-normal font-sans-serif div_loader TotalProfit" data-bs-toggle="tooltip" data-bs-placement="top" title=""></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
 
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
@@ -836,6 +964,7 @@
     <!-- ===============================================-->
 
     <script type="text/javascript" src="http://rtwelfare.club/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
     <script type="text/javascript" src="http://rtwelfare.club/js/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
     <script src="http://rtwelfare.club/vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
     <script src="http://rtwelfare.club/vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>

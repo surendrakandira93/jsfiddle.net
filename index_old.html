@@ -1,0 +1,465 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>True PnL</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="http://true-pnl.rtwelfare.club/Approved.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://true-pnl.rtwelfare.club/Approved.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://true-pnl.rtwelfare.club/Approved.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="http://true-pnl.rtwelfare.club/Approved.svg">
+    <meta name="msapplication-TileImage" content="http://true-pnl.rtwelfare.club/Approved.svg">
+    <meta name="theme-color" content="#ffffff">
+    <script src="http://rtwelfare.club/assets/js/config.js"></script>
+    <script src="http://rtwelfare.club/vendors/simplebar/simplebar.min.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link href="http://rtwelfare.club/vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link href="http://rtwelfare.club/assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+    <link href="http://rtwelfare.club/assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="http://rtwelfare.club/assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="http://rtwelfare.club/assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link href="http://rtwelfare.club/plugins/waitMe/waitMe.min.css" rel="stylesheet" />
+    <link href="http://rtwelfare.club/plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="http://rtwelfare.club/vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
+    <link href="http://rtwelfare.club/vendors/choices/choices.min.css" rel="stylesheet" />
+    <link href="http://rtwelfare.club/css/Custome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://rtwelfare.club/Plugins/cal-heatmap/cal-heatmap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="waitMe/waitMe.min.css" rel="stylesheet" />
+    <style>
+
+        .hover-actions {
+            display: block !important;
+        }
+
+        .btn-sm {
+            --falcon-btn-padding-y: 0.1875rem;
+            --falcon-btn-padding-x: 0.5rem;
+            --falcon-btn-font-size: 0.775rem;
+            --falcon-btn-border-radius: 0.25rem;
+        }
+
+        .sparkline_span {
+            width: 150px;
+            height: 40px;
+        }
+
+        .stretched-link::after {
+            position: relative;
+        }
+
+        canvas {
+            width: 60px;
+            height: 30px;
+        }
+
+        table {
+            font-size: 12px;
+        }
+
+        .tableHeader th {
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+            
+        }
+
+        .mobile_div .active {
+            text-decoration-line: underline;
+        }
+
+        .leading-\[14px\] {
+            line-height: 14px;
+        }
+
+
+        .px-index-2 {
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #2c7be5;
+        }
+
+        .text-hr {
+            color: rgba(237, 242, 249, var(--falcon-text-opacity)) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="dvWaitMe"></div>
+    <main class="main" id="top">
+
+        <div class="container" data-layout="container">
+            <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg">
+                <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" style="display:none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+                <a class="navbar-brand me-1 me-sm-3 desktop_nav" data-key="All" href="index.html?key=All">
+                    <div class="d-flex align-items-center">
+                        <img class="me-2" src="Approved.svg" alt="" width="40" />
+                        <span class="font-sans-serif" id="logo_txt">truePnL</span>
+                    </div>
+                </a>
+                <button type="button" class="btn btn-primary ms-3 mt-3 mobile_div" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')" style="margin-left:0px !important;margin-top:0px !important; margin-right:0px !important;display:none;"><i class="fa fa-plus"></i> PnL</button>
+                <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
+                    <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
+                        <li class="nav-item ">
+                            <a class="nav-link nav-click fw-medium cursor-pointer active" data-key="All" href="index.html?key=All">Max</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="PreviousMonth" href="index.html?key=PreviousMonth">
+                                Prev. Month
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="Last60Days" href="index.html?key=Last60Days">
+                                60D
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="Last90Days" href="index.html?key=Last90Days">
+                                90D
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="CurrentFY" href="index.html?key=CurrentFY">
+                                Curr. FY
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-click fw-medium cursor-pointer" data-key="PreviousFY" href="index.html?key=PreviousFY">
+                                Prev. FY
+                            </a>
+                        </li>
+
+
+
+
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                            <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
+                                <div class="bg-white dark__bg-1000 rounded-3 py-2">
+                                    <!--<a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousDay" href="index.html?key=PreviousDay">
+                            Prev. Day
+                        </a>-->
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last7Days" href="index.html?key=Last7Days">
+                                        7D
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last30Days" href="index.html?key=Last30Days">
+                                        30D
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last180Days" href="index.html?key=Last180Days">
+                                        180D
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last360Days" href="index.html?key=Last360Days">
+                                        360D
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentWeek" href="index.html?key=CurrentWeek">
+                                        Curr. Week
+                                    </a>
+
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentMonth" href="index.html?key=CurrentMonth">
+                                        Curr. Month
+                                    </a>
+
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium cursor-pointer" style="background-color: #2c7be5; color: white;" href="https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform" target="_blank">Add your PnL</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="nav nav-pills nav-fill mobile_div" style="display:none;">
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="All" href="index.html?key=All">Max</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=PreviousMonth" data-key="PreviousMonth">P. M</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=Last60Days" data-key="Last60Days">60D</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=Last90Days" data-key="Last90Days">90D</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=CurrentFY" data-key="CurrentFY">C. FY</a></li>
+                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=PreviousFY" data-key="PreviousFY"> P. FY</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last7Days" href="index.html?key=Last7Days">7D</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last30Days" href="index.html?key=Last30Days">30D</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last180Days" href="index.html?key=Last180Days">180D</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last360Days" href="index.html?key=Last360Days">360D</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="CurrentWeek" href="index.html?key=CurrentWeek">Curr. Week</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="CurrentMonth" href="index.html?key=CurrentMonth">Curr. Month</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               
+                <!--<div class="flex items-center justify-between pb-3 pt-3 mobile_div" style="overflow:auto;display:none;">
+                    <div class="" style="display: flex;">
+                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="All" href="index.html?key=All">Max</a>
+                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=PreviousMonth" data-key="PreviousMonth">P. M</a>
+                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=Last60Days" data-key="Last60Days">60D</a>
+                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=Last90Days" data-key="Last90Days">90D</a>
+                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=CurrentFY" data-key="CurrentFY">C. FY</a>
+                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=PreviousFY" data-key="PreviousFY"> P. FY</a>
+                        <a class="dropdown-toggle nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">More</a>
+                        <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
+                            <div class="bg-white dark__bg-1000 rounded-3 py-2">
+                                <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last7Days" href="index.html?key=Last7Days">
+                                    7D
+                                </a>
+                                <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last30Days" href="index.html?key=Last30Days">
+                                    30D
+                                </a>
+                                <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last180Days" href="index.html?key=Last180Days">
+                                    180D
+                                </a>
+                                <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last360Days" href="index.html?key=Last360Days">
+                                    360D
+                                </a>
+                                <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentWeek" href="index.html?key=CurrentWeek">
+                                    Curr. Week
+                                </a>
+                                <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentMonth" href="index.html?key=CurrentMonth">
+                                    Curr. Month
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+            </nav>
+            <div class="content">
+
+                <div class="row g-3 mb-3">
+                    <div class="col-lg-12 ps-lg-2 mb-3 desktop_div" style="display:none;">
+                        <div class="card h-lg-100">
+                            <div class="card-body h-100 pe-0 div_loader">
+                                <!--<button type="button" class="btn btn-primary ms-3" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')">Add your PnL</button>-->
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-12">
+                                        <span class="ms-3 fw-bold title_date"></span>
+                                        <div class="table-responsive scrollbar ms-3">
+                                            <table class="table table-bordered table-striped mb-0" id="tableUsers" style="width:100%">
+                                                <thead>
+                                                    <tr class="tableHeader">
+                                                        <th>Name</th>
+                                                        <th id="barChartLeval"> Monthly PNL</th>
+                                                        <th>PnL to DD Ratio</th>
+                                                        <th>Win Rate</th>
+                                                        <th>Realised PNL</th>
+                                                        <th>Charges Taxes</th>
+                                                        <th>Net Realised PNL</th>
+                                                        <th>Max Drawdown</th>
+                                                        <th>Number of days</th>
+                                                        <th style="font-size: 12px;width: 5%;" scope="col">Info</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6 class="ms-3">The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
+                        </div>
+
+                    </div>
+
+                    <div class="card mb-3 mobile_div" style="display:none;">
+                       
+                        
+
+                        <div class="card-body bg-light">
+                            <div class="row h-100 g-3">
+                                <span class="ms-3 fw-bold title_date"></span>
+                                <div class="col-md-12">
+                                    <div class="col-xxl-12 col-md-12 div-dark" id="true_nl_rows">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h6>The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </main><!-- ===============================================-->
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script id="pnl_tr_template" type="text/x-jquery-tmpl">
+
+        <tr>
+            <td>
+                <a href="Details.html?user=${userid}">
+                    <div class="d-flex align-items-center">
+                        <div class="avatar avatar-xl">
+                            <img class="rounded-circle" src="${(profilepic != null && profilepic != " " ? profilepic : " http: //rtwelfare.club/img/default-Profile.png")}" alt="">
+                        </div>
+                        <h6 class="mb-0 ps-2">${username}</h6>
+                    </div>
+                </a>
+            </td>
+            <td> <span class="sparkline_span" data-html="${barchart.toString()}"></span></td>
+            <td>${pnlddratio.toFixed(2)}</td>
+            <td>${winrate.toFixed(2)}</td>
+            <td>${realisedpnl.prefix}${realisedpnl.endvalue.toFixed(realisedpnl.decimalplaces)}${realisedpnl.suffix}</td>
+            <td>${chargestaxes.prefix}${chargestaxes.endvalue.toFixed(chargestaxes.decimalplaces)}${chargestaxes.suffix}</td>
+            <td style="color:${netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983'}">${netrealisedpnl.prefix}${netrealisedpnl.endvalue.toFixed(netrealisedpnl.decimalplaces)}${netrealisedpnl.suffix}</td>
+            <td style="color:#f35631">${maxdrawdown}</td>
+            <td>${totaltradingdays}</td>
+            <td><a target="_blank" href="${twitterurl}"> <span class="fab fa-twitter"></span></a> <a target="_blank" href="${pnlsource}"> <span class="far fa-eye"></span></a></td>
+        </tr>
+    </script>
+
+    <script id="pnl_row_template" type="text/x-jquery-tmpl">
+        <div class="row g-0 align-items-center py-2 position-relative">
+            <div class="col-2">
+                <div class="avatar avatar-xl">
+                    <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">
+                        <img class="avatar-name rounded-circle bg-soft-success text-dark" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-5">
+                <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">${username}</a>
+            </div>
+            <div class="col-5">
+                <div class="sparkline_span" data-html="${barchart.toString()}"></div>
+            </div>
+        </div>
+
+        <div class="row g-0 align-items-center py-2 position-relative">
+            <div class="col-3 smallfont">
+                Win Rate:
+            </div>
+
+            <div class="col-3 text-center fw-bold">
+                ${winrate.toFixed(2)}%
+            </div>
+            <div class="col-3 smallfont">
+                Grs PnL:
+            </div>
+
+            <div class="col-3 text-center fw-bold" style="color:${realisedpnl.actualvalue < 0 ? '#f35631' : '#10b983' }">
+                ${realisedpnl.prefix}${realisedpnl.endvalue.toFixed(realisedpnl.decimalplaces)}${realisedpnl.suffix}
+            </div>
+        </div>
+
+        <div class="row g-0 align-items-center py-2 position-relative">
+            <div class="col-3 smallfont">
+                Max DD:
+            </div>
+
+            <div class="col-3 text-center fw-bold">
+                ${maxdrawdown}
+            </div>
+            <div class="col-3 smallfont">
+                Charges:
+            </div>
+
+            <div class="col-3 text-center fw-bold">
+                ${chargestaxes.prefix}${chargestaxes.endvalue.toFixed(chargestaxes.decimalplaces)}${chargestaxes.suffix}
+            </div>
+        </div>
+
+        <div class="row g-0 align-items-center py-2 position-relative">
+            <div class="col-3 smallfont">
+                PnL DD Ratio:
+            </div>
+
+            <div class="col-3 text-center fw-bold">
+                ${pnlddratio.toFixed(2)}
+            </div>
+            <div class="col-3 smallfont">
+                Net PnL:
+            </div>
+
+            <div class="col-3 text-center fw-bold" style="color:${netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983'}">
+                ${netrealisedpnl.prefix}${netrealisedpnl.endvalue.toFixed(netrealisedpnl.decimalplaces)}${netrealisedpnl.suffix}
+            </div>
+        </div>
+        <hr class="text-hr">
+    </script>
+
+    <script type="text/javascript" src="http://rtwelfare.club/js/jquery.min.js"></script>
+    <script type="text/javascript" src="waitMe/waitMe.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+    <script type="text/javascript" src="http://rtwelfare.club/js/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
+    <script src="http://rtwelfare.club/vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
+    <script src="http://rtwelfare.club/vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
+    <script src="http://rtwelfare.club/vendors/anchorjs/anchor.min.js?v=mCNojyCUIjFsIEIal-zHHIUbYBFvD-29Mojv1zI0sPA"></script>
+    <script src="http://rtwelfare.club/vendors/is/is.min.js?v=rNrwuW7iEV0xqy-WkpgQWgItoFd0eEprJpLURRo0hl4"></script>
+    <script src="http://rtwelfare.club/vendors/countup/countUp.umd.js"></script>
+    <script src="http://rtwelfare.club/vendors/echarts/echarts.min.js?v=nID5mM_xbvqrJobTn4k1HIm3QcX9RYVaG6A1FMgyYlw"></script>
+    <script src="http://rtwelfare.club/vendors/fontawesome/all.min.js?v=u7TqVgshDScwW6wDgirx7NLkCiWrm-W9Lc0_6s0DVjs"></script>
+    <script src="http://rtwelfare.club/vendors/lodash/lodash.min.js?v=CVrbEAUGzT7xAu-z5cI5N1GTn0cclSM1QuPeXEJZGF8"></script>
+    <script src="http://rtwelfare.club/vendors/tinymce/tinymce.min.js"></script>
+    <script src="http://rtwelfare.club/vendors/choices/choices.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="http://rtwelfare.club/vendors/list.js/list.min.js?v=jyfQ7nar5XRtzjvEvB_GU5sKBN4QY-ANRj1D5zeKgzU"></script>
+    <script src="http://rtwelfare.club/assets/js/flatpickr.js"></script>
+    <script src="http://rtwelfare.club/assets/js/theme.js?v=iQOEWcaelNwtRkmzUb0lESKcVxZqMfUIBjQczvpVwvY"></script>
+    <script src="http://rtwelfare.club/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="http://rtwelfare.club/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="http://rtwelfare.club/plugins/toastr/toastr.min.js?v=ldqN9_OcVFZtetwyZMvgDHiiWga1hRgUiY2ML1BBLF0"></script>
+    <script src="http://rtwelfare.club/plugins/waitMe/waitMe.min.js"></script>
+    <script src="http://rtwelfare.club/js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
+    <script src="http://rtwelfare.club/js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
+    <script src="js/jquery.sparkline.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="http://rtwelfare.club/js/jquery.tmpl.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ4QCZ8VQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RJ4QCZ8VQV');
+    </script>
+
+</body>
+
+</html>

@@ -1,12 +1,31 @@
 ﻿(function ($) {
+    window.onresize = function (event) {
+        flexTable();
+    };
+    function flexTable() {
+        if ($(window).width() < 768) {
+            $(".mobile_div").show();
+            $(".desktop_div").hide();
+        } else {
+            $(".mobile_div").hide();
+            $(".desktop_div").show();
+        }
+    }
     function PNLDashboard() {
         var $this = this, form;
-        var $timeSpam = new Date().getTime();
+        var $timeSpam = moment(new Date()).format("DDMMYYYY");
         var $domainName = 'https://raw.githubusercontent.com/surendrakandira93/jsfiddle.net/master/';
         var $aliash = getUrlVars();
         var $key = getKeyVars();
         var $title = "";
+
+      
         function initilizeModel() {
+            flexTable();
+
+            $(".menu_dynamic").removeClass('active');
+            $(`[data-key="${$key}"]`).addClass('active');
+
             switch ($key) {
                 case "All":                   
                     break;
@@ -306,6 +325,14 @@
         };
 
         $this.init = function () {
+            var hostName = window.location.hostname;
+            if (hostName == "true-pnl.rtwelfare.club") {
+                $("#logo_img").attr('src', 'Approved.svg');
+                $("#logo_txt").html('truePnL');
+            } else {
+                $("#logo_img").attr('src', 'Approved.svg');
+                $("#logo_txt").html('myPnL');
+            }
             initilizeModel();
             setTimeout(LoadeChatFirstTime, 500);
         }
