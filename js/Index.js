@@ -43,14 +43,42 @@
         var $timeSpam = moment(new Date()).format("DDMMYYYY"); // ddMMyyyy
         var $domainName = 'https://raw.githubusercontent.com/surendrakandira93/jsfiddle.net/master/';
         var table = null;
-        var userInfoArr = Array()
+        var userInfoArr = Array();
+        var modelJson = new Array();
         var $aliash = getUrlVars();      
         
-
-
+        $("#inline_content input[name='btnradio']").click(function () {
+            alert('You clicked radio!');
+            if ($('input:radio[name=type]:checked').val() == "walk_in") {
+                alert($('input:radio[name=type]:checked').val());
+                //$('#select-table > .roomNumber').attr('enabled',false);
+            }
+        });
+        $("input[name='btnradio']").change(function () {
+            var $val = parseInt($(this).val());
+           // debugger;
+            switch ($val) {
+                case 1:
+                    modelJson.sort(WinRateDescSort);
+                    BindDataInHtml();
+                    break;
+                case 2:
+                    modelJson.sort(MaxDDDescSort);
+                    BindDataInHtml();
+                    break;
+                case 3:
+                    modelJson.sort(PnlDDRatioDescSort);
+                    BindDataInHtml();
+                    break;
+                case 4:
+                    modelJson.sort(NetPNLDescSort);
+                    BindDataInHtml();
+                    break;
+            }
+        });
 
         function bindPNLSummary(key) {
-            var modelJson = new Array();
+            modelJson = new Array();
             ShowLoading();
             switch (key) {
                 case "All":                
@@ -73,6 +101,7 @@
                     $("#barChartLeval").html('Daily PNL');
                     break;
                 default:
+                    key = "All";
                     $("#barChartLeval").html('Monthly PNL');
             }
            
@@ -108,36 +137,40 @@
 
                     }
                     
-                modelJson.sort(ArrDescSort);
-                if (modelJson.length > 0) {
-                    $("#pnl_row_template").tmpl(modelJson).appendTo("#true_nl_rows");
-                    
-                } else {
-                    $("#true_nl_rows").html('<span>Record not found </span>');
-                }
-                    setTimeout(function () {
-                        $('.sparkline_span')
-                            .map(function () {
-                                var $this = $('canvas', this).length ? null : this;
-                                return $this;
-                            })
-                            .sparkline('data-html', {
-                                type: 'bar',
-                                width: '135',
-                                height: '2em',
-                                barSpacing: 2,
-                                barWidth: 2,
-                                'negBarColor': '#f35631',
-                                'barColor': '#10b983'
-                            });
-
-                    }, 1)
+                modelJson.sort(PnlDDRatioDescSort);
+                BindDataInHtml();
                     flexTable();              
 
                 HideLoading()
             });
         }
 
+        function BindDataInHtml() {
+            $("#true_nl_rows").empty();
+            if (modelJson.length > 0) {
+                $("#pnl_row_template").tmpl(modelJson).appendTo("#true_nl_rows");
+
+            } else {
+                $("#true_nl_rows").html('<span>Record not found </span>');
+            }
+            setTimeout(function () {
+                $('.sparkline_span')
+                    .map(function () {
+                        var $this = $('canvas', this).length ? null : this;
+                        return $this;
+                    })
+                    .sparkline('data-html', {
+                        type: 'bar',
+                        width: '135',
+                        height: '2em',
+                        barSpacing: 2,
+                        barWidth: 2,
+                        'negBarColor': '#f35631',
+                        'barColor': '#10b983'
+                    });
+
+            }, 1)
+        }
         function GetValByKey(typeKey, onSuccess) {
             $.ajax({
                 type: "GET",
@@ -153,9 +186,24 @@
         }
 
 
-        function ArrDescSort(a, b) {
+        function WinRateDescSort(a, b) {
+            var x = a.winrate;
+            var y = b.winrate;
+            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        }
+        function MaxDDDescSort(a, b) {
+            var x = a.maxdrawdown;
+            var y = b.maxdrawdown;
+            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        }
+        function PnlDDRatioDescSort(a, b) {
             var x = a.pnlddratio;
             var y = b.pnlddratio;
+            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        }
+        function NetPNLDescSort(a, b) {
+            var x = a.netrealisedpnl.actualvalue;
+            var y = b.netrealisedpnl.actualvalue;
             return ((x > y) ? -1 : ((x < y) ? 1 : 0));
         }
 
