@@ -1,7 +1,7 @@
 {
   "title": "Current Month",
   "fromdate": "2024-03-01T00:00:00",
-  "todate": "2024-03-11T19:52:26.3268963+05:30",
+  "todate": "2024-03-12T17:29:51.2054712+05:30",
   "result": [
     {
       "realisedpnl": {
@@ -63,6 +63,7 @@
       ],
       "winrate": 83.33333333333334,
       "pnlddratio": 2.0809221786823557,
+      "maxdrawdownint": 100505.618329,
       "maxdrawdown": "1.01L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -127,6 +128,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -191,6 +193,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -255,6 +258,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -319,6 +323,7 @@
       ],
       "winrate": 66.66666666666666,
       "pnlddratio": -0.7910805860834412,
+      "maxdrawdownint": 1612073.6308139998,
       "maxdrawdown": "16.12L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -383,6 +388,7 @@
       ],
       "winrate": 83.33333333333334,
       "pnlddratio": 5.816672758742077,
+      "maxdrawdownint": 57923.86988499999,
       "maxdrawdown": "57.92K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -447,6 +453,7 @@
       ],
       "winrate": 80.0,
       "pnlddratio": 9.91306944501134,
+      "maxdrawdownint": 52435.892611,
       "maxdrawdown": "52.44K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -511,6 +518,7 @@
       ],
       "winrate": 66.66666666666666,
       "pnlddratio": -0.7910805860834412,
+      "maxdrawdownint": 1612073.6308139998,
       "maxdrawdown": "16.12L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -575,6 +583,7 @@
       ],
       "winrate": 33.33333333333333,
       "pnlddratio": 2306.7685716904225,
+      "maxdrawdownint": 55.10080000000016,
       "maxdrawdown": "55.1",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -639,6 +648,7 @@
       ],
       "winrate": 80.0,
       "pnlddratio": 724.8062289989454,
+      "maxdrawdownint": 205.3013030000002,
       "maxdrawdown": "205.3",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -703,6 +713,7 @@
       ],
       "winrate": 80.0,
       "pnlddratio": 0.04322555632544315,
+      "maxdrawdownint": 90330.486937,
       "maxdrawdown": "90.33K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -767,6 +778,7 @@
       ],
       "winrate": 20.0,
       "pnlddratio": -1.0,
+      "maxdrawdownint": 271750.256319,
       "maxdrawdown": "2.72L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -831,6 +843,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -895,6 +908,7 @@
       ],
       "winrate": 50.0,
       "pnlddratio": -0.15527458718644588,
+      "maxdrawdownint": 148348.00823099999,
       "maxdrawdown": "1.48L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -959,6 +973,7 @@
       ],
       "winrate": 50.0,
       "pnlddratio": 2.2869347067384656,
+      "maxdrawdownint": 42255.476693,
       "maxdrawdown": "42.26K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1023,6 +1038,7 @@
       ],
       "winrate": 83.33333333333334,
       "pnlddratio": 192.0217525929539,
+      "maxdrawdownint": 513.6676819999993,
       "maxdrawdown": "513.67",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1087,6 +1103,7 @@
       ],
       "winrate": 33.33333333333333,
       "pnlddratio": -0.5893248779889215,
+      "maxdrawdownint": 88622.76806,
       "maxdrawdown": "88.62K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1151,6 +1168,7 @@
       ],
       "winrate": 60.0,
       "pnlddratio": 2.712013993356513,
+      "maxdrawdownint": 11531.476087,
       "maxdrawdown": "11.53K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1215,6 +1233,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1279,6 +1298,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1343,6 +1363,7 @@
       ],
       "winrate": 66.66666666666666,
       "pnlddratio": 3.3545777482071286,
+      "maxdrawdownint": 189804.19096599997,
       "maxdrawdown": "1.9L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1407,6 +1428,7 @@
       ],
       "winrate": 66.66666666666666,
       "pnlddratio": 8.340388346231673,
+      "maxdrawdownint": 25347.776383999997,
       "maxdrawdown": "25.35K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1471,6 +1493,7 @@
       ],
       "winrate": 0.0,
       "pnlddratio": -1.0,
+      "maxdrawdownint": 1088.116055,
       "maxdrawdown": "1.09K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1535,6 +1558,7 @@
       ],
       "winrate": 80.0,
       "pnlddratio": 11.406171418258118,
+      "maxdrawdownint": 60052.93754199997,
       "maxdrawdown": "60.05K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1599,6 +1623,7 @@
       ],
       "winrate": 83.33333333333334,
       "pnlddratio": 2044.5856802062935,
+      "maxdrawdownint": 99.7878899999996,
       "maxdrawdown": "99.79",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1663,6 +1688,7 @@
       ],
       "winrate": 50.0,
       "pnlddratio": 2.2857584475870176,
+      "maxdrawdownint": 62992.670229,
       "maxdrawdown": "62.99K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1727,6 +1753,7 @@
       ],
       "winrate": 0.0,
       "pnlddratio": -1.0,
+      "maxdrawdownint": 358599.242386,
       "maxdrawdown": "3.59L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1791,6 +1818,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1855,6 +1883,7 @@
       ],
       "winrate": 66.66666666666666,
       "pnlddratio": 5.822671501104607,
+      "maxdrawdownint": 10504.045202000001,
       "maxdrawdown": "10.5K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1919,6 +1948,7 @@
       ],
       "winrate": 33.33333333333333,
       "pnlddratio": 48.381498442950935,
+      "maxdrawdownint": 3109.92447,
       "maxdrawdown": "3.11K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -1983,6 +2013,7 @@
       ],
       "winrate": 66.66666666666666,
       "pnlddratio": 46.39185965372014,
+      "maxdrawdownint": 4247.782957999996,
       "maxdrawdown": "4.25K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2047,6 +2078,7 @@
       ],
       "winrate": 80.0,
       "pnlddratio": 5.626487536273803,
+      "maxdrawdownint": 3444.819777,
       "maxdrawdown": "3.44K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2111,6 +2143,7 @@
       ],
       "winrate": 16.666666666666664,
       "pnlddratio": -1.0,
+      "maxdrawdownint": 391667.381414,
       "maxdrawdown": "3.92L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2175,6 +2208,7 @@
       ],
       "winrate": 83.33333333333334,
       "pnlddratio": 0.14544286739727127,
+      "maxdrawdownint": 1110313.805949,
       "maxdrawdown": "11.1L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2239,6 +2273,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2303,6 +2338,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2367,6 +2403,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2431,6 +2468,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2495,6 +2533,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2559,6 +2598,7 @@
       ],
       "winrate": 50.0,
       "pnlddratio": -0.8295145747395595,
+      "maxdrawdownint": 9532.233213,
       "maxdrawdown": "9.53K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2623,6 +2663,7 @@
       ],
       "winrate": 66.66666666666666,
       "pnlddratio": 1.0407861285471234,
+      "maxdrawdownint": 100848.51584400001,
       "maxdrawdown": "1.01L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2686,6 +2727,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-06T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2750,6 +2792,7 @@
       ],
       "winrate": 60.0,
       "pnlddratio": 0.7869646498861247,
+      "maxdrawdownint": 14469.797262999999,
       "maxdrawdown": "14.47K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2814,6 +2857,7 @@
       ],
       "winrate": 25.0,
       "pnlddratio": -0.7122044581780889,
+      "maxdrawdownint": 1642688.250298,
       "maxdrawdown": "16.43L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2878,6 +2922,7 @@
       ],
       "winrate": 60.0,
       "pnlddratio": 1.1944918757331824,
+      "maxdrawdownint": 73813.593395,
       "maxdrawdown": "73.81K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -2942,6 +2987,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3006,6 +3052,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3070,6 +3117,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3133,6 +3181,7 @@
       ],
       "winrate": 25.0,
       "pnlddratio": -0.7648357012791546,
+      "maxdrawdownint": 3869.6501209999997,
       "maxdrawdown": "3.87K",
       "maxdate": "2024-03-06T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3197,6 +3246,7 @@
       ],
       "winrate": 33.33333333333333,
       "pnlddratio": 24.65800712278234,
+      "maxdrawdownint": 119.919711,
       "maxdrawdown": "119.92",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3261,6 +3311,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3324,6 +3375,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-06T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3388,6 +3440,7 @@
       ],
       "winrate": 50.0,
       "pnlddratio": 104.73939062551248,
+      "maxdrawdownint": 237.692524,
       "maxdrawdown": "237.69",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3452,6 +3505,7 @@
       ],
       "winrate": 0.0,
       "pnlddratio": -1.0,
+      "maxdrawdownint": 136382.197166,
       "maxdrawdown": "1.36L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3516,6 +3570,7 @@
       ],
       "winrate": 0.0,
       "pnlddratio": -1.0,
+      "maxdrawdownint": 356.33003400000007,
       "maxdrawdown": "356.33",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3574,6 +3629,7 @@
       ],
       "winrate": 0.0,
       "pnlddratio": -1.0,
+      "maxdrawdownint": 2207.743047,
       "maxdrawdown": "2.21K",
       "maxdate": "2024-03-01T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3638,6 +3694,7 @@
       ],
       "winrate": 50.0,
       "pnlddratio": -0.01903977658670621,
+      "maxdrawdownint": 8009.758639,
       "maxdrawdown": "8.01K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3702,6 +3759,7 @@
       ],
       "winrate": 83.33333333333334,
       "pnlddratio": 3.9406482174906325,
+      "maxdrawdownint": 103017.63282399997,
       "maxdrawdown": "1.03L",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3766,6 +3824,7 @@
       ],
       "winrate": 40.0,
       "pnlddratio": -0.9300181053848872,
+      "maxdrawdownint": 67409.546254,
       "maxdrawdown": "67.41K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3828,6 +3887,7 @@
       ],
       "winrate": 0.0,
       "pnlddratio": -1.0,
+      "maxdrawdownint": 617.609377,
       "maxdrawdown": "617.61",
       "maxdate": "2024-03-05T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3891,6 +3951,7 @@
       ],
       "winrate": 25.0,
       "pnlddratio": -0.990008331912959,
+      "maxdrawdownint": 26231.753869,
       "maxdrawdown": "26.23K",
       "maxdate": "2024-03-06T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -3955,6 +4016,7 @@
       ],
       "winrate": 100.0,
       "pnlddratio": 0.0,
+      "maxdrawdownint": -0.0,
       "maxdrawdown": "",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
@@ -4019,6 +4081,7 @@
       ],
       "winrate": 80.0,
       "pnlddratio": 2.0695691246186847,
+      "maxdrawdownint": 3222.861366,
       "maxdrawdown": "3.22K",
       "maxdate": "2024-03-07T00:00:00Z",
       "mindate": "2024-03-01T00:00:00Z"
