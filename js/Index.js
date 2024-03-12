@@ -5,36 +5,10 @@
     function flexTable() {
         if ($(window).width() < 768) {
             $(".mobile_div").show();
-            $(".desktop_div").hide();
-            //setTimeout(function () {
-            //    $('.sparkline_span')
-            //        .map(function () {
-            //            var $this = $('canvas', this).length ? null : this;
-            //            return $this;
-            //        })
-            //        .sparkline('html', {
-            //            type: 'bar',
-            //            width: '850px',
-            //            'negBarColor': '#f35631',
-            //            'barColor': '#10b983'
-            //        });
-
-            //}, 1)
+            $(".desktop_div").hide();           
         } else {
             $(".mobile_div").hide();
             $(".desktop_div").show();
-
-            //setTimeout(function () {
-            //    $('.sparkline').map(function () {
-            //        var $this = $('canvas', this).length ? null : this;
-            //        return $this;
-            //    }).sparkline('html', {
-            //        type: 'bar',
-            //        width: '850px',
-            //        'negBarColor': '#f35631',
-            //        'barColor': '#10b983'
-            //    });
-            //}, 1);
         }
     }
     function PNLDashboard() {
@@ -54,9 +28,32 @@
                 //$('#select-table > .roomNumber').attr('enabled',false);
             }
         });
+
+        $(".list_view").on('click',function(){
+            $(".view_btn").removeClass('active');
+            $(this).addClass('active');
+            $(".filter_div").hide();
+        ListViewBind();
+        });
+
+        $(".grid_view").on('click',function(){
+            $(".view_btn").removeClass('active');
+            $(this).addClass('active');
+               if (table != null) {
+                        table.destroy();
+                        table = null;
+                    }
+            $(".filter_div").show();
+        CardViewBind(3);
+        });
+
         $("input[name='btnradio']").change(function () {
+
             var $val = parseInt($(this).val());
-           // debugger;
+            CardViewBind($val);
+        });
+
+        function CardViewBind($val){
             switch ($val) {
                 case 1:
                     modelJson.sort(WinRateDescSort);
@@ -75,7 +72,149 @@
                     BindDataInHtml();
                     break;
             }
-        });
+        }
+
+         function ListViewBind(){
+           $("#true_nl_rows").empty();
+           $("#pnl_table_template").tmpl().appendTo("#true_nl_rows");
+            if (table != null) {
+                        table.destroy();
+                        table = null;
+                    }
+                    table = $('#tableUsers').DataTable({
+                        paging: false,
+                        order: [[2, 'desc']],
+                        ajax: function (dataSent, callback, settings) {
+                            callback({ data: modelJson });
+                        },
+                        paging: false,
+                        drawCallback: function () {
+                            setTimeout(function () {
+                                $('.sparkline').map(function () {
+                                    var $this = $('canvas', this).length ? null : this;
+                                    return $this;
+                                }).sparkline('data-html', {
+                                    type: 'bar',
+                                    width: '850px',
+                                    height: '2em',
+                                    barSpacing: 2,
+                                    barWidth: 2,
+                                    'negBarColor': '#f35631',
+                                    'barColor': '#10b983'
+                                });
+                            }, 1);
+
+                        },
+                        columns: [
+                            {
+                                data: null,
+                                bSortable: true,
+                                render: function (data, type, row, meta) {
+                                    return `<a href="Details.html?user=${row.userid}&key=${row.key}">
+                                                                        <div class="d-flex align-items-center">
+                                                                            <div class="avatar avatar-xl">
+                                                                                <img class="rounded-circle" src="${(row.profilepic != null && row.profilepic != "" ? row.profilepic : "http://rtwelfare.club/img/default-Profile.png")}" alt="">
+                                                                            </div>
+                                                                            <h6 class="mb-0 ps-2">${row.username}</h6>
+                                                                        </div>
+                                                                    </a>`;
+                                }
+                            }
+                            ,
+                            {
+                                data: 'barchart',
+                                bSortable: false,
+                                render: function (data, type, row, meta) {
+                                    return type === 'display'
+                                        ? '<span class="sparkline" data-html="' + data.toString() + '"></span>'
+                                        : data;
+                                }
+                            },
+                            {
+                                data: null,
+                                bSortable: true,
+                                render: function (data, type, row, meta) {
+                                    if (type === "display") {
+                                        return row.pnlddratio != NaN ? `${row.pnlddratio.toFixed(2)}` : '0.00';
+                                    }
+                                    return row.pnlddratio;
+                                }
+                            },
+                            {
+                                data: null,
+                                bSortable: true,
+                                render: function (data, type, row, meta) {
+                                    if (type === "display") {
+                                        return `${row.winrate.toFixed(2)} %`;
+                                    }
+                                    return row.winrate;
+                                }
+                            },
+                            {
+                                data: null,
+                                bSortable: true,
+                                render: function (data, type, row, meta) {
+                                    if (type === "display") {
+                                        // format data here
+                                        return `${row.realisedpnl.prefix}${row.realisedpnl.endvalue.toFixed(row.realisedpnl.decimalplaces)}${row.realisedpnl.suffix}`; // This is formatted data
+                                    }
+                                    return row.realisedpnl.actualvalue;
+                                }
+                            },
+                            {
+                                data: null,
+                                bSortable: true,
+                                render: function (data, type, row, meta) {
+                                    if (type === "display") {
+                                        // format data here
+                                        return `${row.chargestaxes.prefix}${row.chargestaxes.endvalue.toFixed(row.chargestaxes.decimalplaces)}${row.chargestaxes.suffix}`; // This is formatted data
+                                    }
+                                    return row.chargestaxes.actualvalue;
+                                }
+                            },
+                            {
+                                data: null,
+                                bSortable: true,
+                                render: function (data, type, row, meta) {
+                                    var colour = row.netrealisedpnl.actualvalue < 0 ? '#f35631' : '#10b983';
+                                    return type === 'display' ? `<span style="color:${colour}">${row.netrealisedpnl.prefix}${row.netrealisedpnl.endvalue.toFixed(row.netrealisedpnl.decimalplaces)}${row.netrealisedpnl.suffix}</span>` : row.netrealisedpnl.actualvalue;
+
+                                }
+                            },
+
+                            {
+                                data: null,
+                                bSortable: true,
+                                render: function (data, type, row, meta) {
+                                    if (type === "display") {
+                                        // format data here
+                                        return row.maxdrawdown; // This is formatted data
+                                    }
+                                    return row.maxdrawdownint;
+                                    // return row.maxdrawdown;
+                                }
+                            },
+                            {
+                                data: null,
+                                bSortable: true,
+                                render: function (data, type, row, meta) {
+                                    if (type === "display") {
+                                        // format data here
+                                        return row.totaltradingdays; // This is formatted data
+                                    }
+                                    return row.totaltradingdays;
+                                }
+                            },
+                            {
+                                data: 'barchart',
+                                bSortable: false,
+                                render: function (data, type, row, meta) {
+                                    return `<a target="_blank" href="${row.twitterurl}"> <img src="twitter-x.svg" style="width: 15px;" /> </a> <a target="_blank" href="${row.pnlsource}"> <img src="zerodha.png" style="width: 15px;" /></a>`;
+                                }
+                            }
+                        ]
+                    });
+        }
 
         function bindPNLSummary(key) {
             modelJson = new Array();
@@ -192,8 +331,10 @@
             return ((x > y) ? -1 : ((x < y) ? 1 : 0));
         }
         function MaxDDDescSort(a, b) {
-            var x = a.maxdrawdown;
-            var y = b.maxdrawdown;
+            var x = a.maxdrawdownint;
+            var y = b.maxdrawdownint;
+            //var x = a.maxdrawdown;
+            //var y = b.maxdrawdown;
             return ((x > y) ? -1 : ((x < y) ? 1 : 0));
         }
         function PnlDDRatioDescSort(a, b) {
@@ -286,7 +427,7 @@
             }
             ShowLoading();
             LoadeChatFirstTime();
-
+            $(".grid_view").addClass('active');
         }
     }
 

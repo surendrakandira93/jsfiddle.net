@@ -110,6 +110,10 @@
             width: 75px;
             height: 90px;
         }
+
+        .view_btn.active {
+            color: #2c7be5;
+        }
     </style>
 </head>
 
@@ -229,14 +233,23 @@
                     </li>
                 </ul>
 
-
+                <ul class="navbar-nav navbar-nav-icons ms-auto flex-row align-items-center desktop_div">
+                    <li class="nav-item cursor-pointer">
+                        <!--<button class="btn list_view view_btn "><i class="fa fa-bars"></i></button>-->
+                        <a class="nav-link nav-click fw-medium list_view view_btn"><i class="fa fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item cursor-pointer">
+                        <a class="nav-link nav-click fw-medium grid_view view_btn active"><i class="fa fa-th-large"></i></a>
+                        <!--<button class="btn active grid_view view_btn"><i class="fa fa-th-large"></i></button>-->
+                    </li>
+                </ul>
 
             </nav>
             <div class="content">
                 <div class="row g-3 mb-3">
                     <span class="fw-bold title_date"></span>
                 </div>
-                <div class="row g-3 mb-3">
+                <div class="row g-3 mb-3 filter_div">
                     <span class="">Order By</span>
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top: 0px;">
 
@@ -255,46 +268,52 @@
                         <label class="btn btn-outline-primary btn-sm" for="btnnetpnl">Net PnL</label>
                     </div>
                 </div>
-                    <div class="row g-3 mb-3" id="true_nl_rows">
-
-                    </div>
-
-                    <h6 class="ms-3">The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
+                <div class="row g-3 mb-3" id="true_nl_rows">
 
                 </div>
 
+                <h6 class="ms-3">The data is collected from publicly available sources especially from Zerodha Verified Pnls and Sensibull Pnls. For those who has objection on the data, please feel free to send a note to contact.mypnl AT gmail dot com. Please note that these analytics are purely used for educational purpose and there is no commercial use. We are collecting, sharing, or analyzing data, maintaining transparency, adhering to ethical standards, and respecting privacy and legal considerations here. When uncertain, seeking legal advice or guidance from relevant authorities is recommended to ensure compliance with applicable laws and regulations.</h6>
+
             </div>
+
+        </div>
     </main><!-- ===============================================-->
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
 
+    <script id="pnl_table_template" type="text/x-jquery-tmpl">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive scrollbar ms-3">
+                    <table class="table table-bordered table-striped mb-0" id="tableUsers" style="width:100%">
+                        <thead>
+                            <tr class="tableHeader">
+                                <th>Name</th>
+                                <th id="barChartLeval"> Monthly PNL</th>
+                                <th>PnL to DD Ratio</th>
+                                <th>Win Rate</th>
+                                <th>Realised PNL</th>
+                                <th>Charges Taxes</th>
+                                <th>Net Realised PNL</th>
+                                <th>Max Drawdown</th>
+                                <th>Number of days</th>
+                                <th style="font-size: 12px;width: 5%;" scope="col">Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </script>
 
     <script id="pnl_row_template" type="text/x-jquery-tmpl">
         <!--<div class="col-xxl-2 col-xl-3 col-lg-4 col-md-4  col-sm-6 col-xs-12 mb-3">-->
         <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
             <div class="card">
-                <!--<div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-4.png);"></div>-->
-                <!--<div class="d-flex align-items-start align-items-sm-center">
-                <a class="" href="Details.html?user=${userid}&key=${key}">
-                    <div class="">
-                        <img class="round-sql-img" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
-                    </div>
-                </a>
-                <div class="ms-1 ms-sm-3">
-
-                    <div class="row align-items-center gx-0 gy-2">
-                        <div class="col-6">
-                            <p class="fw-semi-bold mb-3 mb-sm-2">
-                                <a href="Details.html?user=${userid}&key=${key}">${username}</a>
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <div class="sparkline_span" data-html="${barchart.toString()}"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
                 <div class="card-body">
                     <div class="row g-0 align-items-center py-2 position-relative">
                         <div class="col-2">
@@ -362,15 +381,6 @@
                             ${netrealisedpnl.prefix}${netrealisedpnl.endvalue.toFixed(netrealisedpnl.decimalplaces)}${netrealisedpnl.suffix}
                         </div>
                     </div>
-                    <!--<div class="row g-0 align-items-center py-2 position-relative">
-                    <a class="d-flex float-start mb-2 twiter_url" target="_blank" href="https://twitter.com/tatvamasi2020" id="twiter_url">
-                        <img class="align-self-center me-2" src="twitter-x.svg" alt="" width="30">
-                    </a>
-
-                    <a class="d-flex float-end mb-2 pnlsource_url" target="_blank" id="pnlsource_url" href="https://console.zerodha.com/verified/b0ab666f">
-                        <img src="zerodha.png">
-                    </a>
-                </div>-->
                 </div>
             </div>
 
