@@ -16,31 +16,31 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="http://true-pnl.rtwelfare.club/Approved.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="http://true-pnl.rtwelfare.club/Approved.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="http://true-pnl.rtwelfare.club/Approved.svg">
-    <link rel="shortcut icon" type="image/x-icon" href="http://true-pnl.rtwelfare.club/Approved.svg">
-    <meta name="msapplication-TileImage" content="http://true-pnl.rtwelfare.club/Approved.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="Approved.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="Approved.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="Approved.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="Approved.svg">
+    <meta name="msapplication-TileImage" content="Approved.svg">
     <meta name="theme-color" content="#ffffff">
-    <script src="http://rtwelfare.club/assets/js/config.js"></script>
-    <script src="http://rtwelfare.club/vendors/simplebar/simplebar.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="vendors/simplebar/simplebar.min.js"></script>
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
-    <link href="http://rtwelfare.club/vendors/simplebar/simplebar.min.css" rel="stylesheet">
-    <link href="http://rtwelfare.club/assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
-    <link href="http://rtwelfare.club/assets/css/theme.min.css" rel="stylesheet" id="style-default">
-    <link href="http://rtwelfare.club/assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
-    <link href="http://rtwelfare.club/assets/css/user.min.css" rel="stylesheet" id="user-style-default">
-    <link href="http://rtwelfare.club/plugins/waitMe/waitMe.min.css" rel="stylesheet" />
-    <link href="http://rtwelfare.club/plugins/toastr/toastr.min.css" rel="stylesheet" />
-    <link href="http://rtwelfare.club/vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
-    <link href="http://rtwelfare.club/vendors/choices/choices.min.css" rel="stylesheet" />
-    <link href="http://rtwelfare.club/css/Custome.css" rel="stylesheet" />
-    <link rel="stylesheet" href="http://rtwelfare.club/Plugins/cal-heatmap/cal-heatmap.css" />
+    <link href="vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link href="assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+    <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link href="plugins/waitMe/waitMe.min.css" rel="stylesheet" />
+    <link href="plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
+    <link href="vendors/choices/choices.min.css" rel="stylesheet" />
+    <link href="css/Custome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Plugins/cal-heatmap/cal-heatmap.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link href="waitMe/waitMe.min.css" rel="stylesheet" />
     <style>
@@ -135,7 +135,10 @@
                 <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
                     <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
                         <li class="nav-item ">
-                            <a class="nav-link nav-click fw-medium cursor-pointer active" data-key="All" href="index.html?key=All">Max</a>
+                            <a class="nav-link nav-click fw-medium cursor-pointer active" data-key="All" href="index.html?key=All">
+                                <!--<i class="fa fa-home"></i>-->
+                                Max
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-click fw-medium cursor-pointer" data-key="PreviousMonth" href="index.html?key=PreviousMonth">
@@ -214,7 +217,12 @@
                 </div>
 
                 <ul class="nav nav-pills nav-fill mobile_div" style="display:none;">
-                    <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="All" href="index.html?key=All">Max</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="All" href="index.html?key=All">
+                            <!--<i class="fa fa-home"></i>-->
+                            Max
+                        </a>
+                    </li>
                     <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=PreviousMonth" data-key="PreviousMonth">P. M</a></li>
                     <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=Last60Days" data-key="Last60Days">60D</a></li>
                     <li class="nav-item"><a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline text-[#707070]" href="index.html?key=Last90Days" data-key="Last90Days">90D</a></li>
@@ -236,38 +244,99 @@
                 <ul class="navbar-nav navbar-nav-icons ms-auto flex-row align-items-center desktop_div">
                     <li class="nav-item cursor-pointer">
                         <!--<button class="btn list_view view_btn "><i class="fa fa-bars"></i></button>-->
-                        <a class="nav-link nav-click fw-medium list_view view_btn"><i class="fa fa-bars"></i></a>
+                        <a class="nav-link nav-click fw-medium list_view view_btn" title="List View"><i class="fa fa-bars"></i></a>
                     </li>
                     <li class="nav-item cursor-pointer">
-                        <a class="nav-link nav-click fw-medium grid_view view_btn active"><i class="fa fa-th-large"></i></a>
+                        <a class="nav-link nav-click fw-medium grid_view view_btn active" title="Grid View"><i class="fa fa-th-large"></i></a>
                         <!--<button class="btn active grid_view view_btn"><i class="fa fa-th-large"></i></button>-->
                     </li>
                 </ul>
 
             </nav>
             <div class="content">
-                <div class="row g-3 mb-3">
+                <div class="row g-3 mb-3 ms-0 me-0">
                     <span class="fw-bold title_date"></span>
                 </div>
-                <div class="row g-3 mb-3 filter_div">
-                    <span class="">Order By</span>
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top: 0px;">
+                <div class="row mb-3 ms-0 me-0 d-none d-sm-block">
+                    <span class="filter_div">Order By</span>
+                    <div class="row">
 
-                        <input type="radio" class="btn-check btn-sm" name="btnradio" id="btnpnldd" autocomplete="off" checked value="3">
-                        <label class="btn btn-outline-primary btn-sm" for="btnpnldd">PnL DD Ratio</label>
+                        <div class="col-md-6 col-sm-12 g-3 filter_div_show">
+                           
+                        </div>
 
-                        <input type="radio" class="btn-check btn-sm" name="btnradio" id="btnwinRate" autocomplete="off" value="1">
-                        <label class="btn btn-outline-primary btn-sm" for="btnwinRate">Win Rate</label>
+                        <div class="col-md-6 col-sm-12 g-3 filter_div">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top: 0px;">
 
-                        <input type="radio" class="btn-check btn-sm" name="btnradio" id="btnmaxdd" autocomplete="off" value="2">
-                        <label class="btn btn-outline-primary btn-sm" for="btnmaxdd">Max DD</label>
+                                <input type="radio" class="btn-check btn-sm" name="btnradio" id="btnRadio_3" autocomplete="off" value="3">
+                                <label class="btn btn-outline-primary btn-sm" for="btnRadio_3">PnL DD Ratio</label>
+
+                                <input type="radio" class="btn-check btn-sm" name="btnradio" id="btnRadio_1" autocomplete="off" value="1">
+                                <label class="btn btn-outline-primary btn-sm" for="btnRadio_1">Win Rate</label>
+
+                                <input type="radio" class="btn-check btn-sm" name="btnradio" id="btnRadio_2" autocomplete="off" value="2">
+                                <label class="btn btn-outline-primary btn-sm" for="btnRadio_2">Max DD</label>
+
+                                <input type="radio" class="btn-check btn-sm" name="btnradio" id="btnRadio_4" autocomplete="off" value="4">
+                                <label class="btn btn-outline-primary btn-sm" for="btnRadio_4">Net PnL</label>
+                            </div>
+                        </div>
 
 
+                        <div class="col-md-6 col-sm-12 g-3 text-end">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top: 0px;">
+                                <input type="radio" class="btn-check btn-sm" name="btnradio_day" id="btnRadioDay_1" autocomplete="off" value="1">
+                                <label class="btn btn-outline-primary btn-sm" for="btnRadioDay_1">180+D</label>
 
-                        <input type="radio" class="btn-check btn-sm" name="btnradio" id="btnnetpnl" autocomplete="off" value="4">
-                        <label class="btn btn-outline-primary btn-sm" for="btnnetpnl">Net PnL</label>
+                                <input type="radio" class="btn-check btn-sm" name="btnradio_day" id="btnRadioDay_2" autocomplete="off" value="2">
+                                <label class="btn btn-outline-primary btn-sm" for="btnRadioDay_2">90-180D</label>
+
+                                <input type="radio" class="btn-check btn-sm" name="btnradio_day" id="btnRadioDay_3" autocomplete="off" value="3">
+                                <label class="btn btn-outline-primary btn-sm" for="btnRadioDay_3">0-90D</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="row mb-3 ms-0 me-0 d-block d-sm-none">
+                    <span class="filter_div">Order By</span>
+                    <div class="col-md-6 col-sm-12 g-3">
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 g-3 filter_div">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top: 0px;">
+
+                            <input type="radio" class="btn-check btn-sm" name="btnradio_mobile" id="btnradio_mobile_3" autocomplete="off" value="3">
+                            <label class="btn btn-outline-primary btn-sm" for="btnradio_mobile_3">PnL DD Ratio</label>
+
+                            <input type="radio" class="btn-check btn-sm" name="btnradio_mobile" id="btnradio_mobile_1" autocomplete="off" value="1">
+                            <label class="btn btn-outline-primary btn-sm" for="btnradio_mobile_1">Win Rate</label>
+
+                            <input type="radio" class="btn-check btn-sm" name="btnradio_mobile" id="btnradio_mobile_2" autocomplete="off" value="2">
+                            <label class="btn btn-outline-primary btn-sm" for="btnradio_mobile_2">Max DD</label>
+
+                            <input type="radio" class="btn-check btn-sm" name="btnradio_mobile" id="btnradio_mobile_4" autocomplete="off" value="4">
+                            <label class="btn btn-outline-primary btn-sm" for="btnradio_mobile_4">Net PnL</label>
+                        </div>
+                    </div>
+
+                    <div class="row col-md-6 col-sm-12 g-3 text-end">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top: 0px;">
+                            <input type="radio" class="btn-check btn-sm" name="btnradio_MobileDay" id="btnRadioMobileDay_1" autocomplete="off" value="1">
+                            <label class="btn btn-outline-primary btn-sm" for="btnRadioMobileDay_1">180+D</label>
+
+                            <input type="radio" class="btn-check btn-sm" name="btnradio_MobileDay" id="btnRadioMobileDay_2" autocomplete="off" value="2">
+                            <label class="btn btn-outline-primary btn-sm" for="btnRadioMobileDay_2">90-180D</label>
+
+                            <input type="radio" class="btn-check btn-sm" name="btnradio_MobileDay" id="btnRadioMobileDay_3" autocomplete="off" value="3">
+                            <label class="btn btn-outline-primary btn-sm" for="btnRadioMobileDay_3">0-90D</label>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
                 <div class="row g-3 mb-3" id="true_nl_rows">
 
                 </div>
@@ -319,7 +388,7 @@
                         <div class="col-2">
                             <div class="avatar avatar-2xl">
                                 <a class="fw-bold stretched-link" href="Details.html?user=${userid}&key=${key}">
-                                    <img class="avatar-name rounded-circle bg-soft-success text-dark" src="${(profilepic != null ? profilepic:'http://rtwelfare.club/img/default-Profile.png')}" alt="">
+                                    <img class="avatar-name rounded-circle bg-soft-success text-dark" src="${(profilepic != null ? profilepic:'img/default-Profile.png')}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -387,33 +456,33 @@
         </div>
     </script>
 
-    <script type="text/javascript" src="http://rtwelfare.club/js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="waitMe/waitMe.js"></script>
     <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
-    <script type="text/javascript" src="http://rtwelfare.club/js/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
-    <script src="http://rtwelfare.club/vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
-    <script src="http://rtwelfare.club/vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
-    <script src="http://rtwelfare.club/vendors/anchorjs/anchor.min.js?v=mCNojyCUIjFsIEIal-zHHIUbYBFvD-29Mojv1zI0sPA"></script>
-    <script src="http://rtwelfare.club/vendors/is/is.min.js?v=rNrwuW7iEV0xqy-WkpgQWgItoFd0eEprJpLURRo0hl4"></script>
-    <script src="http://rtwelfare.club/vendors/countup/countUp.umd.js"></script>
-    <script src="http://rtwelfare.club/vendors/echarts/echarts.min.js?v=nID5mM_xbvqrJobTn4k1HIm3QcX9RYVaG6A1FMgyYlw"></script>
-    <script src="http://rtwelfare.club/vendors/fontawesome/all.min.js?v=u7TqVgshDScwW6wDgirx7NLkCiWrm-W9Lc0_6s0DVjs"></script>
-    <script src="http://rtwelfare.club/vendors/lodash/lodash.min.js?v=CVrbEAUGzT7xAu-z5cI5N1GTn0cclSM1QuPeXEJZGF8"></script>
-    <script src="http://rtwelfare.club/vendors/tinymce/tinymce.min.js"></script>
-    <script src="http://rtwelfare.club/vendors/choices/choices.min.js"></script>
+    <script type="text/javascript" src="js/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
+    <script src="vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
+    <script src="vendors/anchorjs/anchor.min.js?v=mCNojyCUIjFsIEIal-zHHIUbYBFvD-29Mojv1zI0sPA"></script>
+    <script src="vendors/is/is.min.js?v=rNrwuW7iEV0xqy-WkpgQWgItoFd0eEprJpLURRo0hl4"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="vendors/echarts/echarts.min.js?v=nID5mM_xbvqrJobTn4k1HIm3QcX9RYVaG6A1FMgyYlw"></script>
+    <script src="vendors/fontawesome/all.min.js?v=u7TqVgshDScwW6wDgirx7NLkCiWrm-W9Lc0_6s0DVjs"></script>
+    <script src="vendors/lodash/lodash.min.js?v=CVrbEAUGzT7xAu-z5cI5N1GTn0cclSM1QuPeXEJZGF8"></script>
+    <script src="vendors/tinymce/tinymce.min.js"></script>
+    <script src="vendors/choices/choices.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="http://rtwelfare.club/vendors/list.js/list.min.js?v=jyfQ7nar5XRtzjvEvB_GU5sKBN4QY-ANRj1D5zeKgzU"></script>
-    <script src="http://rtwelfare.club/assets/js/flatpickr.js"></script>
-    <script src="http://rtwelfare.club/assets/js/theme.js?v=iQOEWcaelNwtRkmzUb0lESKcVxZqMfUIBjQczvpVwvY"></script>
-    <script src="http://rtwelfare.club/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="http://rtwelfare.club/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <script src="http://rtwelfare.club/plugins/toastr/toastr.min.js?v=ldqN9_OcVFZtetwyZMvgDHiiWga1hRgUiY2ML1BBLF0"></script>
-    <script src="http://rtwelfare.club/plugins/waitMe/waitMe.min.js"></script>
-    <script src="http://rtwelfare.club/js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
-    <script src="http://rtwelfare.club/js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
+    <script src="vendors/list.js/list.min.js?v=jyfQ7nar5XRtzjvEvB_GU5sKBN4QY-ANRj1D5zeKgzU"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/theme.js?v=iQOEWcaelNwtRkmzUb0lESKcVxZqMfUIBjQczvpVwvY"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="plugins/toastr/toastr.min.js?v=ldqN9_OcVFZtetwyZMvgDHiiWga1hRgUiY2ML1BBLF0"></script>
+    <script src="plugins/waitMe/waitMe.min.js"></script>
+    <script src="js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
+    <script src="js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
     <script src="js/jquery.sparkline.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script src="http://rtwelfare.club/js/jquery.tmpl.js"></script>
+    <script src="js/jquery.tmpl.js"></script>
     <script src="js/index.js"></script>
 
     <!-- Google tag (gtag.js) -->

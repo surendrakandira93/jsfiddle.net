@@ -54,11 +54,16 @@ GoogleChart.drawChartEquityBothChart = function (params) {
     var arrInput = params.xs;
     var element = params.element;
     var colors = params.colors;
+    var columns = params.columns;
 
     var data = new google.visualization.DataTable();
     data.addColumn('date', 'X');
-    data.addColumn('number', 'Net PNL');
-    data.addColumn('number', 'Realized PnL');
+
+    for (var i = 0; i < columns.length; i++) {
+        data.addColumn('number', columns[i]);
+    }
+   // data.addColumn('number', 'Net PNL');
+    //data.addColumn('number', 'Realized PnL');
 
     for (var i = 0; i < arrInput.length; i++) {
         data.addRow([new Date(arrInput[i].date), arrInput[i].netpnl, arrInput[i].pnl]);
@@ -190,9 +195,110 @@ GoogleChart.DrawChartLossProfitChart = function (params) {
         backgroundColor: { fill: 'transparent' }
     };
 
-
-
     var chart = new google.visualization.ColumnChart(document.getElementById('google_bar_pnl'));
+    chart.draw(data, options);
+    window.addEventListener('resize', function () {
+        chart.draw(data, options);
+    }, false);
+}
+
+GoogleChart.DrawChartBarAllChart = function (params) {
+
+    var arrInput = params.xs;
+    var typeStr = params.types;
+
+    var arrData2 = new Array();
+    arrData2.push(["Month", "Net PNL", { role: 'style' }, "PNL", { role: 'style' }, "Charge", { role: 'style' }]);
+    for (var i = 0; i < arrInput.length; i++) {
+        var subArr2 = new Array();
+        subArr2.push(new Date(arrInput[i].date));
+
+        subArr2.push(arrInput[i].netpnl);
+        if (arrInput[i].netpnl < 0) {
+            subArr2.push('color: #dc3912');
+        } else {
+            subArr2.push('color: #109618');
+        }
+        subArr2.push(arrInput[i].pnl);
+        if (arrInput[i].pnl < 0) {
+            subArr2.push('color: #FA8072');
+        } else {
+            subArr2.push('color: #90EE90');
+        }
+        subArr2.push(arrInput[i].charges);
+        subArr2.push('color: #02a8b5');
+        arrData2.push(subArr2);
+    }
+
+    var data = new google.visualization.arrayToDataTable(arrData2);
+
+    var options = {
+        height: 300,
+        chartArea: {
+            left: "7%",
+            top: "4%",
+            height: "85%",
+            width: "85%"
+        },
+        legend: { position: 'none' },
+        //colors: ['#00FF7F', '#90EE90', '#3366cc'],
+        vAxis: { format: 'short', textStyle: { color: 'gray' } },
+        hAxis: { format: 'MMM-yy', textStyle: { color: 'gray' } },
+        backgroundColor: { fill: 'transparent' }
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('google_bar_all_pnl'));
+    chart.draw(data, options);
+    window.addEventListener('resize', function () {
+        chart.draw(data, options);
+    }, false);
+}
+
+GoogleChart.DrawChartBarStackedChart = function (params) {
+
+    var arrInput = params.xs;
+    var typeStr = params.types;
+
+    var arrData2 = new Array();
+    arrData2.push(["Month", "Net PNL", { role: 'style' }, "Charge", { role: 'style' }]);
+    for (var i = 0; i < arrInput.length; i++) {
+        var subArr2 = new Array();
+        subArr2.push(new Date(arrInput[i].date));
+
+        subArr2.push(arrInput[i].netpnl);
+        if (arrInput[i].netpnl < 0)
+        {
+            subArr2.push('color: #dc3912');
+        }
+        else
+        {
+            subArr2.push('color: #109618');
+        }
+        
+        subArr2.push(arrInput[i].charges);
+        subArr2.push('color: #02a8b5');
+        arrData2.push(subArr2);
+    }
+
+    var data = new google.visualization.arrayToDataTable(arrData2);
+
+    var options = {
+        height: 300,
+        chartArea: {
+            left: "7%",
+            top: "4%",
+            height: "85%",
+            width: "85%"
+        },
+        isStacked: true,
+        legend: { position: 'none' },
+        //colors: ['#00FF7F', '#90EE90', '#3366cc'],
+        vAxis: { format: 'short', textStyle: { color: 'gray' } },
+        hAxis: { format: 'MMM-yy', textStyle: { color: 'gray' } },
+        backgroundColor: { fill: 'transparent' }
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('google_bar_stacked_pnl'));
     chart.draw(data, options);
     window.addEventListener('resize', function () {
         chart.draw(data, options);
@@ -259,13 +365,13 @@ GoogleChart.drawDonutChart = function (params) {
         //}
         //arrData2.push(subArr2);
 
-
+        
         if (arrInput[i].pnl > 0) {
             subArr2.push(arrInput[i].weekday);
             subArr2.push(parseInt(arrInput[i].pnl));
             arrData2.push(subArr2);
         }
-
+       
     }
 
     var data = new google.visualization.arrayToDataTable(arrData2);

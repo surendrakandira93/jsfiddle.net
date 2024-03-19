@@ -16,31 +16,31 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="http://true-pnl.rtwelfare.club/Approved.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="http://true-pnl.rtwelfare.club/Approved.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="http://true-pnl.rtwelfare.club/Approved.svg">
-    <link rel="shortcut icon" type="image/x-icon" href="http://true-pnl.rtwelfare.club/Approved.svg">
-    <meta name="msapplication-TileImage" content="http://true-pnl.rtwelfare.club/Approved.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="Approved.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="Approved.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="Approved.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="Approved.svg">
+    <meta name="msapplication-TileImage" content="Approved.svg">
     <meta name="theme-color" content="#ffffff">
-    <script src="http://rtwelfare.club/assets/js/config.js"></script>
-    <script src="http://rtwelfare.club/vendors/simplebar/simplebar.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="vendors/simplebar/simplebar.min.js"></script>
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
-    <link href="http://rtwelfare.club/vendors/simplebar/simplebar.min.css" rel="stylesheet">
-    <link href="http://rtwelfare.club/assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
-    <link href="http://rtwelfare.club/assets/css/theme.min.css" rel="stylesheet" id="style-default">
-    <link href="http://rtwelfare.club/assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
-    <link href="http://rtwelfare.club/assets/css/user.min.css" rel="stylesheet" id="user-style-default">
-    <link href="http://rtwelfare.club/plugins/waitMe/waitMe.min.css" rel="stylesheet" />
-    <link href="http://rtwelfare.club/plugins/toastr/toastr.min.css" rel="stylesheet" />
-    <link href="http://rtwelfare.club/vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
-    <link href="http://rtwelfare.club/vendors/choices/choices.min.css" rel="stylesheet" />
-    <link href="http://rtwelfare.club/css/Custome.css" rel="stylesheet" />
-    <link rel="stylesheet" href="http://rtwelfare.club/Plugins/cal-heatmap/cal-heatmap.css" />
+    <link href="vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link href="assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+    <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link href="plugins/waitMe/waitMe.min.css" rel="stylesheet" />
+    <link href="plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
+    <link href="vendors/choices/choices.min.css" rel="stylesheet" />
+    <link href="css/Custome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Plugins/cal-heatmap/cal-heatmap.css" />
     <script>
         var isRTL = JSON.parse(localStorage.getItem('isRTL'));
         if (isRTL) {
@@ -255,6 +255,9 @@
                 <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
                     <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
                         <li class="nav-item ">
+                            <a class="nav-link nav-click fw-medium cursor-pointer"  href="index.html"><i class="fa fa-home"></i>Home</a>
+                        </li>
+                        <li class="nav-item ">
                             <a class="menu_dynamic nav-link nav-click fw-medium cursor-pointer active" data-key="All" href="Details.html?user=$userKey&key=All">Max</a>
                         </li>
                         <li class="nav-item">
@@ -295,8 +298,8 @@
                             <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
                                 <div class="bg-white dark__bg-1000 rounded-3 py-2">
                                     <!--<a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousDay" href="index.html?key=PreviousDay">
-                                        Prev. Day
-                                    </a>-->
+                    Prev. Day
+                </a>-->
 
                                     <a class="menu_dynamic nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last7Days" href="Details.html?user=$userKey&key=Last7Days">
                                         7D
@@ -422,12 +425,12 @@
 
                     <div class="col-sm-6 col-md-3 mb-3">
                         <div class="card overflow-hidden" style="min-width: 12rem">
-                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-1.png);"></div>
+                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-1.png);"></div>
                             <!--/.bg-holder-->
                             <div class="card-body position-relative">
                                 <h6>Realised PNL</h6>
                                 <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif RealisedPNL_div" id="RealisedPNL_div" data-bs-toggle="tooltip" data-bs-placement="top" title="">
-                                    <img src="http://rtwelfare.club/img/loading-sm.gif" />
+                                    <img src="img/loading-sm.gif" />
                                 </div>
                             </div>
                         </div>
@@ -435,33 +438,33 @@
 
                     <div class="col-sm-6 col-md-3 mb-3">
                         <div class="card overflow-hidden" style="min-width: 12rem">
-                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-2.png);"></div>
+                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-2.png);"></div>
                             <!--/.bg-holder-->
                             <div class="card-body position-relative">
                                 <h6>Charges Taxes</h6>
-                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="chargesTaxes_div" data-bs-toggle="tooltip" data-bs-placement="top" title=""><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="chargesTaxes_div" data-bs-toggle="tooltip" data-bs-placement="top" title=""><img src="img/loading-sm.gif" /></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-md-3 mb-3">
                         <div class="card overflow-hidden" style="min-width: 12rem">
-                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-3.png);"></div>
+                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-3.png);"></div>
                             <!--/.bg-holder-->
                             <div class="card-body position-relative">
                                 <h6>Net Realised PNL</h6>
-                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="netRealisedPNL_div" data-bs-toggle="tooltip" data-bs-placement="top" title=""><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="netRealisedPNL_div" data-bs-toggle="tooltip" data-bs-placement="top" title=""><img src="img/loading-sm.gif" /></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-md-3 mb-3">
                         <div class="card overflow-hidden" style="min-width: 12rem">
-                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-4.png);"></div>
+                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-4.png);"></div>
                             <!--/.bg-holder-->
                             <div class="card-body position-relative">
                                 <h6>PnL to DD Ratio</h6>
-                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="UnrealisedPNL_div"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div class="display-4 fs-4 mb-2 fw-normal font-sans-serif" id="UnrealisedPNL_div"><img src="img/loading-sm.gif" /></div>
                             </div>
                         </div>
                     </div>
@@ -483,7 +486,7 @@
                                 <div class="row g-3">
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-1.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-1.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Total Trading Days</h6>
@@ -494,7 +497,7 @@
                                     </div>
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-2.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-2.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Win Days</h6>
@@ -504,7 +507,7 @@
                                     </div>
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-3.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-3.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Loss Days</h6>
@@ -514,7 +517,7 @@
                                     </div>
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-4.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-4.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Max Winning Streak Days</h6>
@@ -526,7 +529,7 @@
 
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-5.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-5.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Max Losing Streak Days</h6>
@@ -537,7 +540,7 @@
 
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-6.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-6.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Win Rate</h6>
@@ -548,7 +551,7 @@
 
                                     <!--<div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                     <div class="card overflow-hidden" style="min-width: 12rem">
-                                        <div class="bg-holder bg-card" style="background-image:url(/assets/img/icons/spot-illustrations/corner-7.png);"></div>-->
+                                        <div class="bg-holder bg-card" style="background-image:url(assets/img/icons/spot-illustrations/corner-7.png);"></div>-->
                                     <!--/.bg-holder-->
                                     <!--<div class="card-body position-relative">
                                                 <h6>Avg Monthly Profit</h6>
@@ -559,7 +562,7 @@
 
                                     <!--<div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-1.png);"></div>-->
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-1.png);"></div>-->
                                             <!--/.bg-holder-->
                                             <!--<div class="card-body position-relative">
                                                 <h6>Total Profit</h6>
@@ -570,7 +573,7 @@
 
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-2.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-2.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Max Profit in a Day</h6>
@@ -581,7 +584,7 @@
 
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-3.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-3.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Max Loss in a Day</h6>
@@ -592,7 +595,7 @@
 
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-4.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-4.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Avg Profit/Loss Daily</h6>
@@ -602,7 +605,7 @@
                                     </div>
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-5.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-5.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Avg Profit on Profit Days</h6>
@@ -612,7 +615,7 @@
                                     </div>
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-6.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-6.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Avg Loss on Loss Days</h6>
@@ -623,7 +626,7 @@
 
                                     <div class="col-sm-4 col-md-3 mb-3 statistics-danger">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
-                                            <div class="bg-holder bg-card" style="background-image: url(http://rtwelfare.club/assets/img/icons/spot-illustrations/corner-7.png);"></div>
+                                            <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-7.png);"></div>
                                             <!--/.bg-holder-->
                                             <div class="card-body position-relative">
                                                 <h6>Max Drawdown</h6>
@@ -650,7 +653,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive heatyear div_loader">
-                                    <img src="http://rtwelfare.club/img/loading.gif" />
+                                    <img src="img/loading.gif " />
                                 </div>
 
                             </div>
@@ -684,7 +687,7 @@
                             </div>
                             <div class="card-body h-100 pe-0">
 
-                                <div id="google_line_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_line_pnl" class="h-100"><img src="img/loading-sm.gif" /></div>
 
                             </div>
                         </div>
@@ -717,7 +720,7 @@
                             </div>
                             <div class="card-body h-100 pe-0">
 
-                                <div id="google_drawdown_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_drawdown_pnl" class="h-100"><img src="img/loading-sm.gif" /></div>
 
                             </div>
                         </div>
@@ -749,7 +752,7 @@
                                 </div>
                             </div>
                             <div class="card-body h-100 pe-0">
-                                <div id="google_line_both_pnl_dd" class="h-100 div_loader"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_line_both_pnl_dd" class="h-100 div_loader"><img src="img/loading-sm.gif" /></div>
                             </div>
                         </div>
                     </div>
@@ -780,7 +783,7 @@
                                 </div>
                             </div>
                             <div class="card-body h-100 pe-0">
-                                <div id="google_line_both_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_line_both_pnl" class="h-100"><img src="img/loading-sm.gif" /></div>
                             </div>
                         </div>
                     </div>
@@ -813,7 +816,7 @@
 
                             <div class="card-body h-100 pe-0">
 
-                                <div id="google_bar_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_bar_pnl" class="h-100"><img src="img/loading-sm.gif" /></div>
 
 
                             </div>
@@ -848,7 +851,7 @@
 
                             <div class="card-body h-100 pe-0">
 
-                                <div id="google_bar_all_pnl" class="h-100 div_loader"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_bar_all_pnl" class="h-100 div_loader"><img src="img/loading-sm.gif" /></div>
 
 
                             </div>
@@ -883,7 +886,7 @@
                             </div>
 
                             <div class="card-body h-100 pe-0">
-                                <div id="google_bar_stacked_pnl" class="h-100 div_loader"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_bar_stacked_pnl" class="h-100 div_loader"><img src="img/loading-sm.gif" /></div>
                             </div>
                         </div>
                     </div>
@@ -901,7 +904,7 @@
                             </div>
 
                             <div class="card-body h-100 pe-0">
-                                <div id="google_pie_pnl" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_pie_pnl" class="h-100"><img src="img/loading-sm.gif" /></div>
 
                             </div>
                         </div>
@@ -919,7 +922,7 @@
 
                             <div class="card-body h-100 pe-0">
 
-                                <div id="google_pie_pnl_summary" class="h-100"><img src="http://rtwelfare.club/img/loading-sm.gif" /></div>
+                                <div id="google_pie_pnl_summary" class="h-100"><img src="img/loading-sm.gif" /></div>
                             </div>
                         </div>
                     </div>
@@ -935,7 +938,7 @@
                                 </div>
                             </div>
                             <div class="card-body h-100 pe-0 div_loader" id="tbl_weekly">
-                                <img src="http://rtwelfare.club/img/loading-sm.gif" />
+                                <img src="img/loading-sm.gif" />
                             </div>
                         </div>
                     </div>
@@ -951,7 +954,7 @@
                                 </div>
                             </div>
                             <div class="card-body h-100 pe-0 div_loader" id="tbl_monthly">
-                                <img src="http://rtwelfare.club/img/loading-sm.gif" />
+                                <img src="img/loading-sm.gif" />
                             </div>
                         </div>
                     </div>
@@ -963,33 +966,33 @@
     <!--    JavaScripts-->
     <!-- ===============================================-->
 
-    <script type="text/javascript" src="http://rtwelfare.club/js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
-    <script type="text/javascript" src="http://rtwelfare.club/js/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
-    <script src="http://rtwelfare.club/vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
-    <script src="http://rtwelfare.club/vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
-    <script src="http://rtwelfare.club/vendors/anchorjs/anchor.min.js?v=mCNojyCUIjFsIEIal-zHHIUbYBFvD-29Mojv1zI0sPA"></script>
-    <script src="http://rtwelfare.club/vendors/is/is.min.js?v=rNrwuW7iEV0xqy-WkpgQWgItoFd0eEprJpLURRo0hl4"></script>
-    <script src="http://rtwelfare.club/vendors/countup/countUp.umd.js"></script>
-    <script src="http://rtwelfare.club/vendors/echarts/echarts.min.js?v=nID5mM_xbvqrJobTn4k1HIm3QcX9RYVaG6A1FMgyYlw"></script>
-    <script src="http://rtwelfare.club/vendors/fontawesome/all.min.js?v=u7TqVgshDScwW6wDgirx7NLkCiWrm-W9Lc0_6s0DVjs"></script>
-    <script src="http://rtwelfare.club/vendors/lodash/lodash.min.js?v=CVrbEAUGzT7xAu-z5cI5N1GTn0cclSM1QuPeXEJZGF8"></script>
-    <script src="http://rtwelfare.club/vendors/tinymce/tinymce.min.js"></script>
-    <script src="http://rtwelfare.club/vendors/choices/choices.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
+    <script src="vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
+    <script src="vendors/anchorjs/anchor.min.js?v=mCNojyCUIjFsIEIal-zHHIUbYBFvD-29Mojv1zI0sPA"></script>
+    <script src="vendors/is/is.min.js?v=rNrwuW7iEV0xqy-WkpgQWgItoFd0eEprJpLURRo0hl4"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="vendors/echarts/echarts.min.js?v=nID5mM_xbvqrJobTn4k1HIm3QcX9RYVaG6A1FMgyYlw"></script>
+    <script src="vendors/fontawesome/all.min.js?v=u7TqVgshDScwW6wDgirx7NLkCiWrm-W9Lc0_6s0DVjs"></script>
+    <script src="vendors/lodash/lodash.min.js?v=CVrbEAUGzT7xAu-z5cI5N1GTn0cclSM1QuPeXEJZGF8"></script>
+    <script src="vendors/tinymce/tinymce.min.js"></script>
+    <script src="vendors/choices/choices.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="http://rtwelfare.club/vendors/list.js/list.min.js?v=jyfQ7nar5XRtzjvEvB_GU5sKBN4QY-ANRj1D5zeKgzU"></script>
-    <script src="http://rtwelfare.club/assets/js/flatpickr.js"></script>
-    <script src="http://rtwelfare.club/assets/js/theme.js?v=iQOEWcaelNwtRkmzUb0lESKcVxZqMfUIBjQczvpVwvY"></script>
-    <script src="http://rtwelfare.club/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="http://rtwelfare.club/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <script src="http://rtwelfare.club/plugins/toastr/toastr.min.js?v=ldqN9_OcVFZtetwyZMvgDHiiWga1hRgUiY2ML1BBLF0"></script>
-    <script src="http://rtwelfare.club/plugins/waitMe/waitMe.min.js"></script>
-    <script src="http://rtwelfare.club/js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
-    <script src="http://rtwelfare.club/js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
-    <script type="text/javascript" src="http://rtwelfare.club/plugins/cal-heatmap/d3.v3.js"></script>
-    <script type="text/javascript" src="http://rtwelfare.club/plugins/cal-heatmap/cal-heatmap.js"></script>
-    <script src="http://rtwelfare.club/js/St_web_GoogleChart.js"></script>
-    <script src="http://rtwelfare.club/js/globalpnl.js" asp-append-version="true"></script>
+    <script src="vendors/list.js/list.min.js?v=jyfQ7nar5XRtzjvEvB_GU5sKBN4QY-ANRj1D5zeKgzU"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/theme.js?v=iQOEWcaelNwtRkmzUb0lESKcVxZqMfUIBjQczvpVwvY"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="plugins/toastr/toastr.min.js?v=ldqN9_OcVFZtetwyZMvgDHiiWga1hRgUiY2ML1BBLF0"></script>
+    <script src="plugins/waitMe/waitMe.min.js"></script>
+    <script src="js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
+    <script src="js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
+    <script type="text/javascript" src="plugins/cal-heatmap/d3.v3.js"></script>
+    <script type="text/javascript" src="plugins/cal-heatmap/cal-heatmap.js"></script>
+    <script src="js/St_web_GoogleChart.js"></script>
+    <script src="js/globalpnl.js" asp-append-version="true"></script>
     <script>
         var pageUrl = "/";
     </script>
