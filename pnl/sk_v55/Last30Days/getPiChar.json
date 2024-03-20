@@ -1,6 +1,6 @@
 [
   {
-    "pnl": 795082.1125969999,
+    "pnl": 795082.1125970001,
     "pnlstr": null,
     "date": "0001-01-01T00:00:00",
     "weekday": "Monday",
@@ -8,10 +8,26 @@
     "color": null
   },
   {
-    "pnl": 141526.623143,
+    "pnl": 141526.62314300006,
     "pnlstr": null,
     "date": "0001-01-01T00:00:00",
     "weekday": "Tuesday",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": 23555.47124,
+    "pnlstr": null,
+    "date": "0001-01-01T00:00:00",
+    "weekday": "Wednesday",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": -127174.43798000002,
+    "pnlstr": null,
+    "date": "0001-01-01T00:00:00",
+    "weekday": "Thursday",
     "charges": 0.0,
     "color": null
   },
@@ -36,22 +52,6 @@
     "pnlstr": null,
     "date": "0001-01-01T00:00:00",
     "weekday": "Sunday",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": -127174.43798000002,
-    "pnlstr": null,
-    "date": "0001-01-01T00:00:00",
-    "weekday": "Thursday",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": 23555.47124,
-    "pnlstr": null,
-    "date": "0001-01-01T00:00:00",
-    "weekday": "Wednesday",
     "charges": 0.0,
     "color": null
   }

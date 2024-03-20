@@ -1,6 +1,14 @@
 [
   {
-    "pnl": 300786.398055,
+    "pnl": -152.908652,
+    "pnlstr": null,
+    "date": "0001-01-01T00:00:00",
+    "weekday": "Saturday",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": 300786.39805499994,
     "pnlstr": null,
     "date": "0001-01-01T00:00:00",
     "weekday": "Monday",
@@ -16,26 +24,10 @@
     "color": null
   },
   {
-    "pnl": -433737.804042,
+    "pnl": -433737.80404200003,
     "pnlstr": null,
     "date": "0001-01-01T00:00:00",
     "weekday": "Tuesday",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": 885902.087378,
-    "pnlstr": null,
-    "date": "0001-01-01T00:00:00",
-    "weekday": "Friday",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": 475371.296507,
-    "pnlstr": null,
-    "date": "0001-01-01T00:00:00",
-    "weekday": "Thursday",
     "charges": 0.0,
     "color": null
   },
@@ -48,10 +40,18 @@
     "color": null
   },
   {
-    "pnl": -152.908652,
+    "pnl": 475371.296507,
     "pnlstr": null,
     "date": "0001-01-01T00:00:00",
-    "weekday": "Saturday",
+    "weekday": "Thursday",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": 885902.0873780001,
+    "pnlstr": null,
+    "date": "0001-01-01T00:00:00",
+    "weekday": "Friday",
     "charges": 0.0,
     "color": null
   }

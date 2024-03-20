@@ -1,101 +1,5 @@
 [
   {
-    "pnl": -2189.25,
-    "netpnl": -2435.849471,
-    "date": "2024-01-20T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 246.599471,
-    "color": null
-  },
-  {
-    "pnl": 0.0,
-    "netpnl": 0.0,
-    "date": "2024-01-21T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": 0.0,
-    "netpnl": 0.0,
-    "date": "2024-01-22T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": 2795.25,
-    "netpnl": 2648.237399,
-    "date": "2024-01-23T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 147.012601,
-    "color": null
-  },
-  {
-    "pnl": 1453.5,
-    "netpnl": 1146.950178,
-    "date": "2024-01-24T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 306.549822,
-    "color": null
-  },
-  {
-    "pnl": -1449.75,
-    "netpnl": -1947.424066,
-    "date": "2024-01-25T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 497.67406600000004,
-    "color": null
-  },
-  {
-    "pnl": 0.0,
-    "netpnl": 0.0,
-    "date": "2024-01-26T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": 0.0,
-    "netpnl": 0.0,
-    "date": "2024-01-27T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": 0.0,
-    "netpnl": 0.0,
-    "date": "2024-01-28T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 0.0,
-    "color": null
-  },
-  {
-    "pnl": 1130.25,
-    "netpnl": 982.367335,
-    "date": "2024-01-29T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 147.882665,
-    "color": null
-  },
-  {
-    "pnl": 25.5,
-    "netpnl": -99.683957,
-    "date": "2024-01-30T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 125.183957,
-    "color": null
-  },
-  {
-    "pnl": 1103.25,
-    "netpnl": 680.2773320000001,
-    "date": "2024-01-31T00:00:00",
-    "weekday": "Jan 2024",
-    "charges": 422.97266799999994,
-    "color": null
-  },
-  {
     "pnl": -1837.5,
     "netpnl": -2312.105822,
     "date": "2024-02-01T00:00:00",
@@ -256,11 +160,27 @@
     "color": null
   },
   {
+    "pnl": -2189.25,
+    "netpnl": -2435.849471,
+    "date": "2024-01-20T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 246.599471,
+    "color": null
+  },
+  {
     "pnl": -1655.25,
     "netpnl": -1949.473697,
     "date": "2024-02-21T00:00:00",
     "weekday": "Feb 2024",
     "charges": 294.223697,
+    "color": null
+  },
+  {
+    "pnl": 0.0,
+    "netpnl": 0.0,
+    "date": "2024-01-21T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 0.0,
     "color": null
   },
   {
@@ -272,11 +192,91 @@
     "color": null
   },
   {
+    "pnl": 0.0,
+    "netpnl": 0.0,
+    "date": "2024-01-22T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 0.0,
+    "color": null
+  },
+  {
     "pnl": -262.5,
     "netpnl": -430.20887400000004,
     "date": "2024-02-23T00:00:00",
     "weekday": "Feb 2024",
     "charges": 167.708874,
+    "color": null
+  },
+  {
+    "pnl": 2795.25,
+    "netpnl": 2648.237399,
+    "date": "2024-01-23T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 147.012601,
+    "color": null
+  },
+  {
+    "pnl": 1453.5,
+    "netpnl": 1146.950178,
+    "date": "2024-01-24T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 306.549822,
+    "color": null
+  },
+  {
+    "pnl": -1449.75,
+    "netpnl": -1947.424066,
+    "date": "2024-01-25T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 497.67406600000004,
+    "color": null
+  },
+  {
+    "pnl": 0.0,
+    "netpnl": 0.0,
+    "date": "2024-01-26T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": 0.0,
+    "netpnl": 0.0,
+    "date": "2024-01-27T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": 0.0,
+    "netpnl": 0.0,
+    "date": "2024-01-28T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": 1130.25,
+    "netpnl": 982.367335,
+    "date": "2024-01-29T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 147.882665,
+    "color": null
+  },
+  {
+    "pnl": 25.5,
+    "netpnl": -99.683957,
+    "date": "2024-01-30T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 125.183957,
+    "color": null
+  },
+  {
+    "pnl": 1103.25,
+    "netpnl": 680.2773320000001,
+    "date": "2024-01-31T00:00:00",
+    "weekday": "Jan 2024",
+    "charges": 422.97266799999994,
     "color": null
   },
   {
