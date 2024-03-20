@@ -1,7 +1,7 @@
 {
   "realisedpnl": {
-    "endvalue": 15.808823501800001,
-    "actualvalue": 1580882.35018,
+    "endvalue": 11.900313501800001,
+    "actualvalue": 1190031.35018,
     "decimalplaces": 2,
     "suffix": "L",
     "color": "#f5803e",
@@ -9,8 +9,8 @@
     "prefix": "+"
   },
   "totalpnl": {
-    "endvalue": 24.81608299094,
-    "actualvalue": 2481608.299094,
+    "endvalue": 21.66388401653,
+    "actualvalue": 2166388.401653,
     "decimalplaces": 2,
     "suffix": "L",
     "color": "#f5803e",
@@ -18,8 +18,8 @@
     "prefix": ""
   },
   "chargestaxes": {
-    "endvalue": 9.00725948914,
-    "actualvalue": 900725.9489140001,
+    "endvalue": 9.76357051473,
+    "actualvalue": 976357.0514730001,
     "decimalplaces": 2,
     "suffix": "L",
     "color": "#27bcfd",
@@ -27,8 +27,8 @@
     "prefix": ""
   },
   "netrealisedpnl": {
-    "endvalue": 6.80156401266,
-    "actualvalue": 680156.401266,
+    "endvalue": 2.13674298707,
+    "actualvalue": 213674.29870699998,
     "decimalplaces": 2,
     "suffix": "L",
     "color": "#00d27a",
@@ -48,8 +48,9 @@
   "total": 0,
   "totaltradingdays": 0,
   "barchart": null,
-  "winrate": 59.67741935483871,
-  "pnlddratio": 1.3059540875197642,
+  "winrate": 56.451612903225815,
+  "pnlddratio": 0.3990434520812616,
+  "maxdrawdownint": 0.0,
   "maxdrawdown": null,
   "maxdate": null,
   "mindate": null
