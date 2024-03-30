@@ -1,0 +1,221 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>True PnL</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="Approved.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="Approved.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="Approved.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="Approved.svg">
+    <meta name="msapplication-TileImage" content="Approved.svg">
+    <meta name="theme-color" content="#ffffff">
+    <script src="assets/js/config.js"></script>
+    <script src="vendors/simplebar/simplebar.min.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link href="vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link href="assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+    <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link href="plugins/waitMe/waitMe.min.css" rel="stylesheet" />
+    <link href="plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
+    <link href="vendors/choices/choices.min.css" rel="stylesheet" />
+    <link href="css/Custome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Plugins/cal-heatmap/cal-heatmap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="waitMe/waitMe.min.css" rel="stylesheet" />
+    <style>
+
+        .hover-actions {
+            display: block !important;
+        }
+
+        .btn-sm {
+            --falcon-btn-padding-y: 0.1875rem;
+            --falcon-btn-padding-x: 0.5rem;
+            --falcon-btn-font-size: 0.775rem;
+            --falcon-btn-border-radius: 0.25rem;
+        }
+
+        .sparkline_span {
+            width: 150px;
+            height: 40px;
+        }
+
+        .stretched-link::after {
+            position: relative;
+        }
+
+        canvas {
+            width: 60px;
+            height: 30px;
+        }
+
+        table {
+            font-size: 12px;
+        }
+
+        .tableHeader th {
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile_div .active {
+            text-decoration-line: underline;
+        }
+
+        .leading-\[14px\] {
+            line-height: 14px;
+        }
+
+
+        .px-index-2 {
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #2c7be5;
+        }
+
+        .text-hr {
+            color: rgba(237, 242, 249, var(--falcon-text-opacity)) !important;
+        }
+
+        .round-sql-img {
+            border-radius: 35px;
+            padding: 6px;
+            width: 75px;
+            height: 90px;
+        }
+
+        .view_btn.active {
+            color: #2c7be5;
+        }
+        .table-image {
+            td, th
+
+        {
+            vertical-align: middle;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="dvWaitMe"></div>
+    <main class="main" id="top">
+
+        <div class="container" data-layout="container">
+            <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg">
+                <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" style="display:none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+                <a class="navbar-brand me-1 me-sm-3 desktop_nav" data-key="All" href="index.html?key=All">
+                    <div class="d-flex align-items-center">
+                        <img class="me-2" src="Approved.svg" alt="" width="40" />
+                        <span class="font-sans-serif" id="logo_txt">truePnL</span>
+                    </div>
+                </a>
+            </nav>
+            <div class="content">              
+
+                <div class="row g-3 mb-3" id="true_nl_rows">
+
+                </div>
+            </div>
+
+        </div>
+    </main><!-- ===============================================-->
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+
+    <script id="pnl_table_template" type="text/x-jquery-tmpl">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive scrollbar ms-3">
+                    <table class="table table-bordered table-striped mb-0" id="tableUsers" style="width:100%">
+                        <thead>
+                            <tr class="tableHeader">
+                                <th>Name</th>
+                                <th>Snapshot</th>
+                                <th>Win Rate</th>
+                                <th>Realised PNL</th>
+                                <th>Charges Taxes</th>
+                                <th style="font-size: 12px;width: 5%;" scope="col">Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </script>   
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="waitMe/waitMe.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+    <script type="text/javascript" src="js/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
+    <script src="vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
+    <script src="vendors/anchorjs/anchor.min.js?v=mCNojyCUIjFsIEIal-zHHIUbYBFvD-29Mojv1zI0sPA"></script>
+    <script src="vendors/is/is.min.js?v=rNrwuW7iEV0xqy-WkpgQWgItoFd0eEprJpLURRo0hl4"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="vendors/echarts/echarts.min.js?v=nID5mM_xbvqrJobTn4k1HIm3QcX9RYVaG6A1FMgyYlw"></script>
+    <script src="vendors/fontawesome/all.min.js?v=u7TqVgshDScwW6wDgirx7NLkCiWrm-W9Lc0_6s0DVjs"></script>
+    <script src="vendors/lodash/lodash.min.js?v=CVrbEAUGzT7xAu-z5cI5N1GTn0cclSM1QuPeXEJZGF8"></script>
+    <script src="vendors/tinymce/tinymce.min.js"></script>
+    <script src="vendors/choices/choices.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/list.js/list.min.js?v=jyfQ7nar5XRtzjvEvB_GU5sKBN4QY-ANRj1D5zeKgzU"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/theme.js?v=iQOEWcaelNwtRkmzUb0lESKcVxZqMfUIBjQczvpVwvY"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="plugins/toastr/toastr.min.js?v=ldqN9_OcVFZtetwyZMvgDHiiWga1hRgUiY2ML1BBLF0"></script>
+    <script src="plugins/waitMe/waitMe.min.js"></script>
+    <script src="js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
+    <script src="js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
+    <script src="js/jquery.sparkline.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.tmpl.js"></script>
+    <script src="js/TwitterShare.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ4QCZ8VQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RJ4QCZ8VQV');
+    </script>
+
+</body>
+
+</html>
