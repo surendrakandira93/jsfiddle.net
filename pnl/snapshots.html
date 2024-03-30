@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .btn {
+            border-radius: 0;
+        }
+
+        body {
+            background-image: url(http://assets.mypnlbook.com/img/background.jpg);
+            background-repeat: no-repeat;
+            width: 680px;
+        }
+
+        .btn-md {
+            border-width: 0;
+            outline: none;
+            border-radius: 0;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body style="margin:50px;">
+
+
+    <div class="col-12">
+        <div class="card-block">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 text-left">
+                    <img width="50" src="http://assets.mypnlbook.com/Approved.svg" />
+                    <div class="">#VerifiedByMyPnlBook</div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 text-center">
+
+                    <div class="text-center">
+                        <p><h5>FY 23-24 P&L</h5></p>
+                        <h1 style="color:##netpnlcolor##">
+                            <strong> ##netpnl## </strong>
+                            </h1>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-4 text-center">
+                    <img width="100" class="btn-md" src="@Model.##avatar_url##" alt="" style="border-radius:50%;">
+                    <p class="card-text"><strong>##name##</strong></p>
+                </div>
+
+                <div class="col-md-12 col-sm-12 text-left">
+                    <h5 class="card-title"></h5>
+                </div>
+                <div class="col-md-3 col-sm-3 text-left">
+                    <p><small>Win Rate</small></p>
+                    <h2><strong> ##winrate##% </strong></h2>
+                </div>
+
+                <div class="col-md-3 col-sm-3 text-left">
+                    <p><small>Max DD</small></p>
+                    <h2><strong>##maxdrawdownstr##</strong></h2>
+                </div>
+
+                <div class="col-md-2 col-sm-2 text-left">
+                    <p><small>Charges</small></p>
+                    <h2><strong>##chargestaxes##</strong></h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
