@@ -3590,90 +3590,6 @@
     },
     {
       "realisedpnl": {
-        "endvalue": 1.907446689985,
-        "actualvalue": 19074466.89985,
-        "decimalplaces": 2,
-        "suffix": "Cr",
-        "color": "#f5803e",
-        "name": "Realised PNL",
-        "prefix": "+"
-      },
-      "totalpnl": {
-        "endvalue": 1.9777748618884998,
-        "actualvalue": 19777748.618885,
-        "decimalplaces": 2,
-        "suffix": "Cr",
-        "color": "#f5803e",
-        "name": "Total PNL",
-        "prefix": ""
-      },
-      "chargestaxes": {
-        "endvalue": 7.032817190350003,
-        "actualvalue": 703281.7190350003,
-        "decimalplaces": 2,
-        "suffix": "L",
-        "color": "#27bcfd",
-        "name": "Charges Taxes",
-        "prefix": ""
-      },
-      "netrealisedpnl": {
-        "endvalue": 1.8371185180815,
-        "actualvalue": 18371185.180815,
-        "decimalplaces": 2,
-        "suffix": "Cr",
-        "color": "#00d27a",
-        "name": "NetRealised PNL",
-        "prefix": "+"
-      },
-      "unrealisedpnl": {
-        "endvalue": 0.0,
-        "actualvalue": 0.0,
-        "decimalplaces": 2,
-        "suffix": "",
-        "color": "#2c7be5",
-        "name": "Unrealised PNL",
-        "prefix": ""
-      },
-      "name": "truthseekerperi",
-      "total": 178,
-      "totaltradingdays": 122,
-      "barchart": [
-        224225.19,
-        293567.94,
-        711501.56,
-        252186.6,
-        417195.77,
-        248198.73,
-        911050.97,
-        887552.28,
-        48408.04,
-        1088794.36,
-        13222.36,
-        63357.83,
-        1002454.61,
-        1310381.47,
-        147122.28,
-        992863.64,
-        390093.73,
-        1609267.66,
-        972524.78,
-        1987016.11,
-        1261895.54,
-        631611.1,
-        1222895.86,
-        647379.97,
-        754739.52,
-        281677.29
-      ],
-      "winrate": 75.40983606557377,
-      "pnlddratio": 61.116472240869484,
-      "maxdrawdownint": 300593.0235700011,
-      "maxdrawdown": "3.01L",
-      "maxdate": "2024-03-28T00:00:00",
-      "mindate": "2023-10-02T00:00:00"
-    },
-    {
-      "realisedpnl": {
         "endvalue": 1.3940527840000003,
         "actualvalue": 13940527.840000004,
         "decimalplaces": 2,
@@ -14616,6 +14532,77 @@
       "maxdrawdown": "96.32K",
       "maxdate": "2024-03-28T00:00:00",
       "mindate": "2023-10-02T00:00:00"
+    },
+    {
+      "realisedpnl": {
+        "endvalue": 2.436069844985,
+        "actualvalue": 24360698.44985,
+        "decimalplaces": 2,
+        "suffix": "Cr",
+        "color": "#f5803e",
+        "name": "Realised PNL",
+        "prefix": "+"
+      },
+      "totalpnl": {
+        "endvalue": 2.614669474526,
+        "actualvalue": 26146694.74526,
+        "decimalplaces": 2,
+        "suffix": "Cr",
+        "color": "#f5803e",
+        "name": "Total PNL",
+        "prefix": ""
+      },
+      "chargestaxes": {
+        "endvalue": 17.859962954099988,
+        "actualvalue": 1785996.2954099989,
+        "decimalplaces": 2,
+        "suffix": "L",
+        "color": "#27bcfd",
+        "name": "Charges Taxes",
+        "prefix": ""
+      },
+      "netrealisedpnl": {
+        "endvalue": 2.257470215444,
+        "actualvalue": 22574702.15444,
+        "decimalplaces": 2,
+        "suffix": "Cr",
+        "color": "#00d27a",
+        "name": "NetRealised PNL",
+        "prefix": "+"
+      },
+      "unrealisedpnl": {
+        "endvalue": 0.0,
+        "actualvalue": 0.0,
+        "decimalplaces": 2,
+        "suffix": "",
+        "color": "#2c7be5",
+        "name": "Unrealised PNL",
+        "prefix": ""
+      },
+      "name": "truthseekerperi",
+      "total": 393,
+      "totaltradingdays": 263,
+      "barchart": [
+        1377922.11,
+        849426.44,
+        -376848.46,
+        732191.09,
+        175719.73,
+        1175878.83,
+        269227.23,
+        1286844.21,
+        2521147.63,
+        2353724.4,
+        3369032.27,
+        5274013.78,
+        3566422.9
+      ],
+      "winrate": 75.2851711026616,
+      "pnlddratio": 21.76184226819744,
+      "maxdrawdownint": 1037352.5309220012,
+      "maxdrawdown": "10.37L",
+      "maxdate": "2024-03-28T00:00:00",
+      "mindate": "2023-03-01T00:00:00"
     }
   ]
 }

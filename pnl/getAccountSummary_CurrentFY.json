@@ -3092,76 +3092,6 @@
     },
     {
       "realisedpnl": {
-        "endvalue": 2.281913694985,
-        "actualvalue": 22819136.94985,
-        "decimalplaces": 2,
-        "suffix": "Cr",
-        "color": "#f5803e",
-        "name": "Realised PNL",
-        "prefix": "+"
-      },
-      "totalpnl": {
-        "endvalue": 2.4441493851469,
-        "actualvalue": 24441493.851469,
-        "decimalplaces": 2,
-        "suffix": "Cr",
-        "color": "#f5803e",
-        "name": "Total PNL",
-        "prefix": ""
-      },
-      "chargestaxes": {
-        "endvalue": 16.22356901618999,
-        "actualvalue": 1622356.901618999,
-        "decimalplaces": 2,
-        "suffix": "L",
-        "color": "#27bcfd",
-        "name": "Charges Taxes",
-        "prefix": ""
-      },
-      "netrealisedpnl": {
-        "endvalue": 2.1196780048231,
-        "actualvalue": 21196780.048231002,
-        "decimalplaces": 2,
-        "suffix": "Cr",
-        "color": "#00d27a",
-        "name": "NetRealised PNL",
-        "prefix": "+"
-      },
-      "unrealisedpnl": {
-        "endvalue": 0.0,
-        "actualvalue": 0.0,
-        "decimalplaces": 2,
-        "suffix": "",
-        "color": "#2c7be5",
-        "name": "Unrealised PNL",
-        "prefix": ""
-      },
-      "name": "truthseekerperi",
-      "total": 362,
-      "totaltradingdays": 242,
-      "barchart": [
-        849426.44,
-        -376848.46,
-        732191.09,
-        175719.73,
-        1175878.83,
-        269227.23,
-        1286844.21,
-        2521147.63,
-        2353724.4,
-        3369032.27,
-        5274013.78,
-        3566422.9
-      ],
-      "winrate": 74.3801652892562,
-      "pnlddratio": 20.43353577148098,
-      "maxdrawdownint": 1037352.5309219994,
-      "maxdrawdown": "10.37L",
-      "maxdate": "2024-03-28T00:00:00",
-      "mindate": "2023-04-01T00:00:00"
-    },
-    {
-      "realisedpnl": {
         "endvalue": 3.4643286320000017,
         "actualvalue": 34643286.320000015,
         "decimalplaces": 2,
@@ -12459,6 +12389,77 @@
       "maxdrawdown": "96.32K",
       "maxdate": "2024-03-28T00:00:00",
       "mindate": "2023-04-05T00:00:00"
+    },
+    {
+      "realisedpnl": {
+        "endvalue": 2.436069844985,
+        "actualvalue": 24360698.44985,
+        "decimalplaces": 2,
+        "suffix": "Cr",
+        "color": "#f5803e",
+        "name": "Realised PNL",
+        "prefix": "+"
+      },
+      "totalpnl": {
+        "endvalue": 2.614669474526,
+        "actualvalue": 26146694.74526,
+        "decimalplaces": 2,
+        "suffix": "Cr",
+        "color": "#f5803e",
+        "name": "Total PNL",
+        "prefix": ""
+      },
+      "chargestaxes": {
+        "endvalue": 17.859962954099988,
+        "actualvalue": 1785996.2954099989,
+        "decimalplaces": 2,
+        "suffix": "L",
+        "color": "#27bcfd",
+        "name": "Charges Taxes",
+        "prefix": ""
+      },
+      "netrealisedpnl": {
+        "endvalue": 2.257470215444,
+        "actualvalue": 22574702.15444,
+        "decimalplaces": 2,
+        "suffix": "Cr",
+        "color": "#00d27a",
+        "name": "NetRealised PNL",
+        "prefix": "+"
+      },
+      "unrealisedpnl": {
+        "endvalue": 0.0,
+        "actualvalue": 0.0,
+        "decimalplaces": 2,
+        "suffix": "",
+        "color": "#2c7be5",
+        "name": "Unrealised PNL",
+        "prefix": ""
+      },
+      "name": "truthseekerperi",
+      "total": 393,
+      "totaltradingdays": 263,
+      "barchart": [
+        1377922.11,
+        849426.44,
+        -376848.46,
+        732191.09,
+        175719.73,
+        1175878.83,
+        269227.23,
+        1286844.21,
+        2521147.63,
+        2353724.4,
+        3369032.27,
+        5274013.78,
+        3566422.9
+      ],
+      "winrate": 75.2851711026616,
+      "pnlddratio": 21.76184226819744,
+      "maxdrawdownint": 1037352.5309220012,
+      "maxdrawdown": "10.37L",
+      "maxdate": "2024-03-28T00:00:00",
+      "mindate": "2023-03-01T00:00:00"
     }
   ]
 }

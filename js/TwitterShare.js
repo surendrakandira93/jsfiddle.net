@@ -1,5 +1,5 @@
 ﻿(function ($) {
-  
+
     function PNLDashboard() {
         var $this = this, form;
         //var $timeSpam = new Date().getTime(); // ddMMyyyy
@@ -7,7 +7,7 @@
         var $domainName = 'https://raw.githubusercontent.com/surendrakandira93/jsfiddle.net/master/';
         var table = null;
         var allModelJson = new Array();
-        var modelJson = new Array();    
+        var modelJson = new Array();
 
         function ListViewBind() {
             $("#true_nl_rows").empty();
@@ -22,7 +22,7 @@
                 ajax: function (dataSent, callback, settings) {
                     callback({ data: allModelJson });
                 },
-                paging: false,               
+                paging: false,
                 columns: [
                     {
                         data: null,
@@ -51,7 +51,7 @@
                         bSortable: true,
                         render: function (data, type, row, meta) {
                             if (type === "display") {
-                                return `${row.winrate.toFixed(2)} %`;
+                                return row.winrate!=null?`${row.winrate.toFixed(2)} %`:'';
                             }
                             return row.winrate;
                         }
@@ -79,11 +79,12 @@
                         data: 'twitter',
                         bSortable: false,
                         render: function (data, type, row, meta) {
+
                             var encodedImage = encodeURIComponent(row.media);
-                            var encodedTweet = encodedImage +" "+ encodeURIComponent(`Congratulations @${row.twitter} Please find your verified pnl for FY 2023-24 #VerifiedPnLByMyPnLBook`);
-                            var encodedUrl = encodeURIComponent(row.link);
-                            
-                            return `<a target="_blank" href="https://twitter.com/intent/tweet?text=${encodedTweet}&url=${encodedUrl}"> Share on twitter </a>`;
+                            var encodedTweet = encodeURIComponent(`#VerifiedPnLByMyPnLBook\n\n#myPnlBook\n\nCongratulations @${row.twitter}\n\nPlease find your verified pnl for FY 2023-24`);
+                            var encodedUrl = encodedTweet + "%0A%0A" + encodeURIComponent(row.link) + "%0A%0A" + encodedImage;
+
+                            return `<a target="_blank" href="https://twitter.com/intent/tweet?text=${encodedUrl}"> Share on twitter </a>`;
                         }
                     }
                 ]
@@ -95,16 +96,16 @@
             ShowLoading();
             $(".title_date").html('');
 
-            GetValByKey(function (response) {                
-                allModelJson = response; 
+            GetValByKey(function (response) {
+                allModelJson = response;
                 BindDataWithDayFilter();
                 HideLoading()
             });
         }
 
-      
-        function BindDataWithDayFilter() {            
-                ListViewBind()           
+
+        function BindDataWithDayFilter() {
+            ListViewBind()
         }
 
         function GetValByKey(onSuccess) {
@@ -171,14 +172,14 @@
             $('body').removeClass('ajax-waitme');
         };
 
-        function LoadeChatFirstTime() {            
+        function LoadeChatFirstTime() {
             bindPNLSummary();
 
         }
 
-       
+
         $this.init = function () {
-            
+
             ShowLoading();
             LoadeChatFirstTime();
 

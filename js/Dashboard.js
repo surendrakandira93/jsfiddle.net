@@ -76,6 +76,10 @@
                     $title = "Previous Month";
                     pageUrl = `/${$key}/`;
                     break;
+                case "FY2324":
+                    $title = "FY 2023-24";
+                    pageUrl = `/${$key}/`;
+                    break;
                 default:
             }
 

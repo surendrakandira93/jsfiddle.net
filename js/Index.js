@@ -242,6 +242,7 @@
                 case "Last360Days":
                 case "PreviousFY":
                 case "CurrentFY":
+                case "FY2324":
                     $("#barChartLeval").html('Monthly PNL');
                     break;
                 case "Last60Days":
