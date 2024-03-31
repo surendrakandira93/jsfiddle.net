@@ -11069,26 +11069,26 @@
     },
     {
       "realisedpnl": {
-        "endvalue": 2.436069844985,
-        "actualvalue": 24360698.44985,
+        "endvalue": 92.9230125,
+        "actualvalue": 9292301.25,
         "decimalplaces": 2,
-        "suffix": "Cr",
+        "suffix": "L",
         "color": "#f5803e",
         "name": "Realised PNL",
         "prefix": "+"
       },
       "totalpnl": {
-        "endvalue": 2.614669474526,
-        "actualvalue": 26146694.74526,
+        "endvalue": 95.37144754252,
+        "actualvalue": 9537144.754252,
         "decimalplaces": 2,
-        "suffix": "Cr",
+        "suffix": "L",
         "color": "#f5803e",
         "name": "Total PNL",
         "prefix": ""
       },
       "chargestaxes": {
-        "endvalue": 17.859962954099988,
-        "actualvalue": 1785996.2954099989,
+        "endvalue": 2.44843504252,
+        "actualvalue": 244843.50425199998,
         "decimalplaces": 2,
         "suffix": "L",
         "color": "#27bcfd",
@@ -11096,10 +11096,10 @@
         "prefix": ""
       },
       "netrealisedpnl": {
-        "endvalue": 2.257470215444,
-        "actualvalue": 22574702.15444,
+        "endvalue": 90.47457745748,
+        "actualvalue": 9047457.745748,
         "decimalplaces": 2,
-        "suffix": "Cr",
+        "suffix": "L",
         "color": "#00d27a",
         "name": "NetRealised PNL",
         "prefix": "+"
@@ -11114,29 +11114,19 @@
         "prefix": ""
       },
       "name": "truthseekerperi",
-      "total": 393,
-      "totaltradingdays": 263,
+      "total": 57,
+      "totaltradingdays": 40,
       "barchart": [
-        1377922.11,
-        849426.44,
-        -376848.46,
-        732191.09,
-        175719.73,
-        1175878.83,
-        269227.23,
-        1286844.21,
-        2521147.63,
-        2353724.4,
-        3369032.27,
+        207021.07,
         5274013.78,
         3566422.9
       ],
-      "winrate": 75.2851711026616,
-      "pnlddratio": 21.76184226819744,
-      "maxdrawdownint": 1037352.5309220012,
-      "maxdrawdown": "10.37L",
+      "winrate": 72.5,
+      "pnlddratio": 30.098695033888855,
+      "maxdrawdownint": 300593.0235700002,
+      "maxdrawdown": "3.01L",
       "maxdate": "2024-03-28T00:00:00",
-      "mindate": "2023-03-01T00:00:00"
+      "mindate": "2024-01-31T00:00:00"
     }
   ]
 }

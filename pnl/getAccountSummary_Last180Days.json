@@ -14535,8 +14535,8 @@
     },
     {
       "realisedpnl": {
-        "endvalue": 2.436069844985,
-        "actualvalue": 24360698.44985,
+        "endvalue": 1.907446689985,
+        "actualvalue": 19074466.89985,
         "decimalplaces": 2,
         "suffix": "Cr",
         "color": "#f5803e",
@@ -14544,8 +14544,8 @@
         "prefix": "+"
       },
       "totalpnl": {
-        "endvalue": 2.614669474526,
-        "actualvalue": 26146694.74526,
+        "endvalue": 1.9777748618884998,
+        "actualvalue": 19777748.618885,
         "decimalplaces": 2,
         "suffix": "Cr",
         "color": "#f5803e",
@@ -14553,8 +14553,8 @@
         "prefix": ""
       },
       "chargestaxes": {
-        "endvalue": 17.859962954099988,
-        "actualvalue": 1785996.2954099989,
+        "endvalue": 7.032817190350003,
+        "actualvalue": 703281.7190350003,
         "decimalplaces": 2,
         "suffix": "L",
         "color": "#27bcfd",
@@ -14562,8 +14562,8 @@
         "prefix": ""
       },
       "netrealisedpnl": {
-        "endvalue": 2.257470215444,
-        "actualvalue": 22574702.15444,
+        "endvalue": 1.8371185180815,
+        "actualvalue": 18371185.180815,
         "decimalplaces": 2,
         "suffix": "Cr",
         "color": "#00d27a",
@@ -14580,16 +14580,9 @@
         "prefix": ""
       },
       "name": "truthseekerperi",
-      "total": 393,
-      "totaltradingdays": 263,
+      "total": 177,
+      "totaltradingdays": 122,
       "barchart": [
-        1377922.11,
-        849426.44,
-        -376848.46,
-        732191.09,
-        175719.73,
-        1175878.83,
-        269227.23,
         1286844.21,
         2521147.63,
         2353724.4,
@@ -14597,12 +14590,12 @@
         5274013.78,
         3566422.9
       ],
-      "winrate": 75.2851711026616,
-      "pnlddratio": 21.76184226819744,
-      "maxdrawdownint": 1037352.5309220012,
-      "maxdrawdown": "10.37L",
+      "winrate": 75.40983606557377,
+      "pnlddratio": 61.116472240869484,
+      "maxdrawdownint": 300593.0235700011,
+      "maxdrawdown": "3.01L",
       "maxdate": "2024-03-28T00:00:00",
-      "mindate": "2023-03-01T00:00:00"
+      "mindate": "2023-10-03T00:00:00"
     }
   ]
 }

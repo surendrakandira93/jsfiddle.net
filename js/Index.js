@@ -65,7 +65,7 @@
 
         $("input[name='btnradio_MobileDay']").change(function () {
             var $val = parseInt($(this).val());
-            localStorage.setItem('filterDayType', $val);
+            //localStorage.setItem('filterDayType', $val);
             BindDataWithDayFilter($val);
 
         });
@@ -278,16 +278,16 @@
                 var allRec = response.result;
                 allRec.sort(TotalTradingDayDescSort);
 
-                if (allRec[0].totaltradingdays > 180) {
-                    localStorage.setItem('filterDayType', 1);
-                } else if (allRec[0].totaltradingdays > 90 && allRec[0].totaltradingdays < 180) {
-                    localStorage.setItem('filterDayType', 2);
-                } else {
-                    localStorage.setItem('filterDayType', 3);
-                }
-                $(`#btnradio_mobile_${localStorage.getItem('filterDayType')}`).prop("checked", true);
-                $(`#btnRadioDay_${localStorage.getItem('filterDayType')}`).prop("checked", true);
-                $(`#btnRadioMobileDay_${localStorage.getItem('filterDayType')}`).prop("checked", true);
+                //if (allRec[0].totaltradingdays > 180) {
+                //    localStorage.setItem('filterDayType', 1);
+                //} else if (allRec[0].totaltradingdays > 90 && allRec[0].totaltradingdays < 180) {
+                //    localStorage.setItem('filterDayType', 2);
+                //} else {
+                //    localStorage.setItem('filterDayType', 3);
+                //}
+                //$(`#btnradio_mobile_${localStorage.getItem('filterDayType')}`).prop("checked", true);
+                //$(`#btnRadioDay_${localStorage.getItem('filterDayType')}`).prop("checked", true);
+                //$(`#btnRadioMobileDay_${localStorage.getItem('filterDayType')}`).prop("checked", true);
                 for (var i = 0; i < userList.length; i++) {
                     let userSummary = response.result.filter(function (el) {
                         return el.name === userList[i].userid;
@@ -316,19 +316,20 @@
 
       
         function BindDataWithDayFilter(dayFilter) {
-            if (dayFilter == 1) {
-                modelJson = allModelJson.filter(function (el) {
-                    return el.totaltradingdays > 180
-                });
-            } else if (dayFilter == 2) {
-                modelJson = allModelJson.filter(function (el) {
-                    return el.totaltradingdays > 90 && el.totaltradingdays <= 180
-                });
-            } else {
-                modelJson = allModelJson.filter(function (el) {
-                    return el.totaltradingdays <= 90
-                });
-            }
+            modelJson = allModelJson;
+            //if (dayFilter == 1) {
+            //    modelJson = allModelJson.filter(function (el) {
+            //        return el.totaltradingdays > 180
+            //    });
+            //} else if (dayFilter == 2) {
+            //    modelJson = allModelJson.filter(function (el) {
+            //        return el.totaltradingdays > 90 && el.totaltradingdays <= 180
+            //    });
+            //} else {
+            //    modelJson = allModelJson.filter(function (el) {
+            //        return el.totaltradingdays <= 90
+            //    });
+            //}
 
             if (parseInt(localStorage.getItem('viewType')) == 1) {
                 ListViewBind()
@@ -483,9 +484,9 @@
                 localStorage.setItem('filterType', 3);
             }
 
-            if (localStorage.getItem('filterDayType') == null) {
-                localStorage.setItem('filterDayType', 1);
-            }
+            //if (localStorage.getItem('filterDayType') == null) {
+            //    localStorage.setItem('filterDayType', 1);
+            //}
 
             var hostName = window.location.hostname;
             if (hostName == "true-pnl.rtwelfare.club") {
