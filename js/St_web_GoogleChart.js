@@ -1,5 +1,6 @@
 ﻿/*google.charts.load('current', { packages: ['corechart', 'line'] });*/
-google.charts.load('current', { 'packages': ['corechart', 'bar', 'line', 'geochart'], 'mapsApiKey': 'AIzaSyDzZ6uwr469KAgQeW2GFqSYxykj3Zmag8U' });
+google.charts.load('visualization', '1.0', { 'packages': ['corechart', 'bar', 'line', 'geochart'] });
+//google.charts.load('current', { 'packages': ['corechart', 'bar', 'line', 'geochart'], 'mapsApiKey': 'AIzaSyDzZ6uwr469KAgQeW2GFqSYxykj3Zmag8U' });
 var geoChart;
 var GoogleChart = {};
 var cal;
