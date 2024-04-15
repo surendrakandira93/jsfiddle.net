@@ -4,7 +4,7 @@
       "created_at": "2024-04-12T11:15:09.7910833Z",
       "total_profit": 27887.0
     },
-    "snapshot_liveliness_state": "LIVE",
+    "snapshot_liveliness_state": "STALE",
     "name": "welfaring-moldavite",
     "twitter_data": {
       "live_share_mode": "STOPPED",
@@ -13,8 +13,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T11:17:43.3114042Z",
-      "total_profit": -16935.000949999994
+      "created_at": "2024-04-15T10:42:57.7939226Z",
+      "total_profit": 9334.9998
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "testing-maracas",
@@ -28,7 +28,7 @@
       "created_at": "2024-04-12T15:20:51.0677578Z",
       "total_profit": 1062.0
     },
-    "snapshot_liveliness_state": "LIVE",
+    "snapshot_liveliness_state": "STALE",
     "name": "wealthy-canoe",
     "twitter_data": {
       "live_share_mode": "STOPPED",
@@ -37,8 +37,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T10:20:28.8913436Z",
-      "total_profit": 9721.74999999999
+      "created_at": "2024-04-15T10:30:53.4344368Z",
+      "total_profit": 13715.000000000007
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "hardwired-shower",
@@ -49,20 +49,20 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T10:01:34.8422856Z",
-      "total_profit": 33964.99799999995
+      "created_at": "2024-04-15T10:03:07.8643189Z",
+      "total_profit": 468144.74770000007
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "educated-oud",
     "twitter_data": {
-      "live_share_mode": "STOPPED",
-      "live_since": null
+      "live_share_mode": "LIVE_SHARING",
+      "live_since": "2024-04-15T04:07:32.812443261Z"
     }
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T14:04:14.7256156Z",
-      "total_profit": -37487.50000000011
+      "created_at": "2024-04-15T10:03:22.988326Z",
+      "total_profit": 18447.50000000003
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "farstretched-ball",
@@ -73,8 +73,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T10:06:30.8943464Z",
-      "total_profit": 744.9999999999998
+      "created_at": "2024-04-15T10:42:51.1868542Z",
+      "total_profit": -13377.5
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "cold-kangkong",
@@ -85,8 +85,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T10:03:51.5425348Z",
-      "total_profit": 6323.5
+      "created_at": "2024-04-15T10:00:07.6808526Z",
+      "total_profit": -2532.5000000000255
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "acceptable-mozanite",
@@ -97,8 +97,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T10:00:41.4600307Z",
-      "total_profit": 9028.749850000007
+      "created_at": "2024-04-15T10:00:15.1876019Z",
+      "total_profit": 81397.5005
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "tiny-convertible",
@@ -109,8 +109,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T17:23:51.9055133Z",
-      "total_profit": 135.00000000000136
+      "created_at": "2024-04-15T10:00:49.1430711Z",
+      "total_profit": -4787.5
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "deepseated-cantaloupe",
@@ -121,8 +121,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T13:55:42.0474161Z",
-      "total_profit": -36377.0
+      "created_at": "2024-04-15T10:00:57.4678254Z",
+      "total_profit": 44264.25000000003
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "magical-catbird",
@@ -133,8 +133,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T10:00:42.3320598Z",
-      "total_profit": -1039.0
+      "created_at": "2024-04-15T10:19:44.5345622Z",
+      "total_profit": 3321.250000000001
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "furry-eagle",
@@ -145,8 +145,8 @@
   },
   {
     "position_snapshot_data": {
-      "created_at": "2024-04-12T14:29:50.0729363Z",
-      "total_profit": 11794.5
+      "created_at": "2024-04-15T10:35:33.6832843Z",
+      "total_profit": -20631.750000000015
     },
     "snapshot_liveliness_state": "LIVE",
     "name": "welfaring-sphalerite",
@@ -168,10 +168,7 @@
     }
   },
   {
-    "position_snapshot_data": {
-      "created_at": "2024-04-08T05:24:37.485894Z",
-      "total_profit": 0.0
-    },
+    "position_snapshot_data": null,
     "snapshot_liveliness_state": "STALE",
     "name": "big-snare",
     "twitter_data": {
