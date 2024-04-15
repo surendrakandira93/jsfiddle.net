@@ -315,19 +315,21 @@
 
       
         function BindDataWithDayFilter(dayFilter) {
-            if (dayFilter == 1) {
-                modelJson = allModelJson.filter(function (el) {
-                    return el.totaltradingdays > 180
-                });
-            } else if (dayFilter == 2) {
-                modelJson = allModelJson.filter(function (el) {
-                    return el.totaltradingdays > 90 && el.totaltradingdays <= 180
-                });
-            } else {
-                modelJson = allModelJson.filter(function (el) {
-                    return el.totaltradingdays <= 90
-                });
-            }
+            modelJson = allModelJson;
+
+            //if (dayFilter == 1) {
+            //    modelJson = allModelJson.filter(function (el) {
+            //        return el.totaltradingdays > 180
+            //    });
+            //} else if (dayFilter == 2) {
+            //    modelJson = allModelJson.filter(function (el) {
+            //        return el.totaltradingdays > 90 && el.totaltradingdays <= 180
+            //    });
+            //} else {
+            //    modelJson = allModelJson.filter(function (el) {
+            //        return el.totaltradingdays <= 90
+            //    });
+            //}
 
             if (parseInt(localStorage.getItem('viewType')) == 1) {
                 ListViewBind()
@@ -458,7 +460,9 @@
             $(".nav-click").removeClass('active');
             $(`[data-key="${$aliash}"]`).addClass('active');
             $.getJSON(`${$domainName}pnl/userInfo.json?v=${$timeSpam}`, function (result) {
-                userInfoArr = result;
+                userInfoArr = result.filter(function (el) {
+                    return el.isprivate === false;
+                });
                 bindPNLSummary($aliash);
             });
 

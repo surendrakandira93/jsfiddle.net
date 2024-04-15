@@ -18,8 +18,8 @@
         var $aliash = getUrlVars();
         var $key = getKeyVars();
         var $title = "";
+        let userInfo;
 
-      
         function initilizeModel() {
             flexTable();
 
@@ -27,7 +27,7 @@
             $(`[data-key="${$key}"]`).addClass('active');
 
             switch ($key) {
-                case "All":                   
+                case "All":
                     break;
                 case "Last90Days":
                     $title = "Last 90 Days";
@@ -74,6 +74,10 @@
                     pageUrl = `/${$key}/`;
                 case "PreviousMonth":
                     $title = "Previous Month";
+                    pageUrl = `/${$key}/`;
+                    break;
+                case "FY2324":
+                    $title = "FY 2023-24";
                     pageUrl = `/${$key}/`;
                     break;
                 default:
@@ -142,6 +146,22 @@
                 success: function (response) {
                     //var result = JSON.parse(response);
                     onSuccess(response);
+                },
+                error: function () {
+                }
+            });
+        }
+
+        function GetUserInfo(onSuccess) {
+            $.ajax({
+                type: "GET",
+                url: `${$domainName}pnl/userInfo.json?v=${$timeSpam}`,
+                dataType: "json",
+                success: function (response) {
+                    let userInfos = response.filter(function (el) {
+                        return el.userid === $aliash && el.isprivate === false;
+                    });
+                    onSuccess(userInfos.length > 0 ? userInfos[0] : {});
                 },
                 error: function () {
                 }
@@ -253,20 +273,53 @@
         }
 
         function LoadeChatFirstTime() {
-            bindPNLManu();
-            bindEquityChart('day');
-            bindDrawDownChart('day');
-            bindEquityBothChart('day');
-            bindPnLAndDrawnDownChart('day');
-            bindBarChart('month');
-            bindBarAllChart('month');
-            bindBarStackedChart('month');
-            bindPiChar();
-            bindHeatMap();
-            bindSummary();
-            bindPNLSummary();
-            bindWeeklyBreaup();
-            bindStatistics();
+            $(".menu_dynamic").each(function () {
+                var href = $(this).attr('href');
+                var newHref = href.replace("$userKey", $aliash);
+                $(this).attr('href', newHref);
+            })
+
+            GetUserInfo(function (result) {
+                if (result.username) {
+                    $(".user_profile_img").attr("src", result.profilepic);
+                    $(".twiter_url").attr("href", result.twitterurl);
+                    $(".pnlsource_url").attr("href", result.pnlsource);
+                    $(".user_name").html(result.username);
+                    userInfo = result;
+
+                    bindEquityChart('day');
+                    bindDrawDownChart('day');
+                    bindEquityBothChart('day');
+                    bindPnLAndDrawnDownChart('day');
+                    bindBarChart('month');
+                    bindBarAllChart('month');
+                    bindBarStackedChart('month');
+                    bindPiChar();
+                    bindHeatMap();
+                    bindSummary();
+                    bindPNLSummary();
+                    bindWeeklyBreaup();
+                    bindStatistics();
+
+                } else {
+                    $(".hide_user_Info").hide();
+                }
+            });
+
+            //bindPNLManu();
+            //bindEquityChart('day');
+            //bindDrawDownChart('day');
+            //bindEquityBothChart('day');
+            //bindPnLAndDrawnDownChart('day');
+            //bindBarChart('month');
+            //bindBarAllChart('month');
+            //bindBarStackedChart('month');
+            //bindPiChar();
+            //bindHeatMap();
+            //bindSummary();
+            //bindPNLSummary();
+            //bindWeeklyBreaup();
+            //bindStatistics();
         }
 
         function bindPNLManu() {
@@ -280,14 +333,15 @@
             $.getJSON(`${$domainName}pnl/userInfo.json?v=${$timeSpam}`, function (result) {
                 if (result.length > 0) {
 
-                    let userInfo = result.filter(function (el) {
-                        return el.userid === $aliash;
+                    let userInfos = result.filter(function (el) {
+                        return el.userid === $aliash && el.isprivate === false;
                     });
-                    if (userInfo.length > 0) {
-                        $(".user_profile_img").attr("src", userInfo[0].profilepic);
-                        $(".twiter_url").attr("href", userInfo[0].twitterurl);
-                        $(".pnlsource_url").attr("href", userInfo[0].pnlsource);
-                        $(".user_name").html(userInfo[0].username);
+                    if (userInfos.length > 0) {
+                        $(".user_profile_img").attr("src", userInfos[0].profilepic);
+                        $(".twiter_url").attr("href", userInfos[0].twitterurl);
+                        $(".pnlsource_url").attr("href", userInfos[0].pnlsource);
+                        $(".user_name").html(userInfos[0].username);
+                        userInfo = userInfos[0];
                     } else {
                         $(".hide_user_Info").hide();
                     }
