@@ -22,7 +22,14 @@
         var allModelJson = new Array();
         var modelJson = new Array();
         var $aliash = getUrlVars();   
-     
+
+        var startTime = new Date();
+        startTime.setHours(9, 15, 0); // 9:15 AM
+
+        var endTime = new Date();
+        endTime.setHours(15, 0, 0); // 3:00 PM
+
+       
 
         function bindPNLSummary() {
             allModelJson = new Array();        
@@ -69,6 +76,12 @@
             }
 
             setTimeout(function () {
+
+                //$('img').on('error', function () {
+                //    // Replace with default image
+                //    $(this).attr('src', 'img/default-Profile.png');
+                //});
+
                 $('img').each(function () {
                     // Check if the image source is invalid
                     if (!this.complete || typeof this.naturalWidth === "undefined" || this.naturalWidth === 0) {
@@ -76,8 +89,25 @@
                         $(this).attr('src', 'img/default-Profile.png');
                     }
                 });
-            }, 1)
+               
+            }, 1000)
+
+            $(".viewChart").on('click', function () {
+                var id = $(this).data('id');
+                var name = $(this).data('name');
+                BindLineChart(id, name);
+            });
            
+        }
+
+        function BindLineChart(id, name) {
+            $(".userName_span").html(name);
+            $timeSpam = moment(new Date()).format("DDMMYYYYHHmmss");
+            $.getJSON(`${$domainName}pnl/pnlData/${moment(new Date()).format("DDMMYYYY")}/${id}.json?v=${$timeSpam}`, function (result) {
+                var para = { xs: result, element: 'google_line_pnl', colors: ['#2c7be5'] };
+                GoogleChart.drawLineChartForPNLData(para);                
+            });            
+            $("#lineChart-modal").modal('show');
         }
         function GetValByKey(onSuccess) {
             $.ajax({
@@ -93,34 +123,28 @@
             });
         }
 
+        function callFunctionEveryMinute(startTime, endTime, callback) {
+            // Call the callback function immediately
+            callback(new Date());
+            // Set interval to call the function every minute
+            var intervalId = setInterval(function () {
+                // Get current time
+                var now = new Date();
+                // Check if current time is between start and end times
+                if (now.getHours() > startTime.getHours() ||
+                    (now.getHours() === startTime.getHours() && now.getMinutes() >= startTime.getMinutes())) {
+                    if (now.getHours() < endTime.getHours() ||
+                        (now.getHours() === endTime.getHours() && now.getMinutes() < endTime.getMinutes())) {
+                        // Call the callback function
+                        $timeSpam = moment(new Date()).format("DDMMYYYYHHmmss");
+                        callback(now);
+                        return;
+                    }
+                }
 
-        function WinRateDescSort(a, b) {
-            var x = a.winrate;
-            var y = b.winrate;
-            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-        }
-        function MaxDDDescSort(a, b) {
-            var x = a.maxdrawdownint;
-            var y = b.maxdrawdownint;
-            //var x = a.maxdrawdown;
-            //var y = b.maxdrawdown;
-            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-        }
-        function PnlDDRatioDescSort(a, b) {
-            var x = a.pnlddratio;
-            var y = b.pnlddratio;
-            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-        }
-        function NetPNLDescSort(a, b) {
-            var x = a.netrealisedpnl.actualvalue;
-            var y = b.netrealisedpnl.actualvalue;
-            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-        }
-
-        function TotalTradingDayDescSort(a, b) {
-            var x = a.totaltradingdays;
-            var y = b.totaltradingdays;
-            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+                // If the current time is outside the specified range, clear the interval
+                clearInterval(intervalId);
+            }, 60000); // Repeat every minute
         }
 
         function ShowLoading(setting) {
@@ -171,13 +195,14 @@
             $('body').removeClass('ajax-waitme');
         };
 
-        function LoadeChatFirstTime() {            
+        function LoadeChatFirstTime(currentTime) {            
             $.getJSON(`${$domainName}pnl/livepnlUserprofiles.json?v=${$timeSpam}`, function (result) {
                 userInfoArr = result;
-                bindPNLSummary($aliash);
+                bindPNLSummary($aliash);               
             });
-
         }
+
+
 
         function getUrlVars() {
             var vars = [], hash;
@@ -198,7 +223,7 @@
                 $("#logo_txt").html('myPnL');
             }
             ShowLoading();
-            LoadeChatFirstTime();
+            callFunctionEveryMinute(startTime, endTime, LoadeChatFirstTime);
         }
     }
 
@@ -207,3 +232,7 @@
         self.init();
     })
 })(jQuery)
+
+function errorImage() {
+    console.log('Image error to lode');
+}

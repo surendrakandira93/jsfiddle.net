@@ -133,7 +133,12 @@
                 </a>
                 <button type="button" class="btn btn-primary ms-3 mt-3 mobile_div" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSchRcZWV2iVaHdmhKHPhOCvEAjMz5wvKplv8k5jZ2nrG63m4Q/viewform', '_blank')" style="margin-left:0px !important;margin-top:0px !important; margin-right:0px !important;display:none;"><i class="fa fa-plus"></i> PnL</button>
                 <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
-                    <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">                        
+                    <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
+                        <li class="nav-item ">
+                            <a class="nav-link nav-click fw-medium cursor-pointer active" href="livepnl.html">
+                                Live PNL
+                            </a>
+                        </li>
                         <li class="nav-item ">
                             <a class="nav-link nav-click fw-medium cursor-pointer" data-key="All" href="index.html?key=All">
                                 <!--<i class="fa fa-home"></i>-->
@@ -178,8 +183,8 @@
                             <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
                                 <div class="bg-white dark__bg-1000 rounded-3 py-2">
                                     <!--<a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousDay" href="index.html?key=PreviousDay">
-                        Prev. Day
-                    </a>-->
+                                        Prev. Day
+                                    </a>-->
 
                                     <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last7Days" href="index.html?key=Last7Days">
                                         7D
@@ -204,7 +209,9 @@
                                     <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="CurrentMonth" href="index.html?key=CurrentMonth">
                                         Curr. Month
                                     </a>
-
+                                    <a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="FY2324" href="index.html?key=FY2324">
+                                        FY 2023-24
+                                    </a>
 
                                 </div>
                             </div>
@@ -218,7 +225,7 @@
 
                 <ul class="nav nav-pills nav-fill mobile_div" style="display:none;">
                     <li class="nav-item">
-                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" href="livepnl.html">
+                        <a class="nav-link nav-click fw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526] active" href="livepnl.html">
                             Live PNL
                         </a>
                     </li>
@@ -242,13 +249,14 @@
                             <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="Last360Days" href="index.html?key=Last360Days">360D</a></li>
                             <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="CurrentWeek" href="index.html?key=CurrentWeek">Curr. Week</a></li>
                             <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="CurrentMonth" href="index.html?key=CurrentMonth">Curr. Month</a></li>
+                            <li><a class="dropdown-item pfw-medium cursor-pointer btn_data mr-1 cursor-pointer px-index-2 text-xs leading-[14px] last:mr-0 hover:underline font-semibold text-[#232526]" data-key="FY2324" href="index.html?key=FY2324">FY 2023-24</a></li>
                         </ul>
                     </li>
-                </ul>               
+                </ul>
 
             </nav>
-            <div class="content">                
-
+            <div class="content">
+                <!--<img src="invalid_link" onerror="return errorImage();">-->
                 <div class="row g-3 mb-3" id="true_nl_rows">
 
                 </div>
@@ -259,7 +267,30 @@
 
         </div>
     </main><!-- ===============================================-->
-       
+
+    <div class="modal fade" id="lineChart-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">
+            <div class="modal-content position-relative">
+                <div class="position-absolute top-0 end-0 mt-2 me-2 z-index-1">
+                    <button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close" style=" float:right;"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="rounded-top-lg py-3 ps-4 pe-6 bg-light">
+                        <h4 class="mb-1" id="modalExampleDemoLabel">Line Chart for <span class="userName_span"></span> </h4>
+                    </div>
+                    <div class="p-4 pb-0">
+                        <div class="card-body h-100 pe-0">
+
+                            <div id="google_line_pnl" class="h-100"><img src="img/loading-sm.gif" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script id="pnl_row_template" type="text/x-jquery-tmpl">
         <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
@@ -276,18 +307,21 @@
                                 </a>
                             </div>-->
                         </div>
-                        <div class="col-10">
+                        <div class="col-9">
                             <a class="fw-bold stretched-link" target="_blank" href="https://web.sensibull.com/verified-pnl/${twitter_profile.word_hash}/live-positions">${twitter_profile.name}</a>
                         </div>
-                        
+                        <div class="col-1">
+                            <a class="viewChart" data-id="${twitter_profile.word_hash}" data-name="${twitter_profile.name}" href="javascript:void(0);"><i class="fa fa-chart-line"></i></a>
+                        </div>
+
                     </div>
 
-                    <div class="row g-0 align-items-center py-2 position-relative">                        
+                    <div class="row g-0 align-items-center py-2 position-relative">
 
                         <div class="col-12 text-center fw-bold" style="font-weight: 400; font-size: 24px; line-height: 40px; letter-spacing: 0.0025em;color: ${total_profit < 0 ? '#f35631' : '#10b983' }">
                             ${total_profit < 0 ? '' : '+' }${total_profit.toFixed(2)}
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
 
@@ -297,6 +331,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="waitMe/waitMe.js"></script>
     <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js?v=KXV31S_OXfRaU7HS4GRp9l7h3PLpv7yOL0Xb0GoN6LQ"></script>
     <script src="vendors/popper/popper.min.js?v=8ucXTxJthPDgUbEJm8l6Fj_xQzhADKseMtGMp5GCMHw"></script>
     <script src="vendors/bootstrap/bootstrap.min.js?v=eyjjyky-rPCEaAX6qBtuAJ6QjMqu-zb5SnftmlJmTLQ"></script>
     <script src="vendors/anchorjs/anchor.min.js?v=mCNojyCUIjFsIEIal-zHHIUbYBFvD-29Mojv1zI0sPA"></script>
@@ -316,11 +351,19 @@
     <script src="js/global.js?v=WzyuzPZ3Bneqdkb-2vYnarcEgLCFtw2KVEuBCI2hORE"></script>
     <script src="js/Layout.js?v=rKEWKuYUoOgMuMCwbsEw04hmb2Rs0myJWrVLBWt-k8A"></script>
     <script src="js/jquery.tmpl.js"></script>
+    <script src="js/St_web_GoogleChart.js"></script>
+    <script src="js/globalpnl.js" asp-append-version="true"></script>
     <script src="js/livepnl.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ4QCZ8VQV"></script>
     <script>
+
+        $(document).ready(function () {
+            function errorImage() {
+                console.log('Image error to lode');
+            }
+        })
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());

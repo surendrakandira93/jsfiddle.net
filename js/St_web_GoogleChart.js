@@ -50,6 +50,51 @@ GoogleChart.drawChartEquityChart = function (params) {
     }, false);
 }
 
+GoogleChart.drawLineChartForPNLData = function (params) {
+
+    var arrInput = params.xs;
+    var element = params.element;
+    var colors = params.colors;
+
+    var data = new google.visualization.DataTable();
+    data.addColumn('datetime', 'X');
+    data.addColumn('number', 'Equity');
+
+    for (var i = 0; i < arrInput.length; i++) {
+        data.addRow([new Date(arrInput[i].created_at), arrInput[i].total_profit]);
+    }
+    var options = {
+        height: 300,
+        legend: { position: 'none' },
+        chartArea: {
+            left: "7%",
+            top: "4%",
+            height: "85%",
+            width: "85%"
+        },
+        legend: { position: 'none' },
+        vAxis: {
+            format: 'short',
+            textStyle: { color: 'gray' },
+            'stroke-color': 'transparent'
+        },
+        hAxis: {
+            format: 'HH:mm',
+            textStyle: { color: 'gray' },
+            'stroke-color': 'transparent'
+        },
+        backgroundColor: { fill: 'transparent' },
+        colors: colors
+
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById(element));
+    chart.draw(data, options);
+    window.addEventListener('resize', function () {
+        chart.draw(data, options);
+    }, false);
+}
+
 GoogleChart.drawChartEquityBothChart = function (params) {
 
     var arrInput = params.xs;
@@ -608,4 +653,11 @@ GoogleChart.drawCalHeatMap = function (params) {
         });
         calArr.push(cal1);
     }
+}
+
+function pad(number) {
+    if (number < 10) {
+        return '0' + number;
+    }
+    return number;
 }
