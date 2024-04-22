@@ -3,40 +3,40 @@
     "year": 2023,
     "monthly": [
       {
-        "pnl": 445931.94999999995,
-        "pnlstr": "4.46L",
+        "pnl": -564352.8,
+        "pnlstr": "-5.64L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Monday",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 994561.14,
-        "pnlstr": "9.95L",
+        "pnl": 1425614.77,
+        "pnlstr": "14.26L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Tuesday",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": -311887.55999999994,
-        "pnlstr": "-3.12L",
+        "pnl": 2583648.61,
+        "pnlstr": "25.84L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Wednesday",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 1067527.03,
-        "pnlstr": "10.68L",
+        "pnl": 3899597.7600000002,
+        "pnlstr": "39L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Thursday",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 477289.65,
-        "pnlstr": "4.77L",
+        "pnl": 1585631.7199999997,
+        "pnlstr": "15.86L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Friday",
         "charges": 0.0,
@@ -51,6 +51,69 @@
         "color": null
       },
       {
+        "pnl": 57171.04,
+        "pnlstr": "57.17K",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Sunday",
+        "charges": 0.0,
+        "color": null
+      }
+    ],
+    "total": 8987311.099999998,
+    "totalstr": "89.87L"
+  },
+  {
+    "year": 2024,
+    "monthly": [
+      {
+        "pnl": 1564280.1,
+        "pnlstr": "15.64L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Monday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 1757328.46,
+        "pnlstr": "17.57L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Tuesday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 1320273.0300000003,
+        "pnlstr": "13.2L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Wednesday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 937213.5900000001,
+        "pnlstr": "9.37L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Thursday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 2946552.67,
+        "pnlstr": "29.47L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Friday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 145517.35,
+        "pnlstr": "1.46L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Saturday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
         "pnl": 0.0,
         "pnlstr": "",
         "date": "0001-01-01T00:00:00",
@@ -59,7 +122,7 @@
         "color": null
       }
     ],
-    "total": 2673422.2099999995,
-    "totalstr": "26.73L"
+    "total": 8671165.2,
+    "totalstr": "86.71L"
   }
 ]

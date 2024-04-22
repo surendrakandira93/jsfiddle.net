@@ -19,73 +19,120 @@
         "color": null
       },
       {
-        "pnl": -453801.35,
-        "pnlstr": "-4.54L",
+        "pnl": 0.0,
+        "pnlstr": "",
         "date": "2023-03-01T00:00:00",
-        "weekday": "Mar 2023",
+        "weekday": "",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 0.0,
-        "pnlstr": "",
+        "pnl": 1094161.33,
+        "pnlstr": "10.94L",
         "date": "2023-04-01T00:00:00",
-        "weekday": "",
+        "weekday": "Apr 2023",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 0.0,
-        "pnlstr": "",
+        "pnl": 1049992.14,
+        "pnlstr": "10.5L",
         "date": "2023-05-01T00:00:00",
-        "weekday": "",
+        "weekday": "May 2023",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 0.0,
-        "pnlstr": "",
+        "pnl": 2725922.59,
+        "pnlstr": "27.26L",
         "date": "2023-06-01T00:00:00",
-        "weekday": "",
+        "weekday": "Jun 2023",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 0.0,
-        "pnlstr": "",
+        "pnl": 3686191.87,
+        "pnlstr": "36.86L",
         "date": "2023-07-01T00:00:00",
-        "weekday": "",
+        "weekday": "Jul 2023",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 0.0,
-        "pnlstr": "",
+        "pnl": 4987277.85,
+        "pnlstr": "49.87L",
         "date": "2023-08-01T00:00:00",
-        "weekday": "",
+        "weekday": "Aug 2023",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 0.0,
-        "pnlstr": "",
+        "pnl": 5659867.59,
+        "pnlstr": "56.6L",
         "date": "2023-09-01T00:00:00",
-        "weekday": "",
+        "weekday": "Sep 2023",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 0.0,
-        "pnlstr": "",
+        "pnl": -1710295.56,
+        "pnlstr": "-17.1L",
         "date": "2023-10-01T00:00:00",
-        "weekday": "",
+        "weekday": "Oct 2023",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 0.0,
-        "pnlstr": "",
+        "pnl": 1560513.64,
+        "pnlstr": "15.61L",
         "date": "2023-11-01T00:00:00",
+        "weekday": "Nov 2023",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 5632207.02,
+        "pnlstr": "56.32L",
+        "date": "2023-12-01T00:00:00",
+        "weekday": "Dec 2023",
+        "charges": 0.0,
+        "color": null
+      }
+    ],
+    "total": 24685838.47,
+    "totalstr": "2.47Cr"
+  },
+  {
+    "year": 2024,
+    "monthly": [
+      {
+        "pnl": 5623100.72,
+        "pnlstr": "56.23L",
+        "date": "2024-01-01T00:00:00",
+        "weekday": "Jan 2024",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 1824914.61,
+        "pnlstr": "18.25L",
+        "date": "2024-02-01T00:00:00",
+        "weekday": "Feb 2024",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": -1707064.75,
+        "pnlstr": "-17.07L",
+        "date": "2024-03-01T00:00:00",
+        "weekday": "Mar 2024",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "2024-04-01T00:00:00",
         "weekday": "",
         "charges": 0.0,
         "color": null
@@ -93,13 +140,69 @@
       {
         "pnl": 0.0,
         "pnlstr": "",
-        "date": "2023-12-01T00:00:00",
+        "date": "2024-05-01T00:00:00",
+        "weekday": "",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "2024-06-01T00:00:00",
+        "weekday": "",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "2024-07-01T00:00:00",
+        "weekday": "",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "2024-08-01T00:00:00",
+        "weekday": "",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "2024-09-01T00:00:00",
+        "weekday": "",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "2024-10-01T00:00:00",
+        "weekday": "",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "2024-11-01T00:00:00",
+        "weekday": "",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "2024-12-01T00:00:00",
         "weekday": "",
         "charges": 0.0,
         "color": null
       }
     ],
-    "total": -453801.35,
-    "totalstr": "-4.54L"
+    "total": 5740950.58,
+    "totalstr": "57.41L"
   }
 ]
