@@ -153,7 +153,7 @@
                         bSortable: true,
                         render: function (data, type, row, meta) {
                             if (type === "display") {
-                                return row.pnlddratio != NaN ? `${row.pnlddratio.toFixed(2)}` : '0.00';
+                                return row.pnlddratio != NaN ? `${row.pnlddratio==0?'1.00':row.pnlddratio.toFixed(2)}` : '1.00';
                             }
                             return row.pnlddratio;
                         }

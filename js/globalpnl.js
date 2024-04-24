@@ -139,7 +139,7 @@ GlobalPNL.bindSummary= function(result) {
     $("#netRealisedPNL_div").html(summary.netrealisedpnl.prefix + summary.netrealisedpnl.endvalue.toFixed(summary.netrealisedpnl.decimalplaces) + summary.netrealisedpnl.suffix);
     $("#netRealisedPNL_div").attr('title', GlobalPNL.formatMoney(summary.netrealisedpnl.actualvalue));
     //$("#UnrealisedPNL_div").html(summary.unrealisedpnl.prefix + summary.unrealisedpnl.endvalue.toFixed(summary.unrealisedpnl.decimalplaces) + summary.unrealisedpnl.suffix);
-    $("#UnrealisedPNL_div").html(summary.pnlddratio.toFixed(2));
+    $("#UnrealisedPNL_div").html(summary.pnlddratio==0?'1.00:' :summary.pnlddratio.toFixed(2));
 
     $("#total_pnl").html(`${summary.realisedpnl.endvalue.toFixed(0)} ${summary.realisedpnl.suffix}`);
 

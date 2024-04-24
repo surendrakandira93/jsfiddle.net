@@ -269,8 +269,8 @@
     </main><!-- ===============================================-->
 
     <div class="modal fade" id="lineChart-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px">
-            <div class="modal-content position-relative">
+        <div class="modal-dialog modal-lg mt-6" role="document">
+            <div class="modal-content border-0">
                 <div class="position-absolute top-0 end-0 mt-2 me-2 z-index-1">
                     <button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close" style=" float:right;"></button>
                 </div>
@@ -278,10 +278,25 @@
                     <div class="rounded-top-lg py-3 ps-4 pe-6 bg-light">
                         <h4 class="mb-1" id="modalExampleDemoLabel">Line Chart for <span class="userName_span"></span> </h4>
                     </div>
-                    <div class="p-4 pb-0">
-                        <div class="card-body h-100 pe-0">
-
-                            <div id="google_line_pnl" class="h-100"><img src="img/loading-sm.gif" /></div>
+                    <div class="p-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4"><span class="dropdown-header py-0 px-3 mb-0">MAX MTM :</span></div>
+                                    <div class="col-6 text-start"><span class="dropdown-header py-0 px-3 mb-0 maxmtm"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><span class="dropdown-header py-0 px-3 mb-0">MIN MTM :</span></div>
+                                    <div class="col-6 text-start"><span class="dropdown-header py-0 px-3 mb-0 minmtm"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><span class="dropdown-header py-0 px-3 mb-0">MTM :</span></div>
+                                    <div class="col-6 text-start"><span class="dropdown-header py-0 px-3 mb-0 netmtm"></span></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div id="google_line_pnl"><img src="img/loading-sm.gif" /></div>
+                            </div>
                         </div>
                     </div>
                 </div>

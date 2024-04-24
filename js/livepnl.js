@@ -102,12 +102,29 @@
 
         function BindLineChart(id, name) {
             $(".userName_span").html(name);
+            $("#google_line_pnl").html(`<img src="img/loading-sm.gif" />`);
+            $("#lineChart-modal").modal('show');
+
             $timeSpam = moment(new Date()).format("DDMMYYYYHHmmss");
             $.getJSON(`${$domainName}pnl/pnlData/${moment(new Date()).format("DDMMYYYY")}/${id}.json?v=${$timeSpam}`, function (result) {
+                var minValue = Math.min.apply(null, result.map(function (item) {
+                    return item.total_profit;
+                }));
+
+                // Find maximum value
+                var maxValue = Math.max.apply(null, result.map(function (item) {
+                    return item.total_profit;
+                }));
+
+                var lastValue = result[result.length - 1].total_profit;
+                $(".maxmtm").html(maxValue.toFixed(2));
+                $(".minmtm").html(minValue.toFixed(2));
+                $(".netmtm").html(lastValue.toFixed(2));
+
                 var para = { xs: result, element: 'google_line_pnl', colors: ['#2c7be5'] };
                 GoogleChart.drawLineChartForPNLData(para);                
-            });            
-            $("#lineChart-modal").modal('show');
+            });
+            
         }
         function GetValByKey(onSuccess) {
             $.ajax({

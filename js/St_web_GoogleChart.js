@@ -89,7 +89,10 @@ GoogleChart.drawLineChartForPNLData = function (params) {
     };
 
     var chart = new google.visualization.LineChart(document.getElementById(element));
-    chart.draw(data, options);
+    //chart.draw(data, options);
+    setTimeout(function () {
+        chart.draw(data, options);
+    }, 1000)
     window.addEventListener('resize', function () {
         chart.draw(data, options);
     }, false);
