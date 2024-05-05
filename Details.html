@@ -164,6 +164,70 @@
         .customTable tr:last-child td:last-child {
             border-bottom-right-radius: 15px;
         }
+
+        .heatmap-count {
+            text-align: center;
+            min-height: 25px;
+            margin-left: 15px;
+            margin-top: 20px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+            .heatmap-count .heatmap-date-label {
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            .heatmap-count p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .heatmap-count .heatmap-date {
+                display: inline-block;
+                margin-right: 20px;
+                border-right: 1px solid #c1c1c1;
+                padding-right: 20px;
+                color: #0059c1;
+            }
+
+        .heatmap-count {
+            text-align: center;
+            min-height: 25px;
+            margin-left: 15px;
+            margin-top: 20px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+            .heatmap-count .heatmap-segment {
+                margin-right: 20px;
+                display: inline-flex;
+            }
+
+                .heatmap-count .heatmap-segment p {
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+
+        .neg {
+            color: #f35631;
+            margin-left: 10px;
+        }
+
+        .pos {
+            color: #10b983;
+            margin-left: 10px;
+        }
+
+        .graph-label {
+            cursor: pointer;
+        }
+
+        .graph-domain .active {
+            fill: #2c7be5 !important;
+        }
     </style>
 
     <style>
@@ -303,8 +367,8 @@
                             <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="Strategies">
                                 <div class="bg-white dark__bg-1000 rounded-3 py-2">
                                     <!--<a class="nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="PreviousDay" href="index.html?key=PreviousDay">
-        Prev. Day
-    </a>-->
+                                        Prev. Day
+                                    </a>-->
 
                                     <a class="menu_dynamic nav-click dropdown-item link-600 fw-medium cursor-pointer" data-key="Last7Days" href="Details.html?user=$userKey&key=Last7Days">
                                         7D
@@ -572,12 +636,11 @@
                                             </div>
                                         </div>
                                     </div>-->
-
                                     <!--<div class="col-sm-4 col-md-3 mb-3 statistics-sucess">
                                         <div class="card overflow-hidden" style="min-width: 12rem">
                                             <div class="bg-holder bg-card" style="background-image: url(assets/img/icons/spot-illustrations/corner-1.png);"></div>-->
-                                            <!--/.bg-holder-->
-                                            <!--<div class="card-body position-relative">
+                                    <!--/.bg-holder-->
+                                    <!--<div class="card-body position-relative">
                                                 <h6>Total Profit</h6>
                                                 <div class="display-4 mb-2 fw-normal font-sans-serif div_loader TotalProfit" data-bs-toggle="tooltip" data-bs-placement="top" title=""></div>
                                             </div>
@@ -668,7 +731,8 @@
                                 <div class="table-responsive heatyear div_loader">
                                     <img src="img/loading.gif " />
                                 </div>
-
+                                <div id="heatmap_count"></div>
+                                
                             </div>
                         </div>
                     </div>
