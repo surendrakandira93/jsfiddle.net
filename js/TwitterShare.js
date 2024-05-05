@@ -81,7 +81,7 @@
                         render: function (data, type, row, meta) {
 
                             var encodedImage = encodeURIComponent(row.media);
-                            var encodedTweet = encodeURIComponent(`#VerifiedPnLByMyPnLBook\n\n#myPnlBook\n\nCongratulations @${row.twitter}\n\nPlease find your verified pnl for FY 2023-24`);
+                            var encodedTweet = encodeURIComponent(`#VerifiedPnLByMyPnLBook\n\n#myPnlBook\n\nCongratulations @${row.twitter}\n\nPlease find your verified pnl for FY Apr-24`);
                             var encodedUrl = encodedTweet + "%0A%0A" + encodeURIComponent(row.link) + "%0A%0A" + encodedImage;
 
                             return `<a target="_blank" href="https://twitter.com/intent/tweet?text=${encodedUrl}"> Share on twitter </a>`;

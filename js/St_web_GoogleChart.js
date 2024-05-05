@@ -111,7 +111,7 @@ GoogleChart.drawChartEquityBothChart = function (params) {
     for (var i = 0; i < columns.length; i++) {
         data.addColumn('number', columns[i]);
     }
-   // data.addColumn('number', 'Net PNL');
+    // data.addColumn('number', 'Net PNL');
     //data.addColumn('number', 'Realized PnL');
 
     for (var i = 0; i < arrInput.length; i++) {
@@ -315,15 +315,13 @@ GoogleChart.DrawChartBarStackedChart = function (params) {
         subArr2.push(new Date(arrInput[i].date));
 
         subArr2.push(arrInput[i].netpnl);
-        if (arrInput[i].netpnl < 0)
-        {
+        if (arrInput[i].netpnl < 0) {
             subArr2.push('color: #dc3912');
         }
-        else
-        {
+        else {
             subArr2.push('color: #109618');
         }
-        
+
         subArr2.push(arrInput[i].charges);
         subArr2.push('color: #02a8b5');
         arrData2.push(subArr2);
@@ -414,13 +412,13 @@ GoogleChart.drawDonutChart = function (params) {
         //}
         //arrData2.push(subArr2);
 
-        
+
         if (arrInput[i].pnl > 0) {
             subArr2.push(arrInput[i].weekday);
             subArr2.push(parseInt(arrInput[i].pnl));
             arrData2.push(subArr2);
         }
-       
+
     }
 
     var data = new google.visualization.arrayToDataTable(arrData2);
@@ -650,11 +648,50 @@ GoogleChart.drawCalHeatMap = function (params) {
                 filled: `{count} {name} at {date}`
             },
             onClick: function (date, nb) {
-                $("#heap_selcted_date").html(moment(date).format('YYYY-MM-DD'));
-                $("#heap_selcted_items").html(`F&O:${nb}`)
+                var allrecords = params.records;
+                var dayRecords = $.grep(allrecords, function (v) {
+                    return moment(v.date).format('YYYY-MM-DD') == moment(date).format('YYYY-MM-DD');
+                });
+                if (dayRecords.length > 0)
+                    heatmapSegment(moment(date).format('MMM DD, YYYY'), dayRecords);
             }
         });
         calArr.push(cal1);
+    }
+
+    $(".graph-label").on('click', function () {
+        var allrecords = params.records;
+        $(".graph-label").removeClass('active');
+        $(this).addClass('active');
+        var textMonth = $(this).html();
+        var monthRecords = $.grep(allrecords, function (v) {
+            return moment(v.date).format('MMM-YYYY') == textMonth;
+        });
+        if (monthRecords.length > 0)
+            heatmapSegment(textMonth, monthRecords);
+    })
+}
+
+function heatmapSegment(dateTitle, records) {
+
+    let result = [];
+    records.reduce(function (res, value) {
+        if (!res[value.segment]) {
+            res[value.segment] = { segment: value.segment, value: 0 };
+            result.push(res[value.segment])
+        }
+        res[value.segment].value += value.value;
+        return res;
+    }, {});
+
+    if (result.length > 0) {
+        var $segHtml = '';
+        for (var i = 0; i < result.length; i++) {
+            $segHtml += `<div class="heatmap-segment">
+                                        <p>${result[i].segment.replace('FO', 'F&amp;O')}:</p> <span class="${result[i].value < 0 ? 'neg' : 'pos'}">${formatMoney(result[i].value,2)}</span>
+                                    </div>`;
+        }
+        $('#heatmap_count').html(`<div class="heatmap-count"><p class="heatmap-date-label">Net realised P&amp;L</p> <p class="heatmap-date">${dateTitle}</p>${$segHtml}</div>`);
     }
 }
 
@@ -664,3 +701,22 @@ function pad(number) {
     }
     return number;
 }
+
+function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
+    try {
+        decimalCount = Math.abs(decimalCount);
+        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+        const negativeSign = amount < 0 ? "-" : "";
+
+        let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+        let j = (i.length > 3) ? i.length % 3 : 0;
+
+        return negativeSign +
+            (j ? i.substr(0, j) + thousands : '') +
+            i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) +
+            (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+    } catch (e) {
+        console.log(e)
+    }
+};
