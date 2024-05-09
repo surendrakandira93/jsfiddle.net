@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "data": [
+        {
+          "date": 1711929600,
+          "value": 8186.1
+        }
+      ],
+      "calstartdate": "2024-01-01T00:00:00",
+      "range": 12
+    },
+    {
+      "data": [],
+      "calstartdate": "2025-01-01T00:00:00",
+      "range": 12
+    }
+  ],
+  "records": [
+    {
+      "date": "2024-04-01T00:00:00",
+      "segment": "EQ",
+      "value": 242.61,
+      "charges": 1.33
+    },
+    {
+      "date": "2024-04-01T00:00:00",
+      "segment": "FO",
+      "value": 7943.49,
+      "charges": 969.01
+    }
+  ],
+  "min": 0.0,
+  "max": 8186.1,
+  "startyear": 2024,
+  "endyear": 2025
+}

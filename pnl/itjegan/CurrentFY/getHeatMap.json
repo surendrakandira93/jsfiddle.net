@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "data": [
+        {
+          "date": 1712016000,
+          "value": 125034.36
+        }
+      ],
+      "calstartdate": "2024-01-01T00:00:00",
+      "range": 12
+    },
+    {
+      "data": [],
+      "calstartdate": "2025-01-01T00:00:00",
+      "range": 12
+    }
+  ],
+  "records": [
+    {
+      "date": "2024-04-02T00:00:00",
+      "segment": "",
+      "value": 125034.36,
+      "charges": 8507.44
+    }
+  ],
+  "min": 0.0,
+  "max": 125034.36,
+  "startyear": 2024,
+  "endyear": 2025
+}

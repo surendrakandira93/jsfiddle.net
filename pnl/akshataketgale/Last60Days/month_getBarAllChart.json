@@ -1,10 +1,26 @@
 [
   {
-    "pnl": 9936.5,
-    "netpnl": 7570.391212999999,
+    "pnl": 3600.0,
+    "netpnl": 1873.6846349999996,
     "date": "2024-03-01T00:00:00",
     "weekday": "Mar 2024",
-    "charges": 2366.108787,
+    "charges": 1726.315365,
+    "color": null
+  },
+  {
+    "pnl": 0.0,
+    "netpnl": 0.0,
+    "date": "2024-04-01T00:00:00",
+    "weekday": "Apr 2024",
+    "charges": 0.0,
+    "color": null
+  },
+  {
+    "pnl": -2365.0,
+    "netpnl": -2881.292038,
+    "date": "2024-05-01T00:00:00",
+    "weekday": "May 2024",
+    "charges": 516.292038,
     "color": null
   }
 ]

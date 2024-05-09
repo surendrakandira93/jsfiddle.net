@@ -3,22 +3,6 @@
     {
       "data": [
         {
-          "date": 1712275200,
-          "value": 27074.7
-        },
-        {
-          "date": 1712361600,
-          "value": 0.0
-        },
-        {
-          "date": 1712448000,
-          "value": 0.0
-        },
-        {
-          "date": 1712534400,
-          "value": 87022.28
-        },
-        {
           "date": 1712620800,
           "value": 250.51
         },
@@ -89,6 +73,34 @@
         {
           "date": 1714089600,
           "value": 65164.55
+        },
+        {
+          "date": 1714176000,
+          "value": 0.0
+        },
+        {
+          "date": 1714262400,
+          "value": 0.0
+        },
+        {
+          "date": 1714348800,
+          "value": 291562.12
+        },
+        {
+          "date": 1714435200,
+          "value": -19871.73
+        },
+        {
+          "date": 1714521600,
+          "value": 0.0
+        },
+        {
+          "date": 1714608000,
+          "value": -8687.98
+        },
+        {
+          "date": 1714694400,
+          "value": 226211.05
         }
       ],
       "calstartdate": "2024-01-01T00:00:00",
@@ -97,223 +109,308 @@
   ],
   "records": [
     {
-      "date": "2024-04-05T00:00:00",
-      "segment": "EQ",
-      "value": 25554.43
-    },
-    {
-      "date": "2024-04-06T00:00:00",
-      "segment": "EQ",
-      "value": 0.0
-    },
-    {
-      "date": "2024-04-07T00:00:00",
-      "segment": "EQ",
-      "value": 0.0
-    },
-    {
-      "date": "2024-04-08T00:00:00",
-      "segment": "EQ",
-      "value": 87708.17
-    },
-    {
-      "date": "2024-04-05T00:00:00",
+      "date": "2024-04-09T00:00:00",
       "segment": "FO",
-      "value": 1520.26
-    },
-    {
-      "date": "2024-04-06T00:00:00",
-      "segment": "FO",
-      "value": 0.0
-    },
-    {
-      "date": "2024-04-07T00:00:00",
-      "segment": "FO",
-      "value": 0.0
-    },
-    {
-      "date": "2024-04-08T00:00:00",
-      "segment": "FO",
-      "value": -685.89
+      "value": 601.15,
+      "charges": 94.85
     },
     {
       "date": "2024-04-09T00:00:00",
       "segment": "EQ",
-      "value": -350.64
+      "value": -350.64,
+      "charges": 350.64
     },
     {
       "date": "2024-04-10T00:00:00",
       "segment": "EQ",
-      "value": 2929.6
+      "value": 2929.6,
+      "charges": 901.1
     },
     {
-      "date": "2024-04-09T00:00:00",
-      "segment": "FO",
-      "value": 601.15
+      "date": "2024-04-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-12T00:00:00",
+      "segment": "EQ",
+      "value": 157718.9,
+      "charges": 1179.15
+    },
+    {
+      "date": "2024-04-13T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-15T00:00:00",
+      "segment": "EQ",
+      "value": 279165.8,
+      "charges": 7438.7
     },
     {
       "date": "2024-04-10T00:00:00",
       "segment": "FO",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
       "date": "2024-04-11T00:00:00",
       "segment": "FO",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
       "date": "2024-04-12T00:00:00",
       "segment": "FO",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
       "date": "2024-04-13T00:00:00",
       "segment": "FO",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
       "date": "2024-04-14T00:00:00",
       "segment": "FO",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
       "date": "2024-04-15T00:00:00",
       "segment": "FO",
-      "value": 4041.79
-    },
-    {
-      "date": "2024-04-16T00:00:00",
-      "segment": "FO",
-      "value": 4988.0
-    },
-    {
-      "date": "2024-04-17T00:00:00",
-      "segment": "FO",
-      "value": 0.0
-    },
-    {
-      "date": "2024-04-18T00:00:00",
-      "segment": "FO",
-      "value": 4176.57
-    },
-    {
-      "date": "2024-04-19T00:00:00",
-      "segment": "FO",
-      "value": 5367.32
-    },
-    {
-      "date": "2024-04-11T00:00:00",
-      "segment": "EQ",
-      "value": 0.0
-    },
-    {
-      "date": "2024-04-12T00:00:00",
-      "segment": "EQ",
-      "value": 157718.9
-    },
-    {
-      "date": "2024-04-13T00:00:00",
-      "segment": "EQ",
-      "value": 0.0
-    },
-    {
-      "date": "2024-04-14T00:00:00",
-      "segment": "EQ",
-      "value": 0.0
-    },
-    {
-      "date": "2024-04-15T00:00:00",
-      "segment": "EQ",
-      "value": 279165.8
+      "value": 4041.79,
+      "charges": 289.46
     },
     {
       "date": "2024-04-16T00:00:00",
       "segment": "EQ",
-      "value": -4627.11
+      "value": -4627.11,
+      "charges": 4627.11
+    },
+    {
+      "date": "2024-04-16T00:00:00",
+      "segment": "FO",
+      "value": 4988.0,
+      "charges": 244.0
     },
     {
       "date": "2024-04-17T00:00:00",
       "segment": "EQ",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
       "date": "2024-04-18T00:00:00",
       "segment": "EQ",
-      "value": -36203.06
+      "value": -36203.06,
+      "charges": 1388.71
+    },
+    {
+      "date": "2024-04-17T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-18T00:00:00",
+      "segment": "FO",
+      "value": 4176.57,
+      "charges": 100.93
     },
     {
       "date": "2024-04-19T00:00:00",
       "segment": "EQ",
-      "value": 77692.63
+      "value": 77692.63,
+      "charges": 5219.82
+    },
+    {
+      "date": "2024-04-19T00:00:00",
+      "segment": "FO",
+      "value": 5367.32,
+      "charges": 101.68
     },
     {
       "date": "2024-04-20T00:00:00",
       "segment": "EQ",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
       "date": "2024-04-21T00:00:00",
       "segment": "EQ",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
       "date": "2024-04-22T00:00:00",
       "segment": "EQ",
-      "value": -85520.46
+      "value": -85520.46,
+      "charges": 4101.56
     },
     {
       "date": "2024-04-23T00:00:00",
       "segment": "EQ",
-      "value": -1458.35
+      "value": -1458.35,
+      "charges": 751.55
     },
     {
       "date": "2024-04-24T00:00:00",
       "segment": "EQ",
-      "value": 21638.77
+      "value": 21638.77,
+      "charges": 2224.68
+    },
+    {
+      "date": "2024-04-20T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-21T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-22T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-23T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-24T00:00:00",
+      "segment": "FO",
+      "value": 895.48,
+      "charges": 143.27
+    },
+    {
+      "date": "2024-04-25T00:00:00",
+      "segment": "FO",
+      "value": 833.93,
+      "charges": 96.07
     },
     {
       "date": "2024-04-25T00:00:00",
       "segment": "EQ",
-      "value": 139772.09
+      "value": 139772.09,
+      "charges": 3235.56
     },
     {
       "date": "2024-04-26T00:00:00",
       "segment": "EQ",
-      "value": 65164.55
+      "value": 65164.55,
+      "charges": 2468.15
     },
     {
-      "date": "2024-04-20T00:00:00",
-      "segment": "FO",
-      "value": 0.0
+      "date": "2024-04-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
     },
     {
-      "date": "2024-04-21T00:00:00",
-      "segment": "FO",
-      "value": 0.0
+      "date": "2024-04-28T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
     },
     {
-      "date": "2024-04-22T00:00:00",
-      "segment": "FO",
-      "value": 0.0
+      "date": "2024-04-29T00:00:00",
+      "segment": "EQ",
+      "value": 289234.47,
+      "charges": 5501.33
     },
     {
-      "date": "2024-04-23T00:00:00",
+      "date": "2024-04-26T00:00:00",
       "segment": "FO",
-      "value": 0.0
+      "value": 0.0,
+      "charges": 0.0
     },
     {
-      "date": "2024-04-24T00:00:00",
+      "date": "2024-04-27T00:00:00",
       "segment": "FO",
-      "value": 895.48
+      "value": 0.0,
+      "charges": 0.0
     },
     {
-      "date": "2024-04-25T00:00:00",
+      "date": "2024-04-28T00:00:00",
       "segment": "FO",
-      "value": 833.93
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-29T00:00:00",
+      "segment": "FO",
+      "value": 2327.65,
+      "charges": 263.6
+    },
+    {
+      "date": "2024-04-30T00:00:00",
+      "segment": "EQ",
+      "value": -20296.93,
+      "charges": 1498.73
+    },
+    {
+      "date": "2024-04-30T00:00:00",
+      "segment": "FO",
+      "value": 425.2,
+      "charges": 94.8
+    },
+    {
+      "date": "2024-05-01T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-05-02T00:00:00",
+      "segment": "EQ",
+      "value": -8687.98,
+      "charges": 607.18
+    },
+    {
+      "date": "2024-05-03T00:00:00",
+      "segment": "EQ",
+      "value": 222072.66,
+      "charges": 3752.09
+    },
+    {
+      "date": "2024-05-01T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-05-02T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-05-03T00:00:00",
+      "segment": "FO",
+      "value": 4138.4,
+      "charges": 99.6
     }
   ],
-  "min": -80171.063,
-  "max": 220463.245,
+  "min": -74821.666,
+  "max": 287384.855,
   "startyear": 2024,
   "endyear": 2024
 }

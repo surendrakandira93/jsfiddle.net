@@ -27,16 +27,16 @@
         "color": null
       },
       {
-        "pnl": 1189926.1800000002,
-        "pnlstr": "11.9L",
+        "pnl": 1136128.9000000001,
+        "pnlstr": "11.36L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Thursday",
         "charges": 0.0,
         "color": null
       },
       {
-        "pnl": 1633367.2400000002,
-        "pnlstr": "16.33L",
+        "pnl": 1627513.8599999999,
+        "pnlstr": "16.28L",
         "date": "0001-01-01T00:00:00",
         "weekday": "Friday",
         "charges": 0.0,
@@ -59,7 +59,70 @@
         "color": null
       }
     ],
-    "total": 5340633.720000001,
-    "totalstr": "53.41L"
+    "total": 5280983.0600000005,
+    "totalstr": "52.81L"
+  },
+  {
+    "year": 2024,
+    "monthly": [
+      {
+        "pnl": -195303.15999999997,
+        "pnlstr": "-1.95L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Monday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 786334.43,
+        "pnlstr": "7.86L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Tuesday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 251649.9200000001,
+        "pnlstr": "2.52L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Wednesday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 709302.7699999999,
+        "pnlstr": "7.09L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Thursday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 1117638.2,
+        "pnlstr": "11.18L",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Friday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 48180.21,
+        "pnlstr": "48.18K",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Saturday",
+        "charges": 0.0,
+        "color": null
+      },
+      {
+        "pnl": 0.0,
+        "pnlstr": "",
+        "date": "0001-01-01T00:00:00",
+        "weekday": "Sunday",
+        "charges": 0.0,
+        "color": null
+      }
+    ],
+    "total": 2717802.37,
+    "totalstr": "27.18L"
   }
 ]

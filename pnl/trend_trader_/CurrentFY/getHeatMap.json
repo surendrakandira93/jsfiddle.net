@@ -77,6 +77,34 @@
         {
           "date": 1713484800,
           "value": 7992.17
+        },
+        {
+          "date": 1713571200,
+          "value": 0.0
+        },
+        {
+          "date": 1713657600,
+          "value": 0.0
+        },
+        {
+          "date": 1713744000,
+          "value": -69.08
+        },
+        {
+          "date": 1713830400,
+          "value": -171.67
+        },
+        {
+          "date": 1713916800,
+          "value": 7262.42
+        },
+        {
+          "date": 1714003200,
+          "value": 0.0
+        },
+        {
+          "date": 1714089600,
+          "value": 15032.92
         }
       ],
       "calstartdate": "2024-01-01T00:00:00",
@@ -88,8 +116,166 @@
       "range": 12
     }
   ],
-  "min": -3343.172499999997,
-  "max": 10150.658,
+  "records": [
+    {
+      "date": "2024-04-01T00:00:00",
+      "segment": "EQ",
+      "value": -29.98,
+      "charges": 29.98
+    },
+    {
+      "date": "2024-04-02T00:00:00",
+      "segment": "EQ",
+      "value": -179.95,
+      "charges": 179.95
+    },
+    {
+      "date": "2024-04-03T00:00:00",
+      "segment": "EQ",
+      "value": -188.24,
+      "charges": 188.24
+    },
+    {
+      "date": "2024-04-04T00:00:00",
+      "segment": "EQ",
+      "value": 134.62,
+      "charges": 141.88
+    },
+    {
+      "date": "2024-04-05T00:00:00",
+      "segment": "EQ",
+      "value": -249.27,
+      "charges": 249.27
+    },
+    {
+      "date": "2024-04-06T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-07T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-08T00:00:00",
+      "segment": "EQ",
+      "value": 7590.2,
+      "charges": 166.75
+    },
+    {
+      "date": "2024-04-09T00:00:00",
+      "segment": "EQ",
+      "value": 10690.28,
+      "charges": 218.37
+    },
+    {
+      "date": "2024-04-10T00:00:00",
+      "segment": "EQ",
+      "value": -112.76,
+      "charges": 112.76
+    },
+    {
+      "date": "2024-04-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-12T00:00:00",
+      "segment": "EQ",
+      "value": -5009.12,
+      "charges": 129.12
+    },
+    {
+      "date": "2024-04-13T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-15T00:00:00",
+      "segment": "EQ",
+      "value": 7523.92,
+      "charges": 148.38
+    },
+    {
+      "date": "2024-04-16T00:00:00",
+      "segment": "EQ",
+      "value": -77.55,
+      "charges": 77.55
+    },
+    {
+      "date": "2024-04-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-18T00:00:00",
+      "segment": "EQ",
+      "value": -172.7,
+      "charges": 172.7
+    },
+    {
+      "date": "2024-04-19T00:00:00",
+      "segment": "EQ",
+      "value": 7992.17,
+      "charges": 286.63
+    },
+    {
+      "date": "2024-04-20T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-22T00:00:00",
+      "segment": "EQ",
+      "value": -69.08,
+      "charges": 69.08
+    },
+    {
+      "date": "2024-04-23T00:00:00",
+      "segment": "EQ",
+      "value": -171.67,
+      "charges": 171.67
+    },
+    {
+      "date": "2024-04-24T00:00:00",
+      "segment": "EQ",
+      "value": 7262.42,
+      "charges": 88.68
+    },
+    {
+      "date": "2024-04-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-04-26T00:00:00",
+      "segment": "EQ",
+      "value": 15032.92,
+      "charges": 55.08
+    }
+  ],
+  "min": -2867.1874999999945,
+  "max": 13730.127999999997,
   "startyear": 2024,
   "endyear": 2025
 }

@@ -1,14 +1,36 @@
 {
   "items": [
     {
-      "data": [],
+      "data": [
+        {
+          "date": 1714608000,
+          "value": -283.79
+        },
+        {
+          "date": 1714694400,
+          "value": 30250.65
+        }
+      ],
       "calstartdate": "2024-01-01T00:00:00",
       "range": 12
     }
   ],
-  "records": [],
-  "min": 0.0,
-  "max": 0.0,
+  "records": [
+    {
+      "date": "2024-05-02T00:00:00",
+      "segment": "EQ",
+      "value": -283.79,
+      "charges": 19.89
+    },
+    {
+      "date": "2024-05-03T00:00:00",
+      "segment": "EQ",
+      "value": 30250.65,
+      "charges": 852.1
+    }
+  ],
+  "min": -283.79,
+  "max": 30250.65,
   "startyear": 2024,
   "endyear": 2024
 }

@@ -3,6 +3,30 @@
     {
       "data": [
         {
+          "date": 1680652800,
+          "value": -71.45
+        },
+        {
+          "date": 1680739200,
+          "value": 0.0
+        },
+        {
+          "date": 1680825600,
+          "value": 0.0
+        },
+        {
+          "date": 1680912000,
+          "value": 0.0
+        },
+        {
+          "date": 1680998400,
+          "value": 0.0
+        },
+        {
+          "date": 1681084800,
+          "value": 0.0
+        },
+        {
           "date": 1681171200,
           "value": -89746.69
         },
@@ -1437,7 +1461,2181 @@
       "range": 12
     }
   ],
-  "min": -21326.67,
+  "records": [
+    {
+      "date": "2023-04-05T00:00:00",
+      "segment": "EQ",
+      "value": -71.45,
+      "charges": 71.45
+    },
+    {
+      "date": "2023-04-06T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-07T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-08T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-09T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-11T00:00:00",
+      "segment": "EQ",
+      "value": -89746.69,
+      "charges": 1285.69
+    },
+    {
+      "date": "2023-04-12T00:00:00",
+      "segment": "EQ",
+      "value": -152.23,
+      "charges": 152.23
+    },
+    {
+      "date": "2023-04-13T00:00:00",
+      "segment": "EQ",
+      "value": -238.13,
+      "charges": 238.13
+    },
+    {
+      "date": "2023-04-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-17T00:00:00",
+      "segment": "EQ",
+      "value": 32681.26,
+      "charges": 2333.74
+    },
+    {
+      "date": "2023-04-18T00:00:00",
+      "segment": "EQ",
+      "value": -206.04,
+      "charges": 206.04
+    },
+    {
+      "date": "2023-04-19T00:00:00",
+      "segment": "EQ",
+      "value": 83042.62,
+      "charges": 397.63
+    },
+    {
+      "date": "2023-04-20T00:00:00",
+      "segment": "EQ",
+      "value": 3891.24,
+      "charges": 745.76
+    },
+    {
+      "date": "2023-04-21T00:00:00",
+      "segment": "EQ",
+      "value": -48.67,
+      "charges": 48.67
+    },
+    {
+      "date": "2023-04-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-26T00:00:00",
+      "segment": "EQ",
+      "value": 113803.22,
+      "charges": 881.78
+    },
+    {
+      "date": "2023-04-27T00:00:00",
+      "segment": "EQ",
+      "value": -133.12,
+      "charges": 105.62
+    },
+    {
+      "date": "2023-04-28T00:00:00",
+      "segment": "EQ",
+      "value": 6374.36,
+      "charges": 323.49
+    },
+    {
+      "date": "2023-04-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-04-30T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-01T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-02T00:00:00",
+      "segment": "EQ",
+      "value": 13180.91,
+      "charges": 438.84
+    },
+    {
+      "date": "2023-05-03T00:00:00",
+      "segment": "EQ",
+      "value": 631.55,
+      "charges": 598.45
+    },
+    {
+      "date": "2023-05-04T00:00:00",
+      "segment": "EQ",
+      "value": 751.22,
+      "charges": 38.38
+    },
+    {
+      "date": "2023-05-05T00:00:00",
+      "segment": "EQ",
+      "value": 67616.94,
+      "charges": 804.56
+    },
+    {
+      "date": "2023-05-06T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-07T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-08T00:00:00",
+      "segment": "EQ",
+      "value": 1363.01,
+      "charges": 592.59
+    },
+    {
+      "date": "2023-05-09T00:00:00",
+      "segment": "EQ",
+      "value": -60.06,
+      "charges": 60.06
+    },
+    {
+      "date": "2023-05-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-12T00:00:00",
+      "segment": "EQ",
+      "value": -1.06,
+      "charges": 1.06
+    },
+    {
+      "date": "2023-05-13T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-18T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-19T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-20T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-24T00:00:00",
+      "segment": "EQ",
+      "value": -50.76,
+      "charges": 50.76
+    },
+    {
+      "date": "2023-05-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-28T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-30T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-31T00:00:00",
+      "segment": "EQ",
+      "value": -2334.4,
+      "charges": 92.4
+    },
+    {
+      "date": "2023-06-01T00:00:00",
+      "segment": "EQ",
+      "value": 577.46,
+      "charges": 86.14
+    },
+    {
+      "date": "2023-06-02T00:00:00",
+      "segment": "EQ",
+      "value": -8.31,
+      "charges": 8.31
+    },
+    {
+      "date": "2023-06-03T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-04T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-05T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-06T00:00:00",
+      "segment": "EQ",
+      "value": 488.07,
+      "charges": 79.93
+    },
+    {
+      "date": "2023-06-07T00:00:00",
+      "segment": "EQ",
+      "value": -8.29,
+      "charges": 8.29
+    },
+    {
+      "date": "2023-06-08T00:00:00",
+      "segment": "EQ",
+      "value": -90.1,
+      "charges": 90.1
+    },
+    {
+      "date": "2023-06-09T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-12T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-13T00:00:00",
+      "segment": "EQ",
+      "value": 31038.61,
+      "charges": 1543.94
+    },
+    {
+      "date": "2023-06-14T00:00:00",
+      "segment": "EQ",
+      "value": -37.27,
+      "charges": 37.27
+    },
+    {
+      "date": "2023-06-15T00:00:00",
+      "segment": "EQ",
+      "value": 1789.99,
+      "charges": 487.01
+    },
+    {
+      "date": "2023-06-16T00:00:00",
+      "segment": "EQ",
+      "value": -59.03,
+      "charges": 59.03
+    },
+    {
+      "date": "2023-06-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-18T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-19T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-20T00:00:00",
+      "segment": "EQ",
+      "value": 89336.56,
+      "charges": 2211.94
+    },
+    {
+      "date": "2023-06-21T00:00:00",
+      "segment": "EQ",
+      "value": 17399.14,
+      "charges": 621.66
+    },
+    {
+      "date": "2023-06-22T00:00:00",
+      "segment": "EQ",
+      "value": -280.61,
+      "charges": 280.61
+    },
+    {
+      "date": "2023-06-23T00:00:00",
+      "segment": "EQ",
+      "value": -108.71,
+      "charges": 108.71
+    },
+    {
+      "date": "2023-06-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-28T00:00:00",
+      "segment": "EQ",
+      "value": -89.07,
+      "charges": 89.07
+    },
+    {
+      "date": "2023-06-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-30T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-01T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-02T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-03T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-04T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-05T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-06T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-07T00:00:00",
+      "segment": "EQ",
+      "value": 2575.25,
+      "charges": 931.45
+    },
+    {
+      "date": "2023-07-08T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-09T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-10T00:00:00",
+      "segment": "EQ",
+      "value": 13327.42,
+      "charges": 412.58
+    },
+    {
+      "date": "2023-07-11T00:00:00",
+      "segment": "EQ",
+      "value": 188932.08,
+      "charges": 2936.67
+    },
+    {
+      "date": "2023-07-12T00:00:00",
+      "segment": "EQ",
+      "value": 30219.18,
+      "charges": 4813.62
+    },
+    {
+      "date": "2023-07-13T00:00:00",
+      "segment": "EQ",
+      "value": 108277.69,
+      "charges": 3762.06
+    },
+    {
+      "date": "2023-07-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-17T00:00:00",
+      "segment": "EQ",
+      "value": 105477.24,
+      "charges": 1522.76
+    },
+    {
+      "date": "2023-07-18T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-19T00:00:00",
+      "segment": "EQ",
+      "value": 50933.21,
+      "charges": 1641.79
+    },
+    {
+      "date": "2023-07-20T00:00:00",
+      "segment": "EQ",
+      "value": -3650.34,
+      "charges": 3650.34
+    },
+    {
+      "date": "2023-07-21T00:00:00",
+      "segment": "EQ",
+      "value": 46413.0,
+      "charges": 4587.0
+    },
+    {
+      "date": "2023-07-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-24T00:00:00",
+      "segment": "EQ",
+      "value": -2646.66,
+      "charges": 4146.66
+    },
+    {
+      "date": "2023-07-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-27T00:00:00",
+      "segment": "EQ",
+      "value": 6891.91,
+      "charges": 3756.04
+    },
+    {
+      "date": "2023-07-28T00:00:00",
+      "segment": "EQ",
+      "value": 4600.82,
+      "charges": 3304.33
+    },
+    {
+      "date": "2023-07-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-30T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-31T00:00:00",
+      "segment": "EQ",
+      "value": 10573.21,
+      "charges": 507.79
+    },
+    {
+      "date": "2023-08-01T00:00:00",
+      "segment": "EQ",
+      "value": 75341.21,
+      "charges": 3978.29
+    },
+    {
+      "date": "2023-08-02T00:00:00",
+      "segment": "EQ",
+      "value": -5160.48,
+      "charges": 5160.48
+    },
+    {
+      "date": "2023-08-03T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-04T00:00:00",
+      "segment": "EQ",
+      "value": 99401.28,
+      "charges": 2042.27
+    },
+    {
+      "date": "2023-08-05T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-06T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-07T00:00:00",
+      "segment": "EQ",
+      "value": -121.04,
+      "charges": 121.04
+    },
+    {
+      "date": "2023-08-08T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-09T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-12T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-13T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-18T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-19T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-20T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-25T00:00:00",
+      "segment": "EQ",
+      "value": -27163.21,
+      "charges": 8162.11
+    },
+    {
+      "date": "2023-08-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-28T00:00:00",
+      "segment": "EQ",
+      "value": -941.3,
+      "charges": 941.3
+    },
+    {
+      "date": "2023-08-29T00:00:00",
+      "segment": "EQ",
+      "value": 56898.64,
+      "charges": 1376.36
+    },
+    {
+      "date": "2023-08-30T00:00:00",
+      "segment": "EQ",
+      "value": 160428.02,
+      "charges": 1920.48
+    },
+    {
+      "date": "2023-08-31T00:00:00",
+      "segment": "EQ",
+      "value": 27235.43,
+      "charges": 4264.57
+    },
+    {
+      "date": "2023-09-01T00:00:00",
+      "segment": "EQ",
+      "value": 2494.1,
+      "charges": 43.4
+    },
+    {
+      "date": "2023-09-02T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-03T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-04T00:00:00",
+      "segment": "EQ",
+      "value": -55.87,
+      "charges": 55.87
+    },
+    {
+      "date": "2023-09-05T00:00:00",
+      "segment": "EQ",
+      "value": -136.26,
+      "charges": 1638.86
+    },
+    {
+      "date": "2023-09-06T00:00:00",
+      "segment": "EQ",
+      "value": -320.66,
+      "charges": 320.66
+    },
+    {
+      "date": "2023-09-07T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-08T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-09T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-11T00:00:00",
+      "segment": "EQ",
+      "value": 7150.65,
+      "charges": 720.85
+    },
+    {
+      "date": "2023-09-12T00:00:00",
+      "segment": "EQ",
+      "value": -86.27,
+      "charges": 86.27
+    },
+    {
+      "date": "2023-09-13T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-18T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-19T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-20T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-25T00:00:00",
+      "segment": "EQ",
+      "value": -0.03,
+      "charges": 0.03
+    },
+    {
+      "date": "2023-09-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-28T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-30T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-01T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-02T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-03T00:00:00",
+      "segment": "EQ",
+      "value": -119.55,
+      "charges": 119.55
+    },
+    {
+      "date": "2023-10-04T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-05T00:00:00",
+      "segment": "EQ",
+      "value": -117.95,
+      "charges": 117.95
+    },
+    {
+      "date": "2023-10-06T00:00:00",
+      "segment": "EQ",
+      "value": -86.93,
+      "charges": 86.93
+    },
+    {
+      "date": "2023-10-07T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-08T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-09T00:00:00",
+      "segment": "EQ",
+      "value": -2.1,
+      "charges": 2.1
+    },
+    {
+      "date": "2023-10-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-12T00:00:00",
+      "segment": "EQ",
+      "value": -14121.19,
+      "charges": 291.39
+    },
+    {
+      "date": "2023-10-13T00:00:00",
+      "segment": "EQ",
+      "value": -3493.1,
+      "charges": 280.6
+    },
+    {
+      "date": "2023-10-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-16T00:00:00",
+      "segment": "EQ",
+      "value": -10.35,
+      "charges": 10.35
+    },
+    {
+      "date": "2023-10-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-18T00:00:00",
+      "segment": "EQ",
+      "value": -3545.28,
+      "charges": 98.78
+    },
+    {
+      "date": "2023-10-19T00:00:00",
+      "segment": "EQ",
+      "value": -16971.35,
+      "charges": 1189.05
+    },
+    {
+      "date": "2023-10-20T00:00:00",
+      "segment": "EQ",
+      "value": 32762.3,
+      "charges": 1249.3
+    },
+    {
+      "date": "2023-10-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-23T00:00:00",
+      "segment": "EQ",
+      "value": -778.0,
+      "charges": 778.0
+    },
+    {
+      "date": "2023-10-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-26T00:00:00",
+      "segment": "EQ",
+      "value": -1067.64,
+      "charges": 1067.64
+    },
+    {
+      "date": "2023-10-27T00:00:00",
+      "segment": "EQ",
+      "value": -2763.96,
+      "charges": 96.16
+    },
+    {
+      "date": "2023-10-28T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-30T00:00:00",
+      "segment": "EQ",
+      "value": -35.2,
+      "charges": 35.2
+    },
+    {
+      "date": "2023-10-31T00:00:00",
+      "segment": "EQ",
+      "value": -103191.33,
+      "charges": 2588.03
+    },
+    {
+      "date": "2023-11-01T00:00:00",
+      "segment": "EQ",
+      "value": -285.56,
+      "charges": 285.56
+    },
+    {
+      "date": "2023-11-02T00:00:00",
+      "segment": "EQ",
+      "value": 6541.77,
+      "charges": 256.83
+    },
+    {
+      "date": "2023-11-03T00:00:00",
+      "segment": "EQ",
+      "value": 843.27,
+      "charges": 912.78
+    },
+    {
+      "date": "2023-11-04T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-05T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-06T00:00:00",
+      "segment": "EQ",
+      "value": 11656.31,
+      "charges": 766.39
+    },
+    {
+      "date": "2023-11-07T00:00:00",
+      "segment": "EQ",
+      "value": -791.41,
+      "charges": 791.41
+    },
+    {
+      "date": "2023-11-08T00:00:00",
+      "segment": "EQ",
+      "value": 23640.17,
+      "charges": 1714.13
+    },
+    {
+      "date": "2023-11-09T00:00:00",
+      "segment": "EQ",
+      "value": -848.34,
+      "charges": 848.34
+    },
+    {
+      "date": "2023-11-10T00:00:00",
+      "segment": "EQ",
+      "value": 445.2,
+      "charges": 136.05
+    },
+    {
+      "date": "2023-11-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-12T00:00:00",
+      "segment": "EQ",
+      "value": -1.04,
+      "charges": 1.04
+    },
+    {
+      "date": "2023-11-13T00:00:00",
+      "segment": "EQ",
+      "value": -0.03,
+      "charges": 0.03
+    },
+    {
+      "date": "2023-11-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-18T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-19T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-20T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-28T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-30T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-01T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-02T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-03T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-04T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-05T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-06T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-07T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-08T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-09T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-12T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-13T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-18T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-19T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-20T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-28T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-30T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-31T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-01T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-02T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-03T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-04T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-05T00:00:00",
+      "segment": "EQ",
+      "value": -21326.67,
+      "charges": 571.87
+    },
+    {
+      "date": "2024-01-06T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-07T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-08T00:00:00",
+      "segment": "EQ",
+      "value": -298.38,
+      "charges": 340.38
+    },
+    {
+      "date": "2024-01-09T00:00:00",
+      "segment": "EQ",
+      "value": -0.02,
+      "charges": 0.02
+    },
+    {
+      "date": "2024-01-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-11T00:00:00",
+      "segment": "EQ",
+      "value": 383161.63,
+      "charges": 6634.77
+    },
+    {
+      "date": "2024-01-12T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-13T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-15T00:00:00",
+      "segment": "EQ",
+      "value": 131986.37,
+      "charges": 3859.63
+    },
+    {
+      "date": "2024-01-16T00:00:00",
+      "segment": "EQ",
+      "value": 27191.27,
+      "charges": 3344.68
+    },
+    {
+      "date": "2024-01-17T00:00:00",
+      "segment": "EQ",
+      "value": -7394.87,
+      "charges": 7394.87
+    },
+    {
+      "date": "2024-01-18T00:00:00",
+      "segment": "EQ",
+      "value": 2357.18,
+      "charges": 216.62
+    },
+    {
+      "date": "2024-01-19T00:00:00",
+      "segment": "EQ",
+      "value": -81.73,
+      "charges": 81.73
+    },
+    {
+      "date": "2024-01-20T00:00:00",
+      "segment": "EQ",
+      "value": -1.05,
+      "charges": 1.05
+    },
+    {
+      "date": "2024-01-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-28T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-30T00:00:00",
+      "segment": "EQ",
+      "value": 100352.52,
+      "charges": 12607.48
+    },
+    {
+      "date": "2024-01-31T00:00:00",
+      "segment": "EQ",
+      "value": 34470.23,
+      "charges": 3891.17
+    },
+    {
+      "date": "2024-02-01T00:00:00",
+      "segment": "EQ",
+      "value": 103115.67,
+      "charges": 2797.48
+    },
+    {
+      "date": "2024-02-02T00:00:00",
+      "segment": "EQ",
+      "value": -5949.59,
+      "charges": 5949.59
+    },
+    {
+      "date": "2024-02-03T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-04T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-05T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-06T00:00:00",
+      "segment": "EQ",
+      "value": 60472.84,
+      "charges": 4759.06
+    },
+    {
+      "date": "2024-02-07T00:00:00",
+      "segment": "EQ",
+      "value": 19611.46,
+      "charges": 841.14
+    },
+    {
+      "date": "2024-02-08T00:00:00",
+      "segment": "EQ",
+      "value": -6032.35,
+      "charges": 6032.35
+    },
+    {
+      "date": "2024-02-09T00:00:00",
+      "segment": "EQ",
+      "value": -1.04,
+      "charges": 1.04
+    },
+    {
+      "date": "2024-02-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-12T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-13T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-14T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-15T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-18T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-19T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-20T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-21T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-22T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-26T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-27T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-28T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-02-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-01T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-02T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-03T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-04T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-05T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-06T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-07T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-08T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-09T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-10T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-11T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-12T00:00:00",
+      "segment": "EQ",
+      "value": 26957.3,
+      "charges": 2629.7
+    },
+    {
+      "date": "2024-03-13T00:00:00",
+      "segment": "EQ",
+      "value": 9801.24,
+      "charges": 1322.36
+    },
+    {
+      "date": "2024-03-14T00:00:00",
+      "segment": "EQ",
+      "value": -18256.55,
+      "charges": 186.45
+    },
+    {
+      "date": "2024-03-15T00:00:00",
+      "segment": "EQ",
+      "value": -4654.73,
+      "charges": 196.53
+    },
+    {
+      "date": "2024-03-16T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-17T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-18T00:00:00",
+      "segment": "EQ",
+      "value": 8463.89,
+      "charges": 372.21
+    },
+    {
+      "date": "2024-03-19T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-20T00:00:00",
+      "segment": "EQ",
+      "value": 2778.83,
+      "charges": 1077.42
+    },
+    {
+      "date": "2024-03-21T00:00:00",
+      "segment": "EQ",
+      "value": -3477.25,
+      "charges": 306.75
+    },
+    {
+      "date": "2024-03-22T00:00:00",
+      "segment": "EQ",
+      "value": 27941.59,
+      "charges": 1037.66
+    },
+    {
+      "date": "2024-03-23T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-24T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-25T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-26T00:00:00",
+      "segment": "EQ",
+      "value": 27478.41,
+      "charges": 1389.64
+    },
+    {
+      "date": "2024-03-27T00:00:00",
+      "segment": "EQ",
+      "value": -152.1,
+      "charges": 152.1
+    },
+    {
+      "date": "2024-03-28T00:00:00",
+      "segment": "EQ",
+      "value": 11744.77,
+      "charges": 1445.23
+    },
+    {
+      "date": "2024-03-29T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-30T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-03-31T00:00:00",
+      "segment": "EQ",
+      "value": 0.0,
+      "charges": 0.0
+    }
+  ],
+  "min": -21173.163999999986,
   "max": 139096.7825,
   "startyear": 2023,
   "endyear": 2024

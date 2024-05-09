@@ -3,74 +3,6 @@
     {
       "data": [
         {
-          "date": 1682640000,
-          "value": 19848.68
-        },
-        {
-          "date": 1682726400,
-          "value": 0.0
-        },
-        {
-          "date": 1682812800,
-          "value": 0.0
-        },
-        {
-          "date": 1682899200,
-          "value": 0.0
-        },
-        {
-          "date": 1682985600,
-          "value": 14946.65
-        },
-        {
-          "date": 1683072000,
-          "value": 10399.61
-        },
-        {
-          "date": 1683158400,
-          "value": 409.38
-        },
-        {
-          "date": 1683244800,
-          "value": -103.4
-        },
-        {
-          "date": 1683331200,
-          "value": 0.0
-        },
-        {
-          "date": 1683417600,
-          "value": 0.0
-        },
-        {
-          "date": 1683504000,
-          "value": -7717.21
-        },
-        {
-          "date": 1683590400,
-          "value": -32402.65
-        },
-        {
-          "date": 1683676800,
-          "value": -13906.33
-        },
-        {
-          "date": 1683763200,
-          "value": -29235.73
-        },
-        {
-          "date": 1683849600,
-          "value": -16852.37
-        },
-        {
-          "date": 1683936000,
-          "value": 0.0
-        },
-        {
-          "date": 1684022400,
-          "value": 0.0
-        },
-        {
           "date": 1684108800,
           "value": 9217.7
         },
@@ -1025,8 +957,1426 @@
       "range": 12
     }
   ],
-  "min": -186421.11750000028,
-  "max": 151651.86949999994,
+  "records": [
+    {
+      "date": "2023-05-15T00:00:00",
+      "segment": "FO",
+      "value": 9217.7,
+      "charges": 2193.55
+    },
+    {
+      "date": "2023-05-16T00:00:00",
+      "segment": "FO",
+      "value": 17783.36,
+      "charges": 196.64
+    },
+    {
+      "date": "2023-05-17T00:00:00",
+      "segment": "FO",
+      "value": -3068.41,
+      "charges": 3399.66
+    },
+    {
+      "date": "2023-05-18T00:00:00",
+      "segment": "FO",
+      "value": 14639.49,
+      "charges": 1489.26
+    },
+    {
+      "date": "2023-05-19T00:00:00",
+      "segment": "FO",
+      "value": 6804.04,
+      "charges": 360.96
+    },
+    {
+      "date": "2023-05-20T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-21T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-22T00:00:00",
+      "segment": "FO",
+      "value": -99.37,
+      "charges": 678.12
+    },
+    {
+      "date": "2023-05-23T00:00:00",
+      "segment": "FO",
+      "value": 2494.04,
+      "charges": 188.46
+    },
+    {
+      "date": "2023-05-24T00:00:00",
+      "segment": "FO",
+      "value": 8768.56,
+      "charges": 3058.94
+    },
+    {
+      "date": "2023-05-25T00:00:00",
+      "segment": "FO",
+      "value": -5347.45,
+      "charges": 2562.45
+    },
+    {
+      "date": "2023-05-26T00:00:00",
+      "segment": "FO",
+      "value": 12297.7,
+      "charges": 706.05
+    },
+    {
+      "date": "2023-05-27T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-28T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-05-29T00:00:00",
+      "segment": "FO",
+      "value": 33238.35,
+      "charges": 1044.15
+    },
+    {
+      "date": "2023-05-30T00:00:00",
+      "segment": "FO",
+      "value": 31054.77,
+      "charges": 925.23
+    },
+    {
+      "date": "2023-05-31T00:00:00",
+      "segment": "FO",
+      "value": 6724.86,
+      "charges": 1485.14
+    },
+    {
+      "date": "2023-06-01T00:00:00",
+      "segment": "FO",
+      "value": -2989.12,
+      "charges": 294.12
+    },
+    {
+      "date": "2023-06-02T00:00:00",
+      "segment": "FO",
+      "value": 1437.46,
+      "charges": 1320.04
+    },
+    {
+      "date": "2023-06-03T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-04T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-05T00:00:00",
+      "segment": "FO",
+      "value": -92.16,
+      "charges": 92.16
+    },
+    {
+      "date": "2023-06-06T00:00:00",
+      "segment": "FO",
+      "value": -6030.76,
+      "charges": 442.01
+    },
+    {
+      "date": "2023-06-07T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-08T00:00:00",
+      "segment": "FO",
+      "value": 7236.63,
+      "charges": 1385.87
+    },
+    {
+      "date": "2023-06-09T00:00:00",
+      "segment": "FO",
+      "value": -66.68,
+      "charges": 66.68
+    },
+    {
+      "date": "2023-06-10T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-11T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-12T00:00:00",
+      "segment": "FO",
+      "value": -9339.81,
+      "charges": 1117.31
+    },
+    {
+      "date": "2023-06-13T00:00:00",
+      "segment": "FO",
+      "value": -33448.99,
+      "charges": 2491.49
+    },
+    {
+      "date": "2023-06-14T00:00:00",
+      "segment": "FO",
+      "value": 19785.98,
+      "charges": 1404.02
+    },
+    {
+      "date": "2023-06-15T00:00:00",
+      "segment": "FO",
+      "value": -24319.14,
+      "charges": 2959.14
+    },
+    {
+      "date": "2023-06-16T00:00:00",
+      "segment": "FO",
+      "value": 21056.19,
+      "charges": 1725.06
+    },
+    {
+      "date": "2023-06-17T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-18T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-19T00:00:00",
+      "segment": "FO",
+      "value": 9927.44,
+      "charges": 1025.06
+    },
+    {
+      "date": "2023-06-20T00:00:00",
+      "segment": "FO",
+      "value": 17555.55,
+      "charges": 1973.2
+    },
+    {
+      "date": "2023-06-21T00:00:00",
+      "segment": "FO",
+      "value": 9705.93,
+      "charges": 2541.57
+    },
+    {
+      "date": "2023-06-22T00:00:00",
+      "segment": "FO",
+      "value": -1722.06,
+      "charges": 3129.56
+    },
+    {
+      "date": "2023-06-23T00:00:00",
+      "segment": "FO",
+      "value": -45440.9,
+      "charges": 4067.15
+    },
+    {
+      "date": "2023-06-24T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-25T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-26T00:00:00",
+      "segment": "FO",
+      "value": 6430.67,
+      "charges": 2914.33
+    },
+    {
+      "date": "2023-06-27T00:00:00",
+      "segment": "FO",
+      "value": 31386.87,
+      "charges": 1604.13
+    },
+    {
+      "date": "2023-06-28T00:00:00",
+      "segment": "FO",
+      "value": -15523.79,
+      "charges": 2240.04
+    },
+    {
+      "date": "2023-06-29T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-06-30T00:00:00",
+      "segment": "FO",
+      "value": 29049.58,
+      "charges": 775.92
+    },
+    {
+      "date": "2023-07-01T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-02T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-03T00:00:00",
+      "segment": "FO",
+      "value": 13251.38,
+      "charges": 773.62
+    },
+    {
+      "date": "2023-07-04T00:00:00",
+      "segment": "FO",
+      "value": 2887.89,
+      "charges": 786.61
+    },
+    {
+      "date": "2023-07-05T00:00:00",
+      "segment": "FO",
+      "value": -46690.28,
+      "charges": 4320.53
+    },
+    {
+      "date": "2023-07-06T00:00:00",
+      "segment": "FO",
+      "value": -847.5,
+      "charges": 3811.0
+    },
+    {
+      "date": "2023-07-07T00:00:00",
+      "segment": "FO",
+      "value": 23059.62,
+      "charges": 1787.38
+    },
+    {
+      "date": "2023-07-08T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-09T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-10T00:00:00",
+      "segment": "FO",
+      "value": 14385.26,
+      "charges": 2672.24
+    },
+    {
+      "date": "2023-07-11T00:00:00",
+      "segment": "FO",
+      "value": -18694.21,
+      "charges": 1993.46
+    },
+    {
+      "date": "2023-07-12T00:00:00",
+      "segment": "FO",
+      "value": 21237.11,
+      "charges": 2212.89
+    },
+    {
+      "date": "2023-07-13T00:00:00",
+      "segment": "FO",
+      "value": 8771.18,
+      "charges": 2400.07
+    },
+    {
+      "date": "2023-07-14T00:00:00",
+      "segment": "FO",
+      "value": -73293.56,
+      "charges": 3823.06
+    },
+    {
+      "date": "2023-07-15T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-16T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-17T00:00:00",
+      "segment": "FO",
+      "value": -5749.47,
+      "charges": 1735.72
+    },
+    {
+      "date": "2023-07-18T00:00:00",
+      "segment": "FO",
+      "value": -9027.17,
+      "charges": 2079.67
+    },
+    {
+      "date": "2023-07-19T00:00:00",
+      "segment": "FO",
+      "value": 21.34,
+      "charges": 363.66
+    },
+    {
+      "date": "2023-07-20T00:00:00",
+      "segment": "FO",
+      "value": 13623.96,
+      "charges": 2567.04
+    },
+    {
+      "date": "2023-07-21T00:00:00",
+      "segment": "FO",
+      "value": -12927.66,
+      "charges": 909.41
+    },
+    {
+      "date": "2023-07-22T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-23T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-24T00:00:00",
+      "segment": "FO",
+      "value": -12644.65,
+      "charges": 1149.4
+    },
+    {
+      "date": "2023-07-25T00:00:00",
+      "segment": "FO",
+      "value": -40605.6,
+      "charges": 990.6
+    },
+    {
+      "date": "2023-07-26T00:00:00",
+      "segment": "FO",
+      "value": 1444.05,
+      "charges": 288.45
+    },
+    {
+      "date": "2023-07-27T00:00:00",
+      "segment": "FO",
+      "value": 4561.25,
+      "charges": 346.95
+    },
+    {
+      "date": "2023-07-28T00:00:00",
+      "segment": "FO",
+      "value": 11791.62,
+      "charges": 762.63
+    },
+    {
+      "date": "2023-07-29T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-30T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-07-31T00:00:00",
+      "segment": "FO",
+      "value": 799.32,
+      "charges": 318.18
+    },
+    {
+      "date": "2023-08-01T00:00:00",
+      "segment": "FO",
+      "value": -6405.14,
+      "charges": 1950.14
+    },
+    {
+      "date": "2023-08-02T00:00:00",
+      "segment": "FO",
+      "value": -154613.4,
+      "charges": 3336.9
+    },
+    {
+      "date": "2023-08-03T00:00:00",
+      "segment": "FO",
+      "value": 45880.54,
+      "charges": 4064.21
+    },
+    {
+      "date": "2023-08-04T00:00:00",
+      "segment": "FO",
+      "value": -2566.42,
+      "charges": 431.42
+    },
+    {
+      "date": "2023-08-05T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-06T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-07T00:00:00",
+      "segment": "FO",
+      "value": -81236.97,
+      "charges": 536.97
+    },
+    {
+      "date": "2023-08-08T00:00:00",
+      "segment": "FO",
+      "value": -982.79,
+      "charges": 1615.54
+    },
+    {
+      "date": "2023-08-09T00:00:00",
+      "segment": "FO",
+      "value": 26027.37,
+      "charges": 779.88
+    },
+    {
+      "date": "2023-08-10T00:00:00",
+      "segment": "FO",
+      "value": -7340.9,
+      "charges": 728.4
+    },
+    {
+      "date": "2023-08-11T00:00:00",
+      "segment": "FO",
+      "value": 8846.98,
+      "charges": 753.02
+    },
+    {
+      "date": "2023-08-12T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-13T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-14T00:00:00",
+      "segment": "FO",
+      "value": -30389.2,
+      "charges": 250.45
+    },
+    {
+      "date": "2023-08-15T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-16T00:00:00",
+      "segment": "FO",
+      "value": 11029.55,
+      "charges": 1055.45
+    },
+    {
+      "date": "2023-08-17T00:00:00",
+      "segment": "FO",
+      "value": 113.74,
+      "charges": 452.76
+    },
+    {
+      "date": "2023-08-18T00:00:00",
+      "segment": "FO",
+      "value": -25293.31,
+      "charges": 825.81
+    },
+    {
+      "date": "2023-08-19T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-20T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-21T00:00:00",
+      "segment": "FO",
+      "value": 25377.86,
+      "charges": 1122.14
+    },
+    {
+      "date": "2023-08-22T00:00:00",
+      "segment": "FO",
+      "value": -23566.34,
+      "charges": 873.84
+    },
+    {
+      "date": "2023-08-23T00:00:00",
+      "segment": "FO",
+      "value": 17153.74,
+      "charges": 1562.76
+    },
+    {
+      "date": "2023-08-24T00:00:00",
+      "segment": "FO",
+      "value": 20097.58,
+      "charges": 637.42
+    },
+    {
+      "date": "2023-08-25T00:00:00",
+      "segment": "FO",
+      "value": 14493.38,
+      "charges": 2136.62
+    },
+    {
+      "date": "2023-08-26T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-27T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-08-28T00:00:00",
+      "segment": "FO",
+      "value": -11950.36,
+      "charges": 1587.86
+    },
+    {
+      "date": "2023-08-29T00:00:00",
+      "segment": "FO",
+      "value": 50.68,
+      "charges": 205.82
+    },
+    {
+      "date": "2023-08-30T00:00:00",
+      "segment": "FO",
+      "value": 1002.46,
+      "charges": 1708.79
+    },
+    {
+      "date": "2023-08-31T00:00:00",
+      "segment": "FO",
+      "value": -4595.79,
+      "charges": 2114.54
+    },
+    {
+      "date": "2023-09-01T00:00:00",
+      "segment": "FO",
+      "value": 26686.4,
+      "charges": 1548.1
+    },
+    {
+      "date": "2023-09-02T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-03T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-04T00:00:00",
+      "segment": "FO",
+      "value": -2841.72,
+      "charges": 1941.72
+    },
+    {
+      "date": "2023-09-05T00:00:00",
+      "segment": "FO",
+      "value": -20966.32,
+      "charges": 3355.07
+    },
+    {
+      "date": "2023-09-06T00:00:00",
+      "segment": "FO",
+      "value": 6804.65,
+      "charges": 1237.1
+    },
+    {
+      "date": "2023-09-07T00:00:00",
+      "segment": "FO",
+      "value": 10229.02,
+      "charges": 2929.73
+    },
+    {
+      "date": "2023-09-08T00:00:00",
+      "segment": "FO",
+      "value": 20722.26,
+      "charges": 2776.19
+    },
+    {
+      "date": "2023-09-09T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-10T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-11T00:00:00",
+      "segment": "FO",
+      "value": 1585.62,
+      "charges": 841.88
+    },
+    {
+      "date": "2023-09-12T00:00:00",
+      "segment": "FO",
+      "value": 15189.2,
+      "charges": 1578.8
+    },
+    {
+      "date": "2023-09-13T00:00:00",
+      "segment": "FO",
+      "value": 8430.25,
+      "charges": 916.0
+    },
+    {
+      "date": "2023-09-14T00:00:00",
+      "segment": "FO",
+      "value": -4610.83,
+      "charges": 1300.83
+    },
+    {
+      "date": "2023-09-15T00:00:00",
+      "segment": "FO",
+      "value": 1301.81,
+      "charges": 198.19
+    },
+    {
+      "date": "2023-09-16T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-17T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-18T00:00:00",
+      "segment": "FO",
+      "value": 6805.25,
+      "charges": 1503.5
+    },
+    {
+      "date": "2023-09-19T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-20T00:00:00",
+      "segment": "FO",
+      "value": -5379.26,
+      "charges": 782.51
+    },
+    {
+      "date": "2023-09-21T00:00:00",
+      "segment": "FO",
+      "value": -35547.1,
+      "charges": 819.6
+    },
+    {
+      "date": "2023-09-22T00:00:00",
+      "segment": "FO",
+      "value": 61882.25,
+      "charges": 1671.5
+    },
+    {
+      "date": "2023-09-23T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-24T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-09-25T00:00:00",
+      "segment": "FO",
+      "value": 5004.53,
+      "charges": 207.22
+    },
+    {
+      "date": "2023-09-26T00:00:00",
+      "segment": "FO",
+      "value": -11984.04,
+      "charges": 2702.04
+    },
+    {
+      "date": "2023-09-27T00:00:00",
+      "segment": "FO",
+      "value": 13652.92,
+      "charges": 1464.33
+    },
+    {
+      "date": "2023-09-28T00:00:00",
+      "segment": "FO",
+      "value": 43675.6,
+      "charges": 1158.65
+    },
+    {
+      "date": "2023-09-29T00:00:00",
+      "segment": "FO",
+      "value": -59554.98,
+      "charges": 2435.73
+    },
+    {
+      "date": "2023-09-30T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-01T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-02T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-03T00:00:00",
+      "segment": "FO",
+      "value": 14808.7,
+      "charges": 3396.3
+    },
+    {
+      "date": "2023-10-04T00:00:00",
+      "segment": "FO",
+      "value": -38678.94,
+      "charges": 6773.19
+    },
+    {
+      "date": "2023-10-05T00:00:00",
+      "segment": "FO",
+      "value": -908.19,
+      "charges": 2336.94
+    },
+    {
+      "date": "2023-10-06T00:00:00",
+      "segment": "FO",
+      "value": 17982.49,
+      "charges": 2598.76
+    },
+    {
+      "date": "2023-10-07T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-08T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-09T00:00:00",
+      "segment": "FO",
+      "value": -33360.83,
+      "charges": 1268.33
+    },
+    {
+      "date": "2023-10-10T00:00:00",
+      "segment": "FO",
+      "value": 26977.88,
+      "charges": 772.12
+    },
+    {
+      "date": "2023-10-11T00:00:00",
+      "segment": "FO",
+      "value": 1197.39,
+      "charges": 981.86
+    },
+    {
+      "date": "2023-10-12T00:00:00",
+      "segment": "FO",
+      "value": -4197.74,
+      "charges": 4696.74
+    },
+    {
+      "date": "2023-10-13T00:00:00",
+      "segment": "FO",
+      "value": -151817.28,
+      "charges": 4437.28
+    },
+    {
+      "date": "2023-10-14T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-15T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-16T00:00:00",
+      "segment": "FO",
+      "value": -138674.27,
+      "charges": 5226.02
+    },
+    {
+      "date": "2023-10-17T00:00:00",
+      "segment": "FO",
+      "value": 25149.4,
+      "charges": 3193.1
+    },
+    {
+      "date": "2023-10-18T00:00:00",
+      "segment": "FO",
+      "value": 40921.11,
+      "charges": 2372.14
+    },
+    {
+      "date": "2023-10-19T00:00:00",
+      "segment": "FO",
+      "value": -71974.4,
+      "charges": 4937.65
+    },
+    {
+      "date": "2023-10-20T00:00:00",
+      "segment": "FO",
+      "value": -151109.69,
+      "charges": 2740.44
+    },
+    {
+      "date": "2023-10-21T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-22T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-23T00:00:00",
+      "segment": "FO",
+      "value": 100496.63,
+      "charges": 5630.37
+    },
+    {
+      "date": "2023-10-24T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-25T00:00:00",
+      "segment": "FO",
+      "value": 30460.63,
+      "charges": 3705.87
+    },
+    {
+      "date": "2023-10-26T00:00:00",
+      "segment": "FO",
+      "value": -57639.06,
+      "charges": 5504.56
+    },
+    {
+      "date": "2023-10-27T00:00:00",
+      "segment": "FO",
+      "value": 14303.1,
+      "charges": 2963.15
+    },
+    {
+      "date": "2023-10-28T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-29T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-10-30T00:00:00",
+      "segment": "FO",
+      "value": -39160.58,
+      "charges": 2583.83
+    },
+    {
+      "date": "2023-10-31T00:00:00",
+      "segment": "FO",
+      "value": 26115.96,
+      "charges": 3791.04
+    },
+    {
+      "date": "2023-11-01T00:00:00",
+      "segment": "FO",
+      "value": 5738.51,
+      "charges": 5721.24
+    },
+    {
+      "date": "2023-11-02T00:00:00",
+      "segment": "FO",
+      "value": -10235.99,
+      "charges": 4121.24
+    },
+    {
+      "date": "2023-11-03T00:00:00",
+      "segment": "FO",
+      "value": 36518.27,
+      "charges": 3203.23
+    },
+    {
+      "date": "2023-11-04T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-05T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-06T00:00:00",
+      "segment": "FO",
+      "value": 24013.0,
+      "charges": 1565.75
+    },
+    {
+      "date": "2023-11-07T00:00:00",
+      "segment": "FO",
+      "value": 28737.04,
+      "charges": 1548.96
+    },
+    {
+      "date": "2023-11-08T00:00:00",
+      "segment": "FO",
+      "value": 28821.94,
+      "charges": 1911.56
+    },
+    {
+      "date": "2023-11-09T00:00:00",
+      "segment": "FO",
+      "value": 6791.21,
+      "charges": 945.79
+    },
+    {
+      "date": "2023-11-10T00:00:00",
+      "segment": "FO",
+      "value": 78217.03,
+      "charges": 909.97
+    },
+    {
+      "date": "2023-11-11T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-12T00:00:00",
+      "segment": "FO",
+      "value": -97.14,
+      "charges": 97.14
+    },
+    {
+      "date": "2023-11-13T00:00:00",
+      "segment": "FO",
+      "value": 57159.69,
+      "charges": 1173.81
+    },
+    {
+      "date": "2023-11-14T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-15T00:00:00",
+      "segment": "FO",
+      "value": 11956.96,
+      "charges": 431.54
+    },
+    {
+      "date": "2023-11-16T00:00:00",
+      "segment": "FO",
+      "value": 28180.33,
+      "charges": 2297.42
+    },
+    {
+      "date": "2023-11-17T00:00:00",
+      "segment": "FO",
+      "value": 8887.79,
+      "charges": 4664.46
+    },
+    {
+      "date": "2023-11-18T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-19T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-20T00:00:00",
+      "segment": "FO",
+      "value": 13532.2,
+      "charges": 2061.8
+    },
+    {
+      "date": "2023-11-21T00:00:00",
+      "segment": "FO",
+      "value": -23653.23,
+      "charges": 1565.98
+    },
+    {
+      "date": "2023-11-22T00:00:00",
+      "segment": "FO",
+      "value": -28463.87,
+      "charges": 3841.62
+    },
+    {
+      "date": "2023-11-23T00:00:00",
+      "segment": "FO",
+      "value": -107074.16,
+      "charges": 6074.16
+    },
+    {
+      "date": "2023-11-24T00:00:00",
+      "segment": "FO",
+      "value": 25813.19,
+      "charges": 2268.06
+    },
+    {
+      "date": "2023-11-25T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-26T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-27T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-11-28T00:00:00",
+      "segment": "FO",
+      "value": 82444.09,
+      "charges": 1369.66
+    },
+    {
+      "date": "2023-11-29T00:00:00",
+      "segment": "FO",
+      "value": 61408.39,
+      "charges": 4066.36
+    },
+    {
+      "date": "2023-11-30T00:00:00",
+      "segment": "FO",
+      "value": 18337.79,
+      "charges": 486.46
+    },
+    {
+      "date": "2023-12-01T00:00:00",
+      "segment": "FO",
+      "value": -142161.39,
+      "charges": 4995.39
+    },
+    {
+      "date": "2023-12-02T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-03T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-04T00:00:00",
+      "segment": "FO",
+      "value": 142419.45,
+      "charges": 1884.05
+    },
+    {
+      "date": "2023-12-05T00:00:00",
+      "segment": "FO",
+      "value": -247357.09,
+      "charges": 9849.84
+    },
+    {
+      "date": "2023-12-06T00:00:00",
+      "segment": "FO",
+      "value": 4140.04,
+      "charges": 6000.71
+    },
+    {
+      "date": "2023-12-07T00:00:00",
+      "segment": "FO",
+      "value": 51799.41,
+      "charges": 7467.59
+    },
+    {
+      "date": "2023-12-08T00:00:00",
+      "segment": "FO",
+      "value": 100145.65,
+      "charges": 3360.6
+    },
+    {
+      "date": "2023-12-09T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-10T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-11T00:00:00",
+      "segment": "FO",
+      "value": -203548.35,
+      "charges": 832.35
+    },
+    {
+      "date": "2023-12-12T00:00:00",
+      "segment": "FO",
+      "value": -105555.06,
+      "charges": 2355.06
+    },
+    {
+      "date": "2023-12-13T00:00:00",
+      "segment": "FO",
+      "value": 102376.92,
+      "charges": 725.58
+    },
+    {
+      "date": "2023-12-14T00:00:00",
+      "segment": "FO",
+      "value": 178632.22,
+      "charges": 1742.78
+    },
+    {
+      "date": "2023-12-15T00:00:00",
+      "segment": "FO",
+      "value": 13572.45,
+      "charges": 2003.05
+    },
+    {
+      "date": "2023-12-16T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-17T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-18T00:00:00",
+      "segment": "FO",
+      "value": 16536.5,
+      "charges": 5298.75
+    },
+    {
+      "date": "2023-12-19T00:00:00",
+      "segment": "FO",
+      "value": 212605.73,
+      "charges": 3495.27
+    },
+    {
+      "date": "2023-12-20T00:00:00",
+      "segment": "FO",
+      "value": 256462.04,
+      "charges": 7219.46
+    },
+    {
+      "date": "2023-12-21T00:00:00",
+      "segment": "FO",
+      "value": 153281.12,
+      "charges": 5806.63
+    },
+    {
+      "date": "2023-12-22T00:00:00",
+      "segment": "FO",
+      "value": 42409.09,
+      "charges": 2219.41
+    },
+    {
+      "date": "2023-12-23T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-24T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-25T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-26T00:00:00",
+      "segment": "FO",
+      "value": -287629.91,
+      "charges": 12224.41
+    },
+    {
+      "date": "2023-12-27T00:00:00",
+      "segment": "FO",
+      "value": 1365.75,
+      "charges": 7559.75
+    },
+    {
+      "date": "2023-12-28T00:00:00",
+      "segment": "FO",
+      "value": 103984.51,
+      "charges": 6668.49
+    },
+    {
+      "date": "2023-12-29T00:00:00",
+      "segment": "FO",
+      "value": 77871.45,
+      "charges": 2458.55
+    },
+    {
+      "date": "2023-12-30T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2023-12-31T00:00:00",
+      "segment": "FO",
+      "value": 0.0,
+      "charges": 0.0
+    },
+    {
+      "date": "2024-01-01T00:00:00",
+      "segment": "FO",
+      "value": 160095.35,
+      "charges": 1712.4
+    },
+    {
+      "date": "2024-01-02T00:00:00",
+      "segment": "FO",
+      "value": 86964.36,
+      "charges": 2047.64
+    },
+    {
+      "date": "2024-01-03T00:00:00",
+      "segment": "FO",
+      "value": 188641.37,
+      "charges": 2884.63
+    },
+    {
+      "date": "2024-01-04T00:00:00",
+      "segment": "FO",
+      "value": -5519.33,
+      "charges": 5499.58
+    },
+    {
+      "date": "2024-01-05T00:00:00",
+      "segment": "FO",
+      "value": -397544.48,
+      "charges": 5385.73
+    }
+  ],
+  "min": -201101.6024999998,
+  "max": 153621.83149999997,
   "startyear": 2023,
   "endyear": 2024
 }
