@@ -677,18 +677,30 @@ function heatmapSegment(dateTitle, records) {
     let result = [];
     records.reduce(function (res, value) {
         if (!res[value.segment]) {
-            res[value.segment] = { segment: value.segment, value: 0 };
+            res[value.segment] = { segment: value.segment, value: 0, charges:0 };
             result.push(res[value.segment])
         }
         res[value.segment].value += value.value;
+        res[value.segment].charges += value.charges;
         return res;
     }, {});
 
     if (result.length > 0) {
         var $segHtml = '';
         for (var i = 0; i < result.length; i++) {
+            var seg = "";
+            // switch result[i].segment    
+            switch (result[i].segment) {
+                case 'EQ':
+                    seg = "Equity";
+                    break;
+                case 'FO':
+                    seg = "F&amp;O";
+                    break;
+                default:
+            }
             $segHtml += `<div class="heatmap-segment">
-                                        <p>${result[i].segment.replace('FO', 'F&amp;O')}:</p> <span class="${result[i].value < 0 ? 'neg' : 'pos'}">${formatMoney(result[i].value,2)}</span>
+                                        <p>${seg}:</p> <span class="${result[i].value < 0 ? 'neg' : 'pos'}">${formatMoney(result[i].value, 2)}</span><p style="padding-left: 5px;">Charges:</p><span style="padding-left: 5px;">${formatMoney(result[i].charges, 2)}</span>
                                     </div>`;
         }
         $('#heatmap_count').html(`<div class="heatmap-count"><p class="heatmap-date-label">Net realised P&amp;L</p> <p class="heatmap-date">${dateTitle}</p>${$segHtml}</div>`);

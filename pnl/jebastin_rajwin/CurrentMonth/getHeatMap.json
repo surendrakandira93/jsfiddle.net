@@ -3,14 +3,6 @@
     {
       "data": [
         {
-          "date": 1714521600,
-          "value": 0.0
-        },
-        {
-          "date": 1714608000,
-          "value": -122.34
-        },
-        {
           "date": 1714694400,
           "value": 2887.15
         }
@@ -21,37 +13,13 @@
   ],
   "records": [
     {
-      "date": "2024-05-01T00:00:00",
-      "segment": "EQ",
-      "value": 0.0,
-      "charges": 0.0
-    },
-    {
-      "date": "2024-05-02T00:00:00",
-      "segment": "EQ",
-      "value": -98.47,
-      "charges": 98.47
-    },
-    {
-      "date": "2024-05-01T00:00:00",
-      "segment": "FO",
-      "value": 0.0,
-      "charges": 0.0
-    },
-    {
-      "date": "2024-05-02T00:00:00",
-      "segment": "FO",
-      "value": -23.87,
-      "charges": 23.87
-    },
-    {
       "date": "2024-05-03T00:00:00",
       "segment": "FO",
       "value": 2887.15,
       "charges": 236.6
     }
   ],
-  "min": -122.34,
+  "min": -2887.15,
   "max": 2887.15,
   "startyear": 2024,
   "endyear": 2024

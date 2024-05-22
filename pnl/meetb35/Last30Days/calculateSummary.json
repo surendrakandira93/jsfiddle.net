@@ -1,16 +1,16 @@
 {
   "realisedpnl": {
-    "endvalue": -82.6385,
-    "actualvalue": -82638.5,
+    "endvalue": 1.0695,
+    "actualvalue": 1069.5,
     "decimalplaces": 2,
     "suffix": "K",
     "color": "#f5803e",
     "name": "Realised PNL",
-    "prefix": ""
+    "prefix": "+"
   },
   "totalpnl": {
-    "endvalue": -61.771166853000004,
-    "actualvalue": -61771.166853,
+    "endvalue": 7.257168245,
+    "actualvalue": 7257.168245,
     "decimalplaces": 2,
     "suffix": "K",
     "color": "#f5803e",
@@ -18,8 +18,8 @@
     "prefix": ""
   },
   "chargestaxes": {
-    "endvalue": 20.867333147,
-    "actualvalue": 20867.333147,
+    "endvalue": 6.187668245,
+    "actualvalue": 6187.668245,
     "decimalplaces": 2,
     "suffix": "K",
     "color": "#27bcfd",
@@ -27,10 +27,10 @@
     "prefix": ""
   },
   "netrealisedpnl": {
-    "endvalue": -1.03505833147,
-    "actualvalue": -103505.833147,
+    "endvalue": -5.118168245,
+    "actualvalue": -5118.168245,
     "decimalplaces": 2,
-    "suffix": "L",
+    "suffix": "K",
     "color": "#00d27a",
     "name": "NetRealised PNL",
     "prefix": ""
@@ -48,8 +48,8 @@
   "total": 0,
   "totaltradingdays": 0,
   "barchart": null,
-  "winrate": 43.75,
-  "pnlddratio": -0.7921004327344082,
+  "winrate": 55.55555555555556,
+  "pnlddratio": -0.3100181421504866,
   "maxdrawdownint": 0.0,
   "maxdrawdown": null,
   "maxdate": null,

@@ -5,10 +5,6 @@
         {
           "date": 1711929600,
           "value": -535.94
-        },
-        {
-          "date": 1712016000,
-          "value": 0.0
         }
       ],
       "calstartdate": "2024-01-01T00:00:00",
@@ -21,22 +17,10 @@
       "segment": "EQ",
       "value": -535.94,
       "charges": 277.34
-    },
-    {
-      "date": "2024-04-01T00:00:00",
-      "segment": "FO",
-      "value": 0.0,
-      "charges": 0.0
-    },
-    {
-      "date": "2024-04-02T00:00:00",
-      "segment": "FO",
-      "value": 0.0,
-      "charges": 0.0
     }
   ],
   "min": -535.94,
-  "max": 0.0,
+  "max": 535.94,
   "startyear": 2024,
   "endyear": 2024
 }

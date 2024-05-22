@@ -204,6 +204,7 @@
             .heatmap-count .heatmap-segment {
                 margin-right: 20px;
                 display: inline-flex;
+                
             }
 
                 .heatmap-count .heatmap-segment p {
@@ -214,11 +215,15 @@
         .neg {
             color: #f35631;
             margin-left: 10px;
+            padding-right: 5px;
+            border-right: 1px solid #c1c1c1;
         }
 
         .pos {
             color: #10b983;
             margin-left: 10px;
+            padding-right: 5px;
+            border-right: 1px solid #c1c1c1;
         }
 
         .graph-label {
@@ -228,6 +233,20 @@
         .graph-domain .active {
             fill: #2c7be5 !important;
         }
+        @media only screen and (max-width: 800px) {
+            .heatmap-count {
+                text-align: left !important;
+                margin-left: 0 !important;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            .heatmap-count {
+                text-align: left !important;
+                margin-left: 0 !important;
+            }
+        }
+
     </style>
 
     <style>

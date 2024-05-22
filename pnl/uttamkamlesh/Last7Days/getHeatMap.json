@@ -1,36 +1,14 @@
 {
   "items": [
     {
-      "data": [
-        {
-          "date": 1714608000,
-          "value": -66533.54
-        },
-        {
-          "date": 1714694400,
-          "value": 3066.47
-        }
-      ],
+      "data": [],
       "calstartdate": "2024-01-01T00:00:00",
       "range": 12
     }
   ],
-  "records": [
-    {
-      "date": "2024-05-02T00:00:00",
-      "segment": "FO",
-      "value": -66533.54,
-      "charges": 3374.79
-    },
-    {
-      "date": "2024-05-03T00:00:00",
-      "segment": "FO",
-      "value": 3066.47,
-      "charges": 436.03
-    }
-  ],
-  "min": -66533.54,
-  "max": 3066.47,
+  "records": [],
+  "min": 0.0,
+  "max": 0.0,
   "startyear": 2024,
   "endyear": 2024
 }

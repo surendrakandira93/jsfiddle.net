@@ -1,64 +1,14 @@
 {
   "items": [
     {
-      "data": [
-        {
-          "date": 1710028800,
-          "value": 0.0
-        },
-        {
-          "date": 1710115200,
-          "value": 213220.77
-        },
-        {
-          "date": 1710201600,
-          "value": -251989.8
-        }
-      ],
+      "data": [],
       "calstartdate": "2024-01-01T00:00:00",
       "range": 12
     }
   ],
-  "records": [
-    {
-      "date": "2024-03-10T00:00:00",
-      "segment": "EQ",
-      "value": 0.0,
-      "charges": 0.0
-    },
-    {
-      "date": "2024-03-11T00:00:00",
-      "segment": "EQ",
-      "value": 5384.49,
-      "charges": 86.21
-    },
-    {
-      "date": "2024-03-12T00:00:00",
-      "segment": "EQ",
-      "value": -1.04,
-      "charges": 1.04
-    },
-    {
-      "date": "2024-03-10T00:00:00",
-      "segment": "FO",
-      "value": 0.0,
-      "charges": 0.0
-    },
-    {
-      "date": "2024-03-11T00:00:00",
-      "segment": "FO",
-      "value": 207836.29,
-      "charges": 3377.46
-    },
-    {
-      "date": "2024-03-12T00:00:00",
-      "segment": "FO",
-      "value": -251988.75,
-      "charges": 3388.75
-    }
-  ],
-  "min": -251989.8,
-  "max": 213220.77,
+  "records": [],
+  "min": 0.0,
+  "max": 0.0,
   "startyear": 2024,
   "endyear": 2024
 }

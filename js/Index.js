@@ -70,8 +70,34 @@
 
         //});
 
+        $('.search_for_div').on('keyup', function () {
+            var searchText = $(this).val().toLowerCase();
+            if (searchText != "") {
+                //modelJson = allModelJson;
+
+               modelJson= allModelJson.filter(function (user) {
+                    return user.username.toLowerCase().indexOf(searchText) !== -1;
+                });
+                //modelJson = $.grep(allModelJson, function (user) {
+                //    user.username.toLowerCase().indexOf(searchText) !== -1;
+                //});
+                
+            } else {
+                modelJson = allModelJson;
+            }
+            CardViewBind(parseInt(localStorage.getItem('filterType')));
+            //$('.search_by_name').each(function () {
+            //    var listItemText = $(this).data('name').toLowerCase();
+            //    if (listItemText.indexOf(searchText) !== -1) {
+            //        $(this).show();
+            //    } else {
+            //        $(this).hide();
+            //    }
+            //});
+        });
+
         function CardViewBind($val) {
-            localStorage.setItem('filterType', $val);
+            localStorage.setItem('filterType', $val);            
             switch ($val) {
                 case 1:
                     modelJson.sort(WinRateDescSort);

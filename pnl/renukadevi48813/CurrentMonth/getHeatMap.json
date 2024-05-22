@@ -3,10 +3,6 @@
     {
       "data": [
         {
-          "date": 1714521600,
-          "value": 0.0
-        },
-        {
           "date": 1714608000,
           "value": 335.96
         }
@@ -17,19 +13,13 @@
   ],
   "records": [
     {
-      "date": "2024-05-01T00:00:00",
-      "segment": "EQ",
-      "value": 0.0,
-      "charges": 0.0
-    },
-    {
       "date": "2024-05-02T00:00:00",
       "segment": "EQ",
       "value": 335.96,
       "charges": 66.64
     }
   ],
-  "min": 0.0,
+  "min": -335.96,
   "max": 335.96,
   "startyear": 2024,
   "endyear": 2024
