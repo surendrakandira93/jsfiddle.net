@@ -95,10 +95,10 @@ GlobalPNL.bindStatistics= function(result) {
         $(".AvgProfitonProfitDays").html(`Rs. ${result.avgprofitonprofitdaysstr}`);
         $(".AvgProfitonProfitDays").attr("title", GlobalPNL.formatMoney(result.avgprofitonprofitdays));
 
-        $(".AvgLossonLossDays").html(`Rs. ${result.avglossonlossdaysstr}`);
+        $(".AvgLossonLossDays").html(`Rs. ${result.avglossonlossdays==0?'0':result.avglossonlossdaysstr}`);
         $(".AvgLossonLossDays").attr("title", GlobalPNL.formatMoney(result.avglossonlossdays));
 
-        $(".MaxDrawdown").html(`Rs. ${result.maxdrawdownstr}`);
+        $(".MaxDrawdown").html(`Rs. ${result.maxdrawdown==0?'0':result.maxdrawdownstr}`);
         $(".MaxDrawdown").attr("title", GlobalPNL.formatMoney(result.maxdrawdown));
 
         $(".LoosRate").html(`${result.lossrate.toFixed(2)} %`);

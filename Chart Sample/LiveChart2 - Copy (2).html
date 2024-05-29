@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Line Chart with Baseline</title>
+    <!-- Load Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <!-- The chart container -->
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Define the data
+            var data = new google.visualization.DataTable();
+            data.addColumn('timeofday', 'Time of Day');
+            data.addColumn('number', 'Stock Price');
+
+            // Generate initial data for the chart (random values for demonstration)
+            var initialData = generateData();
+            data.addRows(initialData);
+
+            // Set chart options
+            var options = {
+                title: 'Stock Market Data',
+                curveType: 'function',
+                legend: { position: 'bottom' },
+                hAxis: {
+                    title: 'Time',
+                    format: 'HH:mm',
+                    minValue: [9, 15, 0],
+                    maxValue: [15, 30, 0]
+                },
+                vAxis: {
+                    title: 'Stock Price',
+                    baseline: 550, // Set baseline at 550,
+                    baselineColor: 'red'  
+                },
+               
+            };
+
+            // Instantiate and draw the chart
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+            // Update chart data every minute
+            //setInterval(function() {
+            //    var newData = generateData();
+            //    data.removeRows(0, 1); // Remove the oldest row
+            //    data.addRows(newData); // Add new data
+            //    chart.draw(data, options); // Redraw the chart
+            //}, 60000); // Update every minute (60000 milliseconds)
+        }
+
+        // Function to generate random data for the chart
+        function generateData() {
+            var data = [];
+            var startTime = new Date();
+            startTime.setHours(9, 15, 0, 0); // Set start time to 9:15 AM
+            var endTime = new Date();
+            endTime.setHours(15, 30, 0, 0); // Set end time to 3:30 PM
+
+            // Generate data for each minute between 9:15 AM and 3:30 PM
+            for (var time = new Date(startTime); time <= endTime; time.setMinutes(time.getMinutes() + 1)) {
+                var stockPrice = Math.random() * 1000; // Random value for demonstration
+                data.push([[time.getHours(), time.getMinutes(), time.getSeconds()], stockPrice]);
+            }
+
+            return data;
+        }
+    </script>
+</body>
+</html>
